@@ -1,0 +1,1140 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SFRequest Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SlyceSDK </a></h1>
+				<a id="developerHome" href="../index.html">Slyce Inc</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SFRequest Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/options">&nbsp;&nbsp;&nbsp;&nbsp;options</option>
+	
+	<option value="//api/name/requestID">&nbsp;&nbsp;&nbsp;&nbsp;requestID</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
+	
+	<option value="//api/name/getItemDescriptionFromImage:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemDescriptionFromImage:</option>
+	
+	<option value="//api/name/getItemDescriptionFromImageURL:">&nbsp;&nbsp;&nbsp;&nbsp;- getItemDescriptionFromImageURL:</option>
+	
+	<option value="//api/name/getMerchantIDs">&nbsp;&nbsp;&nbsp;&nbsp;- getMerchantIDs</option>
+	
+	<option value="//api/name/getProductsFromImage:fromMerchantIDs:">&nbsp;&nbsp;&nbsp;&nbsp;- getProductsFromImage:fromMerchantIDs:</option>
+	
+	<option value="//api/name/getProductsFromImageURL:fromMerchantIDs:">&nbsp;&nbsp;&nbsp;&nbsp;- getProductsFromImageURL:fromMerchantIDs:</option>
+	
+	<option value="//api/name/initWithSlyce:options:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSlyce:options:andDelegate:</option>
+	
+	<option value="//api/name/recognizeSimilarProductsFromImage:">&nbsp;&nbsp;&nbsp;&nbsp;- recognizeSimilarProductsFromImage:</option>
+	
+	<option value="//api/name/recognizeSimilarProductsFromImageURL:">&nbsp;&nbsp;&nbsp;&nbsp;- recognizeSimilarProductsFromImageURL:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initialization">Initialization</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Standard methods">Standard methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Premium methods">Premium methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Miscellaneous">Miscellaneous</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Helpers">Helpers</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/options">options</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestID">requestID</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemDescriptionFromImage:">getItemDescriptionFromImage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getItemDescriptionFromImageURL:">getItemDescriptionFromImageURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMerchantIDs">getMerchantIDs</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">getProductsFromImage:fromMerchantIDs:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">getProductsFromImageURL:fromMerchantIDs:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSlyce:options:andDelegate:">initWithSlyce:options:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recognizeSimilarProductsFromImage:">recognizeSimilarProductsFromImage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recognizeSimilarProductsFromImageURL:">recognizeSimilarProductsFromImageURL:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SFRequest Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SFRequest Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SFRequest.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Provides a way to perform visual search without using SDK’s integral camera functionality.</p>
+
+<p>Set of asynchronuous methods that allow developers to send a request for recognition by providing an UIImage object or an NSURL to the image.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestID">&nbsp;&nbsp;requestID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/options">&nbsp;&nbsp;options</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Initialization" name="task_Initialization"></a>
+						<h3 class="subsubtitle task-title">Initialization</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSlyce:options:andDelegate:">&ndash;&nbsp;initWithSlyce:options:andDelegate:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Standard methods" name="task_Standard methods"></a>
+						<h3 class="subsubtitle task-title">Standard methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getItemDescriptionFromImage:">&ndash;&nbsp;getItemDescriptionFromImage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getItemDescriptionFromImageURL:">&ndash;&nbsp;getItemDescriptionFromImageURL:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">&ndash;&nbsp;getProductsFromImage:fromMerchantIDs:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">&ndash;&nbsp;getProductsFromImageURL:fromMerchantIDs:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Premium methods" name="task_Premium methods"></a>
+						<h3 class="subsubtitle task-title">Premium methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recognizeSimilarProductsFromImage:">&ndash;&nbsp;recognizeSimilarProductsFromImage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recognizeSimilarProductsFromImageURL:">&ndash;&nbsp;recognizeSimilarProductsFromImageURL:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Miscellaneous" name="task_Miscellaneous"></a>
+						<h3 class="subsubtitle task-title">Miscellaneous</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Helpers" name="task_Helpers"></a>
+						<h3 class="subsubtitle task-title">Helpers</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMerchantIDs">&ndash;&nbsp;getMerchantIDs</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The request delegate that will be notified of the results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;SFRequestDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/options" title="options"></a>
+	<h3 class="subsubtitle method-title">options</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Options dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *options</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this dictionary to pass properties to Slyce servers.
+For example: @{@&ldquo;storeID&rdquo; : @&ldquo;1234&rdquo;, @&ldquo;state&rdquo; : @&ldquo;CA&rdquo;}. Can be <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestID" title="requestID"></a>
+	<h3 class="subsubtitle method-title">requestID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The unique identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *requestID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The request ID is generated <em>only</em> after making the actual request, i.e. after
+calling one of SFRequest&rsquo;s methods.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="subsubtitle method-title">cancel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancels the current request.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this method when you want to cancel the current visual search processing. This method will stop both the 3D and 2D
+(Premium) recognitions, if used.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getItemDescriptionFromImage:" title="getItemDescriptionFromImage:"></a>
+	<h3 class="subsubtitle method-title">getItemDescriptionFromImage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to retrieve a payload describing the description of the product in the image, along with optional parameters.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getItemDescriptionFromImage:(UIImage *)<em>image</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>the image object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method will ask the SDK to asynchronously recognize the image in the param and return an <code>NSDictionary</code> representing the description of
+the item matched.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/getItemDescriptionFromImageURL:">- getItemDescriptionFromImageURL:</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getItemDescriptionFromImageURL:" title="getItemDescriptionFromImageURL:"></a>
+	<h3 class="subsubtitle method-title">getItemDescriptionFromImageURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to retrieve a payload describing the description of the product in the URL to the image provided, along with optional parameters.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getItemDescriptionFromImageURL:(NSURL *)<em>imageURL</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>imageURL</em></dt>
+			<dd><p>the URL to the image.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method will ask the SDK to asynchronously recognize the image in the URL passed and return an <code>NSDictionary</code> representing the
+description of the item matched.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/getItemDescriptionFromImage:">- getItemDescriptionFromImage:</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getMerchantIDs" title="getMerchantIDs"></a>
+	<h3 class="subsubtitle method-title">getMerchantIDs</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method to get the IDs of all the supported merchants.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getMerchantIDs</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Used to asynchronously retrieve a list of all merchant IDs that can be used with <a href="#//api/name/getProductsFromImage:fromMerchantIDs:">getProductsFromImage:fromMerchantIDs:</a> and
+<a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">getProductsFromImageURL:fromMerchantIDs:</a> methods.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getProductsFromImage:fromMerchantIDs:" title="getProductsFromImage:fromMerchantIDs:"></a>
+	<h3 class="subsubtitle method-title">getProductsFromImage:fromMerchantIDs:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to asynchrounously retrieve a list of products from the image passed. May also provide an array of merchant IDs to narrow
+the search to specific merchants.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getProductsFromImage:(UIImage *)<em>image</em> fromMerchantIDs:(NSArray *)<em>merchantIDs</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>The image object to recognize.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>merchantIDs</em></dt>
+			<dd><p>An array of merchant IDs to match (optional). Pass nil to search all the supported merchants.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
+will be notified via the <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> object. For more information, see the reference for <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p><div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using a convinient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
+method as a param to the current method.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">- getProductsFromImageURL:fromMerchantIDs:</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getProductsFromImageURL:fromMerchantIDs:" title="getProductsFromImageURL:fromMerchantIDs:"></a>
+	<h3 class="subsubtitle method-title">getProductsFromImageURL:fromMerchantIDs:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Used to asynchrounously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
+to narrow the search to specific merchants.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getProductsFromImageURL:(NSURL *)<em>imageURL</em> fromMerchantIDs:(NSArray *)<em>merchantIDs</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>imageURL</em></dt>
+			<dd><p>The URL to the image to recognize.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>merchantIDs</em></dt>
+			<dd><p>An array of merchant IDs to match (optional). Pass nil to search all the supported merchants.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
+will be notified via the <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> object. For more information, see the reference for <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p><div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using a convinient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
+method as a param to the current method.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">- getProductsFromImage:fromMerchantIDs:</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSlyce:options:andDelegate:" title="initWithSlyce:options:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">initWithSlyce:options:andDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SFRequest object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithSlyce:(SFSlyce *)<em>slyce</em> options:(NSDictionary *)<em>options</em> andDelegate:(id&lt;SFRequestDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>slyce</em></dt>
+			<dd><p>the Slyce object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p><a href="#//api/name/options">options</a> dictionary (optional). Pass <code>nil</code> for no <a href="#//api/name/options">options</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>object that implements <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> protocol.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an instance of SFRequest.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this method to prepare the SDK for 2D/3D recognition functionality.
+In order to successfully use this method to initialize a new SFRequest, you <em>must</em> first
+have a valid <a href="../Classes/SFSlyce.html">SFSlyce</a> object, previously initialized with your client ID.
+Depending on your client ID, SFRequest will be able to perform a 2D and/or 3D search.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/recognizeSimilarProductsFromImage:" title="recognizeSimilarProductsFromImage:"></a>
+	<h3 class="subsubtitle method-title">recognizeSimilarProductsFromImage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Premium method to asynchrounsly retrieve 2D and 3D products from the image passed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)recognizeSimilarProductsFromImage:(UIImage *)<em>image</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>The image object to recognize.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is a Premium feature. Use this method if you are interested in retrieving a 2D product along with 3D products
+from the SDK. 2D visual recognition is possible if the SFSlyce object was initialized using client ID that supports premium features.
+Otherwise, the delegate will be notified via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didFailWithError:">[SFRequestDelegate sfRequest:didFailWithError:]</a> with an SFErrorNotPremium error (In case of a success, the
+delegate won&rsquo;t be notified).</p>
+
+<p>The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+<a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didDetectImage:">[SFRequestDelegate sfRequest:didDetectImage:]</a> and <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveResults:">[SFRequestDelegate sfRequest:didReceiveResults:]</a>, accordingly. In
+case of a 2D match, additional info might be delivered, via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveImageInfo:">[SFRequestDelegate sfRequest:didReceiveImageInfo:]</a> callback.
+The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p><div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using a convenient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
+method as a param to the current method.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/recognizeSimilarProductsFromImageURL:">- recognizeSimilarProductsFromImageURL:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">- getProductsFromImage:fromMerchantIDs:</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/recognizeSimilarProductsFromImageURL:" title="recognizeSimilarProductsFromImageURL:"></a>
+	<h3 class="subsubtitle method-title">recognizeSimilarProductsFromImageURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Premium method to asynchrounsly retrieve 2D and 3D products from the URL to the image.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)recognizeSimilarProductsFromImageURL:(NSURL *)<em>imageURL</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>imageURL</em></dt>
+			<dd><p>The URL to the image to recognize.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is a Premium feature. Use this method if you are interested in retrieving a 2D product along with 3D products
+from the SDK. 2D visual recognition is possible if the SFSlyce object was initialized using client ID that supports premium features.
+Otherwise, the delegate will be notified via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didFailWithError:">[SFRequestDelegate sfRequest:didFailWithError:]</a> with an SFErrorNotPremium error (In case of a success, the
+delegate won&rsquo;t be notified).</p>
+
+<p>The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+<a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didDetectImage:">[SFRequestDelegate sfRequest:didDetectImage:]</a> and <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveResults:">[SFRequestDelegate sfRequest:didReceiveResults:]</a>, accordingly. In
+case of a 2D match, additional info might be delivered, via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveImageInfo:">[SFRequestDelegate sfRequest:didReceiveImageInfo:]</a> callback.
+The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p><div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using the convenient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
+method as a param to the current method.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/recognizeSimilarProductsFromImage:">- recognizeSimilarProductsFromImage:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">- getProductsFromImage:fromMerchantIDs:</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFRequest.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-06-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

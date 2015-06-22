@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSError+Slyce.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSError(Slyce)</TokenIdentifier>
+			<Abstract type="html">Enumeration for main Slyce SDK error codes.</Abstract>
+			<DeclaredIn>NSError+Slyce.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/sf_errorWithCode:</TokenIdentifier>
+			<Abstract type="html">Create an error object configured with the Slyce error domain.</Abstract>
+			<DeclaredIn>NSError+Slyce.h</DeclaredIn>
+			
+			<Declaration>+ (NSError *)sf_errorWithCode:(NSInteger)code</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>code</Name>
+					<Abstract type="html">the Slyce error code (e.g SFErrorMisuse)</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The created error object.</Abstract></ReturnValue>
+			<Anchor>//api/name/sf_errorWithCode:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/NSError/sf_message</TokenIdentifier>
+			<Abstract type="html">Return the message string related to the error code.</Abstract>
+			<DeclaredIn>NSError+Slyce.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)sf_message</Declaration>
+			
+			<ReturnValue><Abstract type="html">The user friendly message string.</Abstract></ReturnValue>
+			<Anchor>//api/name/sf_message</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

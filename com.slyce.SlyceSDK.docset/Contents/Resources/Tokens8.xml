@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/SFCameraViewDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/SFCameraViewDelegate</TokenIdentifier>
+			<Abstract type="html">The protocol by which the delegate is kept notified of SFCamera&apos;s operations and scan
+results.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didReceiveResults:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that 3D products for the image snapped
+have been found. The result is an NSDictionary representing some metadata and the matched 3D products in key-value pairs.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didReceiveResults:(NSDictionary *)results</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>results</Name>
+					<Abstract type="html">NSDictionary representing the matched 3D products and some metadata. Guranteed to be non-nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didReceiveResults:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didFinishWithItemDescription:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that an item description for the image snapped
+has been found.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithItemDescription:(NSDictionary *)itemDescription</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>itemDescription</Name>
+					<Abstract type="html">the NSDictionary representaton of the item description found. Can be empty in case no match has been found.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didFinishWithItemDescription:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didDetectBarcode:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that a barcode was matched.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SFBarcode</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didDetectBarcode:(SFBarcode *)barcode</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>barcode</Name>
+					<Abstract type="html">recognized barcode object. Guranteed to be non-nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didDetectBarcode:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didDetectImage:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that 2D products for the image from the current video
+frame have been found. The result is an NSDictionary representing a short info about the matched products and their contents in key-value pairs.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didDetectImage:(NSDictionary *)imageInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>imageInfo</Name>
+					<Abstract type="html">NSDictionary represeting a short info about the matched 2D products. Can
+be nil in case no match has been found.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didDetectImage:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didReceiveImageInfo:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that additional info for the previously recognized 2D
+products has been found. The result is an NSArray representing the additional products
+info in key-value pairs.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didReceiveImageInfo:(NSArray *)products</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>products</Name>
+					<Abstract type="html">NSArray represeting the 2D products found. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didReceiveImageInfo:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didProgressToStage:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate of the progress done in matching the image snapped by reporting the stage
+currently being processed.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didProgressToStage:(SFRequestStage)stage</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>stage</Name>
+					<Abstract type="html">enum representing the current recognition stage.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didProgressToStage:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didProgressToValue:withMessage:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate of the progress done in matching the image snapped by reporting a numeric value and
+informative message.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didProgressToValue:(CGFloat)value withMessage:(NSString *)message</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">a percentage from the whole search process (from 0 to 1).</Abstract>
+				</Parameter><Parameter>
+					<Name>message</Name>
+					<Abstract type="html">a short description of the current search stage.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didProgressToValue:withMessage:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didFailWithError:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that an error has occured while trying to fulfil
+some task of the 2D recognition engine (verification of credentials, sync with local storage,
+no response from the matching server, etc). This method is only called when using the Premium
+account.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didFailWithError:(NSError *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView`.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">the encountered scanning error.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didFailWithError:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraViewDidFinish:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that the Slyce 3D search has finished.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraViewDidFinish:(SFCameraView *)cameraView</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraViewDidFinish:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didSnapImage:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that an image object from the current video frame is ready.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didSnapImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">image representing the video frame captured when SFCameraView’s snap method was invoked.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didSnapImage:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didStartRequest:forImage:</TokenIdentifier>
+			<Abstract type="html">Informs the delegate the image matching process has started.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didStartRequest:(SFRequest *)request forImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>request</Name>
+					<Abstract type="html">the request fulfilling the image recognition.</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">the image being searched. The image is the video frame captured when
+SFCameraView&apos;s snap method was invoked.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didStartRequest:forImage:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:wasTappedInPoint:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that the scanner was touched in a specific point.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView wasTappedInPoint:(CGPoint)point</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>point</Name>
+					<Abstract type="html">point representing a touch location in the presenting view (the one that SFCameraView object was initialized with) coordinate system.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:wasTappedInPoint:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didFinishWith3DProducts:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that 3D products for the image snapped
+have been found. The result is an NSDictionary representing some metadata and the matched 3D products in key-value pairs. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; since 1.9. Use sfCameraView:didReceiveResults: instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didFinishWith3DProducts:(NSDictionary *)products</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>products</Name>
+					<Abstract type="html">NSDictionary representing the matched 3D products and some metadata. Guranteed to be non-nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didFinishWith3DProducts:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didRecognizeBarcode:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that a barcode was matched. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; since 1.9. Use sfCameraView:didDetectBarcode: instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SFBarcode</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didRecognizeBarcode:(SFBarcode *)barcode</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>barcode</Name>
+					<Abstract type="html">recognized barcode object. Guranteed to be non-nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didRecognizeBarcode:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didFinishWithEncodedString:and2DProductInfo:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that 2D products for the image from the current video
+frame have been found. The result is base64 encoded string representation of the products
+along with an additional NSDictionary representing a short info about the matched products
+and their contents in key-value pairs. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; since 1.9. Use sfCameraView:didDetectImage: instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithEncodedString:(NSString *)encodedString and2DProductInfo:(NSDictionary *)productInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>encodedString</Name>
+					<Abstract type="html">string representing the recognized 2D products in base64 format. Can be
+nil in case no match has been found.</Abstract>
+				</Parameter><Parameter>
+					<Name>productInfo</Name>
+					<Abstract type="html">NSDictionary represeting a short info about the matched 2D products. Can
+be nil in case no match has been found.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didFinishWithEncodedString:and2DProductInfo:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didFinishWithExtendedInfoFor2DProducts:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that additional info for the previously recognized 2D
+products has been found. The result is an NSArray representing the additional products
+info in key-value pairs. (&lt;b class=&quot;deprecated&quot;&gt;Deprecated:&lt;/b&gt;&lt;span class=&quot;deprecated&quot;&gt; since 1.9. Use sfCameraView:didReceiveImageInfo: instead.&lt;/span&gt;)</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithExtendedInfoFor2DProducts:(NSArray *)products</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>products</Name>
+					<Abstract type="html">NSArray represeting the 2D products found. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didFinishWithExtendedInfoFor2DProducts:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

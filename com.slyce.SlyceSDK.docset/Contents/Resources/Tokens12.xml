@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/SFRequestStage.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/SFRequestStage</TokenIdentifier>
+			<Abstract type="html">Enumeration for 3D recognition stages.</Abstract>
+			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFRequestStageSendingImage</TokenIdentifier>
+            <Abstract type="html">Image uploading stage.</Abstract>
+            <Declaration>SFRequestStageSendingImage</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="12"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFRequestStageAnalyzingImage</TokenIdentifier>
+            <Abstract type="html">Image recognition stage.</Abstract>
+            <Declaration>SFRequestStageAnalyzingImage</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="12"/>
+        </Token>
+        
+	</File>
+</Tokens>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFCameraView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFCameraView</TokenIdentifier>
+			<Abstract type="html">Provides an integral camera functionality</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldPauseScannerAfterRecognition:</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 2D detection.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldPauseScannerAfterRecognition</Declaration>
+			
+			
+			<Anchor>//api/name/shouldPauseScannerAfterRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/shouldPauseScannerAfterRecognition</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 2D detection.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldPauseScannerAfterRecognition</Declaration>
+			
+			
+			<Anchor>//api/name/shouldPauseScannerAfterRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/shouldPauseScannerAfterRecognition</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 2D detection.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldPauseScannerAfterRecognition</Declaration>
+			
+			
+			<Anchor>//api/name/shouldPauseScannerAfterRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldUseContinuousRecognition:</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognition</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/shouldUseContinuousRecognition</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognition</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/shouldUseContinuousRecognition</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognition</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setOptions:</TokenIdentifier>
+			<Abstract type="html">Options dictionary.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *options</Declaration>
+			
+			
+			<Anchor>//api/name/options</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/options</TokenIdentifier>
+			<Abstract type="html">Options dictionary.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *options</Declaration>
+			
+			
+			<Anchor>//api/name/options</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/options</TokenIdentifier>
+			<Abstract type="html">Options dictionary.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *options</Declaration>
+			
+			
+			<Anchor>//api/name/options</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The camera view delegate that will be notified of scan results.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SFCameraViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/delegate</TokenIdentifier>
+			<Abstract type="html">The camera view delegate that will be notified of scan results.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SFCameraViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/delegate</TokenIdentifier>
+			<Abstract type="html">The camera view delegate that will be notified of scan results.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SFCameraViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setPreviewLayer:</TokenIdentifier>
+			<Abstract type="html">The layer used to display the video capture on a given UIView.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer *previewLayer</Declaration>
+			
+			
+			<Anchor>//api/name/previewLayer</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/previewLayer</TokenIdentifier>
+			<Abstract type="html">The layer used to display the video capture on a given UIView.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer *previewLayer</Declaration>
+			
+			
+			<Anchor>//api/name/previewLayer</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/previewLayer</TokenIdentifier>
+			<Abstract type="html">The layer used to display the video capture on a given UIView.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer *previewLayer</Declaration>
+			
+			
+			<Anchor>//api/name/previewLayer</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/initWithSlyce:view:options:andDelegate:</TokenIdentifier>
+			<Abstract type="html">Initializes a new SFCameraView object.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/SFCameraViewDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (instancetype)initWithSlyce:(SFSlyce *)slyce view:(UIView *)view options:(NSDictionary *)options andDelegate:(id&lt;SFCameraViewDelegate&gt;)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>slyce</Name>
+					<Abstract type="html">The initialized Slyce object.</Abstract>
+				</Parameter><Parameter>
+					<Name>view</Name>
+					<Abstract type="html">The view on top of which this camera view will placed.</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">options dictionary (optional). Pass nil for no options.</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">Object that implements SFCameraViewDelegate protocol.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns an instance of SFCameraView.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithSlyce:view:options:andDelegate:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/startCamera</TokenIdentifier>
+			<Abstract type="html">Starts the video preview and processing frames.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didDetectImage:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didDetectBarcode:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)startCamera</Declaration>
+			
+			
+			<Anchor>//api/name/startCamera</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/stopCamera</TokenIdentifier>
+			<Abstract type="html">Stops the video preview and processing frames.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>- (void)stopCamera</Declaration>
+			
+			
+			<Anchor>//api/name/stopCamera</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/pauseCapture</TokenIdentifier>
+			<Abstract type="html">Stops processing frames temporarily.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>- (void)pauseCapture</Declaration>
+			
+			
+			<Anchor>//api/name/pauseCapture</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/resumeCapture</TokenIdentifier>
+			<Abstract type="html">Starts processing frames again.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>- (void)resumeCapture</Declaration>
+			
+			
+			<Anchor>//api/name/resumeCapture</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/turnFlash:</TokenIdentifier>
+			<Abstract type="html">Turns on/off the flash of the device.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>- (void)turnFlash:(BOOL)on</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>on</Name>
+					<Abstract type="html">A boolean representing the required state of the flash (YES = ON, NO = OFF).</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/turnFlash:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/snap</TokenIdentifier>
+			<Abstract type="html">Perform an image recognition for the current frame.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/SFCameraViewDelegate</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/cl/SFRequest</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)snap</Declaration>
+			
+			
+			<Anchor>//api/name/snap</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/focusAtPoint:</TokenIdentifier>
+			<Abstract type="html">Asks the scanner to focus the underlying camera to a specific point.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>- (void)focusAtPoint:(CGPoint)point</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>point</Name>
+					<Abstract type="html">The point to focus at.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/focusAtPoint:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

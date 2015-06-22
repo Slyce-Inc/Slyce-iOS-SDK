@@ -1,0 +1,643 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SFCameraViewController Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SlyceSDK </a></h1>
+				<a id="developerHome" href="../index.html">Slyce Inc</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SFCameraViewController Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/cameraView">&nbsp;&nbsp;&nbsp;&nbsp;cameraView</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/options">&nbsp;&nbsp;&nbsp;&nbsp;options</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithSlyce:resourcesBundle:options:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSlyce:resourcesBundle:options:andDelegate:</option>
+	
+	<option value="//api/name/presentFromViewController:usingAnimation:">&nbsp;&nbsp;&nbsp;&nbsp;- presentFromViewController:usingAnimation:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initialization">Initialization</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Presentation">Presentation</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cameraView">cameraView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/options">options</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSlyce:resourcesBundle:options:andDelegate:">initWithSlyce:resourcesBundle:options:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentFromViewController:usingAnimation:">presentFromViewController:usingAnimation:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SFCameraViewController Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SFCameraViewController Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIViewController</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SFCameraViewController.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Provides an integrated <code>UIViewController</code> with all the Slyce SDK functionalities.</p>
+
+<p>The Slyce SDK may be utilized out of the box as a turnkey solution. Using
+SFCameraViewController, the SDK will present the UI of the
+camera screen as well as progress indication during the recognition phase. Using this view
+controller, a developer will a continuous
+barcodes/2D(Premium) scanning, slylized buttons for toggling the flash ON/OFF, opening an
+image from the Photo Library, as well as a
+possibility to
+manually send an image from Photo Library / video preview for a 3D/2D(Premium) recognition.
+The developer has to conform to
+<a href="../Protocols/SFCameraViewControllerDelegate.html">SFCameraViewControllerDelegate</a> protocol to get the results.</p><div class="note"><p><strong>Note:</strong> This mode of operation is mostly used when the user wants to utilize the Slyce SDK along
+with the Slyce UI.</p></div><div class="note"><p><strong>Note:</strong> One can also use his own resource images instead of the SDK&rsquo;s built-in resource bundle,
+in case the developer wants to match
+the look and feel of his own app.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/options">&nbsp;&nbsp;options</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cameraView">&nbsp;&nbsp;cameraView</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Initialization" name="task_Initialization"></a>
+						<h3 class="subsubtitle task-title">Initialization</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSlyce:resourcesBundle:options:andDelegate:">&ndash;&nbsp;initWithSlyce:resourcesBundle:options:andDelegate:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Presentation" name="task_Presentation"></a>
+						<h3 class="subsubtitle task-title">Presentation</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/presentFromViewController:usingAnimation:">&ndash;&nbsp;presentFromViewController:usingAnimation:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cameraView" title="cameraView"></a>
+	<h3 class="subsubtitle method-title">cameraView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A handle to the underlying camera/scanner view used.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (strong, nonatomic, readonly) SFCameraView *cameraView</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this property if you need to tweak the SDK&rsquo;s scanner functionalities or
+perform camera&rsquo;s specific operations, like turn the flash
+on/off, snap an image etc. SFCameraViewController is started along with the continuous
+barcodes/2D(premium) recognition by default. If you do
+not wish to use a continuous recognition, set <a href="../Classes/SFCameraView.html#//api/name/shouldUseContinuousRecognition">[SFCameraView shouldUseContinuousRecognition]</a>
+property of SFCameraView&rsquo;s object to <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The camera view controller delegate that will be notified of scan results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (weak, nonatomic) id&lt;SFCameraViewControllerDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/options" title="options"></a>
+	<h3 class="subsubtitle method-title">options</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Options dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *options</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this dictionary to pass properties to Slyce servers.
+For example: @{@&ldquo;storeID&rdquo; : @&ldquo;1234&rdquo;, @&ldquo;state&rdquo; : @&ldquo;CA&rdquo;}. Can be <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSlyce:resourcesBundle:options:andDelegate:" title="initWithSlyce:resourcesBundle:options:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">initWithSlyce:resourcesBundle:options:andDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new SFCameraViewController object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithSlyce:(SFSlyce *)<em>slyce</em> resourcesBundle:(NSBundle *)<em>resourcesBundle</em> options:(NSDictionary *)<em>options</em> andDelegate:(id&lt;SFCameraViewControllerDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>slyce</em></dt>
+			<dd><p>The initialized Slyce object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourcesBundle</em></dt>
+			<dd><p>An <em>optional</em> bundle of resources to use as assets for the current view
+controller. In case you wish to use the built-in
+SDK&rsquo;s assets, simply pass <code>nil</code> to this parameter.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p><a href="#//api/name/options">options</a> dictionary (optional). Pass <code>nil</code> for no <a href="#//api/name/options">options</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Object that implements <a href="../Protocols/SFCameraViewControllerDelegate.html">SFCameraViewControllerDelegate</a> protocol.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an instance of SFCameraViewController.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method initializes SFCameraViewController object. Depending on you client ID,
+it will be initialized for Standard/Premium SDK&rsquo;s features. If you wish to use Premium
+features, make sure your client ID is registered for Premium features.</p>
+
+<p>Use this method to prepare the Slyce&rsquo;s integral view controller. You may also provide you own
+bundle of resources. The size and name
+of the assets
+you provide must follow the guidelines in the docs to be presented correctly by the SDK.
+In case you wish to use the built-in SDK&rsquo;s assets, simply pass <code>nil</code> to this parameter.</p><div class="note"><p><strong>Note:</strong> This method only initiliazes the view controller object and does NOT start
+the video  frames processing nor the video preview
+at all, until the view controller is actually presented via
+<a href="#//api/name/presentFromViewController:usingAnimation:">presentFromViewController:usingAnimation:</a> method.</p></div><div class="note"><p><strong>Note:</strong> Initializing SFCameraViewController using this method will prepare the view controller
+for a continuous and manual 3D recognition.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/SFCameraViewControllerDelegate.html">SFCameraViewControllerDelegate</a> protocol</p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/presentFromViewController:usingAnimation:" title="presentFromViewController:usingAnimation:"></a>
+	<h3 class="subsubtitle method-title">presentFromViewController:usingAnimation:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Presents the SFCameraViewController using animation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)presentFromViewController:(UIViewController *)<em>fromViewController</em> usingAnimation:(SFAnimationType)<em>animationType</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromViewController</em></dt>
+			<dd><p>The view controller from which SFCameraViewController is presented.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animationType</em></dt>
+			<dd><p>Presentation animation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this method to present the camera view controller. You can choose among
+predefined animation types the presentation animation that will best fit to your app style.
+For the available animation types, refer to <a href="../Constants/SFAnimationType.html">SFAnimationType</a> enum.</p><div class="note"><p><strong>Note:</strong> This method may look a bit different to the usual iOS native view controllers'
+presentation technique. It is due to the fact
+this method encapsulted all the operations needed to present a view controller using a custom
+transition in iOS. Please refer to the
+code below.</p>
+
+<p><pre><code>
+SFCameraViewController *cameraVC = [[SFCameraViewController alloc] initWithSlyce:self.slyce resourcesBundle:nil andDelegate:self];
+[cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom];
+</code></pre></p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-06-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

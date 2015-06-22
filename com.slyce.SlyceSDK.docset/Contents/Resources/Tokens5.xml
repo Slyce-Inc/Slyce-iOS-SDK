@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFSlyce.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFSlyce</TokenIdentifier>
+			<Abstract type="html">Main object used to initialize the Slyce SDK.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFSlyce/sharedInstance</TokenIdentifier>
+			<Abstract type="html">Initializes and returns a singleton instance of the SDK.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>+ (id)sharedInstance</Declaration>
+			
+			<ReturnValue><Abstract type="html">a shared SFSlyce instance.</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedInstance</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/openWithClientID:error:</TokenIdentifier>
+			<Abstract type="html">Initializes a new SFSlyce object.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)openWithClientID:(NSString *)clientID error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>clientID</Name>
+					<Abstract type="html">the client ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">the pointer to the error object, if any.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if it succeeded, NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/openWithClientID:error:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setClientID:</TokenIdentifier>
+			<Abstract type="html">The client ID used to initialize the SFSlyce object.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *clientID</Declaration>
+			
+			
+			<Anchor>//api/name/clientID</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/clientID</TokenIdentifier>
+			<Abstract type="html">The client ID used to initialize the SFSlyce object.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *clientID</Declaration>
+			
+			
+			<Anchor>//api/name/clientID</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/clientID</TokenIdentifier>
+			<Abstract type="html">The client ID used to initialize the SFSlyce object.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *clientID</Declaration>
+			
+			
+			<Anchor>//api/name/clientID</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setIsPremiumUser:</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can use premium features of the SDK.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isPremiumUser</Declaration>
+			
+			
+			<Anchor>//api/name/isPremiumUser</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/isPremiumUser</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can use premium features of the SDK.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isPremiumUser</Declaration>
+			
+			
+			<Anchor>//api/name/isPremiumUser</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/isPremiumUser</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can use premium features of the SDK.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isPremiumUser</Declaration>
+			
+			
+			<Anchor>//api/name/isPremiumUser</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setIs2DSearchEnabled:</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can ask the SDK to perform 2D searches.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL is2DSearchEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/is2DSearchEnabled</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/is2DSearchEnabled</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can ask the SDK to perform 2D searches.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL is2DSearchEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/is2DSearchEnabled</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/is2DSearchEnabled</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can ask the SDK to perform 2D searches.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL is2DSearchEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/is2DSearchEnabled</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setVibrate:</TokenIdentifier>
+			<Abstract type="html">If set, the device will vibrate when the a barcode/2D item auto-matched.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL vibrate</Declaration>
+			
+			
+			<Anchor>//api/name/vibrate</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/vibrate</TokenIdentifier>
+			<Abstract type="html">If set, the device will vibrate when the a barcode/2D item auto-matched.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL vibrate</Declaration>
+			
+			
+			<Anchor>//api/name/vibrate</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/vibrate</TokenIdentifier>
+			<Abstract type="html">If set, the device will vibrate when the a barcode/2D item auto-matched.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL vibrate</Declaration>
+			
+			
+			<Anchor>//api/name/vibrate</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setSound:</TokenIdentifier>
+			<Abstract type="html">If set, the device will play a sound when the a barcode/2D item auto-matched.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL sound</Declaration>
+			
+			
+			<Anchor>//api/name/sound</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/sound</TokenIdentifier>
+			<Abstract type="html">If set, the device will play a sound when the a barcode/2D item auto-matched.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL sound</Declaration>
+			
+			
+			<Anchor>//api/name/sound</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/sound</TokenIdentifier>
+			<Abstract type="html">If set, the device will play a sound when the a barcode/2D item auto-matched.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL sound</Declaration>
+			
+			
+			<Anchor>//api/name/sound</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

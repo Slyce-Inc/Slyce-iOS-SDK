@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFBarcode.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFBarcode</TokenIdentifier>
+			<Abstract type="html">Class representing a barcode</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFBarcode/setType:</TokenIdentifier>
+			<Abstract type="html">The barcode result type.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) SFBarcodeType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFBarcode/type</TokenIdentifier>
+			<Abstract type="html">The barcode result type.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) SFBarcodeType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFBarcode/type</TokenIdentifier>
+			<Abstract type="html">The barcode result type.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) SFBarcodeType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFBarcode/setTypeString:</TokenIdentifier>
+			<Abstract type="html">The barcode result type in a string representation.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *typeString</Declaration>
+			
+			
+			<Anchor>//api/name/typeString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFBarcode/typeString</TokenIdentifier>
+			<Abstract type="html">The barcode result type in a string representation.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *typeString</Declaration>
+			
+			
+			<Anchor>//api/name/typeString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFBarcode/typeString</TokenIdentifier>
+			<Abstract type="html">The barcode result type in a string representation.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *typeString</Declaration>
+			
+			
+			<Anchor>//api/name/typeString</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFBarcode/setText:</TokenIdentifier>
+			<Abstract type="html">The UTF-8 encoded string representing the scan result.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFBarcode/text</TokenIdentifier>
+			<Abstract type="html">The UTF-8 encoded string representing the scan result.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFBarcode/text</TokenIdentifier>
+			<Abstract type="html">The UTF-8 encoded string representing the scan result.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSString *text</Declaration>
+			
+			
+			<Anchor>//api/name/text</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFBarcode/initWithType:andText:</TokenIdentifier>
+			<Abstract type="html">Designated initializer.</Abstract>
+			<DeclaredIn>SFBarcode.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithType:(SFBarcodeType)type andText:(NSString *)text</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>type</Name>
+					<Abstract type="html">Barcode type.</Abstract>
+				</Parameter><Parameter>
+					<Name>text</Name>
+					<Abstract type="html">Barcode string.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">instance of SFBarcode.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithType:andText:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

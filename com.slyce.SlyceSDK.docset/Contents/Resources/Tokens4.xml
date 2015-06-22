@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SFRequest.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SFRequest</TokenIdentifier>
+			<Abstract type="html">Provides a way to perform visual search without using SDK’s integral camera functionality.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/setRequestID:</TokenIdentifier>
+			<Abstract type="html">The unique identifier.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *requestID</Declaration>
+			
+			
+			<Anchor>//api/name/requestID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/requestID</TokenIdentifier>
+			<Abstract type="html">The unique identifier.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *requestID</Declaration>
+			
+			
+			<Anchor>//api/name/requestID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRequest/requestID</TokenIdentifier>
+			<Abstract type="html">The unique identifier.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *requestID</Declaration>
+			
+			
+			<Anchor>//api/name/requestID</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/setOptions:</TokenIdentifier>
+			<Abstract type="html">Options dictionary.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *options</Declaration>
+			
+			
+			<Anchor>//api/name/options</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/options</TokenIdentifier>
+			<Abstract type="html">Options dictionary.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *options</Declaration>
+			
+			
+			<Anchor>//api/name/options</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRequest/options</TokenIdentifier>
+			<Abstract type="html">Options dictionary.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *options</Declaration>
+			
+			
+			<Anchor>//api/name/options</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/setDelegate:</TokenIdentifier>
+			<Abstract type="html">The request delegate that will be notified of the results.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SFRequestDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/delegate</TokenIdentifier>
+			<Abstract type="html">The request delegate that will be notified of the results.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SFRequestDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRequest/delegate</TokenIdentifier>
+			<Abstract type="html">The request delegate that will be notified of the results.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;SFRequestDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/initWithSlyce:options:andDelegate:</TokenIdentifier>
+			<Abstract type="html">Initializes a new SFRequest object.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (instancetype)initWithSlyce:(SFSlyce *)slyce options:(NSDictionary *)options andDelegate:(id&lt;SFRequestDelegate&gt;)delegate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>slyce</Name>
+					<Abstract type="html">the Slyce object.</Abstract>
+				</Parameter><Parameter>
+					<Name>options</Name>
+					<Abstract type="html">options dictionary (optional). Pass nil for no options.</Abstract>
+				</Parameter><Parameter>
+					<Name>delegate</Name>
+					<Abstract type="html">object that implements SFRequestDelegate protocol.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns an instance of SFRequest.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithSlyce:options:andDelegate:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImage:</TokenIdentifier>
+			<Abstract type="html">Used to retrieve a payload describing the description of the product in the image, along with optional parameters.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImageURL:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)getItemDescriptionFromImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">the image object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getItemDescriptionFromImage:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImageURL:</TokenIdentifier>
+			<Abstract type="html">Used to retrieve a payload describing the description of the product in the URL to the image provided, along with optional parameters.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImage:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)getItemDescriptionFromImageURL:(NSURL *)imageURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageURL</Name>
+					<Abstract type="html">the URL to the image.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getItemDescriptionFromImageURL:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImage:fromMerchantIDs:</TokenIdentifier>
+			<Abstract type="html">Used to asynchrounously retrieve a list of products from the image passed. May also provide an array of merchant IDs to narrow
+the search to specific merchants.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImageURL:fromMerchantIDs:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)getProductsFromImage:(UIImage *)image fromMerchantIDs:(NSArray *)merchantIDs</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The image object to recognize.</Abstract>
+				</Parameter><Parameter>
+					<Name>merchantIDs</Name>
+					<Abstract type="html">An array of merchant IDs to match (optional). Pass nil to search all the supported merchants.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getProductsFromImage:fromMerchantIDs:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImageURL:fromMerchantIDs:</TokenIdentifier>
+			<Abstract type="html">Used to asynchrounously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
+to narrow the search to specific merchants.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImage:fromMerchantIDs:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)getProductsFromImageURL:(NSURL *)imageURL fromMerchantIDs:(NSArray *)merchantIDs</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageURL</Name>
+					<Abstract type="html">The URL to the image to recognize.</Abstract>
+				</Parameter><Parameter>
+					<Name>merchantIDs</Name>
+					<Abstract type="html">An array of merchant IDs to match (optional). Pass nil to search all the supported merchants.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getProductsFromImageURL:fromMerchantIDs:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/recognizeSimilarProductsFromImage:</TokenIdentifier>
+			<Abstract type="html">A Premium method to asynchrounsly retrieve 2D and 3D products from the image passed.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/recognizeSimilarProductsFromImageURL:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImage:fromMerchantIDs:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)recognizeSimilarProductsFromImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>image</Name>
+					<Abstract type="html">The image object to recognize.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/recognizeSimilarProductsFromImage:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/recognizeSimilarProductsFromImageURL:</TokenIdentifier>
+			<Abstract type="html">A Premium method to asynchrounsly retrieve 2D and 3D products from the URL to the image.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/recognizeSimilarProductsFromImage:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImage:fromMerchantIDs:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)recognizeSimilarProductsFromImageURL:(NSURL *)imageURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageURL</Name>
+					<Abstract type="html">The URL to the image to recognize.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/recognizeSimilarProductsFromImageURL:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/cancel</TokenIdentifier>
+			<Abstract type="html">Cancels the current request.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>- (void)cancel</Declaration>
+			
+			
+			<Anchor>//api/name/cancel</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getMerchantIDs</TokenIdentifier>
+			<Abstract type="html">Method to get the IDs of all the supported merchants.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>- (void)getMerchantIDs</Declaration>
+			
+			
+			<Anchor>//api/name/getMerchantIDs</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

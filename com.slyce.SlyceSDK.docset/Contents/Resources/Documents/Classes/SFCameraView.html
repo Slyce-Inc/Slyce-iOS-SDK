@@ -1,0 +1,1078 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SFCameraView Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SlyceSDK </a></h1>
+				<a id="developerHome" href="../index.html">Slyce Inc</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SFCameraView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/options">&nbsp;&nbsp;&nbsp;&nbsp;options</option>
+	
+	<option value="//api/name/previewLayer">&nbsp;&nbsp;&nbsp;&nbsp;previewLayer</option>
+	
+	<option value="//api/name/shouldPauseScannerAfterRecognition">&nbsp;&nbsp;&nbsp;&nbsp;shouldPauseScannerAfterRecognition</option>
+	
+	<option value="//api/name/shouldUseContinuousRecognition">&nbsp;&nbsp;&nbsp;&nbsp;shouldUseContinuousRecognition</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/focusAtPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- focusAtPoint:</option>
+	
+	<option value="//api/name/initWithSlyce:view:options:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSlyce:view:options:andDelegate:</option>
+	
+	<option value="//api/name/pauseCapture">&nbsp;&nbsp;&nbsp;&nbsp;- pauseCapture</option>
+	
+	<option value="//api/name/resumeCapture">&nbsp;&nbsp;&nbsp;&nbsp;- resumeCapture</option>
+	
+	<option value="//api/name/snap">&nbsp;&nbsp;&nbsp;&nbsp;- snap</option>
+	
+	<option value="//api/name/startCamera">&nbsp;&nbsp;&nbsp;&nbsp;- startCamera</option>
+	
+	<option value="//api/name/stopCamera">&nbsp;&nbsp;&nbsp;&nbsp;- stopCamera</option>
+	
+	<option value="//api/name/turnFlash:">&nbsp;&nbsp;&nbsp;&nbsp;- turnFlash:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties">Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initialization">Initialization</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Video Capture">Video Capture</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Session State">Session State</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_General">General</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/options">options</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previewLayer">previewLayer</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldPauseScannerAfterRecognition">shouldPauseScannerAfterRecognition</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldUseContinuousRecognition">shouldUseContinuousRecognition</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/focusAtPoint:">focusAtPoint:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSlyce:view:options:andDelegate:">initWithSlyce:view:options:andDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pauseCapture">pauseCapture</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resumeCapture">resumeCapture</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/snap">snap</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startCamera">startCamera</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopCamera">stopCamera</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/turnFlash:">turnFlash:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SFCameraView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SFCameraView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SFCameraView.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Provides an integral camera functionality</p>
+
+<p>Set of methods that allow developers to perform continuous barcode detection, continuous 2D visual recognition (Premium feature),
+taking a <a href="#//api/name/snap">snap</a>, operating the flash, performing focus etc.</p><div class="warning"><p><strong>Warning:</strong> SFCameraView does NOT provide any UI, hence, it should be used in a predefined UIView.</p></div><div class="note"><p><strong>Note:</strong> This mode of operation is mostly used when the user wants to use his own UI with the SDK’s capture capabilities.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Properties" name="task_Properties"></a>
+						<h3 class="subsubtitle task-title">Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldPauseScannerAfterRecognition">&nbsp;&nbsp;shouldPauseScannerAfterRecognition</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldUseContinuousRecognition">&nbsp;&nbsp;shouldUseContinuousRecognition</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/options">&nbsp;&nbsp;options</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/previewLayer">&nbsp;&nbsp;previewLayer</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Initialization" name="task_Initialization"></a>
+						<h3 class="subsubtitle task-title">Initialization</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithSlyce:view:options:andDelegate:">&ndash;&nbsp;initWithSlyce:view:options:andDelegate:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Video Capture" name="task_Video Capture"></a>
+						<h3 class="subsubtitle task-title">Video Capture</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startCamera">&ndash;&nbsp;startCamera</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopCamera">&ndash;&nbsp;stopCamera</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Session State" name="task_Session State"></a>
+						<h3 class="subsubtitle task-title">Session State</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pauseCapture">&ndash;&nbsp;pauseCapture</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resumeCapture">&ndash;&nbsp;resumeCapture</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="General" name="task_General"></a>
+						<h3 class="subsubtitle task-title">General</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/turnFlash:">&ndash;&nbsp;turnFlash:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/snap">&ndash;&nbsp;snap</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/focusAtPoint:">&ndash;&nbsp;focusAtPoint:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The camera view delegate that will be notified of scan results.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;SFCameraViewDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/options" title="options"></a>
+	<h3 class="subsubtitle method-title">options</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Options dictionary.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSDictionary *options</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this dictionary to pass properties to Slyce servers.
+For example: @{@&ldquo;storeID&rdquo; : @&ldquo;1234&rdquo;, @&ldquo;state&rdquo; : @&ldquo;CA&rdquo;}. Can be <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/previewLayer" title="previewLayer"></a>
+	<h3 class="subsubtitle method-title">previewLayer</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The layer used to display the video capture on a given UIView.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer *previewLayer</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldPauseScannerAfterRecognition" title="shouldPauseScannerAfterRecognition"></a>
+	<h3 class="subsubtitle method-title">shouldPauseScannerAfterRecognition</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A property to enable/disable pausing the auto scanner after a successful 2D detection.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldPauseScannerAfterRecognition</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Setting this property to <code>NO</code> will let the auto scanner continuously recognize products.
+Default is <code>YES</code>, meaning the auto scanner will pause after the detection. It&rsquo;s up to the user then to resume it by calling resumeCapture:.
+This property has no effect if <a href="#//api/name/shouldUseContinuousRecognition">shouldUseContinuousRecognition</a> was set to <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldUseContinuousRecognition" title="shouldUseContinuousRecognition"></a>
+	<h3 class="subsubtitle method-title">shouldUseContinuousRecognition</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A property to enable/disable continuous recognition functionality.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldUseContinuousRecognition</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this property to toggle the continuous 2D/3D recognition. Setting this property
+to <code>NO</code> will stop recognizing barcodes in a Regular mode and will stop recognizing 2D products
+and barcodes in Premium mode.
+Default is <code>YES</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/focusAtPoint:" title="focusAtPoint:"></a>
+	<h3 class="subsubtitle method-title">focusAtPoint:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the scanner to focus the underlying camera to a specific point.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)focusAtPoint:(CGPoint)<em>point</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>point</em></dt>
+			<dd><p>The point to focus at.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method will simply focus the camera at the passed point.</p><div class="note"><p><strong>Note:</strong> <em>An example use case</em>: Focusing at the point the user tapped.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithSlyce:view:options:andDelegate:" title="initWithSlyce:view:options:andDelegate:"></a>
+	<h3 class="subsubtitle method-title">initWithSlyce:view:options:andDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes a new <code>SFCameraView</code> object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithSlyce:(SFSlyce *)<em>slyce</em> view:(UIView *)<em>view</em> options:(NSDictionary *)<em>options</em> andDelegate:(id&lt;SFCameraViewDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>slyce</em></dt>
+			<dd><p>The initialized Slyce object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>view</em></dt>
+			<dd><p>The view on top of which this camera view will placed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>options</em></dt>
+			<dd><p><a href="#//api/name/options">options</a> dictionary (optional). Pass <code>nil</code> for no <a href="#//api/name/options">options</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Object that implements <a href="../Protocols/SFCameraViewDelegate.html">SFCameraViewDelegate</a> protocol.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an instance of SFCameraView.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this method to initialize the SDK&rsquo;s camera functionalities and place the video preview in the view hierarchy beneath
+the view passed as a param to this method. One of the use cases of the camera&rsquo;s functionalities is a continuous barcode scanning.
+If you do not wish to get notified about barcodes detection, set <a href="#//api/name/shouldUseContinuousRecognition">shouldUseContinuousRecognition</a> property to <code>NO</code>.</p><div class="note"><p><strong>Note:</strong> This method does NOT start the video preview. Use <a href="#//api/name/startCamera">startCamera</a> to start the video frames processing.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/SFCameraViewDelegate.html">SFCameraViewDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pauseCapture" title="pauseCapture"></a>
+	<h3 class="subsubtitle method-title">pauseCapture</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops processing frames temporarily.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)pauseCapture</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The scanner keeps receiving frames from the camera, but they are no more processed.
+This means the video capture layer keeps being refreshed, but the session can no more report
+any scan result.</p>
+
+<p>If the video was already paused, this method does nothing.</p><div class="note"><p><strong>Note:</strong> This method useful if you want to display an help section on-top of the scanner while
+making sure you will not be notified with unexpected scan results.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resumeCapture" title="resumeCapture"></a>
+	<h3 class="subsubtitle method-title">resumeCapture</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts processing frames again.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resumeCapture</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Call this method to resume processing video frames again after a call to <a href="#//api/name/pauseCapture">pauseCapture</a>.
+If the video was already resumed, this method does nothing.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/snap" title="snap"></a>
+	<h3 class="subsubtitle method-title">snap</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Perform an image recognition for the current frame.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)snap</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use this method to ask the scanner to grab the current video frame and match it.
+The grabbing operation is done asynchronously due to a rendering of a video frame to an image
+object. Once the image is rendered and
+ready, it is returned via a delegate method <a href="../Protocols/SFCameraViewDelegate.html#//api/name/sfCameraView:didStartRequest:forImage:">[SFCameraViewDelegate sfCameraView:didStartRequest:forImage:]</a>.</p><div class="note"><p><strong>Note:</strong> Calling this method again before the previous image was matched, will create a
+new image recognition request for the new video frame. As the image is ready, it will be returned via a delegate method <a href="../Protocols/SFCameraViewDelegate.html#//api/name/sfCameraView:didSnapImage:">[SFCameraViewDelegate sfCameraView:didSnapImage:]</a>.
+The request created for this image will be returned via a delegate method <a href="../Protocols/SFCameraViewDelegate.html#//api/name/sfCameraView:didStartRequest:forImage:">[SFCameraViewDelegate sfCameraView:didStartRequest:forImage:]</a>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/SFCameraViewDelegate.html">SFCameraViewDelegate</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/SFRequest.html">SFRequest</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startCamera" title="startCamera"></a>
+	<h3 class="subsubtitle method-title">startCamera</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts the video preview and processing frames.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startCamera</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is pre-requisite so that the Slyce scanner can start receiving and processing
+camera frames. The type of the processing depends on the SFCamera object initialization:</p>
+
+<p>If it was initialized using slyce object containing Premium client ID,
+startCamera will trigger 2D and barcodes continuous recognition. In case of a match, the <a href="#//api/name/delegate">delegate</a> will be
+notified via sfCameraView:didDetectImage: or sfCameraView:didDetectBarcode:.</p>
+
+<p>If it was initialized using a Standard client ID, startCamera will trigger only barcodes continuous
+recognition. In case of a match, the <a href="#//api/name/delegate">delegate</a> will be notified via sfCameraView:didDetectBarcode:.</p>
+
+<p>If the video was already started, this method does nothing.</p><div class="warning"><p><strong>Warning:</strong> As video frames processing is a CPU consuming operation, remember to stop the camera by using
+<a href="#//api/name/stopCamera">stopCamera</a> method when the video is no longer visible to the user. If the video should be visible without
+the actual recognition process, use <a href="#//api/name/pauseCapture">pauseCapture</a> method instead.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/SFCameraViewDelegate.html#//api/name/sfCameraView:didDetectImage:">[SFCameraViewDelegate sfCameraView:didDetectImage:]</a></p></code></li>
+			
+			<li><code><p><a href="../Protocols/SFCameraViewDelegate.html#//api/name/sfCameraView:didDetectBarcode:">[SFCameraViewDelegate sfCameraView:didDetectBarcode:]</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopCamera" title="stopCamera"></a>
+	<h3 class="subsubtitle method-title">stopCamera</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops the video preview and processing frames.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopCamera</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method stops the video preview. Hence, video frames will no longer be processed.
+If the video was not previously started, this method does nothing.</p><div class="warning"><p><strong>Warning:</strong> You must always stop the camera once done to release underlying camera resources.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/turnFlash:" title="turnFlash:"></a>
+	<h3 class="subsubtitle method-title">turnFlash:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Turns on/off the flash of the device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)turnFlash:(BOOL)<em>on</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>on</em></dt>
+			<dd><p>A boolean representing the required state of the flash (YES = ON, NO = OFF).</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-06-14)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C0E41BCB-DB3C-4AE4-96FF-7FDF56A0B7AC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SlyceSDKDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0D0140F45900258E13937FF84CA97B95BDFB2731</key>
+		<string>https://github.com/drivetrain/foundation_ios_sdk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SlyceSDKDemo/SlyceSDKDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0D0140F45900258E13937FF84CA97B95BDFB2731</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/drivetrain/foundation_ios_sdk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0D0140F45900258E13937FF84CA97B95BDFB2731</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0D0140F45900258E13937FF84CA97B95BDFB2731</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SlyceSDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>
