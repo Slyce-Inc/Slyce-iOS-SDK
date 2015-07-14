@@ -74,7 +74,7 @@
 - (instancetype)initWithSlyce:(SFSlyce *)slyce options:(NSDictionary *)options andDelegate:(id<SFRequestDelegate>)delegate;
 
 ///---------------------------------------------------------------------------------------
-/// @name Standard methods
+/// @name Product Search
 ///---------------------------------------------------------------------------------------
 
 /*!
@@ -94,10 +94,11 @@
 
 /*!
  *  @method
- *  @brief Used to retrieve a payload describing the description of the product in the URL to the image provided, along with optional parameters.
+ *  @brief Used to asynchrounously retrieve a list of products from URL to the image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass `nil`.
  *
- *  @discussion This method will ask the SDK to asynchronously recognize the image in the URL passed and return an `NSDictionary` representing the 
- *  description of the item matched.
+ *  @discussion The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+ *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. 2D match is possible for Premium and 2D-enabled users only. In case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
+ *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
  *
  *  @param imageURL the URL to the image.
  *
@@ -109,11 +110,12 @@
 
 /*!
  *  @method
- *  @brief Used to asynchrounously retrieve a list of products from the image passed. May also provide an array of merchant IDs to narrow
- *  the search to specific merchants.
+ *  @brief Used to asynchrounously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass `nil`.
  *
- *  @discussion Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
- *  will be notified via the SFRequestDelegate object. For more information, see the reference for SFRequestDelegate class.
+ *  @discussion  
+ *  The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+ *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. 2D match is possible for Premium and 2D-enabled users only. In case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
+ *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
  *
  *  @param image The image object to recognize.
  *  @param merchantIDs An array of merchant IDs to match (optional). Pass nil to search all the supported merchants.
@@ -121,11 +123,11 @@
  *  @note Another way to get all the supported merchants is using a convinient method getMerchantIDs. You can pass the return array of this
  *  method as a param to the current method.
  *
- *  @see getProductsFromImageURL:fromMerchantIDs:
+ *  @see getProductsFromImageURL:merchantIDs:
  *  @see SFRequestDelegate
  */
 
-- (void)getProductsFromImage:(UIImage *)image fromMerchantIDs:(NSArray *)merchantIDs;
+- (void)getProductsFromImage:(UIImage *)image merchantIDs:(NSArray *)merchantIDs;
 
 /*!
  *  @method
@@ -141,67 +143,11 @@
  *  @note Another way to get all the supported merchants is using a convinient method getMerchantIDs. You can pass the return array of this
  *  method as a param to the current method.
  *
- *  @see getProductsFromImage:fromMerchantIDs:
+ *  @see getProductsFromImage:merchantIDs:
  *  @see SFRequestDelegate
  */
 
-- (void)getProductsFromImageURL:(NSURL *)imageURL fromMerchantIDs:(NSArray *)merchantIDs;
-
-///---------------------------------------------------------------------------------------
-/// @name Premium methods
-///---------------------------------------------------------------------------------------
-
-/*!
- *  @method
- *  @brief A Premium method to asynchrounsly retrieve 2D and 3D products from the image passed.
- *
- *  @discussion This method is a Premium feature. Use this method if you are interested in retrieving a 2D product along with 3D products 
- *  from the SDK. 2D visual recognition is possible if the SFSlyce object was initialized using client ID that supports premium features.
- *  Otherwise, the delegate will be notified via [SFRequestDelegate sfRequest:didFailWithError:] with an SFErrorNotPremium error (In case of a success, the 
- *  delegate won't be notified).
- *
- *  The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via 
- *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. In
- *  case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
- *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
- *
- *  @param image The image object to recognize.
- *
- *  @note Another way to get all the supported merchants is using a convenient method getMerchantIDs. You can pass the return array of this
- *  method as a param to the current method.
- *
- *  @see recognizeSimilarProductsFromImageURL:
- *  @see getProductsFromImage:fromMerchantIDs:
- *  @see SFRequestDelegate
- */
-
-- (void)recognizeSimilarProductsFromImage:(UIImage *)image;
-
-/*!
- *  @method
- *  @brief A Premium method to asynchrounsly retrieve 2D and 3D products from the URL to the image.
- *
- *  @discussion This method is a Premium feature. Use this method if you are interested in retrieving a 2D product along with 3D products
- *  from the SDK. 2D visual recognition is possible if the SFSlyce object was initialized using client ID that supports premium features.
- *  Otherwise, the delegate will be notified via [SFRequestDelegate sfRequest:didFailWithError:] with an SFErrorNotPremium error (In case of a success, the 
- *  delegate won't be notified).
- *
- *  The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
- *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. In
- *  case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
- *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
- *
- *  @param imageURL The URL to the image to recognize.
- *
- *  @note Another way to get all the supported merchants is using the convenient method getMerchantIDs. You can pass the return array of this
- *  method as a param to the current method.
- *
- *  @see recognizeSimilarProductsFromImage:
- *  @see getProductsFromImage:fromMerchantIDs:
- *  @see SFRequestDelegate
- */
-
-- (void)recognizeSimilarProductsFromImageURL:(NSURL *)imageURL;
+- (void)getProductsFromImageURL:(NSURL *)imageURL merchantIDs:(NSArray *)merchantIDs;
 
 ///---------------------------------------------------------------------------------------
 /// @name Miscellaneous
@@ -226,11 +172,66 @@
  *  @method
  *  @brief Method to get the IDs of all the supported merchants.
  *
- *  @discussion Used to asynchronously retrieve a list of all merchant IDs that can be used with getProductsFromImage:fromMerchantIDs: and
- *  getProductsFromImageURL:fromMerchantIDs: methods.
+ *  @discussion Used to asynchronously retrieve a list of all merchant IDs that can be used with getProductsFromImage:merchantIDs: and
+ *  getProductsFromImageURL:merchantIDs: methods.
  *
  */
 
 - (void)getMerchantIDs;
+
+///---------------------------------------------------------------------------------------
+/// @name Deprecated
+///---------------------------------------------------------------------------------------
+
+/*!
+ *  @method
+ *  @brief A Premium method to asynchrounsly retrieve 2D and 3D products from the image passed.
+ *
+ *  @discussion This method is a Premium feature. Use this method if you are interested in retrieving a 2D product along with 3D products
+ *  from the SDK. 2D visual recognition is possible if the SFSlyce object was initialized using client ID that supports premium features.
+ *  Otherwise, the delegate will be notified via [SFRequestDelegate sfRequest:didFailWithError:] with an SFErrorNotPremium error (In case of a success, the
+ *  delegate won't be notified).
+ *
+ *  The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+ *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. In
+ *  case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
+ *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
+ *
+ *  @param image The image object to recognize.
+ *
+ *  @see recognizeSimilarProductsFromImageURL:
+ *  @see getProductsFromImage:merchantIDs:
+ *  @see SFRequestDelegate
+ *
+ *  @deprecated since 2.0. Use getProductsFromImage:merchantIDs: instead.
+ */
+
+- (void)recognizeSimilarProductsFromImage:(UIImage *)image __attribute((deprecated("This method is deprecated since 2.0. Use getProductsFromImage:merchantIDs: instead.")));
+
+/*!
+ *  @method
+ *  @brief A Premium method to asynchrounsly retrieve 2D and 3D products from the URL to the image.
+ *
+ *  @discussion This method is a Premium feature. Use this method if you are interested in retrieving a 2D product along with 3D products
+ *  from the SDK. 2D visual recognition is possible if the SFSlyce object was initialized using client ID that supports premium features.
+ *  Otherwise, the delegate will be notified via [SFRequestDelegate sfRequest:didFailWithError:] with an SFErrorNotPremium error (In case of a success, the
+ *  delegate won't be notified).
+ *
+ *  The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+ *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. In
+ *  case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
+ *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
+ *
+ *  @param imageURL The URL to the image to recognize.
+ *
+ *  @see recognizeSimilarProductsFromImage:
+ *  @see getProductsFromImage:merchantIDs:
+ *  @see SFRequestDelegate
+ *
+ *  @deprecated since 2.0. Use getProductsFromImageURL:merchantIDs: instead.
+ */
+
+- (void)recognizeSimilarProductsFromImageURL:(NSURL *)imageURL __attribute((deprecated("This method is deprecated since 2.0. Use getProductsFromImageURL:merchantIDs: instead.")));
+
 
 @end

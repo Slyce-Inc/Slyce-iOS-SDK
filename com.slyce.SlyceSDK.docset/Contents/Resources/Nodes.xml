@@ -50,6 +50,7 @@
 						<NodeRef refid="10"/>
 						<NodeRef refid="11"/>
 						<NodeRef refid="12"/>
+						<NodeRef refid="13"/>
 						
 					</Subnodes>
 				</Node>
@@ -360,6 +361,11 @@
 		<Node id="12" type="file" documentType="reference">
             <Name>SFRequestStage</Name>
             <Path>Constants/SFRequestStage.html</Path>
+            
+        </Node>
+		<Node id="13" type="file" documentType="reference">
+            <Name>SFStatusType</Name>
+            <Path>Constants/SFStatusType.html</Path>
             
         </Node>
 		

@@ -154,11 +154,11 @@ SDK&apos;s assets, simply pass nil to this parameter.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/presentFromViewController:usingAnimation:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/presentFromViewController:usingAnimation:completionBlock:</TokenIdentifier>
 			<Abstract type="html">Presents the SFCameraViewController using animation.</Abstract>
 			<DeclaredIn>SFCameraViewController.h</DeclaredIn>
 			
-			<Declaration>- (void)presentFromViewController:(UIViewController *)fromViewController usingAnimation:(SFAnimationType)animationType</Declaration>
+			<Declaration>- (void)presentFromViewController:(UIViewController *)fromViewController usingAnimation:(SFAnimationType)animationType completionBlock:(void ( ^ ) ( void ))completionBlock</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>fromViewController</Name>
@@ -166,10 +166,13 @@ SDK&apos;s assets, simply pass nil to this parameter.</Abstract>
 				</Parameter><Parameter>
 					<Name>animationType</Name>
 					<Abstract type="html">Presentation animation.</Abstract>
+				</Parameter><Parameter>
+					<Name>completionBlock</Name>
+					<Abstract type="html">block that executes after presenting animation completes.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/presentFromViewController:usingAnimation:</Anchor>
+			<Anchor>//api/name/presentFromViewController:usingAnimation:completionBlock:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

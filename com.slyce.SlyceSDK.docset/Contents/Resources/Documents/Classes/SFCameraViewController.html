@@ -54,7 +54,7 @@
 	
 	<option value="//api/name/initWithSlyce:resourcesBundle:options:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSlyce:resourcesBundle:options:andDelegate:</option>
 	
-	<option value="//api/name/presentFromViewController:usingAnimation:">&nbsp;&nbsp;&nbsp;&nbsp;- presentFromViewController:usingAnimation:</option>
+	<option value="//api/name/presentFromViewController:usingAnimation:completionBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- presentFromViewController:usingAnimation:completionBlock:</option>
 	
 	
 	
@@ -102,7 +102,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSlyce:resourcesBundle:options:andDelegate:">initWithSlyce:resourcesBundle:options:andDelegate:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentFromViewController:usingAnimation:">presentFromViewController:usingAnimation:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentFromViewController:usingAnimation:completionBlock:">presentFromViewController:usingAnimation:completionBlock:</a></span></li>
 	
 </ul></li>
 
@@ -213,7 +213,7 @@ the look and feel of his own app.</p></div>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/presentFromViewController:usingAnimation:">&ndash;&nbsp;presentFromViewController:usingAnimation:</a></code>
+		<code><a href="#//api/name/presentFromViewController:usingAnimation:completionBlock:">&ndash;&nbsp;presentFromViewController:usingAnimation:completionBlock:</a></code>
 	</span>
 	
 	
@@ -431,7 +431,7 @@ you provide must follow the guidelines in the docs to be presented correctly by 
 In case you wish to use the built-in SDK&rsquo;s assets, simply pass <code>nil</code> to this parameter.</p><div class="note"><p><strong>Note:</strong> This method only initiliazes the view controller object and does NOT start
 the video  frames processing nor the video preview
 at all, until the view controller is actually presented via
-<a href="#//api/name/presentFromViewController:usingAnimation:">presentFromViewController:usingAnimation:</a> method.</p></div><div class="note"><p><strong>Note:</strong> Initializing SFCameraViewController using this method will prepare the view controller
+<a href="#//api/name/presentFromViewController:usingAnimation:completionBlock:">presentFromViewController:usingAnimation:completionBlock:</a> method.</p></div><div class="note"><p><strong>Note:</strong> Initializing SFCameraViewController using this method will prepare the view controller
 for a continuous and manual 3D recognition.</p></div>
 	</div>
 	
@@ -459,8 +459,8 @@ for a continuous and manual 3D recognition.</p></div>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/presentFromViewController:usingAnimation:" title="presentFromViewController:usingAnimation:"></a>
-	<h3 class="subsubtitle method-title">presentFromViewController:usingAnimation:</h3>
+	<a name="//api/name/presentFromViewController:usingAnimation:completionBlock:" title="presentFromViewController:usingAnimation:completionBlock:"></a>
+	<h3 class="subsubtitle method-title">presentFromViewController:usingAnimation:completionBlock:</h3>
 	
 	
 	
@@ -470,7 +470,7 @@ for a continuous and manual 3D recognition.</p></div>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)presentFromViewController:(UIViewController *)<em>fromViewController</em> usingAnimation:(SFAnimationType)<em>animationType</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)presentFromViewController:(UIViewController *)<em>fromViewController</em> usingAnimation:(SFAnimationType)<em>animationType</em> completionBlock:(void ( ^ ) ( void ))<em>completionBlock</em></code></div>
 
     
 	
@@ -485,6 +485,11 @@ for a continuous and manual 3D recognition.</p></div>
 		<dl class="argument-def parameter-def">
 			<dt><em>animationType</em></dt>
 			<dd><p>Presentation animation.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completionBlock</em></dt>
+			<dd><p>block that executes after presenting animation completes.</p></dd>
 		</dl>
 		
 	</div>
@@ -507,7 +512,7 @@ code below.</p>
 
 <p><pre><code>
 SFCameraViewController *cameraVC = [[SFCameraViewController alloc] initWithSlyce:self.slyce resourcesBundle:nil andDelegate:self];
-[cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom];
+[cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:nil];
 </code></pre></p></div>
 	</div>
 	
@@ -540,7 +545,7 @@ SFCameraViewController *cameraVC = [[SFCameraViewController alloc] initWithSlyce
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-06-14)</span><br />
+						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-07-14)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

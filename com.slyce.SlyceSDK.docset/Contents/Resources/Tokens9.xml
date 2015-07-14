@@ -189,19 +189,27 @@ info in key-value pairs.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequestDidFinish:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequestDidFinish:withStatus:</TokenIdentifier>
 			<Abstract type="html">Informs the SFRequestDelegate that the Slyce 3D search has finished.</Abstract>
 			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)sfRequestDidFinish:(SFRequest *)sfRequest</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SFRequest</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)sfRequestDidFinish:(SFRequest *)sfRequest withStatus:(SFStatusType)statusType</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>sfRequest</Name>
 					<Abstract type="html">the current SFRequest.</Abstract>
+				</Parameter><Parameter>
+					<Name>statusType</Name>
+					<Abstract type="html">the status about the current request. Refer to SFRequest to see the possible status values.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfRequestDidFinish:</Anchor>
+			<Anchor>//api/name/sfRequestDidFinish:withStatus:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		

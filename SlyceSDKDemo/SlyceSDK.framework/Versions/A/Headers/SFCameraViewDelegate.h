@@ -153,9 +153,12 @@
  *  @brief Informs the SFCameraViewDelegate that the Slyce 3D search has finished.
  *
  *  @param cameraView the current SFCameraView.
+ *  @param statusType the status about the current request. Refer to SFRequest:SFStatusType to see the possible status values.
+ *
+ *  @see SFRequest
  *
  */
-- (void)sfCameraViewDidFinish:(SFCameraView *)cameraView;
+- (void)sfCameraViewDidFinish:(SFCameraView *)cameraView withStatus:(SFStatusType)statusType;
 
 /*!
  *  @brief Informs the SFCameraViewDelegate that an image object from the current video frame is ready.

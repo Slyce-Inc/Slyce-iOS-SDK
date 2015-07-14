@@ -193,19 +193,27 @@ account.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraViewDidFinish:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraViewDidFinish:withStatus:</TokenIdentifier>
 			<Abstract type="html">Informs the SFCameraViewDelegate that the Slyce 3D search has finished.</Abstract>
 			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)sfCameraViewDidFinish:(SFCameraView *)cameraView</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SFRequest</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)sfCameraViewDidFinish:(SFCameraView *)cameraView withStatus:(SFStatusType)statusType</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cameraView</Name>
 					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>statusType</Name>
+					<Abstract type="html">the status about the current request. Refer to SFRequest to see the possible status values.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfCameraViewDidFinish:</Anchor>
+			<Anchor>//api/name/sfCameraViewDidFinish:withStatus:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		

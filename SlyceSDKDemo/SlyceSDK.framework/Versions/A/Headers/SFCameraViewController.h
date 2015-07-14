@@ -122,7 +122,7 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
  *  @note This method only initiliazes the view controller object and does NOT start 
  *  the video  frames processing nor the video preview
  *  at all, until the view controller is actually presented via 
- *  presentFromViewController:usingAnimation: method.
+ *  presentFromViewController:usingAnimation:completionBlock: method.
  *
  *  @note Initializing SFCameraViewController using this method will prepare the view controller 
  *  for a continuous and manual 3D recognition.
@@ -148,6 +148,7 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
  *
  *  @param fromViewController The view controller from which SFCameraViewController is presented.
  *  @param animationType Presentation animation.
+ *  @param completionBlock block that executes after presenting animation completes.
  *
  *  @note This method may look a bit different to the usual iOS native view controllers' 
  *  presentation technique. It is due to the fact
@@ -157,11 +158,11 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
  *
  *  <pre><code>
  *      SFCameraViewController *cameraVC = [[SFCameraViewController alloc] initWithSlyce:self.slyce resourcesBundle:nil andDelegate:self];
- *      [cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom];
+ *      [cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:nil];
  *  </code></pre>
  *
  */
 
-- (void)presentFromViewController:(UIViewController *)fromViewController usingAnimation:(SFAnimationType)animationType;
+- (void)presentFromViewController:(UIViewController *)fromViewController usingAnimation:(SFAnimationType)animationType completionBlock:(void (^)(void))completionBlock;
 
 @end

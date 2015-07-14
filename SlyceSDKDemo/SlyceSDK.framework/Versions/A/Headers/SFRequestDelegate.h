@@ -13,6 +13,33 @@
 @class SFBarcode;
 
 /*!
+ * Enumeration for 3D results status.
+ */
+typedef NS_ENUM(NSUInteger, SFStatusType)
+{
+    /*! 3D results found. */
+    SFStatusTypeSuccess,
+    
+    /*! Unspecified error. */
+    SFStatusTypeUknownError,
+    
+    /*! Internal error. */
+    SFStatusTypeInternalError,
+    
+    /*! No 3D results found. */
+    SFStatusTypeNotFound,
+    
+    /*! Bad image. */
+    SFStatusTypeBadImage,
+    
+    /*! Invalid image. */
+    SFStatusTypeInvalidImage,
+    
+    /*! Timed out. */
+    SFStatusTypeTimeout
+};
+
+/*!
  * Enumeration for 3D recognition stages.
  */
 
@@ -149,9 +176,12 @@ typedef NS_ENUM(NSUInteger, SFRequestStage)
  *  @brief Informs the SFRequestDelegate that the Slyce 3D search has finished.
  *
  *  @param sfRequest the current SFRequest.
+ *  @param statusType the status about the current request. Refer to SFRequest:SFStatusType to see the possible status values.
+ *
+ *  @see SFRequest
  *
  */
-- (void)sfRequestDidFinish:(SFRequest *)sfRequest;
+- (void)sfRequestDidFinish:(SFRequest *)sfRequest withStatus:(SFStatusType)statusType;
 
 /*!
  *  @brief Informs the SFRequestDelegate of the supported merchat IDs to match the search with.

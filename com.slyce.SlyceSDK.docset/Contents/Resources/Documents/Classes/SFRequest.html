@@ -60,9 +60,9 @@
 	
 	<option value="//api/name/getMerchantIDs">&nbsp;&nbsp;&nbsp;&nbsp;- getMerchantIDs</option>
 	
-	<option value="//api/name/getProductsFromImage:fromMerchantIDs:">&nbsp;&nbsp;&nbsp;&nbsp;- getProductsFromImage:fromMerchantIDs:</option>
+	<option value="//api/name/getProductsFromImage:merchantIDs:">&nbsp;&nbsp;&nbsp;&nbsp;- getProductsFromImage:merchantIDs:</option>
 	
-	<option value="//api/name/getProductsFromImageURL:fromMerchantIDs:">&nbsp;&nbsp;&nbsp;&nbsp;- getProductsFromImageURL:fromMerchantIDs:</option>
+	<option value="//api/name/getProductsFromImageURL:merchantIDs:">&nbsp;&nbsp;&nbsp;&nbsp;- getProductsFromImageURL:merchantIDs:</option>
 	
 	<option value="//api/name/initWithSlyce:options:andDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithSlyce:options:andDelegate:</option>
 	
@@ -90,13 +90,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initialization">Initialization</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Standard methods">Standard methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Premium methods">Premium methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Product Search">Product Search</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Miscellaneous">Miscellaneous</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Helpers">Helpers</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Deprecated">Deprecated</a></span></li>
 	
 </ul></li>
 
@@ -128,9 +128,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMerchantIDs">getMerchantIDs</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">getProductsFromImage:fromMerchantIDs:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProductsFromImage:merchantIDs:">getProductsFromImage:merchantIDs:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">getProductsFromImageURL:fromMerchantIDs:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getProductsFromImageURL:merchantIDs:">getProductsFromImageURL:merchantIDs:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithSlyce:options:andDelegate:">initWithSlyce:options:andDelegate:</a></span></li>
 	
@@ -229,8 +229,8 @@
 						</ul>
 						
 						
-						<a title="Standard methods" name="task_Standard methods"></a>
-						<h3 class="subsubtitle task-title">Standard methods</h3>
+						<a title="Product Search" name="task_Product Search"></a>
+						<h3 class="subsubtitle task-title">Product Search</h3>
 
 						<ul class="task-list">
 							<li>
@@ -247,33 +247,13 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">&ndash;&nbsp;getProductsFromImage:fromMerchantIDs:</a></code>
+		<code><a href="#//api/name/getProductsFromImage:merchantIDs:">&ndash;&nbsp;getProductsFromImage:merchantIDs:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">&ndash;&nbsp;getProductsFromImageURL:fromMerchantIDs:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Premium methods" name="task_Premium methods"></a>
-						<h3 class="subsubtitle task-title">Premium methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/recognizeSimilarProductsFromImage:">&ndash;&nbsp;recognizeSimilarProductsFromImage:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/recognizeSimilarProductsFromImageURL:">&ndash;&nbsp;recognizeSimilarProductsFromImageURL:</a></code>
+		<code><a href="#//api/name/getProductsFromImageURL:merchantIDs:">&ndash;&nbsp;getProductsFromImageURL:merchantIDs:</a></code>
 	</span>
 	
 	
@@ -302,6 +282,26 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/getMerchantIDs">&ndash;&nbsp;getMerchantIDs</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Deprecated" name="task_Deprecated"></a>
+						<h3 class="subsubtitle task-title">Deprecated</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recognizeSimilarProductsFromImage:">&ndash;&nbsp;recognizeSimilarProductsFromImage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recognizeSimilarProductsFromImageURL:">&ndash;&nbsp;recognizeSimilarProductsFromImageURL:</a></code>
 	</span>
 	
 	
@@ -560,7 +560,7 @@ the item matched.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Used to retrieve a payload describing the description of the product in the URL to the image provided, along with optional parameters.</p>
+		<p>Used to asynchrounously retrieve a list of products from URL to the image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass <code>nil</code>.</p>
 	</div>		
 	
     
@@ -587,8 +587,9 @@ the item matched.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This method will ask the SDK to asynchronously recognize the image in the URL passed and return an <code>NSDictionary</code> representing the
-description of the item matched.</p>
+		<p>The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+<a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didDetectImage:">[SFRequestDelegate sfRequest:didDetectImage:]</a> and <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveResults:">[SFRequestDelegate sfRequest:didReceiveResults:]</a>, accordingly. 2D match is possible for Premium and 2D-enabled users only. In case of a 2D match, additional info might be delivered, via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveImageInfo:">[SFRequestDelegate sfRequest:didReceiveImageInfo:]</a> callback.
+The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p>
 	</div>
 	
 	
@@ -640,8 +641,8 @@ description of the item matched.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Used to asynchronously retrieve a list of all merchant IDs that can be used with <a href="#//api/name/getProductsFromImage:fromMerchantIDs:">getProductsFromImage:fromMerchantIDs:</a> and
-<a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">getProductsFromImageURL:fromMerchantIDs:</a> methods.</p>
+		<p>Used to asynchronously retrieve a list of all merchant IDs that can be used with <a href="#//api/name/getProductsFromImage:merchantIDs:">getProductsFromImage:merchantIDs:</a> and
+<a href="#//api/name/getProductsFromImageURL:merchantIDs:">getProductsFromImageURL:merchantIDs:</a> methods.</p>
 	</div>
 	
 	
@@ -659,19 +660,18 @@ description of the item matched.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/getProductsFromImage:fromMerchantIDs:" title="getProductsFromImage:fromMerchantIDs:"></a>
-	<h3 class="subsubtitle method-title">getProductsFromImage:fromMerchantIDs:</h3>
+	<a name="//api/name/getProductsFromImage:merchantIDs:" title="getProductsFromImage:merchantIDs:"></a>
+	<h3 class="subsubtitle method-title">getProductsFromImage:merchantIDs:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Used to asynchrounously retrieve a list of products from the image passed. May also provide an array of merchant IDs to narrow
-the search to specific merchants.</p>
+		<p>Used to asynchrounously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass <code>nil</code>.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getProductsFromImage:(UIImage *)<em>image</em> fromMerchantIDs:(NSArray *)<em>merchantIDs</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getProductsFromImage:(UIImage *)<em>image</em> merchantIDs:(NSArray *)<em>merchantIDs</em></code></div>
 
     
 	
@@ -698,8 +698,7 @@ the search to specific merchants.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
-will be notified via the <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> object. For more information, see the reference for <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p><div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using a convinient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
+		<div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using a convinient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
 method as a param to the current method.</p></div>
 	</div>
 	
@@ -711,7 +710,7 @@ method as a param to the current method.</p></div>
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p><a href="#//api/name/getProductsFromImageURL:fromMerchantIDs:">- getProductsFromImageURL:fromMerchantIDs:</a></p></code></li>
+			<li><code><p><a href="#//api/name/getProductsFromImageURL:merchantIDs:">- getProductsFromImageURL:merchantIDs:</a></p></code></li>
 			
 			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
 			
@@ -729,8 +728,8 @@ method as a param to the current method.</p></div>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/getProductsFromImageURL:fromMerchantIDs:" title="getProductsFromImageURL:fromMerchantIDs:"></a>
-	<h3 class="subsubtitle method-title">getProductsFromImageURL:fromMerchantIDs:</h3>
+	<a name="//api/name/getProductsFromImageURL:merchantIDs:" title="getProductsFromImageURL:merchantIDs:"></a>
+	<h3 class="subsubtitle method-title">getProductsFromImageURL:merchantIDs:</h3>
 	
 	
 	
@@ -741,7 +740,7 @@ to narrow the search to specific merchants.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)getProductsFromImageURL:(NSURL *)<em>imageURL</em> fromMerchantIDs:(NSArray *)<em>merchantIDs</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)getProductsFromImageURL:(NSURL *)<em>imageURL</em> merchantIDs:(NSArray *)<em>merchantIDs</em></code></div>
 
     
 	
@@ -781,7 +780,7 @@ method as a param to the current method.</p></div>
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">- getProductsFromImage:fromMerchantIDs:</a></p></code></li>
+			<li><code><p><a href="#//api/name/getProductsFromImage:merchantIDs:">- getProductsFromImage:merchantIDs:</a></p></code></li>
 			
 			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
 			
@@ -883,7 +882,7 @@ Depending on your client ID, SFRequest will be able to perform a 2D and/or 3D se
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A Premium method to asynchrounsly retrieve 2D and 3D products from the image passed.</p>
+		<p>A Premium method to asynchrounsly retrieve 2D and 3D products from the image passed. (<b class="deprecated">Deprecated:</b><span class="deprecated"> since 2.0. Use getProductsFromImage:merchantIDs: instead.</span>)</p>
 	</div>		
 	
     
@@ -918,8 +917,7 @@ delegate won&rsquo;t be notified).</p>
 <p>The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
 <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didDetectImage:">[SFRequestDelegate sfRequest:didDetectImage:]</a> and <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveResults:">[SFRequestDelegate sfRequest:didReceiveResults:]</a>, accordingly. In
 case of a 2D match, additional info might be delivered, via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveImageInfo:">[SFRequestDelegate sfRequest:didReceiveImageInfo:]</a> callback.
-The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p><div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using a convenient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
-method as a param to the current method.</p></div>
+The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p>
 	</div>
 	
 	
@@ -932,7 +930,7 @@ method as a param to the current method.</p></div>
 			
 			<li><code><p><a href="#//api/name/recognizeSimilarProductsFromImageURL:">- recognizeSimilarProductsFromImageURL:</a></p></code></li>
 			
-			<li><code><p><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">- getProductsFromImage:fromMerchantIDs:</a></p></code></li>
+			<li><code><p><a href="#//api/name/getProductsFromImage:merchantIDs:">- getProductsFromImage:merchantIDs:</a></p></code></li>
 			
 			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
 			
@@ -956,7 +954,7 @@ method as a param to the current method.</p></div>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A Premium method to asynchrounsly retrieve 2D and 3D products from the URL to the image.</p>
+		<p>A Premium method to asynchrounsly retrieve 2D and 3D products from the URL to the image. (<b class="deprecated">Deprecated:</b><span class="deprecated"> since 2.0. Use getProductsFromImageURL:merchantIDs: instead.</span>)</p>
 	</div>		
 	
     
@@ -991,8 +989,7 @@ delegate won&rsquo;t be notified).</p>
 <p>The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
 <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didDetectImage:">[SFRequestDelegate sfRequest:didDetectImage:]</a> and <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveResults:">[SFRequestDelegate sfRequest:didReceiveResults:]</a>, accordingly. In
 case of a 2D match, additional info might be delivered, via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveImageInfo:">[SFRequestDelegate sfRequest:didReceiveImageInfo:]</a> callback.
-The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p><div class="note"><p><strong>Note:</strong> Another way to get all the supported merchants is using the convenient method <a href="#//api/name/getMerchantIDs">getMerchantIDs</a>. You can pass the return array of this
-method as a param to the current method.</p></div>
+The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p>
 	</div>
 	
 	
@@ -1005,7 +1002,7 @@ method as a param to the current method.</p></div>
 			
 			<li><code><p><a href="#//api/name/recognizeSimilarProductsFromImage:">- recognizeSimilarProductsFromImage:</a></p></code></li>
 			
-			<li><code><p><a href="#//api/name/getProductsFromImage:fromMerchantIDs:">- getProductsFromImage:fromMerchantIDs:</a></p></code></li>
+			<li><code><p><a href="#//api/name/getProductsFromImage:merchantIDs:">- getProductsFromImage:merchantIDs:</a></p></code></li>
 			
 			<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
 			
@@ -1037,7 +1034,7 @@ method as a param to the current method.</p></div>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-06-14)</span><br />
+						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-07-14)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

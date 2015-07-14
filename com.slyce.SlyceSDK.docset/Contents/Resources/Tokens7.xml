@@ -186,19 +186,27 @@ informative message.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewControllerDidFinish:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewControllerDidFinish:withStatus:</TokenIdentifier>
 			<Abstract type="html">Informs the SFCameraViewControllerDelegate that the Slyce 3D search has finished.</Abstract>
 			<DeclaredIn>SFCameraViewControllerDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)sfCameraViewControllerDidFinish:(SFCameraViewController *)cameraViewController</Declaration>
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/SFRequest</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)sfCameraViewControllerDidFinish:(SFCameraViewController *)cameraViewController withStatus:(SFStatusType)statusType</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cameraViewController</Name>
 					<Abstract type="html">the current SFCameraViewController.</Abstract>
+				</Parameter><Parameter>
+					<Name>statusType</Name>
+					<Abstract type="html">the status about the current request. Refer to SFRequest to see the possible status values.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfCameraViewControllerDidFinish:</Anchor>
+			<Anchor>//api/name/sfCameraViewControllerDidFinish:withStatus:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

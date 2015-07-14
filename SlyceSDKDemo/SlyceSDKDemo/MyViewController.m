@@ -14,7 +14,7 @@
 
 #define kClientID @"ClientID"
 
-@interface MyViewController () <SFCameraViewControllerDelegate, SFRequestDelegate, UITextFieldDelegate, UIAlertViewDelegate>
+@interface MyViewController () <SFCameraViewControllerDelegate, SFRequestDelegate, UITextFieldDelegate, UIAlertViewDelegate, NSStreamDelegate, NSURLConnectionDataDelegate>
 
 @property (nonatomic, copy) NSArray *products;
 @property (nonatomic, strong) MBProgressHUD *hud;
@@ -168,7 +168,7 @@
 
 - (void)sfCameraViewControllerWasDismissed:(SFCameraViewController *)cameraViewController
 {
-    NSLog(@"SFCameraViewController finished dismissing.");
+    NSLog(@"SFCameraViewController was dismissed");
 }
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didProgressToValue:(CGFloat)value withMessage:(NSString *)message
@@ -271,12 +271,6 @@
         
         return;
     }
-    else if (_slyce.isPremiumUser == NO)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unauthorized client ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        
-        return;
-    }
     
     UIImage *img = [UIImage imageNamed:@"shoe.jpg"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:img];
@@ -288,22 +282,8 @@
     self.hud.mode = MBProgressHUDModeCustomView;
     [self.hud show:YES];
     
-    if (_slyce.isPremiumUser)
-    {
-        //2D and 3D
-        SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
-        [request recognizeSimilarProductsFromImage:img];
-    }
-    else
-    {
-        //3D
-        SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
-        [request getProductsFromImage:img fromMerchantIDs:nil];
-    }
-    
-    
-//    SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
-//    [request getProductsFromImage:img fromMerchantIDs:nil];
+    SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
+    [request getProductsFromImage:img merchantIDs:nil];
 }
 
 //Camera/Headless mode
@@ -312,12 +292,6 @@
     if (!_clientID || [_clientID isEqualToString:@""])
     {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a client ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        
-        return;
-    }
-    else if (_slyce.isPremiumUser == NO)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unauthorized client ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         
         return;
     }
@@ -334,15 +308,11 @@
         
         return;
     }
-    else if (_slyce.isPremiumUser == NO)
-    {
-        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Unauthorized client ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-        
-        return;
-    }
-
+    
     self.cameraVC = [[SFCameraViewController alloc] initWithSlyce:_slyce resourcesBundle:nil options:nil andDelegate:self];
-    [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom];
+    [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:^{
+        NSLog(@"SFCameraViewController was presented");
+    }];
     
     [self.hud hide:YES];
 }

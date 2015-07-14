@@ -1,6 +1,15 @@
 Slyce SDK Changelog
 ===================================
 
+1.9.3 - 2015/07/14 
+------------------
+* ADDED: camera zoom functionality
+* ADDED: completionBlock to SFCameraViewController present method (presentFromViewController:usingAnimation:completionBlock:) (#36)
+* FIXED: indeterminate message still appeared when pushing a new view controller before receiving 2D didReceiveImageInfo: callback (#35) 
+* ADDED: SFStatusType - status type param was added to didFinish: callbacks in all 3 modes (#31) 
+* CHANGED: recognizeSimilarProductsFromImage: was deprecated. Use getProductsFromImage:merchantIDs: instead.
+* CHANGED: recognizeSimilarProductsFromImageURL: was deprecated. Use getProductsFromImageURL:merchantIDs: instead.
+
 1.9.1 - 2015/06/14
 ------------------
 * ADDED: delay between two idetical successive 2D detections
