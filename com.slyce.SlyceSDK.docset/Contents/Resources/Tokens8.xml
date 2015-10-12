@@ -81,6 +81,28 @@ has been found.</Abstract>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didReceiveBarcodeInfo:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that additional info for the previously
+recognized barcode has been found.
+The result is an NSURL representing the additional the url to the matched product.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didReceiveBarcodeInfo:(NSURL *)productURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>productURL</Name>
+					<Abstract type="html">NSURL represeting the url to the product found. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didReceiveBarcodeInfo:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didDetectImage:</TokenIdentifier>
 			<Abstract type="html">Informs the SFCameraViewDelegate that 2D products for the image from the current video
 frame have been found. The result is an NSDictionary representing a short info about the matched products and their contents in key-value pairs.</Abstract>
@@ -193,7 +215,31 @@ account.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraViewDidFinish:withStatus:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didChangeCameraPosition:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that camera position was changed from back to
+front or vice versa.
+
+This delegate method is called as soon as SFCameraView:flipCameraPosition finishes
+making the flip.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didChangeCameraPosition:(AVCaptureDevicePosition)devicePosition</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>devicePosition</Name>
+					<Abstract type="html">the new camera position.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didChangeCameraPosition:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didFinishWithStatus:</TokenIdentifier>
 			<Abstract type="html">Informs the SFCameraViewDelegate that the Slyce 3D search has finished.</Abstract>
 			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
 			
@@ -202,7 +248,7 @@ account.</Abstract>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (void)sfCameraViewDidFinish:(SFCameraView *)cameraView withStatus:(SFStatusType)statusType</Declaration>
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithStatus:(SFStatusType)statusType</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cameraView</Name>
@@ -213,7 +259,7 @@ account.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfCameraViewDidFinish:withStatus:</Anchor>
+			<Anchor>//api/name/sfCameraView:didFinishWithStatus:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		

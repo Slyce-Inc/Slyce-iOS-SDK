@@ -25,15 +25,38 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/openWithAppId:appKey:error:</TokenIdentifier>
+			<Abstract type="html">Initializes a new SFSlyce object using valid App ID and App Key credentials.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)openWithAppId:(NSString *)appId appKey:(NSString *)appKey error:(NSError **)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>appId</Name>
+					<Abstract type="html">the App ID.</Abstract>
+				</Parameter><Parameter>
+					<Name>appKey</Name>
+					<Abstract type="html">the App Key.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">the pointer to the error object, if any.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if it succeeded, NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/openWithAppId:appKey:error:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/openWithClientID:error:</TokenIdentifier>
-			<Abstract type="html">Initializes a new SFSlyce object.</Abstract>
+			<Abstract type="html">Initializes a new SFSlyce object using a customer ID.</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
 			<Declaration>- (BOOL)openWithClientID:(NSString *)clientID error:(NSError **)error</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>clientID</Name>
-					<Abstract type="html">the client ID.</Abstract>
+					<Abstract type="html">the customer ID.</Abstract>
 				</Parameter><Parameter>
 					<Name>error</Name>
 					<Abstract type="html">the pointer to the error object, if any.</Abstract>
@@ -45,8 +68,80 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setAppID:</TokenIdentifier>
+			<Abstract type="html">The app ID used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/appID</TokenIdentifier>
+			<Abstract type="html">The app ID used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/appID</TokenIdentifier>
+			<Abstract type="html">The app ID used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *appID</Declaration>
+			
+			
+			<Anchor>//api/name/appID</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setAppKey:</TokenIdentifier>
+			<Abstract type="html">The app key used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *appKey</Declaration>
+			
+			
+			<Anchor>//api/name/appKey</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/appKey</TokenIdentifier>
+			<Abstract type="html">The app key used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *appKey</Declaration>
+			
+			
+			<Anchor>//api/name/appKey</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/appKey</TokenIdentifier>
+			<Abstract type="html">The app key used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly, copy) NSString *appKey</Declaration>
+			
+			
+			<Anchor>//api/name/appKey</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setClientID:</TokenIdentifier>
-			<Abstract type="html">The client ID used to initialize the SFSlyce object.</Abstract>
+			<Abstract type="html">The client ID used to initialize the SFSlyce object for &apos;Premium&apos; mode.</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, readonly, copy) NSString *clientID</Declaration>
@@ -58,7 +153,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/clientID</TokenIdentifier>
-			<Abstract type="html">The client ID used to initialize the SFSlyce object.</Abstract>
+			<Abstract type="html">The client ID used to initialize the SFSlyce object for &apos;Premium&apos; mode.</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, readonly, copy) NSString *clientID</Declaration>
@@ -70,7 +165,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/clientID</TokenIdentifier>
-			<Abstract type="html">The client ID used to initialize the SFSlyce object.</Abstract>
+			<Abstract type="html">The client ID used to initialize the SFSlyce object for &apos;Premium&apos; mode.</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, readonly, copy) NSString *clientID</Declaration>
@@ -149,6 +244,42 @@
 			
 			
 			<Anchor>//api/name/is2DSearchEnabled</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setIsCroppingEnabled:</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can crop the image after snapping.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isCroppingEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/isCroppingEnabled</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/isCroppingEnabled</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can crop the image after snapping.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isCroppingEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/isCroppingEnabled</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/isCroppingEnabled</TokenIdentifier>
+			<Abstract type="html">Indicates whether the user can crop the image after snapping.</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isCroppingEnabled</Declaration>
+			
+			
+			<Anchor>//api/name/isCroppingEnabled</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

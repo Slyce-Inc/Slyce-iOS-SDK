@@ -13,6 +13,42 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldRecognizeAfterSnap:</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable 2D/3D recognition after snapping an image.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldRecognizeAfterSnap</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRecognizeAfterSnap</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/shouldRecognizeAfterSnap</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable 2D/3D recognition after snapping an image.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldRecognizeAfterSnap</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRecognizeAfterSnap</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/shouldRecognizeAfterSnap</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable 2D/3D recognition after snapping an image.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldRecognizeAfterSnap</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRecognizeAfterSnap</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldPauseScannerAfterRecognition:</TokenIdentifier>
 			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 2D detection.</Abstract>
 			<DeclaredIn>SFCameraView.h</DeclaredIn>
@@ -215,7 +251,8 @@
 					<Abstract type="html">options dictionary (optional). Pass nil for no options.</Abstract>
 				</Parameter><Parameter>
 					<Name>delegate</Name>
-					<Abstract type="html">Object that implements SFCameraViewDelegate protocol.</Abstract>
+					<Abstract type="html">Object that implements SFCameraViewDelegate protocol.
+b</Abstract>
 				</Parameter>
 			</Parameters>
 			<ReturnValue><Abstract type="html">Returns an instance of SFCameraView.</Abstract></ReturnValue>
@@ -274,6 +311,30 @@
 			
 			
 			<Anchor>//api/name/resumeCapture</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/stopSearch</TokenIdentifier>
+			<Abstract type="html">Stops the Slyce search.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>- (void)stopSearch</Declaration>
+			
+			
+			<Anchor>//api/name/stopSearch</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/flipCameraPosition</TokenIdentifier>
+			<Abstract type="html">Changes the camera device from rear to front and vice versa.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>- (void)flipCameraPosition</Declaration>
+			
+			
+			<Anchor>//api/name/flipCameraPosition</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

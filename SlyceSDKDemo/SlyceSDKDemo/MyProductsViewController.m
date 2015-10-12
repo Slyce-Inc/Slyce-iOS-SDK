@@ -51,7 +51,7 @@
     NSDictionary *product = [_products objectAtIndex:indexPath.row];
     
     [cell.productImageView setImageWithURL:[NSURL URLWithString:[product objectForKey:@"productImageURL"]] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    if ([product objectForKey:@"productPrice"])
+    if ([product objectForKey:@"productPrice"] && ![[product objectForKey:@"productPrice"] isKindOfClass:[NSNull class]])
         cell.productPriceLabel.text = [NSString stringWithFormat:@"%.2f", [[product objectForKey:@"productPrice"] floatValue]];
     if ([product objectForKey:@"productName"])
         cell.productDescriptionLabel.text = [product objectForKey:@"productName"];

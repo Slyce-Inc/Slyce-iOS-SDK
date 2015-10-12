@@ -10,7 +10,6 @@
 #import "MyProductsViewController.h"
 #import "MBProgressHUD.h"
 #import <SlyceSDK/SlyceSDK.h>
-#import <AVFoundation/AVFoundation.h>
 
 //This is *your* custom view controller where you want to use the SDK's Camera view
 @interface MyCameraViewController () <SFCameraViewDelegate, SFRequestDelegate, UIAlertViewDelegate>
@@ -62,7 +61,7 @@
 {
     NSArray *products = [results objectForKey:@"products"];
     
-    NSLog(@"Recognized products are: %@", products);
+    NSLog(@"sfCameraView:didReceiveResults:%@", products);
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
     
@@ -72,20 +71,20 @@
 
 - (void)sfCameraView:(SFCameraView *)cameraView didProgressToValue:(CGFloat)value withMessage:(NSString *)message
 {
-    NSLog(@"Finished %.2f percents, current step = %@", value, message);
+    NSLog(@"sfCameraView:didProgressToValue:%.2f withMessage:%@", value, message);
     self.hud.labelText = message;
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView didFinishWithItemDescription:(NSDictionary *)itemDescription
 {
-    NSLog(@"Item description is: %@", itemDescription);
+    NSLog(@"sfCameraView:didFinishWithItemDescription:%@", itemDescription);
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView didDetectBarcode:(SFBarcode *)barcode
 {
-    NSLog(@"Recognized Barcode Text = %@", barcode.text);
+    NSLog(@"sfCameraView:didDetectBarcode:%@", barcode.text);
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
     
@@ -98,7 +97,7 @@
 - (void)sfCameraView:(SFCameraView *)cameraView didFailWithError:(NSError *)error
 {
     NSString *message = error.domain == SlyceErrorDomain ? [error sf_message] : [error localizedDescription];
-    NSLog(@"Error = %@", message);
+    NSLog(@"sfCameraView:didFailWithError:%@", message);
     
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
@@ -109,7 +108,7 @@
 
 - (void)sfCameraView:(SFCameraView *)cameraView didReceiveImageInfo:(NSArray *)products
 {
-    NSLog(@"Recognized products are: %@", products);
+    NSLog(@"sfCameraView:didReceiveImageInfo:%@", products);
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
     
@@ -119,19 +118,20 @@
 
 - (void)sfCameraView:(SFCameraView *)cameraView didDetectImage:(NSDictionary *)imageInfo
 {
-    NSLog(@"Recognized 2D Products: data = %@", imageInfo);
+    NSLog(@"sfCameraView:didDetectImage:%@", imageInfo);
     self.resultLabel.text = [imageInfo description];
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView didSnapImage:(UIImage *)image
 {
+    NSLog(@"sfCameraView:didSnapImage:");
     [self.hud show:YES];
     _cancelButton.hidden = NO;
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView wasTappedInPoint:(CGPoint)point
 {
-    NSLog(@"Tapped at Point = %@", NSStringFromCGPoint(point));
+    NSLog(@"sfCameraView:wasTappedInPoint:%@", NSStringFromCGPoint(point));
 }
 
 #pragma mark -
@@ -183,6 +183,12 @@
 
 #pragma mark -
 #pragma mark IBActions
+
+- (IBAction)flipCamera:(id)sender {
+    
+    [_cameraView flipCameraPosition];
+}
+
 
 - (void)cancelSearch
 {

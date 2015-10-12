@@ -27,7 +27,7 @@
 
 /*!
  *  @property
- *  @brief The unique identifier.
+ *  @brief The unique identifier of the request.
  *  @discussion The request ID is generated *only* after making the actual request, i.e. after 
  *  calling one of SFRequest's methods.
  */

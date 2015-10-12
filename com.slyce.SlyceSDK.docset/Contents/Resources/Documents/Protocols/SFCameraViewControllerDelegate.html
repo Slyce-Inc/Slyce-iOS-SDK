@@ -55,9 +55,13 @@
 	
 	<option value="//api/name/sfCameraViewController:didFinishWithExtendedInfoFor2DProducts:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didFinishWithExtendedInfoFor2DProducts:</option>
 	
+	<option value="//api/name/sfCameraViewController:didFinishWithStatus:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didFinishWithStatus:</option>
+	
 	<option value="//api/name/sfCameraViewController:didProgressToStage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didProgressToStage:</option>
 	
 	<option value="//api/name/sfCameraViewController:didProgressToValue:withMessage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didProgressToValue:withMessage:</option>
+	
+	<option value="//api/name/sfCameraViewController:didReceiveBarcodeInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didReceiveBarcodeInfo:</option>
 	
 	<option value="//api/name/sfCameraViewController:didReceiveImageInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didReceiveImageInfo:</option>
 	
@@ -68,8 +72,6 @@
 	<option value="//api/name/sfCameraViewController:didSnapImage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didSnapImage:</option>
 	
 	<option value="//api/name/sfCameraViewController:didStartRequest:forImage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewController:didStartRequest:forImage:</option>
-	
-	<option value="//api/name/sfCameraViewControllerDidFinish:withStatus:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewControllerDidFinish:withStatus:</option>
 	
 	<option value="//api/name/sfCameraViewControllerWasDismissed:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewControllerWasDismissed:</option>
 	
@@ -127,9 +129,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didFinishWithExtendedInfoFor2DProducts:">sfCameraViewController:didFinishWithExtendedInfoFor2DProducts:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didFinishWithStatus:">sfCameraViewController:didFinishWithStatus:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didProgressToStage:">sfCameraViewController:didProgressToStage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didProgressToValue:withMessage:">sfCameraViewController:didProgressToValue:withMessage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didReceiveBarcodeInfo:">sfCameraViewController:didReceiveBarcodeInfo:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didReceiveImageInfo:">sfCameraViewController:didReceiveImageInfo:</a></span></li>
 	
@@ -140,8 +146,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didSnapImage:">sfCameraViewController:didSnapImage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewController:didStartRequest:forImage:">sfCameraViewController:didStartRequest:forImage:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewControllerDidFinish:withStatus:">sfCameraViewControllerDidFinish:withStatus:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewControllerWasDismissed:">sfCameraViewControllerWasDismissed:</a></span></li>
 	
@@ -214,6 +218,12 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/sfCameraViewController:didReceiveBarcodeInfo:">&ndash;&nbsp;sfCameraViewController:didReceiveBarcodeInfo:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/sfCameraViewController:didDetectImage:">&ndash;&nbsp;sfCameraViewController:didDetectImage:</a></code>
 	</span>
 	
@@ -282,7 +292,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sfCameraViewControllerDidFinish:withStatus:">&ndash;&nbsp;sfCameraViewControllerDidFinish:withStatus:</a></code>
+		<code><a href="#//api/name/sfCameraViewController:didFinishWithStatus:">&ndash;&nbsp;sfCameraViewController:didFinishWithStatus:</a></code>
 	</span>
 	
 	
@@ -736,6 +746,66 @@ object containing a Premium client ID.</p></div>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/sfCameraViewController:didFinishWithStatus:" title="sfCameraViewController:didFinishWithStatus:"></a>
+	<h3 class="subsubtitle method-title">sfCameraViewController:didFinishWithStatus:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the SFCameraViewControllerDelegate that the Slyce 3D search has finished.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sfCameraViewController:(SFCameraViewController *)<em>cameraViewController</em> didFinishWithStatus:(SFStatusType)<em>statusType</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cameraViewController</em></dt>
+			<dd><p>the current <a href="../Classes/SFCameraViewController.html">SFCameraViewController</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>statusType</em></dt>
+			<dd><p>the status about the current request. Refer to <a href="../Classes/SFRequest.html">SFRequest</a>:<a href="../Constants/SFStatusType.html">SFStatusType</a> to see the possible status values.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/SFRequest.html">SFRequest</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewControllerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/sfCameraViewController:didProgressToStage:" title="sfCameraViewController:didProgressToStage:"></a>
 	<h3 class="subsubtitle method-title">sfCameraViewController:didProgressToStage:</h3>
 	
@@ -836,6 +906,65 @@ informative message.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The numeric value is a percentage from the whole process and it is float ranged from 0 to 1.
 The message is a short description of the current search stage.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewControllerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sfCameraViewController:didReceiveBarcodeInfo:" title="sfCameraViewController:didReceiveBarcodeInfo:"></a>
+	<h3 class="subsubtitle method-title">sfCameraViewController:didReceiveBarcodeInfo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the SFCameraViewControllerDelegate that additional info for the previously
+recognized barcode has been found.
+The result is an <code>NSURL</code> representing the additional the url to the matched product.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sfCameraViewController:(SFCameraViewController *)<em>cameraViewController</em> didReceiveBarcodeInfo:(NSURL *)<em>productURL</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cameraViewController</em></dt>
+			<dd><p>the current <a href="../Classes/SFCameraViewController.html">SFCameraViewController</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>productURL</em></dt>
+			<dd><p><code>NSURL</code> represeting the url to the product found. Cannot be <code>nil</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> This callback may be called only if <a href="../Classes/SFCameraViewController.html">SFCameraViewController</a> was initialized with a Slyce
+object containing a Premium client ID.</p></div>
 	</div>
 	
 	
@@ -1146,66 +1275,6 @@ to start the 3D recognition process.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/sfCameraViewControllerDidFinish:withStatus:" title="sfCameraViewControllerDidFinish:withStatus:"></a>
-	<h3 class="subsubtitle method-title">sfCameraViewControllerDidFinish:withStatus:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Informs the SFCameraViewControllerDelegate that the Slyce 3D search has finished.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)sfCameraViewControllerDidFinish:(SFCameraViewController *)<em>cameraViewController</em> withStatus:(SFStatusType)<em>statusType</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>cameraViewController</em></dt>
-			<dd><p>the current <a href="../Classes/SFCameraViewController.html">SFCameraViewController</a>.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>statusType</em></dt>
-			<dd><p>the status about the current request. Refer to <a href="../Classes/SFRequest.html">SFRequest</a>:<a href="../Constants/SFStatusType.html">SFStatusType</a> to see the possible status values.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="../Classes/SFRequest.html">SFRequest</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SFCameraViewControllerDelegate.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/sfCameraViewControllerWasDismissed:" title="sfCameraViewControllerWasDismissed:"></a>
 	<h3 class="subsubtitle method-title">sfCameraViewControllerWasDismissed:</h3>
 	
@@ -1266,7 +1335,7 @@ to start the 3D recognition process.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-07-14)</span><br />
+						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-10-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

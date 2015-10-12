@@ -1,6 +1,23 @@
 Slyce SDK Changelog
 ===================================
 
+2.0 - 2015/10/12
+------------------
+* NEW: Full UI mode - a total NEW design!
+* NEW: Full UI mode - Use/Retake screen
+* NEW: Public flow API
+* ADDED: iOS 9 support 
+* ADDED: More barcode types are supported using continuous scanning
+* ADDED: Front facing camera support
+* ADDED: More Slyce domain error codes (see NSError+Slyce category or SFErrorCode enum in the docs)
+* ADDED: SFCameraView - flipCameraPosition method to change the camera position (front vs rear)
+* ADDED: SFCameraViewDelegate - new callback method sfCameraView:didChangeCameraPosition:
+* ADDED: SFCameraView - shouldRecognizeAfterSnap property to enable/disable image recognition after snapping the image
+* ADDED: SFCameraView - stopSearch method to stop the image recognition process after snapping the image
+* ADDED: SFRequestDelegate - sfRequest:didStartForImage: and sfRequest:didStartForImageURL:
+* CHANGED: SFCameraViewController - didSnapImage: delegate method is also called when taking a picture from Camera Roll
+* CHANGED: SFCameraView - shouldRecognizeAfterSnap property affects taking a picture from Camera Roll as well
+
 1.9.3 - 2015/07/14 
 ------------------
 * ADDED: camera zoom functionality

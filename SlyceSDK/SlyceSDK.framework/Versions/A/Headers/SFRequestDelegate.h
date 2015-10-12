@@ -17,25 +17,25 @@
  */
 typedef NS_ENUM(NSUInteger, SFStatusType)
 {
-    /*! 3D results found. */
-    SFStatusTypeSuccess,
+    /*! 0:3D results found. */
+    SFStatusTypeSuccess = 0,
     
-    /*! Unspecified error. */
-    SFStatusTypeUknownError,
+    /*! 1:Unspecified error. */
+    SFStatusTypeUnknownError,
     
-    /*! Internal error. */
+    /*! 2:Internal error. */
     SFStatusTypeInternalError,
     
-    /*! No 3D results found. */
+    /*! 3:No 3D results found. */
     SFStatusTypeNotFound,
     
-    /*! Bad image. */
+    /*! 4:Bad image. */
     SFStatusTypeBadImage,
     
-    /*! Invalid image. */
+    /*! 5:Invalid image. */
     SFStatusTypeInvalidImage,
     
-    /*! Timed out. */
+    /*! 6:Timed out. */
     SFStatusTypeTimeout
 };
 
@@ -97,6 +97,21 @@ typedef NS_ENUM(NSUInteger, SFRequestStage)
 ///---------------------------------------------------------------------------------------
 /// @name Premium
 ///---------------------------------------------------------------------------------------
+
+/*!
+ *  @brief Informs the SFRequestDelegate that additional info for the previously
+ *  recognized barcode has been found. 
+ *  The result is an `NSURL` representing the additional the url to the matched product.
+ *
+ *  @param sfRequest the current `SFRequest`.
+ *  @param productURL `NSURL` represeting the url to the product found. Cannot be `nil`.
+ *
+ *  @note This callback may be called only if SFRequest was previously initialized with a Slyce
+ *  object containing a **Premium** client ID.
+ */
+
+- (void)sfRequest:(SFRequest *)sfRequest didReceiveBarcodeInfo:(NSURL *)productURL;
+
 /*!
  *  @brief Informs the SFRequestDelegate that 2D products for the image in the request
  *  have been found. The result is an `NSDictionary` representing a short info about the
@@ -173,6 +188,24 @@ typedef NS_ENUM(NSUInteger, SFRequestStage)
 ///---------------------------------------------------------------------------------------
 
 /*!
+ *  @brief Informs the delegate the image matching process for the passed image has started.
+ *
+ *  @param sfRequest the current SFRequest.
+ *  @param image the image being searched. Cannot be `nil`.
+ */
+
+- (void)sfRequest:(SFRequest *)sfRequest didStartForImage:(UIImage *)image;
+
+/*!
+ *  @brief Informs the delegate the image matching process for the passed URL to the image has started.
+ *
+ *  @param sfRequest the current SFRequest.
+ *  @param imageURL the URL to the image being searched. Cannot be `nil`.
+ */
+
+- (void)sfRequest:(SFRequest *)sfRequest didStartForImageURL:(NSURL *)imageURL;
+
+/*!
  *  @brief Informs the SFRequestDelegate that the Slyce 3D search has finished.
  *
  *  @param sfRequest the current SFRequest.
@@ -181,7 +214,7 @@ typedef NS_ENUM(NSUInteger, SFRequestStage)
  *  @see SFRequest
  *
  */
-- (void)sfRequestDidFinish:(SFRequest *)sfRequest withStatus:(SFStatusType)statusType;
+- (void)sfRequest:(SFRequest *)sfRequest didFinishWithStatus:(SFStatusType)statusType;
 
 /*!
  *  @brief Informs the SFRequestDelegate of the supported merchat IDs to match the search with.

@@ -52,11 +52,14 @@ pod 'Slyce-iOS-SDK'
 1. Clone or download the SDK, which consists of a framework, resources bundle, API docs, SDK Overview PDF and release notes. It also includes a sample app.
 2. Drag and the drop the `SlyceSDK.framework` to the app’s project (make sure you copy the framework to the project).
 3. If you plan to use the Full UI mode, drag and the drop the `SlyceSDK.bundle` to the app’s project (make sure you copy the bundle to the project).
-3. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section):
+4. In your project's **Build Settings** (in the `TARGETS` section, not the `PROJECTS` section):
   * add `-ObjC` to `Other Linker Flags`
-4. In your project's **Build Phases**, link your project with the following library:
+  * set `Enable Bitcode` to `NO`
+5. In your **info.plist**:
+  * set `NSAllowsArbitraryLoads` to `YES` 
+6. In your project's **Build Phases**, link your project with the following library:
   * `libicucore.dylib`
-5. To start working, import `<SlyceSDK/SlyceSDK.h>` in order to import all the public headers.
+7. To start working, import `<SlyceSDK/SlyceSDK.h>` in order to import all the public headers.
 
 
 ## Credentials

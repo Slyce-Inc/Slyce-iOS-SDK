@@ -38,6 +38,28 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewController:didReceiveBarcodeInfo:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewControllerDelegate that additional info for the previously
+recognized barcode has been found.
+The result is an NSURL representing the additional the url to the matched product.</Abstract>
+			<DeclaredIn>SFCameraViewControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveBarcodeInfo:(NSURL *)productURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraViewController</Name>
+					<Abstract type="html">the current SFCameraViewController.</Abstract>
+				</Parameter><Parameter>
+					<Name>productURL</Name>
+					<Abstract type="html">NSURL represeting the url to the product found. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraViewController:didReceiveBarcodeInfo:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewController:didDetectImage:</TokenIdentifier>
 			<Abstract type="html">Informs the SFCameraViewControllerDelegate that 2D products for the image from the
 current video
@@ -186,7 +208,7 @@ informative message.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewControllerDidFinish:withStatus:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewController:didFinishWithStatus:</TokenIdentifier>
 			<Abstract type="html">Informs the SFCameraViewControllerDelegate that the Slyce 3D search has finished.</Abstract>
 			<DeclaredIn>SFCameraViewControllerDelegate.h</DeclaredIn>
 			
@@ -195,7 +217,7 @@ informative message.</Abstract>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (void)sfCameraViewControllerDidFinish:(SFCameraViewController *)cameraViewController withStatus:(SFStatusType)statusType</Declaration>
+			<Declaration>- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didFinishWithStatus:(SFStatusType)statusType</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cameraViewController</Name>
@@ -206,7 +228,7 @@ informative message.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfCameraViewControllerDidFinish:withStatus:</Anchor>
+			<Anchor>//api/name/sfCameraViewController:didFinishWithStatus:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

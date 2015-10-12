@@ -43,6 +43,8 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/sfCameraView:didChangeCameraPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didChangeCameraPosition:</option>
+	
 	<option value="//api/name/sfCameraView:didDetectBarcode:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didDetectBarcode:</option>
 	
 	<option value="//api/name/sfCameraView:didDetectImage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didDetectImage:</option>
@@ -57,9 +59,13 @@
 	
 	<option value="//api/name/sfCameraView:didFinishWithItemDescription:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didFinishWithItemDescription:</option>
 	
+	<option value="//api/name/sfCameraView:didFinishWithStatus:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didFinishWithStatus:</option>
+	
 	<option value="//api/name/sfCameraView:didProgressToStage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didProgressToStage:</option>
 	
 	<option value="//api/name/sfCameraView:didProgressToValue:withMessage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didProgressToValue:withMessage:</option>
+	
+	<option value="//api/name/sfCameraView:didReceiveBarcodeInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didReceiveBarcodeInfo:</option>
 	
 	<option value="//api/name/sfCameraView:didReceiveImageInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didReceiveImageInfo:</option>
 	
@@ -72,8 +78,6 @@
 	<option value="//api/name/sfCameraView:didStartRequest:forImage:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:didStartRequest:forImage:</option>
 	
 	<option value="//api/name/sfCameraView:wasTappedInPoint:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraView:wasTappedInPoint:</option>
-	
-	<option value="//api/name/sfCameraViewDidFinish:withStatus:">&nbsp;&nbsp;&nbsp;&nbsp;- sfCameraViewDidFinish:withStatus:</option>
 	
 	
 	
@@ -115,6 +119,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didChangeCameraPosition:">sfCameraView:didChangeCameraPosition:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didDetectBarcode:">sfCameraView:didDetectBarcode:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didDetectImage:">sfCameraView:didDetectImage:</a></span></li>
@@ -129,9 +135,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didFinishWithItemDescription:">sfCameraView:didFinishWithItemDescription:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didFinishWithStatus:">sfCameraView:didFinishWithStatus:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didProgressToStage:">sfCameraView:didProgressToStage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didProgressToValue:withMessage:">sfCameraView:didProgressToValue:withMessage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didReceiveBarcodeInfo:">sfCameraView:didReceiveBarcodeInfo:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didReceiveImageInfo:">sfCameraView:didReceiveImageInfo:</a></span></li>
 	
@@ -144,8 +154,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:didStartRequest:forImage:">sfCameraView:didStartRequest:forImage:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraView:wasTappedInPoint:">sfCameraView:wasTappedInPoint:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sfCameraViewDidFinish:withStatus:">sfCameraViewDidFinish:withStatus:</a></span></li>
 	
 </ul></li>
 
@@ -229,6 +237,12 @@ results.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/sfCameraView:didReceiveBarcodeInfo:">&ndash;&nbsp;sfCameraView:didReceiveBarcodeInfo:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/sfCameraView:didDetectImage:">&ndash;&nbsp;sfCameraView:didDetectImage:</a></code>
 	</span>
 	
@@ -283,7 +297,13 @@ results.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/sfCameraViewDidFinish:withStatus:">&ndash;&nbsp;sfCameraViewDidFinish:withStatus:</a></code>
+		<code><a href="#//api/name/sfCameraView:didChangeCameraPosition:">&ndash;&nbsp;sfCameraView:didChangeCameraPosition:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sfCameraView:didFinishWithStatus:">&ndash;&nbsp;sfCameraView:didFinishWithStatus:</a></code>
 	</span>
 	
 	
@@ -353,6 +373,61 @@ results.</p>
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sfCameraView:didChangeCameraPosition:" title="sfCameraView:didChangeCameraPosition:"></a>
+	<h3 class="subsubtitle method-title">sfCameraView:didChangeCameraPosition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the SFCameraViewDelegate that camera position was changed from back to
+front or vice versa.</p>
+
+<p>This delegate method is called as soon as <a href="../Classes/SFCameraView.html">SFCameraView</a>:flipCameraPosition finishes
+making the flip.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sfCameraView:(SFCameraView *)<em>cameraView</em> didChangeCameraPosition:(AVCaptureDevicePosition)<em>devicePosition</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cameraView</em></dt>
+			<dd><p>the current <a href="../Classes/SFCameraView.html">SFCameraView</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>devicePosition</em></dt>
+			<dd><p>the new camera position.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/sfCameraView:didDetectBarcode:" title="sfCameraView:didDetectBarcode:"></a>
@@ -767,6 +842,66 @@ has been found.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/sfCameraView:didFinishWithStatus:" title="sfCameraView:didFinishWithStatus:"></a>
+	<h3 class="subsubtitle method-title">sfCameraView:didFinishWithStatus:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the SFCameraViewDelegate that the Slyce 3D search has finished.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sfCameraView:(SFCameraView *)<em>cameraView</em> didFinishWithStatus:(SFStatusType)<em>statusType</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cameraView</em></dt>
+			<dd><p>the current <a href="../Classes/SFCameraView.html">SFCameraView</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>statusType</em></dt>
+			<dd><p>the status about the current request. Refer to <a href="../Classes/SFRequest.html">SFRequest</a>:<a href="../Constants/SFStatusType.html">SFStatusType</a> to see the possible status values.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/SFRequest.html">SFRequest</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/sfCameraView:didProgressToStage:" title="sfCameraView:didProgressToStage:"></a>
 	<h3 class="subsubtitle method-title">sfCameraView:didProgressToStage:</h3>
 	
@@ -865,6 +1000,65 @@ informative message.</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The numeric value is a percentage from the whole process and it is float ranged from 0 to 1.
 The message is a short description of the current search stage.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SFCameraViewDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sfCameraView:didReceiveBarcodeInfo:" title="sfCameraView:didReceiveBarcodeInfo:"></a>
+	<h3 class="subsubtitle method-title">sfCameraView:didReceiveBarcodeInfo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Informs the SFCameraViewDelegate that additional info for the previously
+recognized barcode has been found.
+The result is an <code>NSURL</code> representing the additional the url to the matched product.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sfCameraView:(SFCameraView *)<em>cameraView</em> didReceiveBarcodeInfo:(NSURL *)<em>productURL</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>cameraView</em></dt>
+			<dd><p>the current <a href="../Classes/SFCameraView.html">SFCameraView</a>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>productURL</em></dt>
+			<dd><p><code>NSURL</code> represeting the url to the product found. Cannot be <code>nil</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> This callback may be called only if <a href="../Classes/SFCameraView.html">SFCameraView</a> was initialized with a Slyce
+object containing a Premium client ID.</p></div>
 	</div>
 	
 	
@@ -1218,66 +1412,6 @@ SFCameraView&rsquo;s snap method was invoked.</p></dd>
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/sfCameraViewDidFinish:withStatus:" title="sfCameraViewDidFinish:withStatus:"></a>
-	<h3 class="subsubtitle method-title">sfCameraViewDidFinish:withStatus:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Informs the SFCameraViewDelegate that the Slyce 3D search has finished.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)sfCameraViewDidFinish:(SFCameraView *)<em>cameraView</em> withStatus:(SFStatusType)<em>statusType</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>cameraView</em></dt>
-			<dd><p>the current <a href="../Classes/SFCameraView.html">SFCameraView</a>.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>statusType</em></dt>
-			<dd><p>the status about the current request. Refer to <a href="../Classes/SFRequest.html">SFRequest</a>:<a href="../Constants/SFStatusType.html">SFStatusType</a> to see the possible status values.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="../Classes/SFRequest.html">SFRequest</a></p></code></li>
-			
-		</ul>
-	</div>
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SFCameraViewDelegate.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
@@ -1293,7 +1427,7 @@ SFCameraView&rsquo;s snap method was invoked.</p></dd>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-07-14)</span><br />
+						<p><span class="copyright">&copy; 2015 Slyce Inc. All rights reserved. (Last updated: 2015-10-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

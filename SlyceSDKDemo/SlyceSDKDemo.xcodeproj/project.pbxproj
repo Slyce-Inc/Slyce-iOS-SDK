@@ -30,11 +30,12 @@
 		2F97EF821AA0BE01006A4393 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97EF811AA0BE01006A4393 /* MBProgressHUD.m */; };
 		2F97EF851AA0BEAE006A4393 /* MyProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97EF841AA0BEAE006A4393 /* MyProductsViewController.m */; };
 		2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA2952A1ADAE764007A0133 /* libicucore.dylib */; };
+		2FA4B0BD1BCC1CD4007FF8D3 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FA4B0BB1BCC1CD4007FF8D3 /* SlyceSDK.bundle */; settings = {ASSET_TAGS = (); }; };
+		2FA4B0BE1BCC1CD4007FF8D3 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA4B0BC1BCC1CD4007FF8D3 /* SlyceSDK.framework */; settings = {ASSET_TAGS = (); }; };
 		2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBD56A51A8A9AB60084864D /* slyce-logo.png */; };
 		2FBD56A91A8AAFD40084864D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD56A81A8AAFD40084864D /* MyViewController.m */; };
 		2FC091B31A81125D008C76C9 /* MyCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC091B21A81125D008C76C9 /* MyCameraViewController.m */; };
-		2FE409E21B2A02FA005F0885 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FE409E11B2A02FA005F0885 /* SlyceSDK.bundle */; };
-		2FE409E41B2A031A005F0885 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE409E31B2A031A005F0885 /* SlyceSDK.framework */; };
+		2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,13 +95,14 @@
 		2F97EF831AA0BEAE006A4393 /* MyProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProductsViewController.h; sourceTree = "<group>"; };
 		2F97EF841AA0BEAE006A4393 /* MyProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProductsViewController.m; sourceTree = "<group>"; };
 		2FA2952A1ADAE764007A0133 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		2FA4B0BB1BCC1CD4007FF8D3 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
+		2FA4B0BC1BCC1CD4007FF8D3 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		2FBD56A51A8A9AB60084864D /* slyce-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slyce-logo.png"; sourceTree = "<group>"; };
 		2FBD56A71A8AAFD40084864D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MyViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2FBD56A81A8AAFD40084864D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2FC091B11A81125D008C76C9 /* MyCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MyCameraViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2FC091B21A81125D008C76C9 /* MyCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyCameraViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		2FE409E11B2A02FA005F0885 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
-		2FE409E31B2A031A005F0885 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
+		2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,7 @@
 			files = (
 				2F2C6D711AFF635F00F3D93E /* AdSupport.framework in Frameworks */,
 				2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */,
-				2FE409E41B2A031A005F0885 /* SlyceSDK.framework in Frameworks */,
+				2FA4B0BE1BCC1CD4007FF8D3 /* SlyceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,10 +122,10 @@
 		2F353F061A7FCBD7002EE2EB = {
 			isa = PBXGroup;
 			children = (
+				2FA4B0BB1BCC1CD4007FF8D3 /* SlyceSDK.bundle */,
+				2FA4B0BC1BCC1CD4007FF8D3 /* SlyceSDK.framework */,
 				2F2C6D701AFF635F00F3D93E /* AdSupport.framework */,
 				2FA2952A1ADAE764007A0133 /* libicucore.dylib */,
-				2FE409E31B2A031A005F0885 /* SlyceSDK.framework */,
-				2FE409E11B2A02FA005F0885 /* SlyceSDK.bundle */,
 				2F353F111A7FCBD7002EE2EB /* SlyceSDKDemo */,
 				2F353F101A7FCBD7002EE2EB /* Products */,
 			);
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				2F66AB9C1AC95944006C035A /* Icon-60@2x.png */,
+				2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */,
 				2F115FE51AC839F90057E547 /* Default-568h@2x.png */,
 				2FBD56A51A8A9AB60084864D /* slyce-logo.png */,
 				2F353F8B1A7FCF26002EE2EB /* shoe.jpg */,
@@ -253,7 +256,6 @@
 				TargetAttributes = {
 					2F353F0E1A7FCBD7002EE2EB = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = NPN2F2GXU7;
 					};
 				};
 			};
@@ -282,9 +284,10 @@
 			files = (
 				2F353F8C1A7FCF26002EE2EB /* shoe.jpg in Resources */,
 				2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */,
+				2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */,
 				2F353F8E1A7FCF3B002EE2EB /* Main.storyboard in Resources */,
-				2FE409E21B2A02FA005F0885 /* SlyceSDK.bundle in Resources */,
 				2F66AB9D1AC95944006C035A /* Icon-60@2x.png in Resources */,
+				2FA4B0BD1BCC1CD4007FF8D3 /* SlyceSDK.bundle in Resources */,
 				2F115FE61AC839F90057E547 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,11 +417,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SlyceSDKDemo",
 					"$(PROJECT_DIR)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SlyceSDK-gbjxojfweqtbtgclhfcnccdxqldx/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = SlyceSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -427,6 +430,7 @@
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.SlyceSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -438,11 +442,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Slyce Inc.";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SlyceSDKDemo",
 					"$(PROJECT_DIR)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SlyceSDK-gbjxojfweqtbtgclhfcnccdxqldx/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = SlyceSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -451,8 +456,9 @@
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.SlyceSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "99d87033-a03d-4697-a1ec-877c787b0df7";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

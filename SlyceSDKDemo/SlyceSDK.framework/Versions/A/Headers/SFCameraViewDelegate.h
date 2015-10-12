@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SFRequestDelegate.h"
+#import <AVFoundation/AVCaptureDevice.h>
 
 #ifndef SlyceSDK_SFCameraViewDelegate_h
 #define SlyceSDK_SFCameraViewDelegate_h
@@ -65,6 +66,20 @@
 ///---------------------------------------------------------------------------------------
 /// @name Premium
 ///---------------------------------------------------------------------------------------
+
+/*!
+ *  @brief Informs the SFCameraViewDelegate that additional info for the previously
+ *  recognized barcode has been found.
+ *  The result is an `NSURL` representing the additional the url to the matched product.
+ *
+ *  @param cameraView the current SFCameraView.
+ *  @param productURL `NSURL` represeting the url to the product found. Cannot be `nil`.
+ *
+ *  @note This callback may be called only if SFCameraView was initialized with a Slyce
+ *  object containing a Premium client ID.
+ */
+
+- (void)sfCameraView:(SFCameraView *)cameraView didReceiveBarcodeInfo:(NSURL *)productURL;
 
 /*!
  *  @brief Informs the SFCameraViewDelegate that 2D products for the image from the current video
@@ -150,6 +165,19 @@
 ///---------------------------------------------------------------------------------------
 
 /*!
+ *  @brief Informs the SFCameraViewDelegate that camera position was changed from back to
+ *  front or vice versa.
+ *
+ *  This delegate method is called as soon as SFCameraView:flipCameraPosition finishes 
+ *  making the flip.
+ *
+ *  @param cameraView the current SFCameraView.
+ *  @param devicePosition the new camera position.
+ *
+ */
+- (void)sfCameraView:(SFCameraView *)cameraView didChangeCameraPosition:(AVCaptureDevicePosition)devicePosition;
+
+/*!
  *  @brief Informs the SFCameraViewDelegate that the Slyce 3D search has finished.
  *
  *  @param cameraView the current SFCameraView.
@@ -158,7 +186,7 @@
  *  @see SFRequest
  *
  */
-- (void)sfCameraViewDidFinish:(SFCameraView *)cameraView withStatus:(SFStatusType)statusType;
+- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithStatus:(SFStatusType)statusType;
 
 /*!
  *  @brief Informs the SFCameraViewDelegate that an image object from the current video frame is ready.

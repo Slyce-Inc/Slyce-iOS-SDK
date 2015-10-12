@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cat/NSError(Slyce)</TokenIdentifier>
-			<Abstract type="html">Enumeration for main Slyce SDK error codes.</Abstract>
+			<Abstract type="html"></Abstract>
 			<DeclaredIn>NSError+Slyce.h</DeclaredIn>
             
 			

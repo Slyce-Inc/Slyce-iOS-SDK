@@ -43,6 +43,20 @@
 ///---------------------------------------------------------------------------------------
 
 /*!
+ *  @brief Informs the SFCameraViewControllerDelegate that additional info for the previously
+ *  recognized barcode has been found.
+ *  The result is an `NSURL` representing the additional the url to the matched product.
+ *
+ *  @param cameraViewController the current SFCameraViewController.
+ *  @param productURL `NSURL` represeting the url to the product found. Cannot be `nil`.
+ *
+ *  @note This callback may be called only if SFCameraViewController was initialized with a Slyce
+ *  object containing a Premium client ID.
+ */
+
+- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveBarcodeInfo:(NSURL *)productURL;
+
+/*!
  *  @brief Informs the SFCameraViewControllerDelegate that 2D products for the image from the 
  *  current video
  *  frame have been found. The result is an `NSDictionary` representing a short info about the matched products
@@ -170,7 +184,7 @@
  *  @see SFRequest
  *
  */
-- (void)sfCameraViewControllerDidFinish:(SFCameraViewController *)cameraViewController withStatus:(SFStatusType)statusType;
+- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didFinishWithStatus:(SFStatusType)statusType;
 
 /*!
  *  @brief Informs the SFCameraViewControllerDelegate that an image object from the current video frame is ready.

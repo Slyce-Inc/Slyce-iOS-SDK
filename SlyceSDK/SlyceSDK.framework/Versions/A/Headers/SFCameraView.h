@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SFCameraViewDelegate.h"
+#import <AVFoundation/AVCaptureVideoPreviewLayer.h>
 
 @class SFSlyce;
-@class AVCaptureVideoPreviewLayer;
+@class SFRequest;
 
 /*!
  *  Provides an integral camera functionality
@@ -23,11 +24,26 @@
  *  @note This mode of operation is mostly used when the user wants to use his own UI with the SDK’s capture capabilities.
  */
 
-@interface SFCameraView : UIView
+@interface SFCameraView : UIView <SFRequestDelegate>
 
 ///---------------------------------------------------------------------------------------
 /// @name Properties
 ///---------------------------------------------------------------------------------------
+
+/*!
+  *  @property
+  *  @brief A property to enable/disable 2D/3D recognition after snapping an image.
+  *
+  *  @discussion Use this property to toggle the image recognition after calling snap method.
+  *  Setting this property to `NO` will not start an image recognition after the image was 
+  *  snapped. This means [SFCameraViewDelegate sfCameraView:didStartRequest:forImage:] callback will NOT be called after [SFCameraViewDelegate sfCameraView:didSnap:].
+  *  This is generally useful if the user wants to make some visual editing for the snapped image prior to sending it for recognition to Slyce.
+  *  Default is `YES`.
+  *
+  */
+
+@property (nonatomic) BOOL shouldRecognizeAfterSnap;
+
 
 /*!
  *  @property
@@ -40,10 +56,6 @@
  */
 
 @property (nonatomic) BOOL shouldPauseScannerAfterRecognition;
-
-///---------------------------------------------------------------------------------------
-/// @name Properties
-///---------------------------------------------------------------------------------------
 
 /*!
  *  @property
@@ -95,7 +107,7 @@
  *  @param view The view on top of which this camera view will placed.
  *  @param options options dictionary (optional). Pass `nil` for no options.
  *  @param delegate Object that implements SFCameraViewDelegate protocol.
- *
+ *b
  *  @note This method does NOT start the video preview. Use startCamera to start the video frames processing.
  *
  *  @see SFCameraViewDelegate
@@ -162,8 +174,8 @@
  *
  *  If the video was already paused, this method does nothing.
  *
- *  @note This method useful if you want to display an help section on-top of the scanner while
- *  making sure you will not be notified with unexpected scan results.
+ *  @note This method useful if you want to display an help section on-top of the scanner 
+ *  while making sure you will not be notified with unexpected scan results.
  *
  */
 
@@ -181,8 +193,32 @@
 - (void)resumeCapture;
 
 ///---------------------------------------------------------------------------------------
+/// @name Slyce Search
+///---------------------------------------------------------------------------------------
+
+/*!
+ *  @method
+ *  @brief Stops the Slyce search.
+ *
+ *  @discussion Asks the underlying Slyce Search request to be stopped, if one was previously 
+ *  initiated. Slyce request is initiated as soon as the user calls the method snap. If Slyce 
+ *  search was not initiated, this method does nothing.
+ *
+ */
+
+- (void)stopSearch;
+
+///---------------------------------------------------------------------------------------
 /// @name General
 ///---------------------------------------------------------------------------------------
+
+/*!
+ *  @method
+ *  @brief Changes the camera device from rear to front and vice versa.
+ *
+ */
+
+- (void)flipCameraPosition;
 
 /*!
  *  @method

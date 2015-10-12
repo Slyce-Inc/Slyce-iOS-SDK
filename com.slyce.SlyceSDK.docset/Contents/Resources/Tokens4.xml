@@ -14,7 +14,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/setRequestID:</TokenIdentifier>
-			<Abstract type="html">The unique identifier.</Abstract>
+			<Abstract type="html">The unique identifier of the request.</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, copy) NSString *requestID</Declaration>
@@ -26,7 +26,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/requestID</TokenIdentifier>
-			<Abstract type="html">The unique identifier.</Abstract>
+			<Abstract type="html">The unique identifier of the request.</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, copy) NSString *requestID</Declaration>
@@ -38,7 +38,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/SFRequest/requestID</TokenIdentifier>
-			<Abstract type="html">The unique identifier.</Abstract>
+			<Abstract type="html">The unique identifier of the request.</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, copy) NSString *requestID</Declaration>

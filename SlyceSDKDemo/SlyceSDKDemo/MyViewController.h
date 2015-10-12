@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SlyceSDK/SlyceSDK.h>
 
 @interface MyViewController : UIViewController
 

@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for SlyceSDK.
-FOUNDATION_EXPORT double SlyceSDKVersionNumber;
-
-//! Project version string for SlyceSDK.
-FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
-
 #import <SlyceSDK/SFRequest.h>
 #import <SlyceSDK/SFRequestDelegate.h>
 #import <SlyceSDK/SFCameraView.h>
@@ -23,3 +17,10 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #import <SlyceSDK/SFBarcode.h>
 #import <SlyceSDK/SFSlyce.h>
 #import <SlyceSDK/NSError+Slyce.h>
+
+//! Project version number for SlyceSDK.
+FOUNDATION_EXPORT double SlyceSDKVersionNumber;
+
+//! Project version string for SlyceSDK.
+FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
+

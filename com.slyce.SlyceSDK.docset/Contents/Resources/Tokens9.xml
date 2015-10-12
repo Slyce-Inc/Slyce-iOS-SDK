@@ -80,6 +80,28 @@ has been found.</Abstract>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didReceiveBarcodeInfo:</TokenIdentifier>
+			<Abstract type="html">Informs the SFRequestDelegate that additional info for the previously
+recognized barcode has been found.
+The result is an NSURL representing the additional the url to the matched product.</Abstract>
+			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfRequest:(SFRequest *)sfRequest didReceiveBarcodeInfo:(NSURL *)productURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sfRequest</Name>
+					<Abstract type="html">the current SFRequest.</Abstract>
+				</Parameter><Parameter>
+					<Name>productURL</Name>
+					<Abstract type="html">NSURL represeting the url to the product found. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfRequest:didReceiveBarcodeInfo:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didDetectImage:</TokenIdentifier>
 			<Abstract type="html">Informs the SFRequestDelegate that 2D products for the image in the request
 have been found. The result is an NSDictionary representing a short info about the
@@ -189,7 +211,47 @@ info in key-value pairs.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequestDidFinish:withStatus:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didStartForImage:</TokenIdentifier>
+			<Abstract type="html">Informs the delegate the image matching process for the passed image has started.</Abstract>
+			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfRequest:(SFRequest *)sfRequest didStartForImage:(UIImage *)image</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sfRequest</Name>
+					<Abstract type="html">the current SFRequest.</Abstract>
+				</Parameter><Parameter>
+					<Name>image</Name>
+					<Abstract type="html">the image being searched. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfRequest:didStartForImage:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didStartForImageURL:</TokenIdentifier>
+			<Abstract type="html">Informs the delegate the image matching process for the passed URL to the image has started.</Abstract>
+			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfRequest:(SFRequest *)sfRequest didStartForImageURL:(NSURL *)imageURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sfRequest</Name>
+					<Abstract type="html">the current SFRequest.</Abstract>
+				</Parameter><Parameter>
+					<Name>imageURL</Name>
+					<Abstract type="html">the URL to the image being searched. Cannot be nil.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfRequest:didStartForImageURL:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didFinishWithStatus:</TokenIdentifier>
 			<Abstract type="html">Informs the SFRequestDelegate that the Slyce 3D search has finished.</Abstract>
 			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
 			
@@ -198,7 +260,7 @@ info in key-value pairs.</Abstract>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (void)sfRequestDidFinish:(SFRequest *)sfRequest withStatus:(SFStatusType)statusType</Declaration>
+			<Declaration>- (void)sfRequest:(SFRequest *)sfRequest didFinishWithStatus:(SFStatusType)statusType</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>sfRequest</Name>
@@ -209,7 +271,7 @@ info in key-value pairs.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfRequestDidFinish:withStatus:</Anchor>
+			<Anchor>//api/name/sfRequest:didFinishWithStatus:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
