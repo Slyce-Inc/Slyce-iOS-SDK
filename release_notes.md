@@ -1,6 +1,13 @@
 Slyce SDK Changelog
 ===================================
 
+2.1 - 2015/11/11
+------------------
+* CHANDED: Full UI Progress screen - progressive blocks loading
+* FIXED: Scanning objects parallel to the ground
+* REMOVED: iPhone Simulator from SlyceSDK.bundle's info.plist file
+* IMPROVED: Analytics reporting 
+
 2.0 - 2015/10/12
 ------------------
 * NEW: Full UI mode - a total NEW design!
