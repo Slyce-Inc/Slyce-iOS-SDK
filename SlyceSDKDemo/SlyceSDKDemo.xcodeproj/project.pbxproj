@@ -14,7 +14,6 @@
 		2F353F8C1A7FCF26002EE2EB /* shoe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F353F8B1A7FCF26002EE2EB /* shoe.jpg */; };
 		2F353F8E1A7FCF3B002EE2EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F353F8D1A7FCF3B002EE2EB /* Main.storyboard */; };
 		2F380B441BF3D35F00C48B59 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F380B421BF3D35F00C48B59 /* SlyceSDK.bundle */; };
-		2F380B451BF3D35F00C48B59 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F380B431BF3D35F00C48B59 /* SlyceSDK.framework */; };
 		2F66AB9D1AC95944006C035A /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66AB9C1AC95944006C035A /* Icon-60@2x.png */; };
 		2F69C3CA1AA0C2F20081F61D /* MyProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F69C3C91AA0C2F20081F61D /* MyProductCollectionViewCell.m */; };
 		2F69C3CE1AA0C5B20081F61D /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F69C3CD1AA0C5B20081F61D /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
@@ -31,6 +30,7 @@
 		2F69C3F01AA0C7910081F61D /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F69C3EF1AA0C7910081F61D /* SDImageCache.m */; };
 		2F97EF821AA0BE01006A4393 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97EF811AA0BE01006A4393 /* MBProgressHUD.m */; };
 		2F97EF851AA0BEAE006A4393 /* MyProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F97EF841AA0BEAE006A4393 /* MyProductsViewController.m */; };
+		2F9E39FE1BF549F90009E019 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9E39FD1BF549F90009E019 /* SlyceSDK.framework */; };
 		2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA2952A1ADAE764007A0133 /* libicucore.dylib */; };
 		2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FBD56A51A8A9AB60084864D /* slyce-logo.png */; };
 		2FBD56A91A8AAFD40084864D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD56A81A8AAFD40084864D /* MyViewController.m */; };
@@ -63,7 +63,6 @@
 		2F353F8B1A7FCF26002EE2EB /* shoe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shoe.jpg; sourceTree = "<group>"; };
 		2F353F8D1A7FCF3B002EE2EB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2F380B421BF3D35F00C48B59 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
-		2F380B431BF3D35F00C48B59 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		2F66AB9C1AC95944006C035A /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		2F69C3C81AA0C2F20081F61D /* MyProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProductCollectionViewCell.h; sourceTree = "<group>"; };
 		2F69C3C91AA0C2F20081F61D /* MyProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProductCollectionViewCell.m; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		2F97EF811AA0BE01006A4393 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2F97EF831AA0BEAE006A4393 /* MyProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProductsViewController.h; sourceTree = "<group>"; };
 		2F97EF841AA0BEAE006A4393 /* MyProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProductsViewController.m; sourceTree = "<group>"; };
+		2F9E39FD1BF549F90009E019 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		2FA2952A1ADAE764007A0133 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		2FBD56A51A8A9AB60084864D /* slyce-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slyce-logo.png"; sourceTree = "<group>"; };
 		2FBD56A71A8AAFD40084864D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MyViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -112,7 +112,7 @@
 			files = (
 				2F2C6D711AFF635F00F3D93E /* AdSupport.framework in Frameworks */,
 				2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */,
-				2F380B451BF3D35F00C48B59 /* SlyceSDK.framework in Frameworks */,
+				2F9E39FE1BF549F90009E019 /* SlyceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +122,8 @@
 		2F353F061A7FCBD7002EE2EB = {
 			isa = PBXGroup;
 			children = (
+				2F9E39FD1BF549F90009E019 /* SlyceSDK.framework */,
 				2F380B421BF3D35F00C48B59 /* SlyceSDK.bundle */,
-				2F380B431BF3D35F00C48B59 /* SlyceSDK.framework */,
 				2F2C6D701AFF635F00F3D93E /* AdSupport.framework */,
 				2FA2952A1ADAE764007A0133 /* libicucore.dylib */,
 				2F353F111A7FCBD7002EE2EB /* SlyceSDKDemo */,

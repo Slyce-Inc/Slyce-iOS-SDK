@@ -1,6 +1,10 @@
 Slyce SDK Changelog
 ===================================
 
+2.1.1 - 2015/11/13
+------------------
+* FIXED: Critical compilation errors when working with iPhone Simulator (Xcode 7.1 and above)
+
 2.1 - 2015/11/11
 ------------------
 * CHANDED: Full UI Progress screen - progressive blocks loading
