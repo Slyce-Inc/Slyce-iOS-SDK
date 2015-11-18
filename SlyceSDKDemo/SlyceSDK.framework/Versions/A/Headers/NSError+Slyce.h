@@ -75,7 +75,9 @@ typedef NS_ENUM(NSUInteger, SFErrorCode)
     ///28: bad image.
     SFErrorRequestBadImage,
     ///29: invalid image.
-    SFErrorRequestInvalidImage
+    SFErrorRequestInvalidImage,
+    ///30: internal error.
+    SFErrorRequestInternalError
 };
 
 @interface NSError (Slyce)

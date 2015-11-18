@@ -313,5 +313,15 @@
             <NodeRef refid="12"/>
         </Token>
         
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFErrorRequestInternalError</TokenIdentifier>
+            <Abstract type="html">30: internal error.</Abstract>
+            <Declaration>SFErrorRequestInternalError</Declaration>
+            
+            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
+            
+            <NodeRef refid="12"/>
+        </Token>
+        
 	</File>
 </Tokens>

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C227BB939E605C3434BD55A11B2C8025960867ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C227BB939E605C3434BD55A11B2C8025960867ED" : 0,
+    "0D0140F45900258E13937FF84CA97B95BDFB2731" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C0E41BCB-DB3C-4AE4-96FF-7FDF56A0B7AC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C227BB939E605C3434BD55A11B2C8025960867ED" : "Public\/",
+    "0D0140F45900258E13937FF84CA97B95BDFB2731" : "SlyceSDK"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SlyceSDKDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SlyceSDKDemo\/SlyceSDKDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/drivetrain\/foundation_ios_sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0D0140F45900258E13937FF84CA97B95BDFB2731"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Slyce-Inc\/Slyce-iOS-SDK",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C227BB939E605C3434BD55A11B2C8025960867ED"
+    }
+  ]
+}

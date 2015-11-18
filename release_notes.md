@@ -1,6 +1,10 @@
 Slyce SDK Changelog
 ===================================
 
+2.1.2 - 2015/11/18
+------------------
+* IMPROVED: Foundation error handling
+
 2.1.1 - 2015/11/13
 ------------------
 * FIXED: Critical compilation errors when working with iPhone Simulator (Xcode 7.1 and above)
