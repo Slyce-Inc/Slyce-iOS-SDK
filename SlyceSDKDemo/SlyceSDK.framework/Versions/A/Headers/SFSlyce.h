@@ -79,6 +79,13 @@
 - (BOOL)openWithClientID:(NSString *)clientID error:(NSError **)error;
 
 ///---------------------------------------------------------------------------------------
+/// @name Unavailable
+///---------------------------------------------------------------------------------------
+
+- (instancetype) init __attribute__((unavailable("Use +[SFSlyce sharedInstance] instead")));
++ (instancetype) new __attribute__ ((unavailable("Use +[SFSlyce sharedInstance] instead")));
+
+///---------------------------------------------------------------------------------------
 /// @name Properties
 ///---------------------------------------------------------------------------------------
 

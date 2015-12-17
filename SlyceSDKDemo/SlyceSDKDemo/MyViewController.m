@@ -351,7 +351,6 @@ typedef NS_ENUM(NSUInteger, ClientMode)
         self.clientMode = ClientModePremium;
 }
 
-
 - (IBAction)acceptButtonClicked:(id)sender
 {
     [_clientIDTextField resignFirstResponder];
@@ -375,7 +374,8 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     self.hud.mode = MBProgressHUDModeIndeterminate;
     [self.hud show:YES];
     
-    self.slyce = [SFSlyce sharedInstance];
+    self.slyce = [SFSlyce sharedInstance];;
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         NSError *error = nil;

@@ -68,6 +68,30 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/init</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SFSlyce/new</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)new</Declaration>
+			
+			
+			<Anchor>//api/name/new</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setAppID:</TokenIdentifier>
 			<Abstract type="html">The app ID used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>

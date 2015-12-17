@@ -19,7 +19,7 @@
 #import <SlyceSDK/NSError+Slyce.h>
 
 //! Project version number for SlyceSDK.
-FOUNDATION_EXPORT double SlyceSDKVersionNumber;
+FOUNDATION_EXPORT float SlyceSDKVersionNumber;
 
 //! Project version string for SlyceSDK.
 FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];

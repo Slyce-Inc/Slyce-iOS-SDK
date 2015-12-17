@@ -1,6 +1,13 @@
 Slyce SDK Changelog
 ===================================
 
+2.2 - 2015/12/17
+------------------
+* FIXED: local image cache synchronization bug 
+* FIXED: image cropping bug on iPhone 5s
+* FIXED: redundant events reporting while app is in background
+* IMPROVED: analytics reporting
+
 2.1.2 - 2015/11/18
 ------------------
 * IMPROVED: Foundation error handling
