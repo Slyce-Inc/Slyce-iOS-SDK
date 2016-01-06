@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/SFStatusType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/SFStatusType</TokenIdentifier>
+			<Abstract type="html">Enumeration for 3D results status.</Abstract>
+			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFStatusTypeSuccess</TokenIdentifier>
+            <Abstract type="html">0:3D results found.</Abstract>
+            <Declaration>SFStatusTypeSuccess</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFStatusTypeUnknownError</TokenIdentifier>
+            <Abstract type="html">1:Unspecified error.</Abstract>
+            <Declaration>SFStatusTypeUnknownError</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFStatusTypeInternalError</TokenIdentifier>
+            <Abstract type="html">2:Internal error.</Abstract>
+            <Declaration>SFStatusTypeInternalError</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFStatusTypeNotFound</TokenIdentifier>
+            <Abstract type="html">3:No 3D results found.</Abstract>
+            <Declaration>SFStatusTypeNotFound</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFStatusTypeBadImage</TokenIdentifier>
+            <Abstract type="html">4:Bad image.</Abstract>
+            <Declaration>SFStatusTypeBadImage</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFStatusTypeInvalidImage</TokenIdentifier>
+            <Abstract type="html">5:Invalid image.</Abstract>
+            <Declaration>SFStatusTypeInvalidImage</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/SFStatusTypeTimeout</TokenIdentifier>
+            <Abstract type="html">6:Timed out.</Abstract>
+            <Declaration>SFStatusTypeTimeout</Declaration>
+            
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            
+            <NodeRef refid="15"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

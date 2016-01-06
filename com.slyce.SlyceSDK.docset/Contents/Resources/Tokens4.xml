@@ -321,6 +321,19 @@ to narrow the search to specific merchants.</Abstract>
             <NodeRef refid="4"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/cancelInternal</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>- (void)cancelInternal</Declaration>
+			
+			
+			<Anchor>//api/name/cancelInternal</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
         
 	</File>
 </Tokens>

@@ -379,6 +379,43 @@
             <NodeRef refid="5"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setCustomeProgressColor:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *customeProgressColor</Declaration>
+			
+			
+			<Anchor>//api/name/customeProgressColor</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/customeProgressColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *customeProgressColor</Declaration>
+			
+			
+			<Anchor>//api/name/customeProgressColor</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/customeProgressColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *customeProgressColor</Declaration>
+			
+			
+			<Anchor>//api/name/customeProgressColor</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
         
 	</File>
 </Tokens>

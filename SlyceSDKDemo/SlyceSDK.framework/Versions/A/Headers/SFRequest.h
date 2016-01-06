@@ -234,4 +234,8 @@
 - (void)recognizeSimilarProductsFromImageURL:(NSURL *)imageURL __attribute((deprecated("This method is deprecated since 2.0. Use getProductsFromImageURL:merchantIDs: instead.")));
 
 
+
+- (void)cancelInternal;
+
+
 @end

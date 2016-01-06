@@ -52,10 +52,12 @@
 						<NodeRef refid="12"/>
 						<NodeRef refid="13"/>
 						<NodeRef refid="14"/>
+						<NodeRef refid="15"/>
 						
 					</Subnodes>
 				</Node>
 				
+                
 			</Subnodes>
         </Node>
     </TOC>
@@ -360,20 +362,26 @@
             
         </Node>
 		<Node id="12" type="file" documentType="reference">
+            <Name>SFCustomBtnPosition</Name>
+            <Path>Constants/SFCustomBtnPosition.html</Path>
+            
+        </Node>
+		<Node id="13" type="file" documentType="reference">
             <Name>SFErrorCode</Name>
             <Path>Constants/SFErrorCode.html</Path>
             
         </Node>
-		<Node id="13" type="file" documentType="reference">
+		<Node id="14" type="file" documentType="reference">
             <Name>SFRequestStage</Name>
             <Path>Constants/SFRequestStage.html</Path>
             
         </Node>
-		<Node id="14" type="file" documentType="reference">
+		<Node id="15" type="file" documentType="reference">
             <Name>SFStatusType</Name>
             <Path>Constants/SFStatusType.html</Path>
             
         </Node>
 		
+        
 	</Library>
 </DocSetNodes>

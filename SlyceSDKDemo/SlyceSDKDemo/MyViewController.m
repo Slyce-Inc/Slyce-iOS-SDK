@@ -12,7 +12,6 @@
 #import "MBProgressHUD.h"
 #import <SlyceSDK/SlyceSDK.h>
 
-
 #define kClientID @"ClientID"
 #define kAppID @"AppID"
 #define kAppKey @"AppKey"
@@ -278,6 +277,8 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didSnapImage:(UIImage *)image
 {
+    
+    
     NSLog(@"sfCameraViewController:didSnapImage:");
 }
 
@@ -300,6 +301,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didDetectImage:(NSDictionary *)imageInfo
 {
     NSLog(@"sfCameraViewController:didDetectImage:%@", imageInfo);
+    
 }
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveImageInfo:(NSArray *)products
@@ -528,12 +530,16 @@ typedef NS_ENUM(NSUInteger, ClientMode)
             return;
         }
     }
+  
     
-    self.cameraVC = [[SFCameraViewController alloc] initWithSlyce:_slyce resourcesBundle:nil options:nil andDelegate:self];
+    self.cameraVC = [[SFCameraViewController alloc] initWithSlyce:_slyce resourcesBundle:[NSBundle mainBundle] options:nil andDelegate:self];
     //self.cameraView.shouldUseContinuousRecognition = NO;
+    
     [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:^{
         NSLog(@"SFCameraViewController was presented");
     }];
+    
+ 
     
     [self.hud hide:YES];
 }

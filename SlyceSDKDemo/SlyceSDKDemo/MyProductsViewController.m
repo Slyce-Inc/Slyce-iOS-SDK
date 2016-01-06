@@ -67,6 +67,7 @@
 - (IBAction)closeWindow:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -

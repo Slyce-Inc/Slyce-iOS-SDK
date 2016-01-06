@@ -102,8 +102,10 @@
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
     
+    /*
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
+     */
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView didReceiveImageInfo:(NSArray *)products
@@ -122,11 +124,29 @@
     self.resultLabel.text = [imageInfo description];
 }
 
+- (UIImage *)renderToImage
+{
+    CGRect viewRect = self.view.frame;
+    UIGraphicsBeginImageContextWithOptions(viewRect.size, NO, [UIScreen mainScreen].scale);
+    CGContextRef contextRef = UIGraphicsGetCurrentContext();
+    [self.view.layer renderInContext:contextRef];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+
 - (void)sfCameraView:(SFCameraView *)cameraView didSnapImage:(UIImage *)image
 {
+    
+ 
     NSLog(@"sfCameraView:didSnapImage:");
     [self.hud show:YES];
     _cancelButton.hidden = NO;
+    
+    [_cameraView pauseCapture];
+    
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView wasTappedInPoint:(CGPoint)point

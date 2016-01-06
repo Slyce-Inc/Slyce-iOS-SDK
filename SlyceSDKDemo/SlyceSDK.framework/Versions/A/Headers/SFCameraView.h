@@ -45,6 +45,9 @@
 @property (nonatomic) BOOL shouldRecognizeAfterSnap;
 
 
+@property (nonatomic, strong) SFRequest *currentRequest;
+
+
 /*!
  *  @property
  *  @brief A property to enable/disable pausing the auto scanner after a successful 2D detection.
@@ -263,5 +266,8 @@
  */
 
 - (void)focusAtPoint:(CGPoint)point;
+
+// its an internal cancel without reporting to mixpanel.
+- (void)stopSearchInternal;
 
 @end

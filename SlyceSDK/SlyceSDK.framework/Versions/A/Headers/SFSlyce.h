@@ -13,7 +13,7 @@
  @abstract Main object used to initialize the Slyce SDK.
  
  */
-
+      
 @interface SFSlyce : NSObject
 
 ///---------------------------------------------------------------------------------------
@@ -179,5 +179,9 @@
  */
 
 @property (nonatomic) BOOL sound;
+
+
+@property (nonatomic,strong) UIColor *customeProgressColor;
+
 
 @end

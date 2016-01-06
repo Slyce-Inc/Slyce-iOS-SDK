@@ -35,6 +35,17 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
     SFAnimationTypeFade
 };
 
+
+typedef NS_ENUM(NSUInteger, SFCustomBtnPosition)
+{
+
+    // Right
+    SFCustomBtnPositionRight,
+    
+    // Left
+    SFCustomBtnPositionLeft,
+};
+
 /*!
  *  Provides an integrated `UIViewController` with all the Slyce SDK functionalities.
  *
@@ -79,6 +90,9 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
 
 @property (nonatomic, copy) NSDictionary *options;
 
+
+
+
 /*!
  *  @property
  *  @brief A handle to the underlying camera/scanner view used.
@@ -93,6 +107,17 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
  */
 
 @property (strong, nonatomic, readonly) SFCameraView *cameraView;
+
+
+
+
+//-(void) setCustomHelpViewController:(id)customHelpView;
+
+//-(void) setCustomNotFoundViewController:(id)customNotFoundView;
+
+//-(void) setCustomBtnWithVC:(id)viewController btnPosition:(SFCustomBtnPosition)btnPosition btnImage:(UIImage  *)btnImage popUpAnimation:(BOOL)popUpAnimation;
+
+//-(void) setCustomBtnWithVC:(id)viewController btnPosition:(CGPoint)btnPosition btnImage:(UIImage  *)btnImage popUpAnimation:(BOOL)popUpAnimation;
 
 ///---------------------------------------------------------------------------------------
 /// @name Initialization
@@ -164,5 +189,7 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
  */
 
 - (void)presentFromViewController:(UIViewController *)fromViewController usingAnimation:(SFAnimationType)animationType completionBlock:(void (^)(void))completionBlock;
+
+
 
 @end

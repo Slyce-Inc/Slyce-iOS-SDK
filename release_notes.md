@@ -1,6 +1,12 @@
 Slyce SDK Changelog
 ===================================
 
+2.3 - 2016/01/06
+------------------
+* FIXED: Screen orientation inverted in landscape when Semi-UI mode implemented
+* FIXED: EAN-13 Barcode detection 
+* ADDED: Assets Sets for different platform support
+
 2.2 - 2015/12/17
 ------------------
 * FIXED: local image cache synchronization bug 

@@ -7,17 +7,12 @@
 		<key>SlyceSDKDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>7</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>2F353F0E1A7FCBD7002EE2EB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2F353F271A7FCBD7002EE2EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
