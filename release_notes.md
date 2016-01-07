@@ -1,6 +1,10 @@
 Slyce SDK Changelog
 ===================================
 
+2.3.1 - 2016/01/07
+------------------
+* FIXED: Minor bug fixes
+
 2.3 - 2016/01/06
 ------------------
 * FIXED: Screen orientation inverted in landscape when Semi-UI mode implemented
