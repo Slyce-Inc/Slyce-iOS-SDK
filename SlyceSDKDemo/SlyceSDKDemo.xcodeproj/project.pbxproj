@@ -35,8 +35,8 @@
 		2FC091B31A81125D008C76C9 /* MyCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC091B21A81125D008C76C9 /* MyCameraViewController.m */; };
 		2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */; };
 		D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0A5281C2FDDAA00960D26 /* images.xcassets */; };
-		D7DF21961C3F0D6A00E6BED4 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7DF21941C3F0D6A00E6BED4 /* SlyceSDK.bundle */; };
-		D7DF21971C3F0D6A00E6BED4 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DF21951C3F0D6A00E6BED4 /* SlyceSDK.framework */; };
+		D7DF219A1C3F1D0900E6BED4 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7DF21981C3F1D0900E6BED4 /* SlyceSDK.bundle */; };
+		D7DF219B1C3F1D0900E6BED4 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DF21991C3F1D0900E6BED4 /* SlyceSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,8 +103,8 @@
 		2FC091B21A81125D008C76C9 /* MyCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyCameraViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		D7A0A5281C2FDDAA00960D26 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
-		D7DF21941C3F0D6A00E6BED4 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
-		D7DF21951C3F0D6A00E6BED4 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
+		D7DF21981C3F1D0900E6BED4 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
+		D7DF21991C3F1D0900E6BED4 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 			files = (
 				2F2C6D711AFF635F00F3D93E /* AdSupport.framework in Frameworks */,
 				2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */,
-				D7DF21971C3F0D6A00E6BED4 /* SlyceSDK.framework in Frameworks */,
+				D7DF219B1C3F1D0900E6BED4 /* SlyceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,8 +124,8 @@
 		2F353F061A7FCBD7002EE2EB = {
 			isa = PBXGroup;
 			children = (
-				D7DF21941C3F0D6A00E6BED4 /* SlyceSDK.bundle */,
-				D7DF21951C3F0D6A00E6BED4 /* SlyceSDK.framework */,
+				D7DF21981C3F1D0900E6BED4 /* SlyceSDK.bundle */,
+				D7DF21991C3F1D0900E6BED4 /* SlyceSDK.framework */,
 				D7A0A5281C2FDDAA00960D26 /* images.xcassets */,
 				2F2C6D701AFF635F00F3D93E /* AdSupport.framework */,
 				2FA2952A1ADAE764007A0133 /* libicucore.dylib */,
@@ -286,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F353F8C1A7FCF26002EE2EB /* shoe.jpg in Resources */,
-				D7DF21961C3F0D6A00E6BED4 /* SlyceSDK.bundle in Resources */,
+				D7DF219A1C3F1D0900E6BED4 /* SlyceSDK.bundle in Resources */,
 				D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */,
 				2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */,
 				2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */,
