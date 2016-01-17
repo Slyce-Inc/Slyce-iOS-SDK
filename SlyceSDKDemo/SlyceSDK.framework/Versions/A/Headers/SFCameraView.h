@@ -50,21 +50,35 @@
 
 /*!
  *  @property
- *  @brief A property to enable/disable pausing the auto scanner after a successful 2D detection.
+ *  @brief A property to enable/disable pausing the auto scanner after a successful 1D/2D detection.
  *
- *  @discussion Setting this property to `NO` will let the auto scanner continuously recognize products.
+ *  @discussion Setting this property to `NO` will let the auto scanner continuously recognize 2D products and barcodes after default pausing time of '3 sec'.
  *  Default is `YES`, meaning the auto scanner will pause after the detection. It's up to the user then to resume it by calling resumeCapture:.
- *  This property has no effect if shouldUseContinuousRecognition was set to `NO`.
+ *  This property has no effect if shouldUseContinuousRecognition/shouldUseContinuousRecognition2D/shouldUseContinuousRecognitionBarcodes was set to `NO`.
  *
  */
 
 @property (nonatomic) BOOL shouldPauseScannerAfterRecognition;
 
+
+/*!
+ *  @property
+ *  @brief A property to override the default '3 sec' delay time for resuming the auto scanner automatincly after a successful 1D/2D detection.
+ *
+ *  @discussion Setting this property will let the auto scanner automatically resume after detection when shouldPauseScannerDelayTime is in seconds.
+ *
+ *  This property has no effect if shouldUseContinuousRecognition/shouldUseContinuousRecognition2D/shouldUseContinuousRecognitionBarcodes was set to `NO`.
+ *
+ */
+
+@property (nonatomic) float shouldPauseScannerDelayTime;
+
+
 /*!
  *  @property
  *  @brief A property to enable/disable continuous recognition functionality.
  *
- *  @discussion Use this property to toggle the continuous 2D/3D recognition. Setting this property
+ *  @discussion Use this property to toggle the continuous 1D/2D recognition. Setting this property
  *  to `NO` will stop recognizing barcodes in a Regular mode and will stop recognizing 2D products
  *  and barcodes in Premium mode.
  *  Default is `YES`.
@@ -72,6 +86,33 @@
  */
 
 @property (nonatomic) BOOL shouldUseContinuousRecognition;
+
+
+/*!
+ *  @property
+ *  @brief A property to enable/disable continuous recognition for 2D products functionality.
+ *
+ *  @discussion Use this property to toggle the continuous 2D recognition. Setting this property
+ *  to `NO` will stop recognizing 2D products in Premium mode.
+ *  Default is `YES`.
+ *
+ */
+
+@property (nonatomic) BOOL shouldUseContinuousRecognition2D;
+
+
+/*!
+*  @property
+*  @brief A property to enable/disable continuous recognition for barcodes functionality.
+*
+*  @discussion Use this property to toggle the continuous barcodes recognition. Setting this property
+*  to `NO` will stop recognizing barcodes in a Regular mode and will stop recognizing barcodes in Premium mode.
+*  Default is `YES`.
+*
+*/
+
+@property (nonatomic) BOOL shouldUseContinuousRecognitionBarcodes;
+
 
 /*!
  *  @property

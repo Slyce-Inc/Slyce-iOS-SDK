@@ -66,9 +66,15 @@
 		
 		<option value="//api/name/shouldPauseScannerAfterRecognition">shouldPauseScannerAfterRecognition</option>
 		
+		<option value="//api/name/shouldPauseScannerDelayTime">shouldPauseScannerDelayTime</option>
+		
 		<option value="//api/name/shouldRecognizeAfterSnap">shouldRecognizeAfterSnap</option>
 		
 		<option value="//api/name/shouldUseContinuousRecognition">shouldUseContinuousRecognition</option>
+		
+		<option value="//api/name/shouldUseContinuousRecognition2D">shouldUseContinuousRecognition2D</option>
+		
+		<option value="//api/name/shouldUseContinuousRecognitionBarcodes">shouldUseContinuousRecognitionBarcodes</option>
 		
 	</optgroup>
 	
@@ -233,7 +239,7 @@ Default is <code>YES</code>.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A property to enable/disable pausing the auto scanner after a successful 2D detection.</p>
+				<p>A property to enable/disable pausing the auto scanner after a successful 1D/2D detection.</p>
 			</div>
 			
 		    
@@ -250,9 +256,57 @@ Default is <code>YES</code>.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Setting this property to <code>NO</code> will let the auto scanner continuously recognize products.
+				<p>Setting this property to <code>NO</code> will let the auto scanner continuously recognize 2D products and barcodes after default pausing time of &lsquo;3 sec&rsquo;.
 Default is <code>YES</code>, meaning the auto scanner will pause after the detection. It&rsquo;s up to the user then to resume it by calling resumeCapture:.
-This property has no effect if <a href="#//api/name/shouldUseContinuousRecognition">shouldUseContinuousRecognition</a> was set to <code>NO</code>.</p>
+This property has no effect if shouldUseContinuousRecognition/shouldUseContinuousRecognition2D/<a href="#//api/name/shouldUseContinuousRecognitionBarcodes">shouldUseContinuousRecognitionBarcodes</a> was set to <code>NO</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFCameraView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldPauseScannerDelayTime" title="shouldPauseScannerDelayTime"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldPauseScannerDelayTime">&nbsp;&nbsp;shouldPauseScannerDelayTime</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A property to override the default &lsquo;3 sec&rsquo; delay time for resuming the auto scanner automatincly after a successful 1D/2D detection.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) float shouldPauseScannerDelayTime</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Setting this property will let the auto scanner automatically resume after detection when shouldPauseScannerDelayTime is in seconds.</p>
+
+<p>This property has no effect if shouldUseContinuousRecognition/shouldUseContinuousRecognition2D/<a href="#//api/name/shouldUseContinuousRecognitionBarcodes">shouldUseContinuousRecognitionBarcodes</a> was set to <code>NO</code>.</p>
 			</div>
 			
 
@@ -298,9 +352,105 @@ This property has no effect if <a href="#//api/name/shouldUseContinuousRecogniti
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Use this property to toggle the continuous 2D/3D recognition. Setting this property
+				<p>Use this property to toggle the continuous 1D/2D recognition. Setting this property
 to <code>NO</code> will stop recognizing barcodes in a Regular mode and will stop recognizing 2D products
 and barcodes in Premium mode.
+Default is <code>YES</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFCameraView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldUseContinuousRecognition2D" title="shouldUseContinuousRecognition2D"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldUseContinuousRecognition2D">&nbsp;&nbsp;shouldUseContinuousRecognition2D</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A property to enable/disable continuous recognition for 2D products functionality.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldUseContinuousRecognition2D</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this property to toggle the continuous 2D recognition. Setting this property
+to <code>NO</code> will stop recognizing 2D products in Premium mode.
+Default is <code>YES</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFCameraView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/shouldUseContinuousRecognitionBarcodes" title="shouldUseContinuousRecognitionBarcodes"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shouldUseContinuousRecognitionBarcodes">&nbsp;&nbsp;shouldUseContinuousRecognitionBarcodes</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A property to enable/disable continuous recognition for barcodes functionality.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL shouldUseContinuousRecognitionBarcodes</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this property to toggle the continuous barcodes recognition. Setting this property
+to <code>NO</code> will stop recognizing barcodes in a Regular mode and will stop recognizing barcodes in Premium mode.
 Default is <code>YES</code>.</p>
 			</div>
 			
@@ -1084,7 +1234,7 @@ The request created for this image will be returned via a delegate method <a hre
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-01-08</p>
+						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-01-17</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

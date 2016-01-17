@@ -11,6 +11,9 @@
 #import "MyProductsViewController.h"
 #import "MBProgressHUD.h"
 #import <SlyceSDK/SlyceSDK.h>
+#import "CustomHistoryViewController.h"
+
+
 
 #define kClientID @"ClientID"
 #define kAppID @"AppID"
@@ -338,8 +341,10 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
+    
     if (_cameraVC)
         [_cameraVC.cameraView resumeCapture];
+     
 }
 
 #pragma mark -
@@ -497,6 +502,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
             return;
         }
     }
+   
     
     [self performSegueWithIdentifier:@"MyCameraViewControllerSegue" sender:_slyce];
 }
@@ -533,13 +539,40 @@ typedef NS_ENUM(NSUInteger, ClientMode)
   
     
     self.cameraVC = [[SFCameraViewController alloc] initWithSlyce:_slyce resourcesBundle:[NSBundle mainBundle] options:nil andDelegate:self];
-    //self.cameraView.shouldUseContinuousRecognition = NO;
+   
+    
+    //_cameraVC.cameraView.shouldUseContinuousRecognition = NO; //Uncomment this line if you don't wish to get notified automatically about recognized barcodes/2D items (Premium) (default is YES)
+    
+    // _cameraVC.cameraView.shouldUseContinuousRecognition2D = NO; //Uncomment this line if you don't wish to get notified automatically about recognized 2D items (Premium) (default is YES)
+    
+    // _cameraVC.cameraView.shouldUseContinuousRecognitionBarcodes = NO; //Uncomment this line if you don't wish to get notified automatically about recognized Barcodes items (default is YES)
+    
+    // _cameraVC.cameraView.shouldPauseScannerAfterRecognition = NO; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection (default is YES), default resume capture delay time is '3 sec'.
+    
+    // _cameraVC.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
+    
+    
+    /* 
+    // Use this method to add your own custom button with a custom viewController to the SFCameraViewController.
+     
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CustomHistoryViewController *historyView = [storyboard instantiateViewControllerWithIdentifier:@"CustomHistoryViewController"];
+    [self.cameraVC setCustomBtnWithVC:historyView postionInPercentX:15 postionInPercentY:4 btnImage:[UIImage imageNamed:@"historyBtn"] popUpAnimation:NO];
+    
+     
+    // Used to override the default 'help' viewController with your custom viewController.
+     
+    [self.cameraVC setCustomHelpViewController:historyView];
+     
+     
+    // Used to override the default 'not found' viewController with your custom viewController.
+     
+    [self.cameraVC setCustomNotFoundViewController:historyView];
+     */
     
     [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:^{
         NSLog(@"SFCameraViewController was presented");
     }];
-    
- 
     
     [self.hud hide:YES];
 }

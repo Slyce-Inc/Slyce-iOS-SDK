@@ -36,16 +36,6 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
 };
 
 
-typedef NS_ENUM(NSUInteger, SFCustomBtnPosition)
-{
-
-    // Right
-    SFCustomBtnPositionRight,
-    
-    // Left
-    SFCustomBtnPositionLeft,
-};
-
 /*!
  *  Provides an integrated `UIViewController` with all the Slyce SDK functionalities.
  *
@@ -110,14 +100,61 @@ typedef NS_ENUM(NSUInteger, SFCustomBtnPosition)
 
 
 
+/*!
+ *  @method
+ *  @brief Used to override the default 'help' viewController with your custom viewController.
+ *
+ *  @discussion
+ *  Your custom viewController will be replaced with the default 'help' viewController.
+ *
+ *  @param customHelpView The custom viewController.
+ *
+ *  @note You have to make sure that your custom viewController includes a back/close button that his action will be '[self dismissViewControllerAnimated:YES completion:nil]'.
+ */
 
-//-(void) setCustomHelpViewController:(id)customHelpView;
 
-//-(void) setCustomNotFoundViewController:(id)customNotFoundView;
+-(void) setCustomHelpViewController:(id)customHelpView;
 
-//-(void) setCustomBtnWithVC:(id)viewController btnPosition:(SFCustomBtnPosition)btnPosition btnImage:(UIImage  *)btnImage popUpAnimation:(BOOL)popUpAnimation;
 
-//-(void) setCustomBtnWithVC:(id)viewController btnPosition:(CGPoint)btnPosition btnImage:(UIImage  *)btnImage popUpAnimation:(BOOL)popUpAnimation;
+/*!
+ *  @method
+ *  @brief Used to override the default 'not found' viewController with your custom viewController.
+ *
+ *  @discussion
+ *  Your custom viewController will be replaced with the default 'not found' viewController.
+ *
+ *  @param customNotFoundView The custom viewController.
+ *
+ *  @note You have to make sure that your custom viewController includes a back/close button that his action will be '[self dismissViewControllerAnimated:YES completion:nil]'.
+ */
+
+-(void) setCustomNotFoundViewController:(id)customNotFoundView;
+
+
+/*!
+*  @method
+*  @brief Add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).
+*
+*  @discussion Use this method to add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).
+*
+*  @param viewController Your Custom viewController.
+*  @param x Position of the custom button in percent, when 100% is width of the screen.
+*  @param y Position of the custom button in percent, when 100% is height of the screen.
+*  @param btnImage The image of the custom button.
+*  @param popUpAnimation PopUp animation.
+*
+*  @note The position of the custom button will be set in percents when 100% is for both width and height of the screen.
+*
+*
+*/
+
+-(void) setCustomBtnWithVC:(id)viewController postionInPercentX:(CGFloat)x postionInPercentY:(CGFloat)y btnImage:(UIImage  *)btnImage popUpAnimation:(BOOL)popUpAnimation;
+
+
+
+-(void) setSlyceLogoHidden:(BOOL)slyceLogoHidden;
+
+
 
 ///---------------------------------------------------------------------------------------
 /// @name Initialization

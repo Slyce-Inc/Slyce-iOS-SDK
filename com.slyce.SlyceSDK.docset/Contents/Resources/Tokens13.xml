@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/SFErrorCode.html">
+	<File path="Constants/SFRequestStage.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/SFErrorCode</TokenIdentifier>
-			<Abstract type="html">Enumeration for main Slyce SDK error codes.</Abstract>
-			<DeclaredIn>NSError+Slyce.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/SFRequestStage</TokenIdentifier>
+			<Abstract type="html">Enumeration for 3D recognition stages.</Abstract>
+			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
             
 			
 			<NodeRef refid="13"/>
@@ -14,311 +14,21 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFSuccess</TokenIdentifier>
-            <Abstract type="html">0:  success.</Abstract>
-            <Declaration>SFSuccess</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/SFRequestStageSendingImage</TokenIdentifier>
+            <Abstract type="html">Image uploading stage.</Abstract>
+            <Declaration>SFRequestStageSendingImage</Declaration>
             
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorUnspecified</TokenIdentifier>
-            <Abstract type="html">1:  unspecified error.</Abstract>
-            <Declaration>SFErrorUnspecified</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorMisuse</TokenIdentifier>
-            <Abstract type="html">2:  invalid use of the library.</Abstract>
-            <Declaration>SFErrorMisuse</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/SFRequestStageAnalyzingImage</TokenIdentifier>
+            <Abstract type="html">Image recognition stage.</Abstract>
+            <Declaration>SFRequestStageAnalyzingImage</Declaration>
             
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorNoPerm</TokenIdentifier>
-            <Abstract type="html">3:  access permission denied.</Abstract>
-            <Declaration>SFErrorNoPerm</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorNoFile</TokenIdentifier>
-            <Abstract type="html">4:  file not found.</Abstract>
-            <Declaration>SFErrorNoFile</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorBusy</TokenIdentifier>
-            <Abstract type="html">5:  database file locked.</Abstract>
-            <Declaration>SFErrorBusy</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorCorrupt</TokenIdentifier>
-            <Abstract type="html">6:  database file corrupted.</Abstract>
-            <Declaration>SFErrorCorrupt</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorEmpty</TokenIdentifier>
-            <Abstract type="html">7:  empty database.</Abstract>
-            <Declaration>SFErrorEmpty</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorAuth</TokenIdentifier>
-            <Abstract type="html">8:  authorization denied.</Abstract>
-            <Declaration>SFErrorAuth</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorNoConn</TokenIdentifier>
-            <Abstract type="html">9:  no internet connection.</Abstract>
-            <Declaration>SFErrorNoConn</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorTimeout</TokenIdentifier>
-            <Abstract type="html">10: operation timeout.</Abstract>
-            <Declaration>SFErrorTimeout</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorThread</TokenIdentifier>
-            <Abstract type="html">11: threading error.</Abstract>
-            <Declaration>SFErrorThread</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorCredMismatch</TokenIdentifier>
-            <Abstract type="html">12: credentials mismatch.</Abstract>
-            <Declaration>SFErrorCredMismatch</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorSlowConn</TokenIdentifier>
-            <Abstract type="html">13: internet connection too slow.</Abstract>
-            <Declaration>SFErrorSlowConn</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorNoRec</TokenIdentifier>
-            <Abstract type="html">14: record not found.</Abstract>
-            <Declaration>SFErrorNoRec</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorAbort</TokenIdentifier>
-            <Abstract type="html">15: operation aborted.</Abstract>
-            <Declaration>SFErrorAbort</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorUnavail</TokenIdentifier>
-            <Abstract type="html">16: resource temporarily unavailable.</Abstract>
-            <Declaration>SFErrorUnavail</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorImg</TokenIdentifier>
-            <Abstract type="html">17: image size or format not supported.</Abstract>
-            <Declaration>SFErrorImg</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorApiKey</TokenIdentifier>
-            <Abstract type="html">18: wrong API key or no offline image.</Abstract>
-            <Declaration>SFErrorApiKey</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorNetworkFail</TokenIdentifier>
-            <Abstract type="html">19: a network problem occurred.</Abstract>
-            <Declaration>SFErrorNetworkFail</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorNotOpen</TokenIdentifier>
-            <Abstract type="html">20: scanner is not open.</Abstract>
-            <Declaration>SFErrorNotOpen</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorBundle</TokenIdentifier>
-            <Abstract type="html">21: could not read bundle.</Abstract>
-            <Declaration>SFErrorBundle</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorApiSecret</TokenIdentifier>
-            <Abstract type="html">22: wrong API secret.</Abstract>
-            <Declaration>SFErrorApiSecret</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorClientID</TokenIdentifier>
-            <Abstract type="html">23: bad or missing client ID.</Abstract>
-            <Declaration>SFErrorClientID</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorNotPremium</TokenIdentifier>
-            <Abstract type="html">24: not a premium user.</Abstract>
-            <Declaration>SFErrorNotPremium</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorRequestInProgress</TokenIdentifier>
-            <Abstract type="html">25: request still in progress.</Abstract>
-            <Declaration>SFErrorRequestInProgress</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorRequestFulfil</TokenIdentifier>
-            <Abstract type="html">26: request fulfilled. Create a new request to perform the operation.</Abstract>
-            <Declaration>SFErrorRequestFulfil</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorRequestProductsNotFound</TokenIdentifier>
-            <Abstract type="html">27: products not found.</Abstract>
-            <Declaration>SFErrorRequestProductsNotFound</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorRequestBadImage</TokenIdentifier>
-            <Abstract type="html">28: bad image.</Abstract>
-            <Declaration>SFErrorRequestBadImage</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorRequestInvalidImage</TokenIdentifier>
-            <Abstract type="html">29: invalid image.</Abstract>
-            <Declaration>SFErrorRequestInvalidImage</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
-            
-            <NodeRef refid="13"/>
-        </Token>
-        
-        <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFErrorRequestInternalError</TokenIdentifier>
-            <Abstract type="html">30: internal error.</Abstract>
-            <Declaration>SFErrorRequestInternalError</Declaration>
-            
-            <DeclaredIn>NSError+Slyce.h</DeclaredIn>
+            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>

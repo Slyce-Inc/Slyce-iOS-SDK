@@ -86,7 +86,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldPauseScannerAfterRecognition:</TokenIdentifier>
-			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 2D detection.</Abstract>
+			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 1D/2D detection.</Abstract>
 			<DeclaredIn>SFCameraView.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic) BOOL shouldPauseScannerAfterRecognition</Declaration>
@@ -98,7 +98,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/shouldPauseScannerAfterRecognition</TokenIdentifier>
-			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 2D detection.</Abstract>
+			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 1D/2D detection.</Abstract>
 			<DeclaredIn>SFCameraView.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic) BOOL shouldPauseScannerAfterRecognition</Declaration>
@@ -110,13 +110,49 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/shouldPauseScannerAfterRecognition</TokenIdentifier>
-			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 2D detection.</Abstract>
+			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 1D/2D detection.</Abstract>
 			<DeclaredIn>SFCameraView.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic) BOOL shouldPauseScannerAfterRecognition</Declaration>
 			
 			
 			<Anchor>//api/name/shouldPauseScannerAfterRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldPauseScannerDelayTime:</TokenIdentifier>
+			<Abstract type="html">A property to override the default &apos;3 sec&apos; delay time for resuming the auto scanner automatincly after a successful 1D/2D detection.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float shouldPauseScannerDelayTime</Declaration>
+			
+			
+			<Anchor>//api/name/shouldPauseScannerDelayTime</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/shouldPauseScannerDelayTime</TokenIdentifier>
+			<Abstract type="html">A property to override the default &apos;3 sec&apos; delay time for resuming the auto scanner automatincly after a successful 1D/2D detection.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float shouldPauseScannerDelayTime</Declaration>
+			
+			
+			<Anchor>//api/name/shouldPauseScannerDelayTime</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/shouldPauseScannerDelayTime</TokenIdentifier>
+			<Abstract type="html">A property to override the default &apos;3 sec&apos; delay time for resuming the auto scanner automatincly after a successful 1D/2D detection.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float shouldPauseScannerDelayTime</Declaration>
+			
+			
+			<Anchor>//api/name/shouldPauseScannerDelayTime</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
@@ -153,6 +189,78 @@
 			
 			
 			<Anchor>//api/name/shouldUseContinuousRecognition</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldUseContinuousRecognition2D:</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition for 2D products functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognition2D</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognition2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/shouldUseContinuousRecognition2D</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition for 2D products functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognition2D</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognition2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/shouldUseContinuousRecognition2D</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition for 2D products functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognition2D</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognition2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldUseContinuousRecognitionBarcodes:</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition for barcodes functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognitionBarcodes</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognitionBarcodes</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/shouldUseContinuousRecognitionBarcodes</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition for barcodes functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognitionBarcodes</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognitionBarcodes</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/shouldUseContinuousRecognitionBarcodes</TokenIdentifier>
+			<Abstract type="html">A property to enable/disable continuous recognition for barcodes functionality.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) BOOL shouldUseContinuousRecognitionBarcodes</Declaration>
+			
+			
+			<Anchor>//api/name/shouldUseContinuousRecognitionBarcodes</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

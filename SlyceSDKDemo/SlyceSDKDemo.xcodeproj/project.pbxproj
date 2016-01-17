@@ -35,8 +35,9 @@
 		2FC091B31A81125D008C76C9 /* MyCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC091B21A81125D008C76C9 /* MyCameraViewController.m */; };
 		2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */; };
 		D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0A5281C2FDDAA00960D26 /* images.xcassets */; };
-		D7DF219A1C3F1D0900E6BED4 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7DF21981C3F1D0900E6BED4 /* SlyceSDK.bundle */; };
-		D7DF219B1C3F1D0900E6BED4 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DF21991C3F1D0900E6BED4 /* SlyceSDK.framework */; };
+		D7A522B41C4BE36D0069B4D8 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7A522B21C4BE36D0069B4D8 /* SlyceSDK.bundle */; };
+		D7A522B51C4BE36D0069B4D8 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A522B31C4BE36D0069B4D8 /* SlyceSDK.framework */; };
+		D7DF21A61C43A56700E6BED4 /* CustomHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DF21A51C43A56700E6BED4 /* CustomHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -103,8 +104,10 @@
 		2FC091B21A81125D008C76C9 /* MyCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyCameraViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		D7A0A5281C2FDDAA00960D26 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
-		D7DF21981C3F1D0900E6BED4 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
-		D7DF21991C3F1D0900E6BED4 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
+		D7A522B21C4BE36D0069B4D8 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
+		D7A522B31C4BE36D0069B4D8 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
+		D7DF21A41C43A56700E6BED4 /* CustomHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHistoryViewController.h; sourceTree = "<group>"; };
+		D7DF21A51C43A56700E6BED4 /* CustomHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +117,7 @@
 			files = (
 				2F2C6D711AFF635F00F3D93E /* AdSupport.framework in Frameworks */,
 				2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */,
-				D7DF219B1C3F1D0900E6BED4 /* SlyceSDK.framework in Frameworks */,
+				D7A522B51C4BE36D0069B4D8 /* SlyceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,8 +127,8 @@
 		2F353F061A7FCBD7002EE2EB = {
 			isa = PBXGroup;
 			children = (
-				D7DF21981C3F1D0900E6BED4 /* SlyceSDK.bundle */,
-				D7DF21991C3F1D0900E6BED4 /* SlyceSDK.framework */,
+				D7A522B21C4BE36D0069B4D8 /* SlyceSDK.bundle */,
+				D7A522B31C4BE36D0069B4D8 /* SlyceSDK.framework */,
 				D7A0A5281C2FDDAA00960D26 /* images.xcassets */,
 				2F2C6D701AFF635F00F3D93E /* AdSupport.framework */,
 				2FA2952A1ADAE764007A0133 /* libicucore.dylib */,
@@ -158,6 +161,8 @@
 				2F97EF841AA0BEAE006A4393 /* MyProductsViewController.m */,
 				2F69C3C81AA0C2F20081F61D /* MyProductCollectionViewCell.h */,
 				2F69C3C91AA0C2F20081F61D /* MyProductCollectionViewCell.m */,
+				D7DF21A41C43A56700E6BED4 /* CustomHistoryViewController.h */,
+				D7DF21A51C43A56700E6BED4 /* CustomHistoryViewController.m */,
 				2F353F8D1A7FCF3B002EE2EB /* Main.storyboard */,
 				2F353F211A7FCBD7002EE2EB /* LaunchScreen.xib */,
 				2F353F121A7FCBD7002EE2EB /* Supporting Files */,
@@ -286,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F353F8C1A7FCF26002EE2EB /* shoe.jpg in Resources */,
-				D7DF219A1C3F1D0900E6BED4 /* SlyceSDK.bundle in Resources */,
+				D7A522B41C4BE36D0069B4D8 /* SlyceSDK.bundle in Resources */,
 				D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */,
 				2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */,
 				2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */,
@@ -319,6 +324,7 @@
 				2F69C3ED1AA0C78B0081F61D /* NSData+GIF.m in Sources */,
 				2F69C3F01AA0C7910081F61D /* SDImageCache.m in Sources */,
 				2F69C3CA1AA0C2F20081F61D /* MyProductCollectionViewCell.m in Sources */,
+				D7DF21A61C43A56700E6BED4 /* CustomHistoryViewController.m in Sources */,
 				2F69C3D41AA0C7350081F61D /* SDWebImageCompat.m in Sources */,
 				2FBD56A91A8AAFD40084864D /* MyViewController.m in Sources */,
 				2F69C3CE1AA0C5B20081F61D /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,

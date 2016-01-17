@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--My View Controller-->
@@ -247,7 +248,7 @@
         <!--My Camera View Controller-->
         <scene sceneID="IHd-Rc-UN8">
             <objects>
-                <viewController id="e6w-d3-1EJ" customClass="MyCameraViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyCameraView" id="e6w-d3-1EJ" customClass="MyCameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dGZ-qH-p4O"/>
                         <viewControllerLayoutGuide type="bottom" id="E5Z-bB-O0n"/>
@@ -377,6 +378,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viy-Cw-7sU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1346" y="44"/>
+        </scene>
+        <!--Custom History View Controller-->
+        <scene sceneID="SHj-Tv-1Xq">
+            <objects>
+                <viewController storyboardIdentifier="CustomHistoryViewController" id="WKI-Cf-epf" customClass="CustomHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HHq-TI-iUR"/>
+                        <viewControllerLayoutGuide type="bottom" id="oQ5-0g-PIb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eSq-Ga-qOt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVn-y3-fMV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                                <items>
+                                    <barButtonItem title="Back" id="FdV-Ud-NqR">
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="WKI-Cf-epf" id="XOM-EO-Vgk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3WZ-As-XaB">
+                                <rect key="frame" x="0.0" y="57" width="320" height="511"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3WZ-As-XaB" secondAttribute="trailing" id="1uu-H4-4mc"/>
+                            <constraint firstItem="3WZ-As-XaB" firstAttribute="leading" secondItem="eSq-Ga-qOt" secondAttribute="leading" id="4u2-dx-cMU"/>
+                            <constraint firstItem="CVn-y3-fMV" firstAttribute="top" secondItem="eSq-Ga-qOt" secondAttribute="top" id="PPF-jk-NJk"/>
+                            <constraint firstAttribute="trailing" secondItem="CVn-y3-fMV" secondAttribute="trailing" id="nyy-Mb-Hjq"/>
+                            <constraint firstItem="oQ5-0g-PIb" firstAttribute="top" secondItem="3WZ-As-XaB" secondAttribute="bottom" id="qWY-AQ-U6H"/>
+                            <constraint firstItem="CVn-y3-fMV" firstAttribute="height" secondItem="eSq-Ga-qOt" secondAttribute="height" multiplier="0.1" id="rMI-aP-KNh"/>
+                            <constraint firstItem="CVn-y3-fMV" firstAttribute="leading" secondItem="eSq-Ga-qOt" secondAttribute="leading" id="uKX-pa-g82"/>
+                            <constraint firstItem="3WZ-As-XaB" firstAttribute="top" secondItem="CVn-y3-fMV" secondAttribute="bottom" id="vHx-8P-JQB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkm-Fl-CS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="1322"/>
         </scene>
         <!--My Products View Controller-->
         <scene sceneID="aiI-8O-2vE">
@@ -537,6 +582,6 @@
         <image name="slyce-logo.png" width="540" height="211"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c0r-3F-25A"/>
+        <segue reference="oiP-Bs-6ii"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -121,6 +121,85 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/setCustomHelpViewController:</TokenIdentifier>
+			<Abstract type="html">Used to override the default &apos;help&apos; viewController with your custom viewController.
+
+</Abstract>
+			<DeclaredIn>SFCameraViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)setCustomHelpViewController:(id)customHelpView</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>customHelpView</Name>
+					<Abstract type="html">The custom viewController.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setCustomHelpViewController:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/setCustomNotFoundViewController:</TokenIdentifier>
+			<Abstract type="html">Used to override the default &apos;not found&apos; viewController with your custom viewController.
+
+</Abstract>
+			<DeclaredIn>SFCameraViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)setCustomNotFoundViewController:(id)customNotFoundView</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>customNotFoundView</Name>
+					<Abstract type="html">The custom viewController.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setCustomNotFoundViewController:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</TokenIdentifier>
+			<Abstract type="html">Add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).</Abstract>
+			<DeclaredIn>SFCameraViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)setCustomBtnWithVC:(id)viewController postionInPercentX:(CGFloat)x postionInPercentY:(CGFloat)y btnImage:(UIImage *)btnImage popUpAnimation:(BOOL)popUpAnimation</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">Your Custom viewController.</Abstract>
+				</Parameter><Parameter>
+					<Name>x</Name>
+					<Abstract type="html">Position of the custom button in percent, when 100% is width of the screen.</Abstract>
+				</Parameter><Parameter>
+					<Name>y</Name>
+					<Abstract type="html">Position of the custom button in percent, when 100% is height of the screen.</Abstract>
+				</Parameter><Parameter>
+					<Name>btnImage</Name>
+					<Abstract type="html">The image of the custom button.</Abstract>
+				</Parameter><Parameter>
+					<Name>popUpAnimation</Name>
+					<Abstract type="html">PopUp animation.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/setSlyceLogoHidden:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFCameraViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)setSlyceLogoHidden:(BOOL)slyceLogoHidden</Declaration>
+			
+			
+			<Anchor>//api/name/setSlyceLogoHidden:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/initWithSlyce:resourcesBundle:options:andDelegate:</TokenIdentifier>
 			<Abstract type="html">Initializes a new SFCameraViewController object.</Abstract>
 			<DeclaredIn>SFCameraViewController.h</DeclaredIn>

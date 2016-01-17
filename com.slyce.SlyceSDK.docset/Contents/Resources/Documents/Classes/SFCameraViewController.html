@@ -74,6 +74,14 @@
 		
 		<option value="//api/name/presentFromViewController:usingAnimation:completionBlock:">- presentFromViewController:usingAnimation:completionBlock:</option>
 		
+		<option value="//api/name/setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:">- setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</option>
+		
+		<option value="//api/name/setCustomHelpViewController:">- setCustomHelpViewController:</option>
+		
+		<option value="//api/name/setCustomNotFoundViewController:">- setCustomNotFoundViewController:</option>
+		
+		<option value="//api/name/setSlyceLogoHidden:">- setSlyceLogoHidden:</option>
+		
 	</optgroup>
 	
 	
@@ -274,6 +282,216 @@ property of SFCameraView&rsquo;s object to <code>NO</code>.</p>
 			</div>
 			
 			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCustomHelpViewController:" title="setCustomHelpViewController:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCustomHelpViewController:">&ndash;&nbsp;setCustomHelpViewController:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used to override the default &lsquo;help&rsquo; viewController with your custom viewController.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCustomHelpViewController:(id)<em>customHelpView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>customHelpView</code></th>
+						<td><p>The custom viewController.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> You have to make sure that your custom viewController includes a back/close button that his action will be &lsquo;[self dismissViewControllerAnimated:YES completion:nil]&rsquo;.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFCameraViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCustomNotFoundViewController:" title="setCustomNotFoundViewController:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCustomNotFoundViewController:">&ndash;&nbsp;setCustomNotFoundViewController:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Used to override the default &lsquo;not found&rsquo; viewController with your custom viewController.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCustomNotFoundViewController:(id)<em>customNotFoundView</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>customNotFoundView</code></th>
+						<td><p>The custom viewController.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="note"><p><strong>Note:</strong> You have to make sure that your custom viewController includes a back/close button that his action will be &lsquo;[self dismissViewControllerAnimated:YES completion:nil]&rsquo;.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFCameraViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:" title="setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:">&ndash;&nbsp;setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setCustomBtnWithVC:(id)<em>viewController</em> postionInPercentX:(CGFloat)<em>x</em> postionInPercentY:(CGFloat)<em>y</em> btnImage:(UIImage *)<em>btnImage</em> popUpAnimation:(BOOL)<em>popUpAnimation</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewController</code></th>
+						<td><p>Your Custom viewController.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>x</code></th>
+						<td><p>Position of the custom button in percent, when 100% is width of the screen.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>y</code></th>
+						<td><p>Position of the custom button in percent, when 100% is height of the screen.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>btnImage</code></th>
+						<td><p>The image of the custom button.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>popUpAnimation</code></th>
+						<td><p>PopUp animation.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this method to add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).</p><div class="note"><p><strong>Note:</strong> The position of the custom button will be set in percents when 100% is for both width and height of the screen.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFCameraViewController.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setSlyceLogoHidden:" title="setSlyceLogoHidden:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setSlyceLogoHidden:">&ndash;&nbsp;setSlyceLogoHidden:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>- (void)setSlyceLogoHidden:(BOOL)<em>slyceLogoHidden</em></code></div>
+
+		    
 		</div>
 	</div>
 </div>
@@ -487,7 +705,7 @@ SFCameraViewController *cameraVC = [[SFCameraViewController alloc] initWithSlyce
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-01-08</p>
+						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-01-17</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
