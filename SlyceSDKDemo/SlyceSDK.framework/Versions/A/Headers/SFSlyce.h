@@ -181,7 +181,16 @@
 @property (nonatomic) BOOL sound;
 
 
-@property (nonatomic,strong) UIColor *customeProgressColor;
+/*!
+ 
+ @property
+ 
+ @abstract You can set your own custom circular progress color
+ @discussion default is `[UIColor colorWithRed:152/255.f green:183/255.f blue:208/255.f alpha:1]`.
+ 
+ */
+
+@property (nonatomic,strong) UIColor *customProgressColor;
 
 
 @end

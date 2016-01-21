@@ -380,38 +380,38 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setCustomeProgressColor:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setCustomProgressColor:</TokenIdentifier>
+			<Abstract type="html">You can set your own custom circular progress color</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIColor *customeProgressColor</Declaration>
+			<Declaration>@property (nonatomic, strong) UIColor *customProgressColor</Declaration>
 			
 			
-			<Anchor>//api/name/customeProgressColor</Anchor>
+			<Anchor>//api/name/customProgressColor</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/customeProgressColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/customProgressColor</TokenIdentifier>
+			<Abstract type="html">You can set your own custom circular progress color</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIColor *customeProgressColor</Declaration>
+			<Declaration>@property (nonatomic, strong) UIColor *customProgressColor</Declaration>
 			
 			
-			<Anchor>//api/name/customeProgressColor</Anchor>
+			<Anchor>//api/name/customProgressColor</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/customeProgressColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/customProgressColor</TokenIdentifier>
+			<Abstract type="html">You can set your own custom circular progress color</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) UIColor *customeProgressColor</Declaration>
+			<Declaration>@property (nonatomic, strong) UIColor *customProgressColor</Declaration>
 			
 			
-			<Anchor>//api/name/customeProgressColor</Anchor>
+			<Anchor>//api/name/customProgressColor</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

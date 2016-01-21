@@ -538,10 +538,11 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     }
   
     
-    self.cameraVC = [[SFCameraViewController alloc] initWithSlyce:_slyce resourcesBundle:[NSBundle mainBundle] options:nil andDelegate:self];
-   
+    // _slyce.customProgressColor = [UIColor redColor]; //Uncomment this line if you wish to set your own custom progress color.
     
-    //_cameraVC.cameraView.shouldUseContinuousRecognition = NO; //Uncomment this line if you don't wish to get notified automatically about recognized barcodes/2D items (Premium) (default is YES)
+    self.cameraVC = [[SFCameraViewController alloc] initWithSlyce:_slyce resourcesBundle:[NSBundle mainBundle] options:nil andDelegate:self];
+       
+    // _cameraVC.cameraView.shouldUseContinuousRecognition = NO; //Uncomment this line if you don't wish to get notified automatically about recognized barcodes/2D items (Premium) (default is YES)
     
     // _cameraVC.cameraView.shouldUseContinuousRecognition2D = NO; //Uncomment this line if you don't wish to get notified automatically about recognized 2D items (Premium) (default is YES)
     
@@ -569,6 +570,8 @@ typedef NS_ENUM(NSUInteger, ClientMode)
      
     [self.cameraVC setCustomNotFoundViewController:historyView];
      */
+    
+    
     
     [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:^{
         NSLog(@"SFCameraViewController was presented");

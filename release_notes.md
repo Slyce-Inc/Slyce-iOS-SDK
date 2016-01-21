@@ -1,7 +1,10 @@
 Slyce SDK Changelog
 ===================================
 
+2.4.1 - 2016/01/21
+------------------
 
+* FIXED: Minor bug fixes
 
 2.4 - 2016/01/17
 ------------------
@@ -12,6 +15,7 @@ Slyce SDK Changelog
 * ADDED: setCustomHelpViewController used to override the default 'help' viewController with your custom viewController.
 * ADDED: setCustomNotFoundViewController used to override the default 'not found' viewController with your custom viewController.
 * ADDED: setCustomBtnWithVC use this method to add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).
+* ADDED: customProgressColor use this method to set your own circular progress color (Full UI mode).
 
 2.3.3 - 2016/01/08
 ------------------
