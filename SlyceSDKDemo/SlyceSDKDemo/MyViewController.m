@@ -553,12 +553,12 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     // _cameraVC.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
     
     
-    /* 
+    /*
     // Use this method to add your own custom button with a custom viewController to the SFCameraViewController.
      
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     CustomHistoryViewController *historyView = [storyboard instantiateViewControllerWithIdentifier:@"CustomHistoryViewController"];
-    [self.cameraVC setCustomBtnWithVC:historyView postionInPercentX:15 postionInPercentY:4 btnImage:[UIImage imageNamed:@"historyBtn"] popUpAnimation:NO];
+    [self.cameraVC addCustomBtnWithVC:historyView postionInPercentX:15 postionInPercentY:4 btnImage:[UIImage imageNamed:@"historyBtn"] popUpAnimation:NO];
     
      
     // Used to override the default 'help' viewController with your custom viewController.

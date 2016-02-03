@@ -1,6 +1,11 @@
 Slyce SDK Changelog
 ===================================
 
+2.4.2 - 2016/02/03
+------------------
+
+* FIXED: Bug fixes
+
 2.4.1 - 2016/01/21
 ------------------
 
@@ -14,7 +19,7 @@ Slyce SDK Changelog
 * ADDED: shouldPauseScannerDelayTime property to override the default '3 sec' delay time for resuming the auto scanner automatincly after a successful 1D/2D detection.
 * ADDED: setCustomHelpViewController used to override the default 'help' viewController with your custom viewController.
 * ADDED: setCustomNotFoundViewController used to override the default 'not found' viewController with your custom viewController.
-* ADDED: setCustomBtnWithVC use this method to add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).
+* ADDED: addCustomBtnWithVC use this method to add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).
 * ADDED: customProgressColor use this method to set your own circular progress color (Full UI mode).
 
 2.3.3 - 2016/01/08

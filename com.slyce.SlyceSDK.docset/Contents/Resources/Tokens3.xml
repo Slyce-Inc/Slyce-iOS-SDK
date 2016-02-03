@@ -159,11 +159,11 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraViewController/addCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</TokenIdentifier>
 			<Abstract type="html">Add your own custom button with a custom viewController to the SFCameraViewController(Full UI mode).</Abstract>
 			<DeclaredIn>SFCameraViewController.h</DeclaredIn>
 			
-			<Declaration>- (void)setCustomBtnWithVC:(id)viewController postionInPercentX:(CGFloat)x postionInPercentY:(CGFloat)y btnImage:(UIImage *)btnImage popUpAnimation:(BOOL)popUpAnimation</Declaration>
+			<Declaration>- (void)addCustomBtnWithVC:(id)viewController postionInPercentX:(CGFloat)x postionInPercentY:(CGFloat)y btnImage:(UIImage *)btnImage popUpAnimation:(BOOL)popUpAnimation</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>viewController</Name>
@@ -183,7 +183,7 @@
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/setCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</Anchor>
+			<Anchor>//api/name/addCustomBtnWithVC:postionInPercentX:postionInPercentY:btnImage:popUpAnimation:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

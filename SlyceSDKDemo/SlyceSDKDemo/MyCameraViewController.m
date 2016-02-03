@@ -67,6 +67,9 @@
     _cancelButton.hidden = YES;
     
     self.products = [products copy];
+    
+    
+    
     [self performSegueWithIdentifier:@"ProductsSegue" sender:nil];
 }
 
@@ -89,12 +92,12 @@
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
     
-    
+   // [_cameraView resumeCapture];
+
     dispatch_async(dispatch_get_main_queue(), ^{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:barcode.typeString message:barcode.text delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     });
-    
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView didFailWithError:(NSError *)error
@@ -118,6 +121,19 @@
     _cancelButton.hidden = YES;
     
     self.products = [products copy];
+    
+    /*
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    MyProductsViewController *myProductsViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyProductsViewController"];
+    
+    myProductsViewController.products = _products;
+
+    [self presentViewController:myProductsViewController animated:YES completion:nil];
+    */
+    
+  //  [_cameraView resumeCapture];
+
+    
     [self performSegueWithIdentifier:@"ProductsSegue" sender:nil];
 }
 
@@ -177,8 +193,7 @@
     //Start the camera ONLY after the view has actually appeared, as this operation is CPU consuming!
     [self.cameraView startCamera];
     
-    [_cameraView resumeCapture];
-
+    [self.cameraView resumeCapture];
 }
 
 - (void)viewDidLoad
@@ -200,13 +215,15 @@
     
     self.cameraView = [[SFCameraView alloc] initWithSlyce:_slyce view:self.view options:nil andDelegate:self];
     
-    //self.cameraView.shouldUseContinuousRecognition = NO; //Uncomment this line if you don't wish to get notified automatically about recognized barcodes/2D items (Premium) (default is YES)
-
-    // self.cameraView.shouldUseContinuousRecognition2D = NO; //Uncomment this line if you don't wish to get notified automatically about recognized 2D items (Premium) (default is YES)
+  //  self.cameraView.shouldUseContinuousRecognition = NO; //Uncomment this line if you don't wish to get notified automatically about recognized barcodes/2D items (Premium) (default is YES)
     
-    // self.cameraView.shouldUseContinuousRecognitionBarcodes = NO; //Uncomment this line if you don't wish to get notified automatically about recognized Barcodes items (default is YES)
+  //  self.cameraView.shouldPauseScannerAfterRecognition = NO; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection (default is YES), default resume capture delay time is '3 sec'.
     
-    // self.cameraView.shouldPauseScannerAfterRecognition = NO; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection (default is YES), default resume capture delay time is '3 sec'.
+  //  self.cameraView.shouldUseContinuousRecognition2D = NO; //Uncomment this line if you don't wish to get notified automatically about recognized 2D items (Premium) (default is YES)
+    
+   // self.cameraView.shouldUseContinuousRecognitionBarcodes = NO; //Uncomment this line if you don't wish to get notified automatically about recognized Barcodes items (default is YES)
+    
+  
     
     // self.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
     
@@ -232,6 +249,7 @@
 
 - (void)cancelSearch
 {
+    [self.cameraView resumeCapture];
     [_currentRequest cancel];
     [self.hud hide:YES];
     _cancelButton.hidden = YES;

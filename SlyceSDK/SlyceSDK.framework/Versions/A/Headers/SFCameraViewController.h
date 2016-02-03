@@ -148,7 +148,7 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
 *
 */
 
--(void) setCustomBtnWithVC:(id)viewController postionInPercentX:(CGFloat)x postionInPercentY:(CGFloat)y btnImage:(UIImage  *)btnImage popUpAnimation:(BOOL)popUpAnimation;
+-(void) addCustomBtnWithVC:(id)viewController postionInPercentX:(CGFloat)x postionInPercentY:(CGFloat)y btnImage:(UIImage  *)btnImage popUpAnimation:(BOOL)popUpAnimation;
 
 
 
