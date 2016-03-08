@@ -249,6 +249,8 @@
 
 - (void)cancelSearch
 {
+    
+    
     [self.cameraView resumeCapture];
     [_currentRequest cancel];
     [self.hud hide:YES];

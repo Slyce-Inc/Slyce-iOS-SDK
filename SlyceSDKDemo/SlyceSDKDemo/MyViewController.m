@@ -470,7 +470,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     
     SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
     [request getProductsFromImage:img merchantIDs:nil];
-    //[request getItemDescriptionFromImage:img];
+  
 }
 
 //Camera/Headless mode

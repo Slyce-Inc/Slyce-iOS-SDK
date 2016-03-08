@@ -34,8 +34,8 @@
 		2FBD56A91A8AAFD40084864D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD56A81A8AAFD40084864D /* MyViewController.m */; };
 		2FC091B31A81125D008C76C9 /* MyCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC091B21A81125D008C76C9 /* MyCameraViewController.m */; };
 		2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */; };
-		D715FBD51C6B4266006AEAC3 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D715FBD31C6B4266006AEAC3 /* SlyceSDK.bundle */; };
-		D715FBD61C6B4266006AEAC3 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D715FBD41C6B4266006AEAC3 /* SlyceSDK.framework */; };
+		D70485781C8EC523001D75E5 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D70485761C8EC523001D75E5 /* SlyceSDK.bundle */; };
+		D70485791C8EC523001D75E5 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70485771C8EC523001D75E5 /* SlyceSDK.framework */; };
 		D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0A5281C2FDDAA00960D26 /* images.xcassets */; };
 		D7DF21A61C43A56700E6BED4 /* CustomHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DF21A51C43A56700E6BED4 /* CustomHistoryViewController.m */; };
 /* End PBXBuildFile section */
@@ -103,8 +103,8 @@
 		2FC091B11A81125D008C76C9 /* MyCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MyCameraViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2FC091B21A81125D008C76C9 /* MyCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyCameraViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
-		D715FBD31C6B4266006AEAC3 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
-		D715FBD41C6B4266006AEAC3 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
+		D70485761C8EC523001D75E5 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
+		D70485771C8EC523001D75E5 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		D7A0A5281C2FDDAA00960D26 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		D7DF21A41C43A56700E6BED4 /* CustomHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHistoryViewController.h; sourceTree = "<group>"; };
 		D7DF21A51C43A56700E6BED4 /* CustomHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHistoryViewController.m; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			files = (
 				2F2C6D711AFF635F00F3D93E /* AdSupport.framework in Frameworks */,
 				2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */,
-				D715FBD61C6B4266006AEAC3 /* SlyceSDK.framework in Frameworks */,
+				D70485791C8EC523001D75E5 /* SlyceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +127,8 @@
 		2F353F061A7FCBD7002EE2EB = {
 			isa = PBXGroup;
 			children = (
-				D715FBD31C6B4266006AEAC3 /* SlyceSDK.bundle */,
-				D715FBD41C6B4266006AEAC3 /* SlyceSDK.framework */,
+				D70485761C8EC523001D75E5 /* SlyceSDK.bundle */,
+				D70485771C8EC523001D75E5 /* SlyceSDK.framework */,
 				D7A0A5281C2FDDAA00960D26 /* images.xcassets */,
 				2F2C6D701AFF635F00F3D93E /* AdSupport.framework */,
 				2FA2952A1ADAE764007A0133 /* libicucore.dylib */,
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F353F8C1A7FCF26002EE2EB /* shoe.jpg in Resources */,
-				D715FBD51C6B4266006AEAC3 /* SlyceSDK.bundle in Resources */,
+				D70485781C8EC523001D75E5 /* SlyceSDK.bundle in Resources */,
 				D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */,
 				2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */,
 				2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */,
