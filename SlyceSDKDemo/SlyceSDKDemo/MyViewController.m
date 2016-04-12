@@ -304,7 +304,6 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didDetectImage:(NSDictionary *)imageInfo
 {
     NSLog(@"sfCameraViewController:didDetectImage:%@", imageInfo);
-    
 }
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveImageInfo:(NSArray *)products
@@ -468,6 +467,8 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     self.hud.mode = MBProgressHUDModeCustomView;
     [self.hud show:YES];
     
+    
+        
     SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
     [request getProductsFromImage:img merchantIDs:nil];
   
@@ -604,6 +605,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     [self.view addSubview:self.hud];
     
     self.versionLabel.text = [NSString stringWithFormat:@"v%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
+    
 }
 
 @end
