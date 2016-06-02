@@ -35,23 +35,23 @@ have been found. The result is an NSDictionary representing some metadata and th
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didFinishWithItemDescription:</TokenIdentifier>
-			<Abstract type="html">Informs the SFCameraViewDelegate that an item description for the image snapped
-has been found.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didReceiveResultsExt:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate that results for the image in the request
+have been found. The result is an NSString representing the extended info that retrieved from the server.</Abstract>
 			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithItemDescription:(NSDictionary *)itemDescription</Declaration>
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didReceiveResultsExt:(NSString *)results</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>cameraView</Name>
 					<Abstract type="html">the current SFCameraView.</Abstract>
 				</Parameter><Parameter>
-					<Name>itemDescription</Name>
-					<Abstract type="html">the NSDictionary representaton of the item description found. Can be empty in case no match has been found.</Abstract>
+					<Name>results</Name>
+					<Abstract type="html">NSString containing the extended info that retrieved from the server.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfCameraView:didFinishWithItemDescription:</Anchor>
+			<Anchor>//api/name/sfCameraView:didReceiveResultsExt:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		
@@ -188,6 +188,26 @@ informative message.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/sfCameraView:didProgressToValue:withMessage:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewDelegate/sfCameraView:didProgressExt:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewDelegate of the progress extended info that retrieved from the server.</Abstract>
+			<DeclaredIn>SFCameraViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraView:(SFCameraView *)cameraView didProgressExt:(NSString *)progress</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraView</Name>
+					<Abstract type="html">the current SFCameraView.</Abstract>
+				</Parameter><Parameter>
+					<Name>progress</Name>
+					<Abstract type="html">NSString containing the progress extended info that retrieved from the server.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraView:didProgressExt:</Anchor>
             <NodeRef refid="8"/>
 		</Token>
 		

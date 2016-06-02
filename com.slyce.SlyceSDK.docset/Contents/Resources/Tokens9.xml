@@ -34,23 +34,23 @@ have been found. The result is an NSDictionary representing some metadata and th
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didFinishWithItemDescription:</TokenIdentifier>
-			<Abstract type="html">Informs the SFRequestDelegate that an item description for the image in the request
-has been found.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didReceiveResultsExt:</TokenIdentifier>
+			<Abstract type="html">Informs the SFRequestDelegate that results for the image in the request
+have been found. The result is an NSString representing the extended info that retrieved from the server.</Abstract>
 			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
 			
-			<Declaration>- (void)sfRequest:(SFRequest *)sfRequest didFinishWithItemDescription:(NSDictionary *)itemDescription</Declaration>
+			<Declaration>- (void)sfRequest:(SFRequest *)sfRequest didReceiveResultsExt:(NSString *)results</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>sfRequest</Name>
 					<Abstract type="html">the current SFRequest.</Abstract>
 				</Parameter><Parameter>
-					<Name>itemDescription</Name>
-					<Abstract type="html">the NSDictionary representaton of the item description found. Can be empty in case no match has been found.</Abstract>
+					<Name>results</Name>
+					<Abstract type="html">NSString containing the extended info that retrieved from the server.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/sfRequest:didFinishWithItemDescription:</Anchor>
+			<Anchor>//api/name/sfRequest:didReceiveResultsExt:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		
@@ -187,6 +187,26 @@ info in key-value pairs.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/sfRequest:didProgressToValue:withMessage:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFRequestDelegate/sfRequest:didProgressExt:</TokenIdentifier>
+			<Abstract type="html">Informs the SFRequestDelegate of the progress extended info that retrieved from the server.</Abstract>
+			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfRequest:(SFRequest *)sfRequest didProgressExt:(NSString *)progress</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sfRequest</Name>
+					<Abstract type="html">the current SFRequest.</Abstract>
+				</Parameter><Parameter>
+					<Name>progress</Name>
+					<Abstract type="html">NSString containing the the progress extended info that retrieved from the server.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfRequest:didProgressExt:</Anchor>
             <NodeRef refid="9"/>
 		</Token>
 		

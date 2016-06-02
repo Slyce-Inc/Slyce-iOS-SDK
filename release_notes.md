@@ -1,6 +1,17 @@
 Slyce SDK Changelog
 ===================================
 
+3.0 - 2016/06/02
+------------------
+
+* ADDED:  Support for public users.
+* ADDED:  in `SFRequest` class `setPublicResultsType:` - Set the result type of the public request. 
+* ADDED:  in `SFCameraView` class `setPublicResultsType:` - Set the result type of the public request. 
+* ADDED:  in `SFRequest` class `getResultsFromImage:` and `getResultsFromImageUrl:`.
+* ADDED:  in `SFRequestDelegate` - `sfRequest: didReceiveResultsExt:` and `sfRequest: didProgressExt:` for extended info from the server.
+* ADDED:  in `SFCameraViewDelegate` - `sfCameraView: didReceiveResultsExt:` and `sfCameraView: didProgressExt:` for extended info from the server.
+* ADDED:  in `SFCameraViewControllerDelegate` - `sfCameraViewController: didReceiveResultsExt:` and `sfCameraViewController: didProgressExt:` for extended info from the server.
+
 2.4.6 - 2016/04/12
 ------------------
 

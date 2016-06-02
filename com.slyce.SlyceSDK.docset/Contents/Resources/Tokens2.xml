@@ -49,42 +49,6 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setCurrentRequest:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>SFCameraView.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) SFRequest *currentRequest</Declaration>
-			
-			
-			<Anchor>//api/name/currentRequest</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/currentRequest</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>SFCameraView.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) SFRequest *currentRequest</Declaration>
-			
-			
-			<Anchor>//api/name/currentRequest</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/currentRequest</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>SFCameraView.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) SFRequest *currentRequest</Declaration>
-			
-			
-			<Anchor>//api/name/currentRequest</Anchor>
-            <NodeRef refid="2"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setShouldPauseScannerAfterRecognition:</TokenIdentifier>
 			<Abstract type="html">A property to enable/disable pausing the auto scanner after a successful 1D/2D detection.</Abstract>
 			<DeclaredIn>SFCameraView.h</DeclaredIn>
@@ -369,6 +333,78 @@
 			
 			
 			<Anchor>//api/name/previewLayer</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setPublicResultsType:</TokenIdentifier>
+			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
+			
+			
+			<Anchor>//api/name/publicResultsType</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/publicResultsType</TokenIdentifier>
+			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
+			
+			
+			<Anchor>//api/name/publicResultsType</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/publicResultsType</TokenIdentifier>
+			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
+			
+			
+			<Anchor>//api/name/publicResultsType</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setCurrentRequest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) SFRequest *currentRequest</Declaration>
+			
+			
+			<Anchor>//api/name/currentRequest</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/currentRequest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) SFRequest *currentRequest</Declaration>
+			
+			
+			<Anchor>//api/name/currentRequest</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/currentRequest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) SFRequest *currentRequest</Declaration>
+			
+			
+			<Anchor>//api/name/currentRequest</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

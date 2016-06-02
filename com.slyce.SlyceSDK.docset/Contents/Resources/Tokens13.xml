@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Constants/SFRequestStage.html">
+	<File path="Constants/SFPublicResultsType.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/c/tdef/SFRequestStage</TokenIdentifier>
-			<Abstract type="html">Enumeration for 3D recognition stages.</Abstract>
-			<DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/c/tdef/SFPublicResultsType</TokenIdentifier>
+			<Abstract type="html">Enumeration for results type (Public users only).</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
             
 			
 			<NodeRef refid="13"/>
@@ -14,21 +14,21 @@
 		
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFRequestStageSendingImage</TokenIdentifier>
-            <Abstract type="html">Image uploading stage.</Abstract>
-            <Declaration>SFRequestStageSendingImage</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/SFPublicDescription</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>SFPublicDescription</Declaration>
             
-            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            <DeclaredIn>SFCameraView.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>
         
         <Token>
-            <TokenIdentifier>//apple_ref/c/econst/SFRequestStageAnalyzingImage</TokenIdentifier>
-            <Abstract type="html">Image recognition stage.</Abstract>
-            <Declaration>SFRequestStageAnalyzingImage</Declaration>
+            <TokenIdentifier>//apple_ref/c/econst/SFPublicProducts</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>SFPublicProducts</Declaration>
             
-            <DeclaredIn>SFRequestDelegate.h</DeclaredIn>
+            <DeclaredIn>SFCameraView.h</DeclaredIn>
             
             <NodeRef refid="13"/>
         </Token>

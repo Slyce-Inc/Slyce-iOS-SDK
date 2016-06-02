@@ -36,6 +36,8 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
 };
 
 
+
+
 /*!
  *  Provides an integrated `UIViewController` with all the Slyce SDK functionalities.
  *
@@ -97,6 +99,7 @@ typedef NS_ENUM(NSUInteger, SFAnimationType)
  */
 
 @property (strong, nonatomic, readonly) SFCameraView *cameraView;
+
 
 
 

@@ -121,6 +121,42 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/setPublicResultsType:</TokenIdentifier>
+			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
+			
+			
+			<Anchor>//api/name/publicResultsType</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/publicResultsType</TokenIdentifier>
+			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
+			
+			
+			<Anchor>//api/name/publicResultsType</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFRequest/publicResultsType</TokenIdentifier>
+			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
+			
+			
+			<Anchor>//api/name/publicResultsType</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/initWithSlyce:options:andDelegate:</TokenIdentifier>
 			<Abstract type="html">Initializes a new SFRequest object.</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
@@ -149,54 +185,56 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImage:</TokenIdentifier>
-			<Abstract type="html">Used to retrieve a payload describing the description of the product in the image, along with optional parameters.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getResultsFromImage:</TokenIdentifier>
+			<Abstract type="html">Used to asynchronously retrieve a list of products and extended info from image.
+
+</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImageURL:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getResultsFromImageUrl:</TokenIdentifier>
 		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (void)getItemDescriptionFromImage:(UIImage *)image</Declaration>
+			<Declaration>- (void)getResultsFromImage:(UIImage *)image</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>image</Name>
-					<Abstract type="html">the image object.</Abstract>
+					<Abstract type="html">The image object to recognize.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/getItemDescriptionFromImage:</Anchor>
+			<Anchor>//api/name/getResultsFromImage:</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImageURL:</TokenIdentifier>
-			<Abstract type="html">Used to asynchrounously retrieve a list of products from URL to the image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass nil.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getResultsFromImageUrl:</TokenIdentifier>
+			<Abstract type="html">Used to asynchronously retrieve a list of products and extended info from the URL to the image.</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
 			
 	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getItemDescriptionFromImage:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getResultsFromImage:</TokenIdentifier>
 		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
 		
 	</RelatedTokens>
 	
-			<Declaration>- (void)getItemDescriptionFromImageURL:(NSURL *)imageURL</Declaration>
+			<Declaration>- (void)getResultsFromImageUrl:(NSURL *)imageURL</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>imageURL</Name>
-					<Abstract type="html">the URL to the image.</Abstract>
+					<Abstract type="html">The URL of the image to recognize.</Abstract>
 				</Parameter>
 			</Parameters>
 			
-			<Anchor>//api/name/getItemDescriptionFromImageURL:</Anchor>
+			<Anchor>//api/name/getResultsFromImageUrl:</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImage:merchantIDs:</TokenIdentifier>
-			<Abstract type="html">Used to asynchrounously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass nil.
+			<Abstract type="html">Used to asynchronously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass nil.
 
 </Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
@@ -224,7 +262,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getProductsFromImageURL:merchantIDs:</TokenIdentifier>
-			<Abstract type="html">Used to asynchrounously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
+			<Abstract type="html">Used to asynchronously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
 to narrow the search to specific merchants.</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
 			

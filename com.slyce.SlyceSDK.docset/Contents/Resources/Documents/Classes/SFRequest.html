@@ -60,6 +60,8 @@
 		
 		<option value="//api/name/options">options</option>
 		
+		<option value="//api/name/publicResultsType">publicResultsType</option>
+		
 		<option value="//api/name/requestID">requestID</option>
 		
 	</optgroup>
@@ -74,15 +76,15 @@
 		
 		<option value="//api/name/cancelInternal">- cancelInternal</option>
 		
-		<option value="//api/name/getItemDescriptionFromImage:">- getItemDescriptionFromImage:</option>
-		
-		<option value="//api/name/getItemDescriptionFromImageURL:">- getItemDescriptionFromImageURL:</option>
-		
 		<option value="//api/name/getMerchantIDs">- getMerchantIDs</option>
 		
 		<option value="//api/name/getProductsFromImage:merchantIDs:">- getProductsFromImage:merchantIDs:</option>
 		
 		<option value="//api/name/getProductsFromImageURL:merchantIDs:">- getProductsFromImageURL:merchantIDs:</option>
+		
+		<option value="//api/name/getResultsFromImage:">- getResultsFromImage:</option>
+		
+		<option value="//api/name/getResultsFromImageUrl:">- getResultsFromImageUrl:</option>
 		
 		<option value="//api/name/initWithSlyce:options:andDelegate:">- initWithSlyce:options:andDelegate:</option>
 		
@@ -276,6 +278,52 @@ For example: @{@&ldquo;storeID&rdquo; : @&ldquo;1234&rdquo;, @&ldquo;state&rdquo
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/publicResultsType" title="publicResultsType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/publicResultsType">&nbsp;&nbsp;publicResultsType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) SFPublicResultsType publicResultsType</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>SFPublicDescription - the description of the image detected. SFPublicProducts - the retrieved products based on the image detected.</p><div class="note"><p><strong>Note:</strong> The default is SFPublicDescription.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -378,8 +426,8 @@ Depending on your client ID, SFRequest will be able to perform a 2D and/or 3D se
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/getItemDescriptionFromImage:" title="getItemDescriptionFromImage:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getItemDescriptionFromImage:">&ndash;&nbsp;getItemDescriptionFromImage:</a></code>
+	<a name="//api/name/getResultsFromImage:" title="getResultsFromImage:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getResultsFromImage:">&ndash;&nbsp;getResultsFromImage:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -389,12 +437,12 @@ Depending on your client ID, SFRequest will be able to perform a 2D and/or 3D se
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Used to retrieve a payload describing the description of the product in the image, along with optional parameters.</p>
+				<p>Used to asynchronously retrieve a list of products and extended info from image.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)getItemDescriptionFromImage:(UIImage *)<em>image</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)getResultsFromImage:(UIImage *)<em>image</em></code></div>
 
 		    
 			
@@ -404,7 +452,7 @@ Depending on your client ID, SFRequest will be able to perform a 2D and/or 3D se
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>image</code></th>
-						<td><p>the image object.</p></td>
+						<td><p>The image object to recognize.</p></td>
 					</tr>
 				
 				</table>
@@ -416,12 +464,6 @@ Depending on your client ID, SFRequest will be able to perform a 2D and/or 3D se
 			
 
 			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>This method will ask the SDK to asynchronously recognize the image in the param and return an <code>NSDictionary</code> representing the description of
-the item matched.</p>
-			</div>
-			
 
 			
 
@@ -430,7 +472,7 @@ the item matched.</p>
 				<h4 class="method-subtitle">See Also</h4>
 				<ul>
 					
-					<li><code><p><a href="#//api/name/getItemDescriptionFromImageURL:">- getItemDescriptionFromImageURL:</a></p></code></li>
+					<li><code><p><a href="#//api/name/getResultsFromImageUrl:">- getResultsFromImageUrl:</a></p></code></li>
 					
 					<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
 					
@@ -448,8 +490,8 @@ the item matched.</p>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/getItemDescriptionFromImageURL:" title="getItemDescriptionFromImageURL:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/getItemDescriptionFromImageURL:">&ndash;&nbsp;getItemDescriptionFromImageURL:</a></code>
+	<a name="//api/name/getResultsFromImageUrl:" title="getResultsFromImageUrl:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getResultsFromImageUrl:">&ndash;&nbsp;getResultsFromImageUrl:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -459,12 +501,12 @@ the item matched.</p>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Used to asynchrounously retrieve a list of products from URL to the image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass <code>nil</code>.</p>
+				<p>Used to asynchronously retrieve a list of products and extended info from the URL to the image.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)getItemDescriptionFromImageURL:(NSURL *)<em>imageURL</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)getResultsFromImageUrl:(NSURL *)<em>imageURL</em></code></div>
 
 		    
 			
@@ -474,7 +516,7 @@ the item matched.</p>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>imageURL</code></th>
-						<td><p>the URL to the image.</p></td>
+						<td><p>The URL of the image to recognize.</p></td>
 					</tr>
 				
 				</table>
@@ -488,9 +530,8 @@ the item matched.</p>
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
-<a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didDetectImage:">[SFRequestDelegate sfRequest:didDetectImage:]</a> and <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveResults:">[SFRequestDelegate sfRequest:didReceiveResults:]</a>, accordingly. 2D match is possible for Premium and 2D-enabled users only. In case of a 2D match, additional info might be delivered, via <a href="../Protocols/SFRequestDelegate.html#//api/name/sfRequest:didReceiveImageInfo:">[SFRequestDelegate sfRequest:didReceiveImageInfo:]</a> callback.
-The 3D products array cannot be empty. For more information, refer to <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p>
+				<p>Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
+will be notified via the <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> object. For more information, see the reference for <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p>
 			</div>
 			
 
@@ -501,7 +542,7 @@ The 3D products array cannot be empty. For more information, refer to <a href=".
 				<h4 class="method-subtitle">See Also</h4>
 				<ul>
 					
-					<li><code><p><a href="#//api/name/getItemDescriptionFromImage:">- getItemDescriptionFromImage:</a></p></code></li>
+					<li><code><p><a href="#//api/name/getResultsFromImage:">- getResultsFromImage:</a></p></code></li>
 					
 					<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
 					
@@ -530,7 +571,7 @@ The 3D products array cannot be empty. For more information, refer to <a href=".
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Used to asynchrounously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass <code>nil</code>.</p>
+				<p>Used to asynchronously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass <code>nil</code>.</p>
 			</div>
 			
 		    
@@ -605,7 +646,7 @@ method as a param to the current method.</p></div>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Used to asynchrounously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
+				<p>Used to asynchronously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
 to narrow the search to specific merchants.</p>
 			</div>
 			
@@ -977,7 +1018,7 @@ The 3D products array cannot be empty. For more information, refer to <a href=".
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-04-12</p>
+						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-06-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

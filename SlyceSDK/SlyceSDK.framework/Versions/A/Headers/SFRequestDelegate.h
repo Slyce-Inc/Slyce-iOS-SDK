@@ -73,15 +73,18 @@ typedef NS_ENUM(NSUInteger, SFRequestStage)
 
 - (void)sfRequest:(SFRequest *)sfRequest didReceiveResults:(NSDictionary *)results;
 
-/*! 
- *  @brief Informs the SFRequestDelegate that an item description for the image in the request
- *  has been found.
+
+
+/*!
+ *  @brief Informs the SFRequestDelegate that results for the image in the request
+ *  have been found. The result is an `NSString` representing the extended info that retrieved from the server.
  *
  *  @param sfRequest the current SFRequest.
- *  @param itemDescription the `NSDictionary` representaton of the item description found. Can be empty in case no match has been found.
+ *  @param results `NSString` containing the extended info that retrieved from the server.
  */
 
-- (void)sfRequest:(SFRequest *)sfRequest didFinishWithItemDescription:(NSDictionary *)itemDescription;
+- (void)sfRequest:(SFRequest *)sfRequest didReceiveResultsExt:(NSString *)results;
+
 
 /*!
  *  @brief Informs the SFRequestDelegate that a barcode was matched.
@@ -168,6 +171,17 @@ typedef NS_ENUM(NSUInteger, SFRequestStage)
  *
  */
 - (void)sfRequest:(SFRequest *)sfRequest didProgressToValue:(CGFloat)value withMessage:(NSString *)message;
+
+
+/*!
+ *  @brief Informs the SFRequestDelegate of the progress extended info that retrieved from the server.
+ *
+ *  @param sfRequest the current SFRequest.
+ *  @param progress `NSString` containing the the progress extended info that retrieved from the server.
+ *
+ */
+- (void)sfRequest:(SFRequest *)sfRequest didProgressExt:(NSString *)progress;
+
 
 ///---------------------------------------------------------------------------------------
 /// @name Error Reporting

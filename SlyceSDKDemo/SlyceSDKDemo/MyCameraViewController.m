@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *resultAdditionalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *premiumLabel;
 
-@property (nonatomic, strong) SFRequest *currentRequest;
 @property (nonatomic, strong) UIButton *cancelButton;
 
 @end
@@ -68,10 +67,17 @@
     
     self.products = [products copy];
     
-    
-    
     [self performSegueWithIdentifier:@"ProductsSegue" sender:nil];
 }
+
+- (void)sfCameraView:(SFCameraView *)cameraView didReceiveResultsExt:(NSString *)results
+{
+    NSLog(@"sfCameraView:didReceiveResultsExt: %@", results);
+    
+    [self.hud hide:YES];
+    _cancelButton.hidden = YES;
+}
+
 
 - (void)sfCameraView:(SFCameraView *)cameraView didProgressToValue:(CGFloat)value withMessage:(NSString *)message
 {
@@ -79,11 +85,9 @@
     self.hud.labelText = message;
 }
 
-- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithItemDescription:(NSDictionary *)itemDescription
+- (void)sfCameraView:(SFCameraView *)cameraView didProgressExt:(NSString *)progress
 {
-    NSLog(@"sfCameraView:didFinishWithItemDescription:%@", itemDescription);
-    [self.hud hide:YES];
-    _cancelButton.hidden = YES;
+    NSLog(@"sfCameraView:didProgressExt:%@", progress);
 }
 
 - (void)sfCameraView:(SFCameraView *)cameraView didDetectBarcode:(SFBarcode *)barcode
@@ -121,26 +125,18 @@
     _cancelButton.hidden = YES;
     
     self.products = [products copy];
-    
-    /*
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    MyProductsViewController *myProductsViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyProductsViewController"];
-    
-    myProductsViewController.products = _products;
-
-    [self presentViewController:myProductsViewController animated:YES completion:nil];
-    */
-    
-  //  [_cameraView resumeCapture];
-
-    
+      
     [self performSegueWithIdentifier:@"ProductsSegue" sender:nil];
 }
+
 
 - (void)sfCameraView:(SFCameraView *)cameraView didDetectImage:(NSDictionary *)imageInfo
 {
     NSLog(@"sfCameraView:didDetectImage:%@", imageInfo);
     self.resultLabel.text = [imageInfo description];
+    
+    [self renderToImage];
+
 }
 
 - (UIImage *)renderToImage
@@ -216,6 +212,7 @@
     
     self.cameraView = [[SFCameraView alloc] initWithSlyce:_slyce view:self.view options:nil andDelegate:self];
     
+    
   //  self.cameraView.shouldUseContinuousRecognition = NO; //Uncomment this line if you don't wish to get notified automatically about recognized barcodes/2D items (Premium) (default is YES)
     
   //  self.cameraView.shouldPauseScannerAfterRecognition = NO; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection (default is YES), default resume capture delay time is '3 sec'.
@@ -224,10 +221,12 @@
     
    // self.cameraView.shouldUseContinuousRecognitionBarcodes = NO; //Uncomment this line if you don't wish to get notified automatically about recognized Barcodes items (default is YES)
     
-  
-    
     // self.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
     
+    
+    // Public users only
+    //[self.cameraView setPublicResultsType:SFPublicProducts]; default is SFPublicDescription
+
 }
 
 
@@ -249,11 +248,9 @@
 
 
 - (void)cancelSearch
-{
-    
-    
+{    
     [self.cameraView resumeCapture];
-    [_currentRequest cancel];
+    [self.cameraView.currentRequest cancel];
     [self.hud hide:YES];
     _cancelButton.hidden = YES;
 }

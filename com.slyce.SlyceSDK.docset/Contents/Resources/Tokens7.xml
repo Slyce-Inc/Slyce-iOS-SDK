@@ -138,6 +138,27 @@ The result is an NSDictionary representing the matched 3D products and some meta
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewController:didReceiveResultsExt:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewControllerDelegate that results for the image in the request
+have been found. The result is an NSString representing the extended info that retrieved from the server.</Abstract>
+			<DeclaredIn>SFCameraViewControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveResultsExt:(NSString *)results</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraViewController</Name>
+					<Abstract type="html">the current SFCameraViewController.</Abstract>
+				</Parameter><Parameter>
+					<Name>results</Name>
+					<Abstract type="html">NSString containing the extended info that retrieved from the server.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraViewController:didReceiveResultsExt:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewController:didFailWithError:</TokenIdentifier>
 			<Abstract type="html">Informs that an error has occured while trying to fulfil some task of the 2D recognition engine (verification of credentials,
 sync with local storage, no response from the matching server, etc).
@@ -204,6 +225,26 @@ informative message.</Abstract>
 			</Parameters>
 			
 			<Anchor>//api/name/sfCameraViewController:didProgressToValue:withMessage:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/SFCameraViewControllerDelegate/sfCameraViewController:didProgressExt:</TokenIdentifier>
+			<Abstract type="html">Informs the SFCameraViewControllerDelegate of the progress extended info that retrieved from the server.</Abstract>
+			<DeclaredIn>SFCameraViewControllerDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didProgressExt:(NSString *)progress</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cameraViewController</Name>
+					<Abstract type="html">the current SFCameraViewController.</Abstract>
+				</Parameter><Parameter>
+					<Name>progress</Name>
+					<Abstract type="html">NSString containing the progress extended info that retrieved from the server.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/sfCameraViewController:didProgressExt:</Anchor>
             <NodeRef refid="7"/>
 		</Token>
 		

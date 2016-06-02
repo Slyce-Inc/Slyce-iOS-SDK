@@ -216,6 +216,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 
 - (void)sfRequest:(SFRequest *)sfRequest didReceiveResults:(NSDictionary *)results
 {
+    
     NSArray *products = [results objectForKey:@"products"];
     NSLog(@"sfRequest:didReceiveResults:%@", products);
     [self.hud hide:YES];
@@ -232,9 +233,10 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     }
 }
 
-- (void)sfRequest:(SFRequest *)sfRequest didFinishWithItemDescription:(NSDictionary *)itemDescription
+- (void)sfRequest:(SFRequest *)sfRequest didReceiveResultsExt:(NSString *)results
 {
-    NSLog(@"sfRequest:didFinishWithItemDescription:%@", itemDescription);
+    NSLog(@"sfRequest:didReceiveResultsExt: %@", results);
+    
     [self.hud hide:YES];
 }
 
@@ -265,6 +267,11 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     self.hud.labelText = message;
 }
 
+- (void)sfRequest:(SFRequest *)sfRequest didProgressExt:(NSString *)progress
+{
+    NSLog(@"sfRequest:didProgressExt:%@", progress);
+}
+
 #pragma mark -
 #pragma mark SFCameraViewControllerDelegate
 
@@ -280,8 +287,6 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didSnapImage:(UIImage *)image
 {
-    
-    
     NSLog(@"sfCameraViewController:didSnapImage:");
 }
 
@@ -293,6 +298,11 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didProgressToValue:(CGFloat)value withMessage:(NSString *)message
 {
     NSLog(@"sfCameraViewController:didProgressToValue:%.2f withMessage:%@", value, message);
+}
+
+- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didProgressExt:(NSString *)progress
+{
+    NSLog(@"sfCameraViewController:didProgressExt:%@", progress);
 }
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didFailWithError:(NSError *)error
@@ -325,6 +335,11 @@ typedef NS_ENUM(NSUInteger, ClientMode)
         [self performSegueWithIdentifier:@"ProductsSegue" sender:nil];
 }
 
+- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveResultsExt:(NSString *)results
+{
+    NSLog(@"sfCameraViewController:didReceiveResultsExt %@",results);
+}
+
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didDetectBarcode:(SFBarcode *)barcode
 {
     NSLog(@"sfCameraViewController:didDetectBarcode:%@", barcode.text);
@@ -334,6 +349,11 @@ typedef NS_ENUM(NSUInteger, ClientMode)
         [alert show];
     });
 }
+- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveBarcodeInfo:(NSURL *)productURL
+{
+    NSLog(@"sfCameraViewController:didReceiveBarcodeInfo:%@", productURL);
+}
+
 
 #pragma mark
 #pragma mark - UIAlertViewDelegate
@@ -468,10 +488,14 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     [self.hud show:YES];
     
     
-        
     SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
-    [request getProductsFromImage:img merchantIDs:nil];
-  
+    
+    // Public users only
+    // [request setPublicResultsType:SFPublicProducts]; default is SFPublicDescription
+
+    [request getResultsFromImage:img];
+    
+   // [request getResultsFromImageUrl:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/4/46/Apple_Magic_Mouse.jpg"]];
 }
 
 //Camera/Headless mode
@@ -542,7 +566,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     // _slyce.customProgressColor = [UIColor redColor]; //Uncomment this line if you wish to set your own custom progress color.
     
     self.cameraVC = [[SFCameraViewController alloc] initWithSlyce:_slyce resourcesBundle:[NSBundle mainBundle] options:nil andDelegate:self];
-       
+    
     // _cameraVC.cameraView.shouldUseContinuousRecognition = NO; //Uncomment this line if you don't wish to get notified automatically about recognized barcodes/2D items (Premium) (default is YES)
     
     // _cameraVC.cameraView.shouldUseContinuousRecognition2D = NO; //Uncomment this line if you don't wish to get notified automatically about recognized 2D items (Premium) (default is YES)
@@ -572,6 +596,9 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     [self.cameraVC setCustomNotFoundViewController:historyView];
      */
     
+    // Public users only
+    // [self.cameraVC.cameraView setPublicResultsType:SFPublicProducts]; // default is SFPublicDescription
+
     
     
     [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:^{

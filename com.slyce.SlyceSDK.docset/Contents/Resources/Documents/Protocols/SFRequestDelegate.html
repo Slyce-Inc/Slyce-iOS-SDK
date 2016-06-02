@@ -72,11 +72,11 @@
 		
 		<option value="//api/name/sfRequest:didFinishWithExtendedInfoFor2DProducts:">- sfRequest:didFinishWithExtendedInfoFor2DProducts:</option>
 		
-		<option value="//api/name/sfRequest:didFinishWithItemDescription:">- sfRequest:didFinishWithItemDescription:</option>
-		
 		<option value="//api/name/sfRequest:didFinishWithMerchantIDs:">- sfRequest:didFinishWithMerchantIDs:</option>
 		
 		<option value="//api/name/sfRequest:didFinishWithStatus:">- sfRequest:didFinishWithStatus:</option>
+		
+		<option value="//api/name/sfRequest:didProgressExt:">- sfRequest:didProgressExt:</option>
 		
 		<option value="//api/name/sfRequest:didProgressToStage:">- sfRequest:didProgressToStage:</option>
 		
@@ -87,6 +87,8 @@
 		<option value="//api/name/sfRequest:didReceiveImageInfo:">- sfRequest:didReceiveImageInfo:</option>
 		
 		<option value="//api/name/sfRequest:didReceiveResults:">- sfRequest:didReceiveResults:</option>
+		
+		<option value="//api/name/sfRequest:didReceiveResultsExt:">- sfRequest:didReceiveResultsExt:</option>
 		
 		<option value="//api/name/sfRequest:didRecognizeBarcode:">- sfRequest:didRecognizeBarcode:</option>
 		
@@ -203,8 +205,8 @@ have been found. The result is an <code>NSDictionary</code> representing some me
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sfRequest:didFinishWithItemDescription:" title="sfRequest:didFinishWithItemDescription:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sfRequest:didFinishWithItemDescription:">&ndash;&nbsp;sfRequest:didFinishWithItemDescription:</a></code>
+	<a name="//api/name/sfRequest:didReceiveResultsExt:" title="sfRequest:didReceiveResultsExt:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sfRequest:didReceiveResultsExt:">&ndash;&nbsp;sfRequest:didReceiveResultsExt:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -214,13 +216,13 @@ have been found. The result is an <code>NSDictionary</code> representing some me
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Informs the SFRequestDelegate that an item description for the image in the request
-has been found.</p>
+				<p>Informs the SFRequestDelegate that results for the image in the request
+have been found. The result is an <code>NSString</code> representing the extended info that retrieved from the server.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)sfRequest:(SFRequest *)<em>sfRequest</em> didFinishWithItemDescription:(NSDictionary *)<em>itemDescription</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)sfRequest:(SFRequest *)<em>sfRequest</em> didReceiveResultsExt:(NSString *)<em>results</em></code></div>
 
 		    
 			
@@ -234,8 +236,8 @@ has been found.</p>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>itemDescription</code></th>
-						<td><p>the <code>NSDictionary</code> representaton of the item description found. Can be empty in case no match has been found.</p></td>
+						<th scope="row" class="argument-name"><code>results</code></th>
+						<td><p><code>NSString</code> containing the extended info that retrieved from the server.</p></td>
 					</tr>
 				
 				</table>
@@ -656,6 +658,64 @@ object containing a <strong>Premium</strong> client ID.</p></div>
 				<p>The numeric value is a percentage from the whole process and it is float ranged from 0 to 1.
 The message is a short description of the current search stage.</p>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFRequestDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/sfRequest:didProgressExt:" title="sfRequest:didProgressExt:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sfRequest:didProgressExt:">&ndash;&nbsp;sfRequest:didProgressExt:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Informs the SFRequestDelegate of the progress extended info that retrieved from the server.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)sfRequest:(SFRequest *)<em>sfRequest</em> didProgressExt:(NSString *)<em>progress</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>sfRequest</code></th>
+						<td><p>the current <a href="../Classes/SFRequest.html">SFRequest</a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progress</code></th>
+						<td><p><code>NSString</code> containing the the progress extended info that retrieved from the server.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
 			
 
 			
@@ -1276,7 +1336,7 @@ object containing a <strong>Premium</strong> client ID.</p></div>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-04-12</p>
+						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-06-02</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

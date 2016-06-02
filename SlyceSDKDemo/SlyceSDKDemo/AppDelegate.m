@@ -25,7 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    // ...
+    // Premium users
     
     NSError *error = nil;
     
@@ -42,8 +42,26 @@
         //Error
         NSLog(@"Slyce SDK failed to open with error = %@", [error sf_message]);
     }
+
     
-    // ...
+    /*
+    // Public users
+
+    BOOL success = [slyce openWithAppId:"Your AppID" appKey:"Your AppKey" error:&error];
+    if (!success)
+    {
+        //Success
+        NSLog(@"Slyce SDK successfully opened");
+
+    }
+    els
+    {
+        //Error
+        NSLog(@"Slyce SDK failed to open with error = %@", [error sf_message]);
+
+    }
+    */
+    
     
     return YES;
 }

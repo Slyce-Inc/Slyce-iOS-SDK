@@ -39,15 +39,17 @@
 
 - (void)sfCameraView:(SFCameraView *)cameraView didReceiveResults:(NSDictionary *)results;
 
+
 /*!
- *  @brief Informs the SFCameraViewDelegate that an item description for the image snapped
- *  has been found.
+ *  @brief Informs the SFCameraViewDelegate that results for the image in the request
+ *  have been found. The result is an `NSString` representing the extended info that retrieved from the server.
  *
  *  @param cameraView the current SFCameraView.
- *  @param itemDescription the `NSDictionary` representaton of the item description found. Can be empty in case no match has been found.
+ *  @param results `NSString` containing the extended info that retrieved from the server.
  */
 
-- (void)sfCameraView:(SFCameraView *)cameraView didFinishWithItemDescription:(NSDictionary *)itemDescription;
+- (void)sfCameraView:(SFCameraView *)cameraView didReceiveResultsExt:(NSString *)results;
+
 
 /*!
  *  @brief Informs the SFCameraViewDelegate that a barcode was matched.
@@ -143,6 +145,18 @@
  *
  */
 - (void)sfCameraView:(SFCameraView *)cameraView didProgressToValue:(CGFloat)value withMessage:(NSString *)message;
+
+
+/*!
+ *  @brief Informs the SFCameraViewDelegate of the progress extended info that retrieved from the server.
+ *
+ *  @param cameraView the current SFCameraView.
+ *  @param progress `NSString` containing the progress extended info that retrieved from the server.
+ *
+ */
+
+- (void)sfCameraView:(SFCameraView *)cameraView didProgressExt:(NSString *)progress;
+
 
 ///---------------------------------------------------------------------------------------
 /// @name Error Reporting

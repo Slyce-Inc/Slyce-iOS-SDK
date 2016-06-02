@@ -123,6 +123,18 @@
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveResults:(NSDictionary *)results;
 
+
+/*!
+ *  @brief Informs the SFCameraViewControllerDelegate that results for the image in the request
+ *  have been found. The result is an `NSString` representing the extended info that retrieved from the server.
+ *
+ *  @param cameraViewController the current SFCameraViewController.
+ *  @param results `NSString` containing the extended info that retrieved from the server.
+ */
+
+- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveResultsExt:(NSString *)results;
+
+
 ///---------------------------------------------------------------------------------------
 /// @name Error Reporting
 ///---------------------------------------------------------------------------------------
@@ -170,6 +182,20 @@
  *
  */
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didProgressToValue:(CGFloat)value withMessage:(NSString *)message;
+
+
+
+/*!
+ *  @brief Informs the SFCameraViewControllerDelegate of the progress extended info that retrieved from the server.
+ *
+ *  @param cameraViewController the current SFCameraViewController.
+ *  @param progress `NSString` containing the progress extended info that retrieved from the server.
+ *
+ */
+
+- (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didProgressExt:(NSString *)progress;
+
+
 
 ///---------------------------------------------------------------------------------------
 /// @name Miscellaneous

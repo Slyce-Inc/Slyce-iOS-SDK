@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "SFRequestDelegate.h"
+#import "SFCameraView.h"
 
 @class SFSlyce;
+
+
+
 
 /*!
  *  Provides a way to perform visual search without using SDK’s integral camera functionality.
@@ -20,6 +24,9 @@
  */
 
 @interface SFRequest : NSObject
+
+
+
 
 ///---------------------------------------------------------------------------------------
 /// @name Properties
@@ -49,6 +56,16 @@
  */
 @property (nonatomic, weak) id<SFRequestDelegate> delegate;
 
+
+/*!
+ *  @property
+ *  @brief For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.
+ *  @discussion SFPublicDescription - the description of the image detected. SFPublicProducts - the retrieved products based on the image detected.
+ *  @note The default is SFPublicDescription.
+ */
+@property (nonatomic) SFPublicResultsType publicResultsType;
+
+
 ///---------------------------------------------------------------------------------------
 /// @name Initialization
 ///---------------------------------------------------------------------------------------
@@ -77,7 +94,41 @@
 /// @name Product Search
 ///---------------------------------------------------------------------------------------
 
+
 /*!
+ *  @method
+ *  @brief Used to asynchronously retrieve a list of products and extended info from image.
+ *
+ *  @discussion
+ *  The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
+ *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:] and [SFRequestDelegate sfRequest:didReceiveResultsExt:], accordingly. 2D match is possible for Premium and 2D-enabled users only. In case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
+ *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
+ *
+ *  @param image The image object to recognize.
+ *
+ *  @see getResultsFromImageUrl:
+ *  @see SFRequestDelegate
+ */
+
+- (void)getResultsFromImage:(UIImage *)image;
+
+/*!
+ *  @method
+ *  @brief Used to asynchronously retrieve a list of products and extended info from the URL to the image.
+ *
+ *  @discussion Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
+ *  will be notified via the SFRequestDelegate object. For more information, see the reference for SFRequestDelegate class.
+ *
+ *  @param imageURL The URL of the image to recognize.
+ *
+ *  @see getResultsFromImage:
+ *  @see SFRequestDelegate
+ */
+
+
+- (void)getResultsFromImageUrl:(NSURL *)imageURL;
+
+/*
  *  @method
  *  @brief Used to retrieve a payload describing the description of the product in the image, along with optional parameters.
  *
@@ -88,13 +139,13 @@
  *
  *  @see getItemDescriptionFromImageURL:
  *  @see SFRequestDelegate
- */
 
 - (void)getItemDescriptionFromImage:(UIImage *)image;
+ */
 
-/*!
+/*
  *  @method
- *  @brief Used to asynchrounously retrieve a list of products from URL to the image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass `nil`.
+ *  @brief Used to asynchronously retrieve a list of products from URL to the image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass `nil`.
  *
  *  @discussion The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
  *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. 2D match is possible for Premium and 2D-enabled users only. In case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
@@ -104,13 +155,14 @@
  *
  *  @see getItemDescriptionFromImage:
  *  @see SFRequestDelegate
+ 
+- (void)getItemDescriptionFromImageURL:(NSURL *)imageURL;
  */
 
-- (void)getItemDescriptionFromImageURL:(NSURL *)imageURL;
 
 /*!
  *  @method
- *  @brief Used to asynchrounously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass `nil`.
+ *  @brief Used to asynchronously retrieve a list of products from image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass `nil`.
  *
  *  @discussion  
  *  The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
@@ -131,7 +183,7 @@
 
 /*!
  *  @method
- *  @brief Used to asynchrounously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
+ *  @brief Used to asynchronously retrieve a list of products from the URL to the image. May also provide an array of merchantIDs
  *  to narrow the search to specific merchants.
  *
  *  @discussion Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
