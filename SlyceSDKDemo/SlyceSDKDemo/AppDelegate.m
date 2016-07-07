@@ -26,10 +26,10 @@
 {
 
     // Premium users
-    
     NSError *error = nil;
     
     SFSlyce *slyce = [SFSlyce sharedInstance];
+
     BOOL success = [slyce openWithClientID:SLYCE_CLIENT_ID error:&error];
     
     if (success)
@@ -42,23 +42,21 @@
         //Error
         NSLog(@"Slyce SDK failed to open with error = %@", [error sf_message]);
     }
-
+    
     
     /*
     // Public users
-
-    BOOL success = [slyce openWithAppId:"Your AppID" appKey:"Your AppKey" error:&error];
+    
+    BOOL success = [slyce openWithAppId:@"Your AppID" appKey:@"Your AppKey" error:&error];
     if (!success)
     {
         //Success
         NSLog(@"Slyce SDK successfully opened");
-
     }
-    els
+    else
     {
         //Error
         NSLog(@"Slyce SDK failed to open with error = %@", [error sf_message]);
-
     }
     */
     

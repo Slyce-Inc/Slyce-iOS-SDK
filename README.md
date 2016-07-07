@@ -66,7 +66,7 @@ pod 'Slyce-iOS-SDK'
 
 Your mobile integration requires a `client_id`.
 
-You can obtain these Slyce API credentials by visiting the [Products Services page on Slyce site](http://slyce.it/products-services) or via a Slyce representative.
+You can obtain these Slyce API credentials via a [Slyce](http://slyce.it/) representative.
 
 After you obtain one, you should use it when initializing the central `SFSlyce` object when using of the SDK modes.
 

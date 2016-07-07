@@ -495,7 +495,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 
     [request getResultsFromImage:img];
     
-   // [request getResultsFromImageUrl:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/4/46/Apple_Magic_Mouse.jpg"]];
+    // [request getResultsFromImageUrl:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/4/46/Apple_Magic_Mouse.jpg"]];
 }
 
 //Camera/Headless mode

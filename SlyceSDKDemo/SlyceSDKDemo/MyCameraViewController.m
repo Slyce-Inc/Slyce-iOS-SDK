@@ -221,7 +221,7 @@
     
    // self.cameraView.shouldUseContinuousRecognitionBarcodes = NO; //Uncomment this line if you don't wish to get notified automatically about recognized Barcodes items (default is YES)
     
-    // self.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
+   // self.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
     
     
     // Public users only
