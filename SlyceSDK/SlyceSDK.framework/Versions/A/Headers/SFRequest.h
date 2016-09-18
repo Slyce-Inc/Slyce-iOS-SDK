@@ -57,14 +57,6 @@
 @property (nonatomic, weak) id<SFRequestDelegate> delegate;
 
 
-/*!
- *  @property
- *  @brief For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.
- *  @discussion SFPublicDescription - the description of the image detected. SFPublicProducts - the retrieved products based on the image detected.
- *  @note The default is SFPublicDescription.
- */
-@property (nonatomic) SFPublicResultsType publicResultsType;
-
 
 ///---------------------------------------------------------------------------------------
 /// @name Initialization
@@ -116,7 +108,7 @@
  *  @method
  *  @brief Used to asynchronously retrieve a list of products and extended info from the URL to the image.
  *
- *  @discussion Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
+ *  @discussion Calling this method will begin the visual 3D recognition of the image URL param. The results, as well as the progress,
  *  will be notified via the SFRequestDelegate object. For more information, see the reference for SFRequestDelegate class.
  *
  *  @param imageURL The URL of the image to recognize.
@@ -127,6 +119,21 @@
 
 
 - (void)getResultsFromImageUrl:(NSURL *)imageURL;
+
+
+/*!
+ *  @method
+ *  @brief For premium users only. Used to asynchronously retrieve a list of products and extended info similar to the image passed with the URL.
+ *
+ *  @discussion Calling this method will begin the visual 3D recognition of the image that is passed with the URL and will retrieve similar products based on that image. The results, as well as the progress, will be notified via the SFRequestDelegate object. For more information, see the reference for SFRequestDelegate class.
+ *
+ *  @param imageURL The URL of the image to recognize.
+ *
+ *  @see SFRequestDelegate
+ */
+
+
+- (void)getSimilarFromResults:(NSURL *)imageURL;
 
 /*
  *  @method

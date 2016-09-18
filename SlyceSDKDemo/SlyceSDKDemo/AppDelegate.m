@@ -47,7 +47,7 @@
     /*
     // Public users
     
-    BOOL success = [slyce openWithAppId:@"Your AppID" appKey:@"Your AppKey" error:&error];
+    BOOL success = [slyce openWithAppKey:@"Your AppKey" appSecret:@"Your appSecret" error:&error];
     if (!success)
     {
         //Success

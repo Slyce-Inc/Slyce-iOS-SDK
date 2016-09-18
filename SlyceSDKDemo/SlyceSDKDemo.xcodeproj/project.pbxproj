@@ -22,6 +22,9 @@
 		2FBD56A91A8AAFD40084864D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD56A81A8AAFD40084864D /* MyViewController.m */; };
 		2FC091B31A81125D008C76C9 /* MyCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC091B21A81125D008C76C9 /* MyCameraViewController.m */; };
 		2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */; };
+		D712275F1D59CD5100A99681 /* show-similar.png in Resources */ = {isa = PBXBuildFile; fileRef = D712275E1D59CD5100A99681 /* show-similar.png */; };
+		D73100601D8EAE6E0081C7AE /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D731005E1D8EAE6E0081C7AE /* SlyceSDK.bundle */; };
+		D73100611D8EAE6E0081C7AE /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D731005F1D8EAE6E0081C7AE /* SlyceSDK.framework */; };
 		D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0A5281C2FDDAA00960D26 /* images.xcassets */; };
 		D7C6478E1D22D46B00C2F7DB /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C6476E1D22D46B00C2F7DB /* MKAnnotationView+WebCache.m */; };
 		D7C6478F1D22D46B00C2F7DB /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C647701D22D46B00C2F7DB /* NSData+ImageContentType.m */; };
@@ -41,8 +44,6 @@
 		D7C6479D1D22D46B00C2F7DB /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C6478D1D22D46B00C2F7DB /* UIView+WebCacheOperation.m */; };
 		D7C647D11D23C53000C2F7DB /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C647D01D23C53000C2F7DB /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
 		D7DF21A61C43A56700E6BED4 /* CustomHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DF21A51C43A56700E6BED4 /* CustomHistoryViewController.m */; };
-		D7E6D3F51D2E74E20075A8EB /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7E6D3F31D2E74E20075A8EB /* SlyceSDK.bundle */; };
-		D7E6D3F61D2E74E20075A8EB /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E6D3F41D2E74E20075A8EB /* SlyceSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,9 @@
 		2FC091B11A81125D008C76C9 /* MyCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MyCameraViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		2FC091B21A81125D008C76C9 /* MyCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MyCameraViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		D712275E1D59CD5100A99681 /* show-similar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "show-similar.png"; sourceTree = "<group>"; };
+		D731005E1D8EAE6E0081C7AE /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
+		D731005F1D8EAE6E0081C7AE /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		D7A0A5281C2FDDAA00960D26 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		D7C6476D1D22D46B00C2F7DB /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		D7C6476E1D22D46B00C2F7DB /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
@@ -121,8 +125,6 @@
 		D7C647D01D23C53000C2F7DB /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
 		D7DF21A41C43A56700E6BED4 /* CustomHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHistoryViewController.h; sourceTree = "<group>"; };
 		D7DF21A51C43A56700E6BED4 /* CustomHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHistoryViewController.m; sourceTree = "<group>"; };
-		D7E6D3F31D2E74E20075A8EB /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
-		D7E6D3F41D2E74E20075A8EB /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,7 @@
 			files = (
 				2F2C6D711AFF635F00F3D93E /* AdSupport.framework in Frameworks */,
 				2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */,
-				D7E6D3F61D2E74E20075A8EB /* SlyceSDK.framework in Frameworks */,
+				D73100611D8EAE6E0081C7AE /* SlyceSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +144,8 @@
 		2F353F061A7FCBD7002EE2EB = {
 			isa = PBXGroup;
 			children = (
-				D7E6D3F31D2E74E20075A8EB /* SlyceSDK.bundle */,
-				D7E6D3F41D2E74E20075A8EB /* SlyceSDK.framework */,
+				D731005E1D8EAE6E0081C7AE /* SlyceSDK.bundle */,
+				D731005F1D8EAE6E0081C7AE /* SlyceSDK.framework */,
 				D7A0A5281C2FDDAA00960D26 /* images.xcassets */,
 				2F2C6D701AFF635F00F3D93E /* AdSupport.framework */,
 				2FA2952A1ADAE764007A0133 /* libicucore.dylib */,
@@ -197,6 +199,7 @@
 		2F353F8A1A7FCF26002EE2EB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D712275E1D59CD5100A99681 /* show-similar.png */,
 				2F66AB9C1AC95944006C035A /* Icon-60@2x.png */,
 				2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */,
 				2F115FE51AC839F90057E547 /* Default-568h@2x.png */,
@@ -291,6 +294,7 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = Q5F56GDW4P;
 						DevelopmentTeamName = "Slyce Inc.";
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -318,11 +322,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F353F8C1A7FCF26002EE2EB /* shoe.jpg in Resources */,
-				D7E6D3F51D2E74E20075A8EB /* SlyceSDK.bundle in Resources */,
 				D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */,
+				D712275F1D59CD5100A99681 /* show-similar.png in Resources */,
 				2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */,
 				2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */,
 				2F353F8E1A7FCF3B002EE2EB /* Main.storyboard in Resources */,
+				D73100601D8EAE6E0081C7AE /* SlyceSDK.bundle in Resources */,
 				2F66AB9D1AC95944006C035A /* Icon-60@2x.png in Resources */,
 				2F115FE61AC839F90057E547 /* Default-568h@2x.png in Resources */,
 			);
@@ -458,7 +463,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q5F56GDW4P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,6 +481,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.SlyceSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -483,8 +492,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q5F56GDW4P;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,6 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.SlyceSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

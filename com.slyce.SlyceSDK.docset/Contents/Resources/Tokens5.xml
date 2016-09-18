@@ -25,25 +25,52 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/openWithAppId:appKey:error:</TokenIdentifier>
-			<Abstract type="html">Initializes a new SFSlyce object using valid App ID and App Key credentials.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/openWithAppKey:appSecret:error:</TokenIdentifier>
+			<Abstract type="html">Initializes a new SFSlyce object using valid App Key and App Secret credentials.</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
-			<Declaration>- (BOOL)openWithAppId:(NSString *)appId appKey:(NSString *)appKey error:(NSError **)error</Declaration>
+			<Declaration>- (BOOL)openWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret error:(NSError **)error</Declaration>
 			<Parameters>
 				<Parameter>
-					<Name>appId</Name>
-					<Abstract type="html">the App ID.</Abstract>
-				</Parameter><Parameter>
 					<Name>appKey</Name>
 					<Abstract type="html">the App Key.</Abstract>
+				</Parameter><Parameter>
+					<Name>appSecret</Name>
+					<Abstract type="html">the App Secret.</Abstract>
 				</Parameter><Parameter>
 					<Name>error</Name>
 					<Abstract type="html">the pointer to the error object, if any.</Abstract>
 				</Parameter>
 			</Parameters>
-			<ReturnValue><Abstract type="html">YES if it succeeded, NO otherwise.</Abstract></ReturnValue>
-			<Anchor>//api/name/openWithAppId:appKey:error:</Anchor>
+			<ReturnValue><Abstract type="html">YES if it succeeded, NO otherwise.
+
+Important: Successfully opening the SFSlyce object is mandatory before you start
+performing any tasks in the SDK!</Abstract></ReturnValue>
+			<Anchor>//api/name/openWithAppKey:appSecret:error:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/getAppKey</TokenIdentifier>
+			<Abstract type="html">Slyce public AppKey</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)getAppKey</Declaration>
+			
+			<ReturnValue><Abstract type="html">Slyce public AppKey</Abstract></ReturnValue>
+			<Anchor>//api/name/getAppKey</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/getAppSecret</TokenIdentifier>
+			<Abstract type="html">Slyce public AppSecret</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)getAppSecret</Declaration>
+			
+			<ReturnValue><Abstract type="html">Slyce public AppSecret</Abstract></ReturnValue>
+			<Anchor>//api/name/getAppSecret</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
@@ -88,78 +115,6 @@
 			
 			
 			<Anchor>//api/name/new</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setAppID:</TokenIdentifier>
-			<Abstract type="html">The app ID used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
-			<DeclaredIn>SFSlyce.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly, copy) NSString *appID</Declaration>
-			
-			
-			<Anchor>//api/name/appID</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/appID</TokenIdentifier>
-			<Abstract type="html">The app ID used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
-			<DeclaredIn>SFSlyce.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly, copy) NSString *appID</Declaration>
-			
-			
-			<Anchor>//api/name/appID</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/appID</TokenIdentifier>
-			<Abstract type="html">The app ID used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
-			<DeclaredIn>SFSlyce.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly, copy) NSString *appID</Declaration>
-			
-			
-			<Anchor>//api/name/appID</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setAppKey:</TokenIdentifier>
-			<Abstract type="html">The app key used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
-			<DeclaredIn>SFSlyce.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly, copy) NSString *appKey</Declaration>
-			
-			
-			<Anchor>//api/name/appKey</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/appKey</TokenIdentifier>
-			<Abstract type="html">The app key used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
-			<DeclaredIn>SFSlyce.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly, copy) NSString *appKey</Declaration>
-			
-			
-			<Anchor>//api/name/appKey</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/appKey</TokenIdentifier>
-			<Abstract type="html">The app key used to initialize the SFSlyce object for &apos;Public&apos; mode.</Abstract>
-			<DeclaredIn>SFSlyce.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, readonly, copy) NSString *appKey</Declaration>
-			
-			
-			<Anchor>//api/name/appKey</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

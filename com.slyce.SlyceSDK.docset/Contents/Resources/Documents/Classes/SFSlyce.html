@@ -56,10 +56,6 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/appID">appID</option>
-		
-		<option value="//api/name/appKey">appKey</option>
-		
 		<option value="//api/name/clientID">clientID</option>
 		
 		<option value="//api/name/customProgressColor">customProgressColor</option>
@@ -90,9 +86,13 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/getAppKey">- getAppKey</option>
+		
+		<option value="//api/name/getAppSecret">- getAppSecret</option>
+		
 		<option value="//api/name/init">- init</option>
 		
-		<option value="//api/name/openWithAppId:appKey:error:">- openWithAppId:appKey:error:</option>
+		<option value="//api/name/openWithAppKey:appSecret:error:">- openWithAppKey:appSecret:error:</option>
 		
 		<option value="//api/name/openWithClientID:error:">- openWithClientID:error:</option>
 		
@@ -186,8 +186,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/openWithAppId:appKey:error:" title="openWithAppId:appKey:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/openWithAppId:appKey:error:">&ndash;&nbsp;openWithAppId:appKey:error:</a></code>
+	<a name="//api/name/openWithAppKey:appSecret:error:" title="openWithAppKey:appSecret:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openWithAppKey:appSecret:error:">&ndash;&nbsp;openWithAppKey:appSecret:error:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -197,12 +197,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>Initializes a <a href="#//api/name/new">new</a> SFSlyce object using valid App ID and App Key credentials.</p>
+				<p>Initializes a <a href="#//api/name/new">new</a> SFSlyce object using valid App Key and App Secret credentials.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (BOOL)openWithAppId:(NSString *)<em>appId</em> appKey:(NSString *)<em>appKey</em> error:(NSError **)<em>error</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (BOOL)openWithAppKey:(NSString *)<em>appKey</em> appSecret:(NSString *)<em>appSecret</em> error:(NSError **)<em>error</em></code></div>
 
 		    
 			
@@ -211,13 +211,13 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>appId</code></th>
-						<td><p>the App ID.</p></td>
+						<th scope="row" class="argument-name"><code>appKey</code></th>
+						<td><p>the App Key.</p></td>
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>appKey</code></th>
-						<td><p>the App Key.</p></td>
+						<th scope="row" class="argument-name"><code>appSecret</code></th>
+						<td><p>the App Secret.</p></td>
 					</tr>
 				
 					<tr>
@@ -233,6 +233,9 @@
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p><code>YES</code> if it succeeded, <code>NO</code> otherwise.</p>
+
+<p><strong>Important:</strong> Successfully opening the SFSlyce object is mandatory before you start
+performing any tasks in the SDK!</p>
 			</div>
 			
 
@@ -241,12 +244,100 @@
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Use this method to open the SDK for &lsquo;Public&rsquo; recognition functionality.</p><div class="warning"><p><strong>Warning:</strong> As this method performs validation checks of your client ID on our
-servers, call this method off the main (UI) thread!</p>
-
-<p><strong>Important:</strong> Successfully opening the SFSlyce object is mandatory before you start
-performing any tasks in the SDK!</p></div>
+				<p>Use this method to open the SDK for &lsquo;Public&rsquo; recognition functionality.</p>
 			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFSlyce.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAppKey" title="getAppKey"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAppKey">&ndash;&nbsp;getAppKey</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Slyce public AppKey</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getAppKey</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Slyce public AppKey</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFSlyce.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getAppSecret" title="getAppSecret"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getAppSecret">&ndash;&nbsp;getAppSecret</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Slyce public AppSecret</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)getAppSecret</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Slyce public AppSecret</p>
+			</div>
+			
+
+			
+
 			
 
 			
@@ -385,88 +476,6 @@ performing any tasks in the SDK!</p></div>
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/appID" title="appID"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appID">&nbsp;&nbsp;appID</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The app ID used to initialize the SFSlyce object for &lsquo;Public&rsquo; mode.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *appID</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SFSlyce.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/appKey" title="appKey"></a>
-	<h3 class="method-title"><code><a href="#//api/name/appKey">&nbsp;&nbsp;appKey</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>The app key used to initialize the SFSlyce object for &lsquo;Public&rsquo; mode.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSString *appKey</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SFSlyce.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
 	<a name="//api/name/clientID" title="clientID"></a>
 	<h3 class="method-title"><code><a href="#//api/name/clientID">&nbsp;&nbsp;clientID</a></code>
 </h3>
@@ -798,7 +807,7 @@ performing any tasks in the SDK!</p></div>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-07-07</p>
+						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-09-18</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

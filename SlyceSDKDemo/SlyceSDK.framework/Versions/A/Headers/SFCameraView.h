@@ -14,14 +14,6 @@
 @class SFRequest;
 
 
-/*!
- * Enumeration for results type (Public users only).
- */
-typedef NS_ENUM(NSInteger, SFPublicResultsType)
-{
-    SFPublicDescription = 0,
-    SFPublicProducts
-};
 
 
 /*!
@@ -146,16 +138,6 @@ typedef NS_ENUM(NSInteger, SFPublicResultsType)
  *  @brief The layer used to display the video capture on a given UIView.
  */
 @property (nonatomic, strong, readonly) AVCaptureVideoPreviewLayer *previewLayer;
-
-/*!
- *  @property
- *  @brief For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.
- *  @discussion SFPublicDescription - the description of the image detected. SFPublicProducts - the retrieved products based on the image detected.
- *  @note The default is SFPublicDescription.
- */
-
-@property (nonatomic) SFPublicResultsType publicResultsType;
-
 
 
 @property (nonatomic, strong) SFRequest *currentRequest;

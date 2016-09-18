@@ -121,42 +121,6 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/setPublicResultsType:</TokenIdentifier>
-			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
-			<DeclaredIn>SFRequest.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
-			
-			
-			<Anchor>//api/name/publicResultsType</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/publicResultsType</TokenIdentifier>
-			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
-			<DeclaredIn>SFRequest.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
-			
-			
-			<Anchor>//api/name/publicResultsType</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/SFRequest/publicResultsType</TokenIdentifier>
-			<Abstract type="html">For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</Abstract>
-			<DeclaredIn>SFRequest.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic) SFPublicResultsType publicResultsType</Declaration>
-			
-			
-			<Anchor>//api/name/publicResultsType</Anchor>
-            <NodeRef refid="4"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/initWithSlyce:options:andDelegate:</TokenIdentifier>
 			<Abstract type="html">Initializes a new SFRequest object.</Abstract>
 			<DeclaredIn>SFRequest.h</DeclaredIn>
@@ -229,6 +193,28 @@
 			</Parameters>
 			
 			<Anchor>//api/name/getResultsFromImageUrl:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFRequest/getSimilarFromResults:</TokenIdentifier>
+			<Abstract type="html">For premium users only. Used to asynchronously retrieve a list of products and extended info similar to the image passed with the URL.</Abstract>
+			<DeclaredIn>SFRequest.h</DeclaredIn>
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/intf/SFRequestDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)getSimilarFromResults:(NSURL *)imageURL</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>imageURL</Name>
+					<Abstract type="html">The URL of the image to recognize.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getSimilarFromResults:</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		

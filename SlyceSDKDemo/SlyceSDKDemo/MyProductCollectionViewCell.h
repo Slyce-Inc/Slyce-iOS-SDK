@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *productDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *productPriceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *productBrandLabel;
+@property (weak, nonatomic) IBOutlet UIButton *showSimilarBtn;
+
 
 
 @end

@@ -16,8 +16,8 @@
 
 
 #define kClientID @"ClientID"
-#define kAppID @"AppID"
 #define kAppKey @"AppKey"
+#define kAppSecret @"AppSecret"
 #define kClientMode @"ClientMode"
 
 typedef NS_ENUM(NSUInteger, ClientMode)
@@ -31,12 +31,12 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 @property (nonatomic, copy) NSArray *products;
 @property (nonatomic, strong) MBProgressHUD *hud;
 @property (weak, nonatomic) IBOutlet UITextField *clientIDTextField;
-@property (weak, nonatomic) IBOutlet UITextField *appIDTextField;
 @property (weak, nonatomic) IBOutlet UITextField *appKeyTextField;
+@property (weak, nonatomic) IBOutlet UITextField *appSecretTextField;
 
 @property (copy, nonatomic) NSString *clientID;
-@property (copy, nonatomic) NSString *appID;
 @property (copy, nonatomic) NSString *appKey;
+@property (copy, nonatomic) NSString *appSecret;
 @property (weak, nonatomic) IBOutlet UILabel *premiumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *publicLabel;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
@@ -67,7 +67,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
         [_premiumPublicButton setTitle:@"PUBLIC" forState:UIControlStateNormal];
         
         [UIView animateWithDuration:0.2 animations:^{
-           
+            
             _premiumView.alpha = 1;
             _publicView.alpha = 0;
         }];
@@ -90,10 +90,10 @@ typedef NS_ENUM(NSUInteger, ClientMode)
             _publicView.alpha = 1;
         }];
         
-        self.appID = [[NSUserDefaults standardUserDefaults] objectForKey:kAppID];
         self.appKey = [[NSUserDefaults standardUserDefaults] objectForKey:kAppKey];
+        self.appSecret = [[NSUserDefaults standardUserDefaults] objectForKey:kAppSecret];
         
-        if (self.appID && ! [self.appID isEqualToString:@""] && self.appKey && ! [self.appKey isEqualToString:@""])
+        if (self.appKey && ! [self.appKey isEqualToString:@""] && self.appSecret && ! [self.appSecret isEqualToString:@""])
             [self acceptButtonClicked:nil];
         
         [[NSUserDefaults standardUserDefaults] setObject:@"public" forKey:kClientMode];
@@ -113,16 +113,16 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     return _clientIDTextField.text;
 }
 
-- (void)setAppID:(NSString *)appID
+- (void)setAppSecret:(NSString *)appSecret
 {
-    _appIDTextField.text = appID;
-    [[NSUserDefaults standardUserDefaults] setObject:appID forKey:kAppID];
+    _appSecretTextField.text = appSecret;
+    [[NSUserDefaults standardUserDefaults] setObject:appSecret forKey:kAppSecret];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (NSString *)appID
+- (NSString *)appSecret
 {
-    return _appIDTextField.text;
+    return _appSecretTextField.text;
 }
 
 - (void)setAppKey:(NSString *)appKey
@@ -328,6 +328,8 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveResults:(NSDictionary *)results
 {
     NSArray *products = [results objectForKey:@"products"];
+    
+    
     NSLog(@"sfCameraViewController:didReceiveResults:%@", products);
     self.products = products;
     
@@ -337,7 +339,10 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didReceiveResultsExt:(NSString *)results
 {
+    
+    
     NSLog(@"sfCameraViewController:didReceiveResultsExt %@",results);
+    
 }
 
 - (void)sfCameraViewController:(SFCameraViewController *)cameraViewController didDetectBarcode:(SFBarcode *)barcode
@@ -363,7 +368,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     
     if (_cameraVC)
         [_cameraVC.cameraView resumeCapture];
-     
+    
 }
 
 #pragma mark -
@@ -380,8 +385,8 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 - (IBAction)acceptButtonClicked:(id)sender
 {
     [_clientIDTextField resignFirstResponder];
-    [_appIDTextField resignFirstResponder];
     [_appKeyTextField resignFirstResponder];
+    [_appSecretTextField resignFirstResponder];
     
     if (_clientMode == ClientModePremium)
     {
@@ -390,10 +395,11 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     }
     else if (_clientMode == ClientModePublic)
     {
-        NSString *appID = [_appIDTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        self.appID = appID;
         NSString *appKey = [_appKeyTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         self.appKey = appKey;
+        
+        NSString *appSecret = [_appSecretTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        self.appSecret = appSecret;
     }
     
     self.hud.labelText = @"Verifying...";
@@ -427,7 +433,8 @@ typedef NS_ENUM(NSUInteger, ClientMode)
         }
         else if (_clientMode == ClientModePublic)
         {
-            BOOL success = [_slyce openWithAppId:self.appID appKey:self.appKey error:&error];
+            BOOL success = [_slyce openWithAppKey:self.appKey appSecret:self.appSecret error:&error];
+            
             if (!success)
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -462,16 +469,16 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     
     else if (_clientMode == ClientModePublic)
     {
-        if (!self.appID || [self.appID isEqualToString:@""])
+        if (!self.appKey || [self.appKey isEqualToString:@""])
         {
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app Key" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             
             return;
         }
         
-        if (!self.appKey || [self.appKey isEqualToString:@""])
+        if (!self.appSecret || [self.appSecret isEqualToString:@""])
         {
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app Key" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app Secret" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             
             return;
         }
@@ -487,15 +494,9 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     self.hud.mode = MBProgressHUDModeCustomView;
     [self.hud show:YES];
     
-    
     SFRequest *request = [[SFRequest alloc] initWithSlyce:self.slyce options:nil andDelegate:self];
-    
-    // Public users only
-    // [request setPublicResultsType:SFPublicProducts]; default is SFPublicDescription
-
     [request getResultsFromImage:img];
     
-    // [request getResultsFromImageUrl:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/4/46/Apple_Magic_Mouse.jpg"]];
 }
 
 //Camera/Headless mode
@@ -513,21 +514,21 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     
     else if (_clientMode == ClientModePublic)
     {
-        if (!self.appID || [self.appID isEqualToString:@""])
-        {
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-            
-            return;
-        }
-        
         if (!self.appKey || [self.appKey isEqualToString:@""])
         {
             [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app Key" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             
             return;
         }
+        
+        if (!self.appSecret || [self.appSecret isEqualToString:@""])
+        {
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app Secret" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            
+            return;
+        }
     }
-   
+    
     
     [self performSegueWithIdentifier:@"MyCameraViewControllerSegue" sender:_slyce];
 }
@@ -547,21 +548,21 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     
     else if (_clientMode == ClientModePublic)
     {
-        if (!self.appID || [self.appID isEqualToString:@""])
-        {
-            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app ID" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-            
-            return;
-        }
-        
         if (!self.appKey || [self.appKey isEqualToString:@""])
         {
             [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app Key" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             
             return;
         }
+        
+        if (!self.appSecret || [self.appSecret isEqualToString:@""])
+        {
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter an app Secret" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            
+            return;
+        }
     }
-  
+    
     
     // _slyce.customProgressColor = [UIColor redColor]; //Uncomment this line if you wish to set your own custom progress color.
     
@@ -579,26 +580,23 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     
     
     /*
-    // Use this method to add your own custom button with a custom viewController to the SFCameraViewController.
+     // Use this method to add your own custom button with a custom viewController to the SFCameraViewController.
      
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    CustomHistoryViewController *historyView = [storyboard instantiateViewControllerWithIdentifier:@"CustomHistoryViewController"];
-    [self.cameraVC addCustomBtnWithVC:historyView postionInPercentX:15 postionInPercentY:4 btnImage:[UIImage imageNamed:@"historyBtn"] popUpAnimation:NO];
-    
-     
-    // Used to override the default 'help' viewController with your custom viewController.
-     
-    [self.cameraVC setCustomHelpViewController:historyView];
+     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+     CustomHistoryViewController *historyView = [storyboard instantiateViewControllerWithIdentifier:@"CustomHistoryViewController"];
+     [self.cameraVC addCustomBtnWithVC:historyView postionInPercentX:15 postionInPercentY:4 btnImage:[UIImage imageNamed:@"historyBtn"] popUpAnimation:NO];
      
      
-    // Used to override the default 'not found' viewController with your custom viewController.
+     // Used to override the default 'help' viewController with your custom viewController.
      
-    [self.cameraVC setCustomNotFoundViewController:historyView];
+     [self.cameraVC setCustomHelpViewController:historyView];
+     
+     
+     // Used to override the default 'not found' viewController with your custom viewController.
+     
+     [self.cameraVC setCustomNotFoundViewController:historyView];
      */
     
-    // Public users only
-    // [self.cameraVC.cameraView setPublicResultsType:SFPublicProducts]; // default is SFPublicDescription
-
     
     
     [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:^{

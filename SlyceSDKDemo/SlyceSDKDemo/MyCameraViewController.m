@@ -59,6 +59,8 @@
 
 - (void)sfCameraView:(SFCameraView *)cameraView didReceiveResults:(NSDictionary *)results
 {
+    
+    
     NSArray *products = [results objectForKey:@"products"];
     
     NSLog(@"sfCameraView:didReceiveResults:%@", products);
@@ -155,7 +157,6 @@
 - (void)sfCameraView:(SFCameraView *)cameraView didSnapImage:(UIImage *)image
 {
     
- 
     NSLog(@"sfCameraView:didSnapImage:");
     [self.hud show:YES];
     _cancelButton.hidden = NO;
@@ -223,10 +224,7 @@
     
    // self.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
     
-    
-    // Public users only
-    //[self.cameraView setPublicResultsType:SFPublicProducts]; default is SFPublicDescription
-
+  
 }
 
 
@@ -257,6 +255,8 @@
 
 - (IBAction)back:(id)sender
 {
+    [self.cameraView stopCamera];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 

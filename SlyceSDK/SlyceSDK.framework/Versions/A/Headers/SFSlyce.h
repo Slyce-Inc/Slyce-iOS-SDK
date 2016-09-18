@@ -37,25 +37,32 @@
 /*!
  *  @method
  *
- *  @brief Initializes a new SFSlyce object using valid App ID and App Key credentials.
+ *  @brief Initializes a new SFSlyce object using valid App Key and App Secret credentials.
  *
  *  @discussion Use this method to open the SDK for 'Public' recognition functionality.
  *
- *  @param appId the App ID.
  *  @param appKey the App Key.
+ *  @param appSecret the App Secret.
  *  @param error the pointer to the error object, if any.
  *
  *  @return `YES` if it succeeded, `NO` otherwise.
- *
- *  @warning As this method performs validation checks of your client ID on our
- *  servers, call this method off the main (UI) thread!
  *
  *  **Important:** Successfully opening the SFSlyce object is mandatory before you start
  *  performing any tasks in the SDK!
  *
  */
 
-- (BOOL)openWithAppId:(NSString *)appId appKey:(NSString *)appKey error:(NSError **)error;
+- (BOOL)openWithAppKey:(NSString *)appKey appSecret:(NSString *)appSecret error:(NSError **)error;
+
+/*!
+ *  @return Slyce public AppKey
+ */
+- (NSString *) getAppKey;
+
+/*!
+ *  @return Slyce public AppSecret
+ */
+- (NSString *) getAppSecret;
 
 /*!
  *  @method
@@ -92,25 +99,6 @@
 /// @name Properties
 ///---------------------------------------------------------------------------------------
 
-/*!
- 
- @property
- 
- @abstract The app ID used to initialize the SFSlyce object for 'Public' mode.
- 
- */
-
-@property (nonatomic, readonly, copy) NSString *appID;
-
-/*!
- 
- @property
- 
- @abstract The app key used to initialize the SFSlyce object for 'Public' mode.
- 
- */
-
-@property (nonatomic, readonly, copy) NSString *appKey;
 
 /*!
  

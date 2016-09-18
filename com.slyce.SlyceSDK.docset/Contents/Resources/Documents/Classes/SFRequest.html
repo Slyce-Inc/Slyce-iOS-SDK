@@ -60,8 +60,6 @@
 		
 		<option value="//api/name/options">options</option>
 		
-		<option value="//api/name/publicResultsType">publicResultsType</option>
-		
 		<option value="//api/name/requestID">requestID</option>
 		
 	</optgroup>
@@ -85,6 +83,8 @@
 		<option value="//api/name/getResultsFromImage:">- getResultsFromImage:</option>
 		
 		<option value="//api/name/getResultsFromImageUrl:">- getResultsFromImageUrl:</option>
+		
+		<option value="//api/name/getSimilarFromResults:">- getSimilarFromResults:</option>
 		
 		<option value="//api/name/initWithSlyce:options:andDelegate:">- initWithSlyce:options:andDelegate:</option>
 		
@@ -263,52 +263,6 @@ For example: @{@&ldquo;storeID&rdquo; : @&ldquo;1234&rdquo;, @&ldquo;state&rdquo
 
 			
 
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SFRequest.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/publicResultsType" title="publicResultsType"></a>
-	<h3 class="method-title"><code><a href="#//api/name/publicResultsType">&nbsp;&nbsp;publicResultsType</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>For public users only. Use this enum to set the results type that will be retrived from the server. SFPublicDescription/SFPublicProducts.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic) SFPublicResultsType publicResultsType</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>SFPublicDescription - the description of the image detected. SFPublicProducts - the retrieved products based on the image detected.</p><div class="note"><p><strong>Note:</strong> The default is SFPublicDescription.</p></div>
-			</div>
 			
 
 			
@@ -530,7 +484,7 @@ Depending on your client ID, SFRequest will be able to perform a 2D and/or 3D se
 			
 			<div class="method-subsection discussion-section">
 				<h4 class="method-subtitle">Discussion</h4>
-				<p>Calling this method will begin the visual 3D recognition of the image object param. The results, as well as the progress,
+				<p>Calling this method will begin the visual 3D recognition of the image URL param. The results, as well as the progress,
 will be notified via the <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> object. For more information, see the reference for <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p>
 			</div>
 			
@@ -543,6 +497,73 @@ will be notified via the <a href="../Protocols/SFRequestDelegate.html">SFRequest
 				<ul>
 					
 					<li><code><p><a href="#//api/name/getResultsFromImage:">- getResultsFromImage:</a></p></code></li>
+					
+					<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SFRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSimilarFromResults:" title="getSimilarFromResults:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSimilarFromResults:">&ndash;&nbsp;getSimilarFromResults:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>For premium users only. Used to asynchronously retrieve a list of products and extended info similar to the image passed with the URL.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getSimilarFromResults:(NSURL *)<em>imageURL</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>imageURL</code></th>
+						<td><p>The URL of the image to recognize.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Calling this method will begin the visual 3D recognition of the image that is passed with the URL and will retrieve similar products based on that image. The results, as well as the progress, will be notified via the <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> object. For more information, see the reference for <a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a> class.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
 					
 					<li><code><p><a href="../Protocols/SFRequestDelegate.html">SFRequestDelegate</a></p></code></li>
 					
@@ -1018,7 +1039,7 @@ The 3D products array cannot be empty. For more information, refer to <a href=".
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-07-07</p>
+						<p class="copyright">Copyright &copy; 2016 Slyce Inc. All rights reserved. Updated: 2016-09-18</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>

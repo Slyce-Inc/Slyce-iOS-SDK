@@ -1,6 +1,14 @@
 Slyce SDK Changelog
 ===================================
 
+4.1 - 2016/09/18
+------------------
+
+* ADDED: Added Find Similar search support.
+* FIXED: Full UI mode - workflow message are excluded. Color, category, gender, keywords are the only ones to appear.
+* IMPROVED: Secure connections optimization.
+* ADDED: Full Public Users support, implemented with the new Portal system.
+
 3.1 - 2016/07/07
 ------------------
 
