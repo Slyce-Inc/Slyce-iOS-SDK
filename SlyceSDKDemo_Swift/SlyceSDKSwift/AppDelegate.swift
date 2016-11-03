@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let slyce: SFSlyce = SFSlyce.sharedInstance() as! SFSlyce
         do {
-            try slyce.openWithAppKey("147384008753mLANasOulez7Z71t9NnS", appSecret: "xEGzu1TNJ87WQopCWs0dDyVyY8sjhOo30zo")
+            try slyce.openWithAppKey("Your App Key", appSecret: "Your App Secret")
             print("Slyce SDK successfully opened")
             
         } catch _ {

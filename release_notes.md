@@ -1,6 +1,11 @@
 Slyce SDK Changelog
 ===================================
 
+4.2 - 2016/11/03
+------------------
+
+* ADDED: Real-time modification of image upload resizing parameters.
+
 4.1 - 2016/09/18
 ------------------
 

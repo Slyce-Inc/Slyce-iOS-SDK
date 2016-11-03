@@ -106,6 +106,11 @@
     });
 }
 
+- (void)sfCameraView:(SFCameraView *)cameraView didReceiveBarcodeInfo:(NSURL *)productURL
+{
+    NSLog(@"sfCameraView:didReceiveBarcodeInfo:%@", productURL);
+}
+
 - (void)sfCameraView:(SFCameraView *)cameraView didFailWithError:(NSError *)error
 {
     NSString *message = error.domain == SlyceErrorDomain ? [error sf_message] : [error localizedDescription];

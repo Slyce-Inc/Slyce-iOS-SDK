@@ -184,4 +184,8 @@
 @property (nonatomic,strong) UIColor *customProgressColor;
 
 
+@property (nonatomic, readonly) int maxWidthDimension;
+@property (nonatomic, readonly) int maxHeightDimension;
+
+
 @end

@@ -43,7 +43,7 @@
         NSLog(@"Slyce SDK failed to open with error = %@", [error sf_message]);
     }
     
-    
+
     /*
     // Public users
     
@@ -60,8 +60,8 @@
     }
     */
     
-    
     return YES;
 }
+
 
 @end

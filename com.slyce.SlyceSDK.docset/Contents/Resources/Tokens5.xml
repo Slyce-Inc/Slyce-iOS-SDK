@@ -370,6 +370,78 @@ performing any tasks in the SDK!</Abstract></ReturnValue>
             <NodeRef refid="5"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setMaxWidthDimension:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) int maxWidthDimension</Declaration>
+			
+			
+			<Anchor>//api/name/maxWidthDimension</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/maxWidthDimension</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) int maxWidthDimension</Declaration>
+			
+			
+			<Anchor>//api/name/maxWidthDimension</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/maxWidthDimension</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) int maxWidthDimension</Declaration>
+			
+			
+			<Anchor>//api/name/maxWidthDimension</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setMaxHeightDimension:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) int maxHeightDimension</Declaration>
+			
+			
+			<Anchor>//api/name/maxHeightDimension</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/maxHeightDimension</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) int maxHeightDimension</Declaration>
+			
+			
+			<Anchor>//api/name/maxHeightDimension</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/maxHeightDimension</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) int maxHeightDimension</Declaration>
+			
+			
+			<Anchor>//api/name/maxHeightDimension</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
         
         
 	</File>
