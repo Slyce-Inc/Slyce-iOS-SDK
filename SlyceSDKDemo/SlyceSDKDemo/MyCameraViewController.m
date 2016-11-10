@@ -229,7 +229,12 @@
     
    // self.cameraView.shouldPauseScannerDelayTime = 4; //Uncomment this line if you don't wish the auto scanner to pause after a successful detection with your custom delay time.
     
-  
+    
+    // self.cameraView.detectionDelay2D = 5; // Uncomment this line if you want to add delay before 2D image detection starts or between detections, the default is 0 (Immediate detection).
+    
+    // self.cameraView.detectionDelay2DSameImage = 7; //Uncomment this line if you want to add delay between same 2D image detections, the default is 3 Sec delay.
+
+
 }
 
 

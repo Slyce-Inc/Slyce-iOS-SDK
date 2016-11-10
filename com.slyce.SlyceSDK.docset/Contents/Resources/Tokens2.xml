@@ -229,6 +229,78 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setDetectionDelay2D:</TokenIdentifier>
+			<Abstract type="html">A property to add delay before 2D image detection starts or between detections, the default is 0 (Immediate detection).</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionDelay2D</Declaration>
+			
+			
+			<Anchor>//api/name/detectionDelay2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/detectionDelay2D</TokenIdentifier>
+			<Abstract type="html">A property to add delay before 2D image detection starts or between detections, the default is 0 (Immediate detection).</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionDelay2D</Declaration>
+			
+			
+			<Anchor>//api/name/detectionDelay2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/detectionDelay2D</TokenIdentifier>
+			<Abstract type="html">A property to add delay before 2D image detection starts or between detections, the default is 0 (Immediate detection).</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionDelay2D</Declaration>
+			
+			
+			<Anchor>//api/name/detectionDelay2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setDetectionDelay2DSameImage:</TokenIdentifier>
+			<Abstract type="html">A property to override the default &apos;3 sec&apos; delay between same 2D image detections.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionDelay2DSameImage</Declaration>
+			
+			
+			<Anchor>//api/name/detectionDelay2DSameImage</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/detectionDelay2DSameImage</TokenIdentifier>
+			<Abstract type="html">A property to override the default &apos;3 sec&apos; delay between same 2D image detections.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionDelay2DSameImage</Declaration>
+			
+			
+			<Anchor>//api/name/detectionDelay2DSameImage</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/detectionDelay2DSameImage</TokenIdentifier>
+			<Abstract type="html">A property to override the default &apos;3 sec&apos; delay between same 2D image detections.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionDelay2DSameImage</Declaration>
+			
+			
+			<Anchor>//api/name/detectionDelay2DSameImage</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setOptions:</TokenIdentifier>
 			<Abstract type="html">Options dictionary.</Abstract>
 			<DeclaredIn>SFCameraView.h</DeclaredIn>

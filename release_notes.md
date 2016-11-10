@@ -1,6 +1,12 @@
 Slyce SDK Changelog
 ===================================
 
+4.3 - 2016/11/10
+------------------
+
+* ADDED:  in `SFCameraView` class `detectionDelay2D` - A property to add delay before 2D image detection starts or between detections. 
+* ADDED:  in `SFCameraView` class `detectionDelay2DSameImage` - A property to override the default '3 sec' delay between same 2D image detections. 
+
 4.2 - 2016/11/03
 ------------------
 

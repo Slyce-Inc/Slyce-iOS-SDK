@@ -13,10 +13,10 @@
 		D70484FA1C87165E001D75E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70484F91C87165E001D75E5 /* Assets.xcassets */; };
 		D70484FD1C87165E001D75E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70484FB1C87165E001D75E5 /* LaunchScreen.storyboard */; };
 		D70485181C87223E001D75E5 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D70485171C87223E001D75E5 /* libicucore.tbd */; };
+		D72A1D491DD4B42E00140D71 /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D72A1D471DD4B42E00140D71 /* SlyceSDK.bundle */; };
+		D72A1D4A1DD4B42E00140D71 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72A1D481DD4B42E00140D71 /* SlyceSDK.framework */; };
 		D731001F1D8AE81C0081C7AE /* shoe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D731001E1D8AE81C0081C7AE /* shoe.jpg */; };
 		D731005D1D8E90320081C7AE /* slyce-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D731005C1D8E90320081C7AE /* slyce-logo.png */; };
-		D742F33E1DCB57F0005AB01E /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D742F33C1DCB57F0005AB01E /* SlyceSDK.bundle */; };
-		D742F33F1DCB57F0005AB01E /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D742F33D1DCB57F0005AB01E /* SlyceSDK.framework */; };
 		D7FAF9911D644735002CA802 /* MyCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF9901D644735002CA802 /* MyCameraViewController.swift */; };
 		D7FAF9931D644758002CA802 /* MyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF9921D644758002CA802 /* MyProductsViewController.swift */; };
 		D7FAF9971D646157002CA802 /* MyProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF9961D646157002CA802 /* MyProductCollectionViewCell.swift */; };
@@ -33,10 +33,10 @@
 		D70484FE1C87165E001D75E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D70485161C8716D9001D75E5 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D70485171C87223E001D75E5 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		D72A1D471DD4B42E00140D71 /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
+		D72A1D481DD4B42E00140D71 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		D731001E1D8AE81C0081C7AE /* shoe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shoe.jpg; sourceTree = "<group>"; };
 		D731005C1D8E90320081C7AE /* slyce-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slyce-logo.png"; sourceTree = "<group>"; };
-		D742F33C1DCB57F0005AB01E /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
-		D742F33D1DCB57F0005AB01E /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		D7FAF9901D644735002CA802 /* MyCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCameraViewController.swift; sourceTree = "<group>"; };
 		D7FAF9921D644758002CA802 /* MyProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductsViewController.swift; sourceTree = "<group>"; };
 		D7FAF9961D646157002CA802 /* MyProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D742F33F1DCB57F0005AB01E /* SlyceSDK.framework in Frameworks */,
+				D72A1D4A1DD4B42E00140D71 /* SlyceSDK.framework in Frameworks */,
 				D70485181C87223E001D75E5 /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,8 +60,8 @@
 		D70484E61C87165D001D75E5 = {
 			isa = PBXGroup;
 			children = (
-				D742F33C1DCB57F0005AB01E /* SlyceSDK.bundle */,
-				D742F33D1DCB57F0005AB01E /* SlyceSDK.framework */,
+				D72A1D471DD4B42E00140D71 /* SlyceSDK.bundle */,
+				D72A1D481DD4B42E00140D71 /* SlyceSDK.framework */,
 				D70485171C87223E001D75E5 /* libicucore.tbd */,
 				D70484F11C87165E001D75E5 /* SlyceSDKSwift */,
 				D70484F01C87165E001D75E5 /* Products */,
@@ -167,7 +167,7 @@
 				D70484FD1C87165E001D75E5 /* LaunchScreen.storyboard in Resources */,
 				D731001F1D8AE81C0081C7AE /* shoe.jpg in Resources */,
 				D70484FA1C87165E001D75E5 /* Assets.xcassets in Resources */,
-				D742F33E1DCB57F0005AB01E /* SlyceSDK.bundle in Resources */,
+				D72A1D491DD4B42E00140D71 /* SlyceSDK.bundle in Resources */,
 				D731005D1D8E90320081C7AE /* slyce-logo.png in Resources */,
 				D70484F81C87165E001D75E5 /* Main.storyboard in Resources */,
 			);

@@ -51,6 +51,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
 
 @property (nonatomic) ClientMode clientMode;
 
+
 @end
 
 @implementation MyViewController
@@ -156,6 +157,7 @@ typedef NS_ENUM(NSUInteger, ClientMode)
     {
         MyCameraViewController *myCameraVC = segue.destinationViewController;
         myCameraVC.slyce = sender;
+    
     }
     else if ([segue.identifier isEqualToString:@"ProductsSegue"])
     {
@@ -597,6 +599,10 @@ typedef NS_ENUM(NSUInteger, ClientMode)
      [self.cameraVC setCustomNotFoundViewController:historyView];
      */
     
+    
+    // _cameraVC.cameraView.detectionDelay2D = 5; //Uncomment this line if you want to add delay before 2D image detection starts or between detections, the default is 0 (Immediate detection).
+    
+    // _cameraVC.cameraView.detectionDelay2DSameImage = 7; //Uncomment this line if you want to add delay between same 2D image detections, the default is 3 Sec delay.
     
     
     [_cameraVC presentFromViewController:self usingAnimation:SFAnimationTypeZoom completionBlock:^{

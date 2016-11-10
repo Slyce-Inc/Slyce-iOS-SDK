@@ -120,6 +120,27 @@
 
 /*!
  *  @property
+ *  @brief A property to add delay before 2D image detection starts or between detections, the default is 0 (Immediate detection).
+ *
+ *  @discussion Setting this property will add delay before 2D image detection starts or between detections.
+ *
+ */
+
+@property (nonatomic) float detectionDelay2D;
+
+/*!
+ *  @property
+ *  @brief A property to override the default '3 sec' delay between same 2D image detections.
+ *
+ *  @discussion Setting this property will override the default '3 sec' delay between same 2D image detections.
+ *
+ */
+
+
+@property (nonatomic) float detectionDelay2DSameImage;
+
+/*!
+ *  @property
  *  @brief Options dictionary.
  *  @discussion Use this dictionary to pass properties to Slyce servers.
  *  For example: @{@"storeID" : @"1234", @"state" : @"CA"}. Can be `nil`.
@@ -141,6 +162,10 @@
 
 
 @property (nonatomic, strong) SFRequest *currentRequest;
+
+
+
+
 
 
 ///---------------------------------------------------------------------------------------
