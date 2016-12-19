@@ -1,6 +1,10 @@
 Slyce SDK Changelog
 ===================================
 
+4.3.1 - 2016/12/19
+
+* FIXED: Incorrect zooming on old iPads
+
 4.3 - 2016/11/10
 ------------------
 
