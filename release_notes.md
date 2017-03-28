@@ -1,6 +1,15 @@
 Slyce SDK Changelog
 ===================================
 
+4.4 - 2016/03/28
+-----------------
+backward compatibility for old retailer IDs - preserved
+
+* CHANGED: 2D recognition framework replaced with a new one - on-device as well as server-side
+* FIXED: 2D and 3D simultaneous recognition
+* CHANGED: sending image request on snap is performed by “Use Photo” only
+
+
 4.3.1 - 2016/12/19
 
 * FIXED: Incorrect zooming on old iPads
@@ -8,8 +17,8 @@ Slyce SDK Changelog
 4.3 - 2016/11/10
 ------------------
 
-* ADDED:  in `SFCameraView` class `detectionDelay2D` - A property to add delay before 2D image detection starts or between detections. 
-* ADDED:  in `SFCameraView` class `detectionDelay2DSameImage` - A property to override the default '3 sec' delay between same 2D image detections. 
+* ADDED:  in `SFCameraView` class `detectionDelay2D` - A property to add delay before 2D image detection starts or between detections.
+* ADDED:  in `SFCameraView` class `detectionDelay2DSameImage` - A property to override the default '3 sec' delay between same 2D image detections.
 
 4.2 - 2016/11/03
 ------------------
@@ -33,8 +42,8 @@ Slyce SDK Changelog
 ------------------
 
 * ADDED:  Support for public users.
-* ADDED:  in `SFRequest` class `setPublicResultsType:` - Set the result type of the public request. 
-* ADDED:  in `SFCameraView` class `setPublicResultsType:` - Set the result type of the public request. 
+* ADDED:  in `SFRequest` class `setPublicResultsType:` - Set the result type of the public request.
+* ADDED:  in `SFCameraView` class `setPublicResultsType:` - Set the result type of the public request.
 * ADDED:  in `SFRequest` class `getResultsFromImage:` and `getResultsFromImageUrl:`.
 * ADDED:  in `SFRequestDelegate` - `sfRequest: didReceiveResultsExt:` and `sfRequest: didProgressExt:` for extended info from the server.
 * ADDED:  in `SFCameraViewDelegate` - `sfCameraView: didReceiveResultsExt:` and `sfCameraView: didProgressExt:` for extended info from the server.
@@ -92,12 +101,12 @@ Slyce SDK Changelog
 2.3 - 2016/01/06
 ------------------
 * FIXED: Screen orientation inverted in landscape when Semi-UI mode implemented
-* FIXED: EAN-13 Barcode detection 
+* FIXED: EAN-13 Barcode detection
 * ADDED: Assets Sets for different platform support
 
 2.2 - 2015/12/17
 ------------------
-* FIXED: local image cache synchronization bug 
+* FIXED: local image cache synchronization bug
 * FIXED: image cropping bug on iPhone 5s
 * FIXED: redundant events reporting while app is in background
 * IMPROVED: analytics reporting
@@ -115,14 +124,14 @@ Slyce SDK Changelog
 * CHANDED: Full UI Progress screen - progressive blocks loading
 * FIXED: Scanning objects parallel to the ground
 * REMOVED: iPhone Simulator from SlyceSDK.bundle's info.plist file
-* IMPROVED: Analytics reporting 
+* IMPROVED: Analytics reporting
 
 2.0 - 2015/10/12
 ------------------
 * NEW: Full UI mode - a total NEW design!
 * NEW: Full UI mode - Use/Retake screen
 * NEW: Public flow API
-* ADDED: iOS 9 support 
+* ADDED: iOS 9 support
 * ADDED: More barcode types are supported using continuous scanning
 * ADDED: Front facing camera support
 * ADDED: More Slyce domain error codes (see NSError+Slyce category or SFErrorCode enum in the docs)
@@ -134,12 +143,12 @@ Slyce SDK Changelog
 * CHANGED: SFCameraViewController - didSnapImage: delegate method is also called when taking a picture from Camera Roll
 * CHANGED: SFCameraView - shouldRecognizeAfterSnap property affects taking a picture from Camera Roll as well
 
-1.9.3 - 2015/07/14 
+1.9.3 - 2015/07/14
 ------------------
 * ADDED: camera zoom functionality
 * ADDED: completionBlock to SFCameraViewController present method (presentFromViewController:usingAnimation:completionBlock:) (#36)
-* FIXED: indeterminate message still appeared when pushing a new view controller before receiving 2D didReceiveImageInfo: callback (#35) 
-* ADDED: SFStatusType - status type param was added to didFinish: callbacks in all 3 modes (#31) 
+* FIXED: indeterminate message still appeared when pushing a new view controller before receiving 2D didReceiveImageInfo: callback (#35)
+* ADDED: SFStatusType - status type param was added to didFinish: callbacks in all 3 modes (#31)
 * CHANGED: recognizeSimilarProductsFromImage: was deprecated. Use getProductsFromImage:merchantIDs: instead.
 * CHANGED: recognizeSimilarProductsFromImageURL: was deprecated. Use getProductsFromImageURL:merchantIDs: instead.
 
@@ -152,7 +161,7 @@ Slyce SDK Changelog
 ------------------
 * ADDED: sfCameraViewControllerWasDismissed: callback
 * ADDED: shouldPauseScannerAfterRecognition property to enable/disable pausing the auto scanner after a successful detection
-* ADDED: Full UI mode - spinner is shown after a successful 2D detection until products found 
+* ADDED: Full UI mode - spinner is shown after a successful 2D detection until products found
 * ADDED: Support for multiple results for one 3D request
 * ADDED: Docs - guide for customizing resources in Full UI mode (Appendix A)
 * ADDED: new didFinish: callback is sent when the Slyce 3D search is finished
@@ -182,6 +191,3 @@ Slyce SDK Changelog
 * ADDED: server side barcode recognition
 * FIXED: possible auto-scan detection while progress screen being launched
 * FIXED: images from Camera Roll were not resized when sent for 2D recognition
-	
-	
-	

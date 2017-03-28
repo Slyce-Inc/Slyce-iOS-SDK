@@ -12,7 +12,7 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
 
     
     let slyce: SFSlyce = SFSlyce.sharedInstance() as! SFSlyce
-    var products = NSArray()
+    var products = [AnyObject]()
     var hub = MBProgressHUD()
     var cameraVC = SFCameraViewController()
 
@@ -27,7 +27,7 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
         hub.animationType = MBProgressHUDAnimationFade
         self.view.addSubview(hub)
 
-        if let text = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
+        if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         {
             versionLabel.text = NSString(format: "v%@",text) as String
         }
@@ -35,7 +35,7 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
      
     }
 
@@ -44,12 +44,12 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
         // Dispose of any resources that can be recreated.
     }
        
-    @IBAction func headlessModeBtnPressed(sender: AnyObject)
+    @IBAction func headlessModeBtnPressed(_ sender: AnyObject)
     {
         
         let image: UIImage = UIImage(named: "shoe.jpg")!
         let bgImage = UIImageView(image: image)
-        bgImage.contentMode = .ScaleAspectFit
+        bgImage.contentMode = .scaleAspectFit
         self.view.addSubview(bgImage)
         
         hub.labelText = "Sending image"
@@ -60,15 +60,15 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
         
         
         let request = SFRequest.init(slyce: slyce, options: nil, andDelegate: self)
-        request.getResultsFromImage(image)
+        request?.getResultsFrom(image)
     }
     
     
-    @IBAction func fullUIModeBtnPressed(sender: AnyObject)
+    @IBAction func fullUIModeBtnPressed(_ sender: AnyObject)
     {
-        self.cameraVC = SFCameraViewController.init(slyce: slyce, resourcesBundle: NSBundle.mainBundle(), options: nil, andDelegate: self)
+        self.cameraVC = SFCameraViewController.init(slyce: slyce, resourcesBundle: Bundle.main, options: nil, andDelegate: self)
         
-        self.cameraVC.presentFromViewController(self, usingAnimation: SFAnimationType.Zoom)
+        self.cameraVC.present(from: self, using: SFAnimationType.zoom)
         {
             print("SFCameraViewController was presented")
         }
@@ -78,22 +78,22 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
     
     // MARK: - SFRequestDelegate
     
-    func sfRequest(sfRequest: SFRequest!, didStartForImage image: UIImage!)
+    func sfRequest(_ sfRequest: SFRequest!, didStartFor image: UIImage!)
     {
         print("didStartForImage")
     }
     
-    func sfRequest(sfRequest: SFRequest!, didStartForImageURL imageURL: NSURL!)
+    func sfRequest(_ sfRequest: SFRequest!, didStartForImageURL imageURL: URL!)
     {
         print("didStartForImageURL")
     }
 
-    func sfRequest(sfRequest: SFRequest!, didFinishWithStatus statusType: SFStatusType)
+    func sfRequest(_ sfRequest: SFRequest!, didFinishWith statusType: SFStatusType)
     {
-        print(NSString(format: "didFinishWithStatus: %@", String(SFStatusType)));
+        print(NSString(format: "didFinishWithStatus: %@", String(describing: SFStatusType.self)));
     }
     
-    func sfRequest(sfRequest: SFRequest!, didReceiveResults results: [NSObject : AnyObject]!)
+    func sfRequest(_ sfRequest: SFRequest!, didReceiveResults results: [AnyHashable: Any]!)
     {
         print(NSString(format: "didReceiveResults:results %@",results));
         
@@ -101,72 +101,72 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
 
         let resultsDic = results as NSDictionary
         
-        let productsFromResults = resultsDic.objectForKey("products") as! NSArray
+        let productsFromResults = resultsDic.object(forKey: "products") as! [AnyObject]
         
         self.products = productsFromResults
         
-        self.performSegueWithIdentifier("ProductsSegue", sender: nil)
+        self.performSegue(withIdentifier: "ProductsSegue", sender: nil)
     }
     
-    func sfRequest(sfRequest: SFRequest!, didFailWithError error: NSError!)
+    func sfRequest(_ sfRequest: SFRequest!, didFailWithError error: NSError!)
     {
         
         let message = error.domain == SlyceErrorDomain ? error.sf_message() : error.localizedDescription
-        print(NSString(format: "didFailWithError:errorMessage %@",message));
+        print(NSString(format: "didFailWithError:errorMessage %@",message!));
         
         let alertController = UIAlertController(title: "Error", message:
-            message, preferredStyle: UIAlertControllerStyle.Alert)
+            message, preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler:nil))
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler:nil))
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
         
         hub.hide(true)
         print("didFailWithError")
     }
     
-    func sfRequest(sfRequest: SFRequest!, didProgressToValue value: CGFloat, withMessage message: String!)
+    func sfRequest(_ sfRequest: SFRequest!, didProgressToValue value: CGFloat, withMessage message: String!)
     {
         print(NSString(format: "didProgressToValue %f withMessage %@",value,message));
         hub.labelText = message
     }
     
-    func sfRequest(sfRequest: SFRequest!, didDetectImage imageInfo: [NSObject : AnyObject]!)
+    func sfRequest(_ sfRequest: SFRequest!, didDetectImage imageInfo: [AnyHashable: Any]!)
     {
         print(NSString(format: "didDetectImage:imageInfo %@",imageInfo));
     }
     
-    func sfRequest(sfRequest: SFRequest!, didReceiveImageInfo products: [AnyObject]!)
+    func sfRequest(_ sfRequest: SFRequest!, didReceiveImageInfo products: [AnyObject]!)
     {
         print(NSString(format: "didReceiveImageInfo:products %@",products));
         
         self.products = products
         
-        self.performSegueWithIdentifier("ProductsSegue", sender: nil)
+        self.performSegue(withIdentifier: "ProductsSegue", sender: nil)
         
         hub.hide(true)
 
     }
     
-    func sfRequest(sfRequest: SFRequest!, didReceiveResultsExt results: String)
+    func sfRequest(_ sfRequest: SFRequest!, didReceiveResultsExt results: String)
     {
         print(NSString(format: "didReceiveResultsExt:results %@",results));
     }
 
-    func sfRequest(sfRequest: SFRequest!, didProgressToStage stage: SFRequestStage)
+    func sfRequest(_ sfRequest: SFRequest!, didProgressTo stage: SFRequestStage)
     {
         switch stage
         {
-        case SFRequestStage.SendingImage:
+        case SFRequestStage.sendingImage:
             print("sfRequest:didProgressToStage:'Sending Image'")
             break
-        case SFRequestStage.AnalyzingImage:
+        case SFRequestStage.analyzingImage:
             print("sfRequest:didProgressToStage:'Analyzing Image'")
             break
         }
     }
 
-    func sfRequest(sfRequest: SFRequest!, didProgressExt progress: String)
+    func sfRequest(_ sfRequest: SFRequest!, didProgressExt progress: String)
     {
         print(NSString(format: "didProgressExt:progress %@",progress));
     }
@@ -174,51 +174,51 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
     
     // MARK: - SFCameraViewControllerDelegate
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didStartRequest request: SFRequest!, forImage image: UIImage!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didStart request: SFRequest!, for image: UIImage!)
     {
         print("sfCameraViewController: didStartRequest")
     }
   
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didSnapImage image: UIImage!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didSnapImage image: UIImage!)
     {
         print("sfCameraViewController:didSnapImage:")
     }
     
-    func sfCameraViewControllerWasDismissed(cameraViewController: SFCameraViewController!)
+    func sfCameraViewControllerWasDismissed(_ cameraViewController: SFCameraViewController!)
     {
         print("sfCameraViewControllerWasDismissed:")
     }
    
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didProgressToValue value: CGFloat, withMessage message: String!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didProgressToValue value: CGFloat, withMessage message: String!)
     {
         print(NSString(format: "sfCameraViewController:didProgressToValue:%.2f withMessage:%@",value, message))
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didProgressExt progress: String!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didProgressExt progress: String!)
     {
         print(NSString(format: "sfCameraViewController:didProgressExt: %@",progress));
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didFailWithError error: NSError!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didFailWithError error: NSError!)
     {
         let message = error.domain == SlyceErrorDomain ? error.sf_message() : error.localizedDescription
-        print(NSString(format: "didFailWithError:errorMessage %@",message));
+        print(NSString(format: "didFailWithError:errorMessage %@",message!));
         
         let alertController = UIAlertController(title: "Error", message:
-            message, preferredStyle: UIAlertControllerStyle.Alert)
+            message, preferredStyle: UIAlertControllerStyle.alert)
         
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler:nil))
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler:nil))
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didDetectImage imageInfo: [NSObject : AnyObject]!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didDetectImage imageInfo: [AnyHashable: Any]!)
     {
         print(NSString(format: "sfCameraViewController:didDetectImage: %@",imageInfo));
 
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didReceiveImageInfo products: [AnyObject]!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didReceiveImageInfo products: [AnyObject]!)
     {
         
         print(NSString(format: "sfCameraViewController:didReceiveImageInfo: %@",products));
@@ -229,11 +229,11 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
         {
             self.products = products
             
-            self.performSegueWithIdentifier("ProductsSegue", sender: nil)
+            self.performSegue(withIdentifier: "ProductsSegue", sender: nil)
         }
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didReceiveResults results: [NSObject : AnyObject]!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didReceiveResults results: [AnyHashable: Any]!)
     {
         print(NSString(format: "sfCameraViewController:didReceiveResults: %@",results));
         
@@ -241,48 +241,47 @@ class MyViewController: UIViewController,SFRequestDelegate,SFCameraViewControlle
         
         let resultsDic = results as NSDictionary
         
-        let productsFromResults = resultsDic.objectForKey("products") as! NSArray
-        
-        self.products = productsFromResults
-        
-        self.performSegueWithIdentifier("ProductsSegue", sender: nil)
+        if let productsFromResults = resultsDic.object(forKey: "products") as? [AnyObject] {
+            self.products = productsFromResults
+
+            self.performSegue(withIdentifier: "ProductsSegue", sender: nil)
+        }
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didReceiveResultsExt results: String!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didReceiveResultsExt results: String!)
     {
         print(NSString(format: "sfCameraViewController:didReceiveResultsExt: %@",results));
 
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didDetectBarcode barcode: SFBarcode!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didDetect barcode: SFBarcode!)
     {
         print(NSString(format: "sfCameraViewController:didDetectBarcode: %@",barcode.text));
         
-        dispatch_async(dispatch_get_main_queue(),
-                       {
+        DispatchQueue.main.async(execute: {
                         
                         let alertController = UIAlertController(title: barcode.typeString, message:
-                            barcode.text, preferredStyle: UIAlertControllerStyle.Alert)
+                            barcode.text, preferredStyle: UIAlertControllerStyle.alert)
                         
-                        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler:nil))
+                        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler:nil))
                         
-                        self.presentViewController(alertController, animated: true, completion: nil)
+                        self.present(alertController, animated: true, completion: nil)
         })
     }
     
-    func sfCameraViewController(cameraViewController: SFCameraViewController!, didReceiveBarcodeInfo productURL: NSURL!)
+    func sfCameraViewController(_ cameraViewController: SFCameraViewController!, didReceiveBarcodeInfo productURL: URL!)
     {
-        print(NSString(format: "sfCameraViewController:didReceiveBarcodeInfo: %@",productURL));
+        print(NSString(format: "sfCameraViewController:didReceiveBarcodeInfo: %@", productURL.absoluteString));
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "ProductsSegue" {
             
-            let productsVC  = segue.destinationViewController as! MyProductsViewController
+            let productsVC  = segue.destination as! MyProductsViewController
             productsVC.products = self.products
             
         }

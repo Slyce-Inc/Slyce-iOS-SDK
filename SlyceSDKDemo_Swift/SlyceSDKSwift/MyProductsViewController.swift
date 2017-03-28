@@ -10,7 +10,7 @@ import UIKit
 
 class MyProductsViewController: UIViewController {
 
-    var products = NSArray()
+    var products = [AnyObject]()
     
     @IBOutlet weak var resultsCollectionView: UICollectionView!
     
@@ -28,92 +28,92 @@ class MyProductsViewController: UIViewController {
    
     
     //2
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return  products.count
     }
     
     //3
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAtIndexPath indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MyProductCollectionViewCell", forIndexPath: indexPath) as! MyProductCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyProductCollectionViewCell", for: indexPath) as! MyProductCollectionViewCell
 
         
-        let productDic = products.objectAtIndex(indexPath.row) as! NSDictionary
+        let productDic = products[indexPath.row] as! NSDictionary
         
-        cell.productPriceLabel.text = productDic.objectForKey("productPrice") as? String
-        cell.productDescriptionLabel.text = productDic.objectForKey("productName") as? String
-        cell.productBrandLabel.text = productDic.objectForKey("brandName") as? String
+        cell.productPriceLabel.text = productDic.object(forKey: "productPrice") as? String
+        cell.productDescriptionLabel.text = productDic.object(forKey: "productName") as? String
+        cell.productBrandLabel.text = productDic.object(forKey: "brandName") as? String
 
         
-        var imgURL = NSURL()
+        var imgURL: URL?
         
         let urlString = productDic["productImageURL"] as? String
         
-        if urlString!.rangeOfString("?") != nil && urlString!.rangeOfString("[") != nil
+        if urlString!.range(of: "?") != nil && urlString!.range(of: "[") != nil
         {
-            let arr = urlString!.characters.split("?").map(String.init) as NSArray
+            let arr = urlString!.characters.split(separator: "?").map(String.init) as NSArray
             print(arr)
             
             if arr.count > 1
             {
-                let address = arr.objectAtIndex(0) as! String
-                var params1 = arr.objectAtIndex(1) as! String
+                let address = arr.object(at: 0) as! String
+                var params1 = arr.object(at: 1) as! String
 
                 params1 = self.escapeStr(params1 )
                 
                 let urlString1 = NSString(format: "%@?%@",address,params1)
                 
-                imgURL = NSURL(string: urlString1 as String)!
+                imgURL = URL(string: urlString1 as String)!
             }
         }else
         {
-            imgURL = NSURL(string: urlString! as String)!
+            imgURL = URL(string: urlString! as String)!
         }
         
         
-        // The image isn't cached, download the img data
-        // We should perform this in a background thread
-        let request: NSURLRequest = NSURLRequest(URL: imgURL)
-        let mainQueue = NSOperationQueue.mainQueue()
-        NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: { (response, data, error) -> Void in
-            if error == nil {
-                // Convert the downloaded data in to a UIImage object
-                let image = UIImage(data: data!)
-                // Store the image in to our cache
-                // Update the cell
-                dispatch_async(dispatch_get_main_queue(), {
-                   cell.productImageView.image = image
-                })
-            }
-            else {
-                print("Error: \(error!.localizedDescription)")
-            }
-        })
+        if let _ = imgURL {
+            // The image isn't cached, download the img data
+            // We should perform this in a background thread
+            let request: URLRequest = URLRequest(url: imgURL!)
+            let mainQueue = OperationQueue.main
+            NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: { (response, data, error) -> Void in
+                if error == nil {
+                    // Convert the downloaded data in to a UIImage object
+                    let image = UIImage(data: data!)
+                    // Store the image in to our cache
+                    // Update the cell
+                    DispatchQueue.main.async(execute: {
+                       cell.productImageView.image = image
+                    })
+                }
+                else {
+                    print("Error: \(error!.localizedDescription)")
+                }
+            })
+        }
  
         
         // Configure the cell
         return cell
     }
     
-    func escapeStr(stringToChange: String) -> (String) {
-
-        let str = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,stringToChange,"[].",":/?&=;+!@#$()',*",CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding))
-        return str as (String)
+    func escapeStr(_ stringToChange: String) -> (String) {
+        return stringToChange.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
     
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize
     {
-        return CGSizeMake(self.view.frame.size.width/2, 200)
+        return CGSize(width: self.view.frame.size.width/2, height: 200)
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         
         
         return 0
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         
         
         

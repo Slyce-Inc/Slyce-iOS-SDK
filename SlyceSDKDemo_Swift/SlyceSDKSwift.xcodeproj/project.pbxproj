@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD74463C1E8AB9AD009B5277 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B65E611E08397700DEC9EB /* SlyceSDK.framework */; };
+		AD74463D1E8AB9AD009B5277 /* SlyceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7B65E611E08397700DEC9EB /* SlyceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D70484F31C87165E001D75E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70484F21C87165E001D75E5 /* AppDelegate.swift */; };
 		D70484F51C87165E001D75E5 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70484F41C87165E001D75E5 /* MyViewController.swift */; };
 		D70484F81C87165E001D75E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70484F61C87165E001D75E5 /* Main.storyboard */; };
@@ -15,13 +17,25 @@
 		D70485181C87223E001D75E5 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D70485171C87223E001D75E5 /* libicucore.tbd */; };
 		D731001F1D8AE81C0081C7AE /* shoe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D731001E1D8AE81C0081C7AE /* shoe.jpg */; };
 		D731005D1D8E90320081C7AE /* slyce-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D731005C1D8E90320081C7AE /* slyce-logo.png */; };
-		D7B65E621E08397700DEC9EB /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7B65E601E08397700DEC9EB /* SlyceSDK.bundle */; };
-		D7B65E631E08397700DEC9EB /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B65E611E08397700DEC9EB /* SlyceSDK.framework */; };
 		D7FAF9911D644735002CA802 /* MyCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF9901D644735002CA802 /* MyCameraViewController.swift */; };
 		D7FAF9931D644758002CA802 /* MyProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF9921D644758002CA802 /* MyProductsViewController.swift */; };
 		D7FAF9971D646157002CA802 /* MyProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF9961D646157002CA802 /* MyProductCollectionViewCell.swift */; };
 		D7FAF99A1D648CD1002CA802 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FAF9991D648CD1002CA802 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD74463E1E8AB9AD009B5277 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AD74463D1E8AB9AD009B5277 /* SlyceSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D70484EF1C87165E001D75E5 /* SlyceSDKSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlyceSDKSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +49,6 @@
 		D70485171C87223E001D75E5 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		D731001E1D8AE81C0081C7AE /* shoe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shoe.jpg; sourceTree = "<group>"; };
 		D731005C1D8E90320081C7AE /* slyce-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slyce-logo.png"; sourceTree = "<group>"; };
-		D7B65E601E08397700DEC9EB /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
 		D7B65E611E08397700DEC9EB /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		D7FAF9901D644735002CA802 /* MyCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCameraViewController.swift; sourceTree = "<group>"; };
 		D7FAF9921D644758002CA802 /* MyProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProductsViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7B65E631E08397700DEC9EB /* SlyceSDK.framework in Frameworks */,
+				AD74463C1E8AB9AD009B5277 /* SlyceSDK.framework in Frameworks */,
 				D70485181C87223E001D75E5 /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +73,6 @@
 		D70484E61C87165D001D75E5 = {
 			isa = PBXGroup;
 			children = (
-				D7B65E601E08397700DEC9EB /* SlyceSDK.bundle */,
 				D7B65E611E08397700DEC9EB /* SlyceSDK.framework */,
 				D70485171C87223E001D75E5 /* libicucore.tbd */,
 				D70484F11C87165E001D75E5 /* SlyceSDKSwift */,
@@ -115,6 +127,7 @@
 				D70484EB1C87165D001D75E5 /* Sources */,
 				D70484EC1C87165D001D75E5 /* Frameworks */,
 				D70484ED1C87165D001D75E5 /* Resources */,
+				AD74463E1E8AB9AD009B5277 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,7 +150,8 @@
 				TargetAttributes = {
 					D70484EE1C87165D001D75E5 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = Q5F56GDW4P;
+						DevelopmentTeam = 7U893RH3X8;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -167,7 +181,6 @@
 				D70484FD1C87165E001D75E5 /* LaunchScreen.storyboard in Resources */,
 				D731001F1D8AE81C0081C7AE /* shoe.jpg in Resources */,
 				D70484FA1C87165E001D75E5 /* Assets.xcassets in Resources */,
-				D7B65E621E08397700DEC9EB /* SlyceSDK.bundle in Resources */,
 				D731005D1D8E90320081C7AE /* slyce-logo.png in Resources */,
 				D70484F81C87165E001D75E5 /* Main.storyboard in Resources */,
 			);
@@ -299,7 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q5F56GDW4P;
+				DEVELOPMENT_TEAM = 7U893RH3X8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,10 +322,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = slyce.SlyceSDKSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = slyce.slyce.sdk.demo.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SlyceSDKSwift/Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -321,7 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q5F56GDW4P;
+				DEVELOPMENT_TEAM = 7U893RH3X8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,10 +344,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = slyce.SlyceSDKSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = slyce.slyce.sdk.demo.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SlyceSDKSwift/Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

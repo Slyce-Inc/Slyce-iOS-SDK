@@ -22,9 +22,10 @@
 		2FBD56A91A8AAFD40084864D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD56A81A8AAFD40084864D /* MyViewController.m */; };
 		2FC091B31A81125D008C76C9 /* MyCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC091B21A81125D008C76C9 /* MyCameraViewController.m */; };
 		2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */; };
+		AD7446371E8A992C009B5277 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B65E5D1E08368000DEC9EB /* SlyceSDK.framework */; };
+		AD7446381E8A992C009B5277 /* SlyceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7B65E5D1E08368000DEC9EB /* SlyceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D712275F1D59CD5100A99681 /* show-similar.png in Resources */ = {isa = PBXBuildFile; fileRef = D712275E1D59CD5100A99681 /* show-similar.png */; };
 		D7A0A5291C2FDDAA00960D26 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0A5281C2FDDAA00960D26 /* images.xcassets */; };
-		D7B65E5E1E08368000DEC9EB /* SlyceSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D7B65E5C1E08368000DEC9EB /* SlyceSDK.bundle */; };
 		D7B65E5F1E08368000DEC9EB /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B65E5D1E08368000DEC9EB /* SlyceSDK.framework */; };
 		D7C6478E1D22D46B00C2F7DB /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C6476E1D22D46B00C2F7DB /* MKAnnotationView+WebCache.m */; };
 		D7C6478F1D22D46B00C2F7DB /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C647701D22D46B00C2F7DB /* NSData+ImageContentType.m */; };
@@ -53,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AD7446381E8A992C009B5277 /* SlyceSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,7 +88,6 @@
 		2FFC47271B8EF9DF003FEC01 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		D712275E1D59CD5100A99681 /* show-similar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "show-similar.png"; sourceTree = "<group>"; };
 		D7A0A5281C2FDDAA00960D26 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
-		D7B65E5C1E08368000DEC9EB /* SlyceSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SlyceSDK.bundle; sourceTree = "<group>"; };
 		D7B65E5D1E08368000DEC9EB /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
 		D7C6476D1D22D46B00C2F7DB /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		D7C6476E1D22D46B00C2F7DB /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7446371E8A992C009B5277 /* SlyceSDK.framework in Frameworks */,
 				2F2C6D711AFF635F00F3D93E /* AdSupport.framework in Frameworks */,
 				2FA2952B1ADAE764007A0133 /* libicucore.dylib in Frameworks */,
 				D7B65E5F1E08368000DEC9EB /* SlyceSDK.framework in Frameworks */,
@@ -144,7 +146,6 @@
 		2F353F061A7FCBD7002EE2EB = {
 			isa = PBXGroup;
 			children = (
-				D7B65E5C1E08368000DEC9EB /* SlyceSDK.bundle */,
 				D7B65E5D1E08368000DEC9EB /* SlyceSDK.framework */,
 				D7A0A5281C2FDDAA00960D26 /* images.xcassets */,
 				2F2C6D701AFF635F00F3D93E /* AdSupport.framework */,
@@ -292,7 +293,7 @@
 				TargetAttributes = {
 					2F353F0E1A7FCBD7002EE2EB = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = Q5F56GDW4P;
+						DevelopmentTeam = 7U893RH3X8;
 						DevelopmentTeamName = "Slyce Inc.";
 						ProvisioningStyle = Automatic;
 					};
@@ -327,7 +328,6 @@
 				2FBD56A61A8A9AB60084864D /* slyce-logo.png in Resources */,
 				2FFC47281B8EF9DF003FEC01 /* Default-667h@2x.png in Resources */,
 				2F353F8E1A7FCF3B002EE2EB /* Main.storyboard in Resources */,
-				D7B65E5E1E08368000DEC9EB /* SlyceSDK.bundle in Resources */,
 				2F66AB9D1AC95944006C035A /* Icon-60@2x.png in Resources */,
 				2F115FE61AC839F90057E547 /* Default-568h@2x.png in Resources */,
 			);
@@ -465,7 +465,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hadiii Mrih (HR2393M593)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q5F56GDW4P;
+				DEVELOPMENT_TEAM = 7U893RH3X8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,13 +473,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SlyceSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.SlyceSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.sdk.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -494,7 +494,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hadiii Mrih (HR2393M593)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = Q5F56GDW4P;
+				DEVELOPMENT_TEAM = 7U893RH3X8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -502,13 +502,13 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SlyceSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.SlyceSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slyce.sdk.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
