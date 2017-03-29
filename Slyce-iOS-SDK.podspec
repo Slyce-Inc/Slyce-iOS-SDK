@@ -11,7 +11,7 @@ s.license      				= { :type => "BSD", :file => "LICENSE.md" }
 s.author 	   				= { "Slyce Inc." => "avital@slyce.it" }
 s.platform     				= :ios, "8.0"
 s.source   	   				= { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "4.4" }
-s.source_files 				= "SlyceSDK/SlyceSDK.framework/Versions/A/Headers/*.h"
+s.source_files 				= "SlyceSDK/SlyceSDK.framework/Headers/*.h"
 s.requires_arc 				= true
 s.preserve_paths 			= "SlyceSDK/SlyceSDK.framework"
 s.libraries					= "icucore"
