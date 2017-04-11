@@ -1,7 +1,16 @@
 Slyce SDK Changelog
 ===================================
 
-4.4 - 2016/03/28
+4.5 - 2017/04/11
+-----------------
+*IMPROVED: 2D scanning optimisations for better on-device recognition
+*IMPROVED: 2D scanning improvements for server-side processing
+*ADDED: x86_64 and i386 architectures to run on the iOS Simulator
+*FIXED: 'image not found' runtime crash
+*IMPROVED: 2D Syncing layer
+
+
+4.4 - 2017/03/28
 -----------------
 backward compatibility for old retailer IDs - preserved
 
