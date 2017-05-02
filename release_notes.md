@@ -1,6 +1,13 @@
 Slyce SDK Changelog
 ===================================
 
+4.5.1 - 2017/05/01
+-----------------
+*ADDED custom event reporting
+*FIXED white balance camera issues
+*FIXED auto sending image on snap in Full UI mode
+
+
 4.5 - 2017/04/11
 -----------------
 *IMPROVED: 2D scanning optimisations for better on-device recognition

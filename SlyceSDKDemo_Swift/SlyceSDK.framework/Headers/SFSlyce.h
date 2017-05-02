@@ -100,6 +100,16 @@
 ///---------------------------------------------------------------------------------------
 
 
+
+/**
+ * @method
+ * @brief Adds custom statistics event to the Slyce tracking system.
+ * @param eventName Custom event name
+ * @param params Custom event paramteters. Only string keys and values supported.
+ */
+- (void)reportStatisticsEventWithName:(NSString *)eventName additionalParameters:(NSDictionary *)params;
+
+
 /*!
  
  @property
@@ -184,7 +194,19 @@
 @property(nonatomic, strong) UIColor *customProgressColor;
 
 
+/**
+ * @property
+ * @abstract Current max image width setting
+ * @discussion Image will be resized according to this setting before uploading it to the server
+ */
 @property(nonatomic, readonly) int maxWidthDimension;
+
+
+/**
+ * @property
+ * @abstract Current max image height setting
+ * @discussion Image will be resized according to this setting before uploading it to the server
+ */
 @property(nonatomic, readonly) int maxHeightDimension;
 
 
