@@ -1,6 +1,11 @@
 Slyce SDK Changelog
 ===================================
 
+4.5.2 - 2017/05/15
+-----------------
+*IMPROVED 2D sync and processing
+
+
 4.5.1 - 2017/05/01
 -----------------
 *ADDED custom event reporting

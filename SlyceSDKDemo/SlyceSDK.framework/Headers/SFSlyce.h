@@ -87,6 +87,20 @@
 
 - (BOOL)openWithClientID:(NSString *)clientID error:(NSError **)error;
 
+
+/**
+ * @method
+ *
+ * @brief Adds custom statistics event to the Slyce tracking system.
+ *
+ * @discussion
+ * @param eventName Custom event name
+ *
+ * @param params Custom event paramteters. Only string keys and values supported.
+ */
+- (void)reportStatisticsEventWithName:(NSString *)eventName additionalParameters:(NSDictionary *)params;
+
+
 ///---------------------------------------------------------------------------------------
 /// @name Unavailable
 ///---------------------------------------------------------------------------------------
@@ -99,15 +113,6 @@
 /// @name Properties
 ///---------------------------------------------------------------------------------------
 
-
-
-/**
- * @method
- * @brief Adds custom statistics event to the Slyce tracking system.
- * @param eventName Custom event name
- * @param params Custom event paramteters. Only string keys and values supported.
- */
-- (void)reportStatisticsEventWithName:(NSString *)eventName additionalParameters:(NSDictionary *)params;
 
 
 /*!

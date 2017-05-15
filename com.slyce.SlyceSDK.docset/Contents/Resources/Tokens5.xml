@@ -95,6 +95,28 @@ performing any tasks in the SDK!</Abstract></ReturnValue>
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/reportStatisticsEventWithName:additionalParameters:</TokenIdentifier>
+			<Abstract type="html">Adds custom statistics event to the Slyce tracking system.
+
+</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>- (void)reportStatisticsEventWithName:(NSString *)eventName additionalParameters:(NSDictionary *)params</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>eventName</Name>
+					<Abstract type="html">Custom event name</Abstract>
+				</Parameter><Parameter>
+					<Name>params</Name>
+					<Abstract type="html">Custom event paramteters. Only string keys and values supported.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/reportStatisticsEventWithName:additionalParameters:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/init</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
@@ -115,26 +137,6 @@ performing any tasks in the SDK!</Abstract></ReturnValue>
 			
 			
 			<Anchor>//api/name/new</Anchor>
-            <NodeRef refid="5"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/reportStatisticsEventWithName:additionalParameters:</TokenIdentifier>
-			<Abstract type="html">Adds custom statistics event to the Slyce tracking system.</Abstract>
-			<DeclaredIn>SFSlyce.h</DeclaredIn>
-			
-			<Declaration>- (void)reportStatisticsEventWithName:(NSString *)eventName additionalParameters:(NSDictionary *)params</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>eventName</Name>
-					<Abstract type="html">Custom event name</Abstract>
-				</Parameter><Parameter>
-					<Name>params</Name>
-					<Abstract type="html">Custom event paramteters. Only string keys and values supported.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/reportStatisticsEventWithName:additionalParameters:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
