@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SFSyncDelegate.h"
 
 
 /*!
@@ -213,6 +214,14 @@
  * @discussion Image will be resized according to this setting before uploading it to the server
  */
 @property(nonatomic, readonly) int maxHeightDimension;
+
+
+/**
+ * @property
+ * @abstract 2D catalogs sync delegate
+ * @discussion This object will receive updates about the 2D catalogs sync progress
+ */
+@property(nonatomic, strong) id <SFSyncDelegate> syncDelegate;
 
 
 @end

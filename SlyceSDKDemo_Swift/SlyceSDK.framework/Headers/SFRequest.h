@@ -135,36 +135,16 @@
 
 - (void)getSimilarFromResults:(NSURL *)imageURL;
 
-/*
- *  @method
- *  @brief Used to retrieve a payload describing the description of the product in the image, along with optional parameters.
- *
- *  @discussion This method will ask the SDK to asynchronously recognize the image in the param and return an `NSDictionary` representing the description of 
- *  the item matched.
- *
- *  @param image the image object.
- *
- *  @see getItemDescriptionFromImageURL:
- *  @see SFRequestDelegate
 
-- (void)getItemDescriptionFromImage:(UIImage *)image;
+/**
+ * @method
+ * @brief Used to retrieve a list of products and extended info similar to the given product id.
+ *
+ * @discussion This method is similar to the @link(getSimilarFromResults)
+ * @param pid
  */
+- (void)getSimilarFromPID:(NSString *)pid;
 
-/*
- *  @method
- *  @brief Used to asynchronously retrieve a list of products from URL to the image. May also provide an array of merchant IDs to narrow the search to specific merchants. Merchant IDs array is only relevant for non-premimum users. Premium users sould simply pass `nil`.
- *
- *  @discussion The delegate will be notified in case of a match for a 2D product and in case of 3D products, separately, via
- *  [SFRequestDelegate sfRequest:didDetectImage:] and [SFRequestDelegate sfRequest:didReceiveResults:], accordingly. 2D match is possible for Premium and 2D-enabled users only. In case of a 2D match, additional info might be delivered, via [SFRequestDelegate sfRequest:didReceiveImageInfo:] callback.
- *  The 3D products array cannot be empty. For more information, refer to SFRequestDelegate class.
- *
- *  @param imageURL the URL to the image.
- *
- *  @see getItemDescriptionFromImage:
- *  @see SFRequestDelegate
- 
-- (void)getItemDescriptionFromImageURL:(NSURL *)imageURL;
- */
 
 
 /*!

@@ -464,6 +464,42 @@ performing any tasks in the SDK!</Abstract></ReturnValue>
             <NodeRef refid="5"/>
 		</Token>
 		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/setSyncDelegate:</TokenIdentifier>
+			<Abstract type="html">2D catalogs sync delegate</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) id&lt;SFSyncDelegate&gt; syncDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/syncDelegate</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/syncDelegate</TokenIdentifier>
+			<Abstract type="html">2D catalogs sync delegate</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) id&lt;SFSyncDelegate&gt; syncDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/syncDelegate</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFSlyce/syncDelegate</TokenIdentifier>
+			<Abstract type="html">2D catalogs sync delegate</Abstract>
+			<DeclaredIn>SFSlyce.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) id&lt;SFSyncDelegate&gt; syncDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/syncDelegate</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
         
         
 	</File>
