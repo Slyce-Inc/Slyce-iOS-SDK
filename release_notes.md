@@ -2,6 +2,13 @@ Slyce SDK Changelog
 ===================================
 
 
+4.5.4 - 2017/07/25
+-----------------
+*ADDED find similar method by product ID and image URL
+*IMPROVED connection security
+*IMPROVED 2D sync process
+
+
 4.5.3 - 2017/06/15
 -----------------
 *IMPROVED 2D catalog sync (relocated to camera init)

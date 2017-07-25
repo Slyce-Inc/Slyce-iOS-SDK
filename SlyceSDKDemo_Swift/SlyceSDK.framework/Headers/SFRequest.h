@@ -136,16 +136,32 @@
 - (void)getSimilarFromResults:(NSURL *)imageURL;
 
 
-/**
+/*!
  * @method
  * @brief Used to retrieve a list of products and extended info similar to the given product id.
  *
- * @discussion This method is similar to the @link(getSimilarFromResults)
- * @param pid
+ * @discussion This method is similar to the getSimilarFromResults:
+ *
+ * @param pid Product ID
+ *
+ * @see getSimilarFromResults:
  */
 - (void)getSimilarFromPID:(NSString *)pid;
 
 
+/*!
+ * @method
+ * @brief Used to retreive a list of products and extended info similar to the given product id and image url.
+ *
+ * @discussion This method works similar to the getSimilarFromResults: and getSimilarFromPID:
+ *
+ * @param pid Product ID
+ * @param imageURL Product image URL
+ *
+ * @see getSimilarFromResults:
+ * @see getSimilarFromPID:
+ */
+- (void)getSimilarFromPID:(NSString *)pid imageURL:(NSString *)imageURL;
 
 /*!
  *  @method

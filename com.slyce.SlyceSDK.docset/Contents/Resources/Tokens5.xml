@@ -96,9 +96,7 @@ performing any tasks in the SDK!</Abstract></ReturnValue>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFSlyce/reportStatisticsEventWithName:additionalParameters:</TokenIdentifier>
-			<Abstract type="html">Adds custom statistics event to the Slyce tracking system.
-
-</Abstract>
+			<Abstract type="html">Adds custom statistics event to the Slyce tracking system.</Abstract>
 			<DeclaredIn>SFSlyce.h</DeclaredIn>
 			
 			<Declaration>- (void)reportStatisticsEventWithName:(NSString *)eventName additionalParameters:(NSDictionary *)params</Declaration>

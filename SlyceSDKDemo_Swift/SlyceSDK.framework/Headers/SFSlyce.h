@@ -94,7 +94,6 @@
  *
  * @brief Adds custom statistics event to the Slyce tracking system.
  *
- * @discussion
  * @param eventName Custom event name
  *
  * @param params Custom event paramteters. Only string keys and values supported.
