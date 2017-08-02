@@ -2,6 +2,11 @@ Slyce SDK Changelog
 ===================================
 
 
+4.5.5 - 2017/08/02
+-----------------
+*FIXED issue in getting similar by combined parameters
+
+
 4.5.4 - 2017/07/25
 -----------------
 *ADDED find similar method by product ID and image URL
