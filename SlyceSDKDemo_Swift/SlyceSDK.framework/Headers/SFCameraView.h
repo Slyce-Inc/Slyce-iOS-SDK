@@ -136,8 +136,21 @@
  *
  */
 
-
 @property(nonatomic) float detectionDelay2DSameImage;
+
+
+/*!
+ *  @property
+ *  @brief Sets on-device continuous recognition threshold.
+ *
+ *  @discussion This property can significantly change the 2D scanning behaviour.
+ *  If set too low it can prevent 2D detecting fully.
+ *  If set too high 2D detection will generate a lot of false positive detections.
+ *  Default value is 10.
+ */
+
+@property(nonatomic) float detectionThreshold2D;
+
 
 /*!
  *  @property

@@ -1,6 +1,12 @@
 Slyce SDK Changelog
 ===================================
 
+4.5.7 - 2017/09/15
+-----------------
+*ADDED exact match threshold parameter
+*CHANGED Exact Match scanning improvements in speed and quality
+
+
 4.5.6 - 2017/08/21
 -----------------
 *ADDED Find similar statistics tracking

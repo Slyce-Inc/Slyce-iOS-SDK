@@ -301,6 +301,42 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setDetectionThreshold2D:</TokenIdentifier>
+			<Abstract type="html">Sets on-device continuous recognition threshold.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionThreshold2D</Declaration>
+			
+			
+			<Anchor>//api/name/detectionThreshold2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/detectionThreshold2D</TokenIdentifier>
+			<Abstract type="html">Sets on-device continuous recognition threshold.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionThreshold2D</Declaration>
+			
+			
+			<Anchor>//api/name/detectionThreshold2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SFCameraView/detectionThreshold2D</TokenIdentifier>
+			<Abstract type="html">Sets on-device continuous recognition threshold.</Abstract>
+			<DeclaredIn>SFCameraView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) float detectionThreshold2D</Declaration>
+			
+			
+			<Anchor>//api/name/detectionThreshold2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/SFCameraView/setOptions:</TokenIdentifier>
 			<Abstract type="html">Options dictionary.</Abstract>
 			<DeclaredIn>SFCameraView.h</DeclaredIn>
