@@ -1,6 +1,12 @@
 Slyce SDK Changelog
 ===================================
 
+4.5.8 - 2017/10/10
+-----------------
+*FIXED slow 2D response
+*FIXED simultaneous 2D and 3D callback calls
+
+
 4.5.7 - 2017/09/15
 -----------------
 *ADDED exact match threshold parameter
