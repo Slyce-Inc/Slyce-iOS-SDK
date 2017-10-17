@@ -1,6 +1,12 @@
 Slyce SDK Changelog
 ===================================
 
+4.5.9 - 2017/10/17
+-----------------
+*CHANGED web socket class names
+*ADDED included fonts to the info.plist
+
+
 4.5.8 - 2017/10/10
 -----------------
 *FIXED slow 2D response
