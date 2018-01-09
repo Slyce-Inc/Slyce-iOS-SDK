@@ -1,6 +1,12 @@
 Slyce SDK Changelog
 ===================================
 
+4.5.10 - 2018/01/09
+-----------------
+*CHANGED Find similar request flow
+*POSSIBLE FIX camera zoom issue
+
+
 4.5.9 - 2017/10/17
 -----------------
 *CHANGED web socket class names
