@@ -47,7 +47,22 @@ platform :ios, '7.0'
 pod 'Slyce-iOS-SDK'
 ```
 
-### If you don't use CocoaPods, then:
+### If you use [Carthage](https://github.com/carthage/carthage), then add these lines to your Cartfile:
+
+ ```
+ binary "https://www.yourDomain.com/Slyce-iOS-SDK.json"
+ ```
+ Then upload the following json string to your https://www.yourDomain.com/ 
+ 
+ ```
+ {
+	   "4.5.10": "https://github.com/Slyce-Inc/Slyce-iOS-SDK/archive/4.5.10.zip"
+ }
+ ```
+ And run `carthage update`, and you should now have the latest version of Slyce in your Carthage folder.
+ 
+
+### If you don't use CocoaPods, and Carthage then:
 
 1. Clone or download the SDK, which consists of a framework, resources bundle, API docs, SDK Overview PDF and release notes. It also includes a sample app.
 2. Drag and the drop the `SlyceSDK.framework` to the app’s project (make sure you copy the framework to the project).
