@@ -1,6 +1,6 @@
 The Slyce iOS SDK Sample App are released under the BSD License:
 
-    Copyright (c) 2014-2016 Slyce, Inc.
+    Copyright (c) 2014-2018 Slyce, Inc.
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without

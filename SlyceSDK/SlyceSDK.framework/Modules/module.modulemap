@@ -1,6 +1,0 @@
-framework module SlyceSDK {
-  umbrella header "SlyceSDK.h"
-
-  export *
-  module * { export * }
-}
