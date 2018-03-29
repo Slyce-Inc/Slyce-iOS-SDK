@@ -10,30 +10,41 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - SlyceSearchTask
 
-/**
- * Builds a search task based on the provided request and workflow ID.
+/*!
+ * @method
+ *
+ * @brief Builds a search task based on the provided request and workflow ID.
  *
  * @param searchRequest - The search request.
  * @param workflowID - The ID of the workflow to use.
  *
- * @return a new {@link SlyceSearchTask} for the request and workflow ID.
+ * @return a new `SlyceSearchTask` for the request and workflow ID.
  */
 - (nullable SlyceSearchTask *)searchTaskWithRequest:(SlyceSearchRequest *)searchRequest workflowID:(NSString *)workflowID;
 
-/**
- * Cancels all tasks within this session.
+
+/*!
+ * @method
+ *
+ * @brief Cancels all tasks within this session.
  */
 - (void)cancelAllTasks;
 
-/**
- * Cancels the task with the provided task ID.
+
+/*!
+ * @method
+ *
+ * @brief Cancels the task with the provided task ID.
  *
  * @param taskID - The ID of the task to cancel.
  */
 - (void)cancelSearchTaskWithIdentifier:(NSString *)taskID;
 
-/**
- * Gets the task with the provided task ID.
+
+/*!
+ * @method
+ *
+ * @brief Gets the task with the provided task ID.
  *
  * @param taskID - The ID of the task to get.
  *
@@ -45,10 +56,22 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - SlyceScanner
 
 
+/*!
+ * @method
+ *
+ * @brief Checks the configuration for the provided lensIdentifier.
+ *
+ * @param lensIdentifier  - The ID of the lens to create.
+ *
+ * @return YES if the lensIdentifier is able to be used to create a `SlyceScanner`.
+ */
 - (BOOL)canCreateScannerForLensIdentifier:(NSString *)lensIdentifier;
 
-/**
- * Creates a new headless lens matching the spec of the provided lens ID.
+
+/*!
+ * @method
+ *
+ * @brief Creates a new headless lens matching the spec of the provided lens ID.
  *
  * @param identifier  - The ID of the lens to create.
  * @param config - The configuration for this lens.
@@ -58,8 +81,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable SlyceScanner *)scannerWithLensIdentifier:(NSString *)identifier configuration:(nullable SlyceLensConfiguration *)config error:(NSError * _Nullable __autoreleasing *)error;
 
-/**
- * Creates a new headless lens matching the spec of the provided lens ID with a default configuration.
+
+/*!
+ * @method
+ *
+ * @brief Creates a new headless lens matching the spec of the provided lens ID with a default configuration.
  *
  * @param identifier  - The ID of the lens to create.
  * @param error - A pointer to an error that may be emitted.

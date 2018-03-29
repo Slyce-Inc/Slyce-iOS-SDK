@@ -6,6 +6,9 @@
 
 #import "SlyceInstance+Environments.h"
 
+#pragma mark Full UI (Preview)
+
+#import "SlyceViewController.h"
 
 #pragma mark Temporary Whitelabel API
 
