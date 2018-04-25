@@ -64,7 +64,7 @@ typedef NS_ENUM(NSUInteger, SlyceBarcodeType) {
  *  @brief Class representing a barcode
  */
 
-@interface SlyceBarcode : NSObject
+@interface SlyceBarcode : NSObject <NSCoding>
 
 /*! The barcode result type. */
 @property(nonatomic, readonly) SlyceBarcodeType type;
@@ -85,7 +85,7 @@ typedef NS_ENUM(NSUInteger, SlyceBarcodeType) {
  @param text Barcode string.
  @return instance of SlyceBarcode.
  */
-- (nonnull instancetype)initWithType:(SlyceBarcodeType)type andText:(nonnull NSString *)text NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithType:(SlyceBarcodeType)type andText:(nonnull NSString *)text NS_DESIGNATED_INITIALIZER NS_SWIFT_NAME(init(type:text:));
 
 /*!
  @brief Convert a `SlyceBarcodeType` value to string format.

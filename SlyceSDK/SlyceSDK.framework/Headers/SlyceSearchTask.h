@@ -1,8 +1,10 @@
 #import <Foundation/Foundation.h>
 
 @class SlyceSearchTask;
-@class SlyceSearchProgress;
 @class SlyceSearchResult;
+@class SlyceSearchRequest;
+@class SlyceSearchProgress;
+@class SlyceSearchResponse;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,8 +42,7 @@ NS_SWIFT_NAME(slyce(searchTask:didFinishWithResult:errors:));
 @end
 
 
-@interface SlyceSearchTask : NSObject
-
+@interface SlyceSearchTask : NSObject <NSCoding>
 
 /*!
  * @property
@@ -51,6 +52,46 @@ NS_SWIFT_NAME(slyce(searchTask:didFinishWithResult:errors:));
  */
 @property (nonatomic, weak, nullable) id<SlyceSearchTaskDelegate> delegate;
 
+/*!
+ * @property
+ *
+ * @brief The `SlyceSearchRequest` represented by this task.
+ *
+ */
+@property (nonatomic, copy, readonly) NSString *identifier;
+@property (nonatomic, copy, readonly) NSString *sessionIdentifier;
+
+/*!
+ * @property
+ *
+ * @brief The `SlyceSearchRequest` represented by this task.
+ *
+ */
+@property (nonatomic, strong) SlyceSearchRequest *request;
+
+/*!
+ * @property
+ *
+ * @brief The `SlyceSearchResponse` represented by this task.
+ *
+ * @discussion This property is only available after a task has successfully completed.
+ */
+@property (nonatomic, strong, nullable) SlyceSearchResponse *response;
+
+/*!
+ * @property
+ *
+ * @brief The `SlyceSearchProgress` represented by this task.
+ *
+ */
+@property (nullable, nonatomic, strong) SlyceSearchProgress *progress;
+/*!
+ * @property
+ *
+ * @brief An array of errors that have occurred.
+ *
+ */
+@property (nonatomic, strong, readonly) NSArray<NSError *> *errors;
 
 /*!
  * @method

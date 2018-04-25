@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return YES if the operation was successful.
  */
-- (BOOL)attachToCaptureSession:(AVCaptureSession *)captureSession error:(NSError * _Nullable __autoreleasing * _Nullable)error;
+- (BOOL)attachToCaptureSession:(AVCaptureSession *)captureSession error:(NSError * _Nullable __autoreleasing * _Nullable)error NS_SWIFT_NAME(attachTo(captureSession:));
 
 
 /*!

@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface SlyceSearchProgress : NSObject
+@interface SlyceSearchProgress : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSString *tag;
 

@@ -4,9 +4,11 @@
 @class SlyceSearchRequest;
 @class SlyceScanner;
 @class SlyceLensConfiguration;
+@class SlyceContext;
+@class SlyceViewController;
 
 NS_ASSUME_NONNULL_BEGIN
-@interface SlyceSession : NSObject
+@protocol SlyceSession <NSObject>
 
 #pragma mark - SlyceSearchTask
 
@@ -16,11 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Builds a search task based on the provided request and workflow ID.
  *
  * @param searchRequest - The search request.
- * @param workflowID - The ID of the workflow to use.
+ * @param workflowIdentifier - The ID of the workflow to use.
  *
  * @return a new `SlyceSearchTask` for the request and workflow ID.
  */
-- (nullable SlyceSearchTask *)searchTaskWithRequest:(SlyceSearchRequest *)searchRequest workflowID:(NSString *)workflowID;
+- (nullable SlyceSearchTask *)searchTaskWithRequest:(SlyceSearchRequest *)searchRequest workflowIdentifier:(NSString *)workflowIdentifier NS_SWIFT_NAME(searchTask(request:workflowIdentifier:));
 
 
 /*!
@@ -38,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param taskID - The ID of the task to cancel.
  */
-- (void)cancelSearchTaskWithIdentifier:(NSString *)taskID;
+- (void)cancelSearchTaskWithIdentifier:(NSString *)taskID NS_SWIFT_NAME(cancelSearchTask(identifier:));
 
 
 /*!
@@ -50,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return the corresponding task, or null if not found.
  */
-- (nullable SlyceSearchTask *)searchTaskForIdentifier:(NSString *)taskID;
+- (nullable SlyceSearchTask *)getSearchTaskByIdentifier:(NSString *)taskID NS_SWIFT_NAME(getSearchTask(identifier:));
 
 
 #pragma mark - SlyceScanner
@@ -65,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return YES if the lensIdentifier is able to be used to create a `SlyceScanner`.
  */
-- (BOOL)canCreateScannerForLensIdentifier:(NSString *)lensIdentifier;
+- (BOOL)canCreateScannerForLensIdentifier:(NSString *)lensIdentifier NS_SWIFT_NAME(canCreateScanner(lensIdentifier:));
 
 
 /*!
@@ -79,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return a new headless lens.
  */
-- (nullable SlyceScanner *)scannerWithLensIdentifier:(NSString *)identifier configuration:(nullable SlyceLensConfiguration *)config error:(NSError * _Nullable __autoreleasing *)error;
+- (nullable SlyceScanner *)createScannerWithLensIdentifier:(NSString *)identifier configuration:(nullable SlyceLensConfiguration *)config error:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NAME(createScanner(lensIdentifier:configuration:));
 
 
 /*!
@@ -92,7 +94,20 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return a new headless lens.
  */
-- (nullable SlyceScanner *)scannerWithLensIdentifier:(NSString *)identifier error:(NSError * _Nullable __autoreleasing *)error;
+- (nullable SlyceScanner *)createScannerWithLensIdentifier:(NSString *)identifier error:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NAME(createScanner(lensIdentifier:));
+
+
+typedef NS_ENUM(NSUInteger, SlyceViewControllerMode);
+/*!
+ * @method
+ *
+ * @brief Creates a new SlyceViewController instance.
+ *
+ * @param mode - The mode for the SlyceViewController
+ *
+ * @return A nullable `SlyceViewController`
+ */
+- (nullable SlyceViewController *)slyceViewControllerWithMode:(SlyceViewControllerMode)mode;
 
 @end
 NS_ASSUME_NONNULL_END

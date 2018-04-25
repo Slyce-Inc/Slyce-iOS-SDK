@@ -2,6 +2,7 @@
 
 #import "SlyceImageMatchingSyncDelegate.h"
 #import "SlyceSession.h"
+#import "SlyceEventTracker.h"
 
 /*
  Main Slyce workflow entry point
@@ -15,21 +16,21 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  @method
  *
- *  @brief Initializes a new Slyce object using valid AccountID, SpaceID, and API Key.
+ *  @brief Initializes a new Slyce object using valid AccountIdentifier, SpaceIdentifier, and API Key.
  *
  *  @discussion Use this method to open the SDK for 'Public' recognition functionality.
  *
- *  @param accountID the Account ID for your organization.
- *  @param spaceID the Space ID for this SlyceInstance.
+ *  @param accountIdentifier the Account Identifier for your organization.
  *  @param apiKey the API Key for your organization.
+ *  @param spaceIdentifier the Space Identifier for this SlyceInstance.
  *  @param completion the completion block.
  *
  *  **Important:** Successfully opening the Slyce object is mandatory before you start
  *  performing any tasks in the SDK!
  *
  */
-- (void)openWithAccountID:(NSString *)accountID spaceID:(NSString *)spaceID apiKey:(NSString *)apiKey completion:(void (^)(NSError * _Nullable))completion
-NS_SWIFT_NAME(open(accountID:spaceID:apiKey:completion:));
+- (void)openWithAccountIdentifier:(NSString *)accountIdentifier apiKey:(NSString *)apiKey spaceIdentifier:(NSString *)spaceIdentifier completion:(void (^)(NSError * _Nullable))completion
+NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
 
 /*!
  * @method
@@ -38,8 +39,13 @@ NS_SWIFT_NAME(open(accountID:spaceID:apiKey:completion:));
  */
 - (void)close;
 
-
-- (SlyceSession *)defaultSession;
+/*!
+ * @method
+ *
+ * @brief The default `SlyceSession`.
+ * @return A `SlyceSession` instance.
+ */
+- (id<SlyceSession>)defaultSession;
 
 /**
  * @property
@@ -64,6 +70,12 @@ NS_SWIFT_NAME(open(accountID:spaceID:apiKey:completion:));
  * @default YES
  */
 @property (nonatomic) BOOL analyticsShouldIncludeLocationInformation;
+
+/**
+ * @property
+ * @abstract An instance of `SlyceEventTracker` for posting events that occur outside of the SlyceSDK.
+ */
+@property (nonatomic, readonly) id<SlyceEventTracker> eventTracker;
 
 @end
 NS_ASSUME_NONNULL_END

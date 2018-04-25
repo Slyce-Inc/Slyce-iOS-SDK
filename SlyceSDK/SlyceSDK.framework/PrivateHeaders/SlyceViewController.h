@@ -21,8 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, weak, nullable) id<SlyceSettingsPanelDataSource> settingsPanelDataSource;
 @property (nonatomic, readwrite, assign) BOOL settingsButtonHidden DEPRECATED_ATTRIBUTE;
 
-- (instancetype)initWithSlyce:(Slyce *)slyce mode:(SlyceViewControllerMode)mode;
-
 - (void)reloadSettingsPanel;
 
 @end

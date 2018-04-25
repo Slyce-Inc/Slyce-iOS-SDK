@@ -21,15 +21,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) CGFloat zoomFactor;
 
-- (BOOL)setZoomFactor:(CGFloat)zoomFactor andReturnError:(NSError * _Nullable __autoreleasing *)error;
+- (BOOL)setZoomFactor:(CGFloat)zoomFactor andReturnError:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NAME(setZoomFactor(_:));
 
-- (BOOL)toggleBackFrontAndReturnError:(NSError * _Nullable __autoreleasing *)error;
+- (BOOL)toggleBackFrontAndReturnError:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NAME(toggleBackFront());
 
-- (BOOL)setFlashMode:(AVCaptureFlashMode)flashMode andReturnError:(NSError * _Nullable __autoreleasing *)error;
+- (BOOL)setFlashMode:(AVCaptureFlashMode)flashMode andReturnError:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NAME(setFlashMode(_:));
 
-- (BOOL)focusAtPoint:(CGPoint)point andReturnError:(NSError * _Nullable __autoreleasing *)error;
+- (BOOL)focusAtPoint:(CGPoint)point andReturnError:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NAME(focusAtPoint(_:));
 
-- (BOOL)setCapturePreset:(AVCaptureSessionPreset)present andReturnError:(NSError * _Nullable __autoreleasing *)error;
+- (BOOL)setCapturePreset:(AVCaptureSessionPreset)present andReturnError:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NAME(setCapturePreset(_:));
 
 #pragma mark Preview / Image Buffer mapping
 

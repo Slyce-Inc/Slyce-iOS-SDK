@@ -5,7 +5,7 @@ typedef NS_ENUM(NSUInteger, SlyceSearchRequestMethod) {
 };
 
 NS_ASSUME_NONNULL_BEGIN
-@interface SlyceSearchRequest : NSObject
+@interface SlyceSearchRequest : NSObject <NSCoding>
 
 
 /*!
@@ -28,14 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract The time that the request was created.
  */
 @property (nonatomic, strong, readonly) NSDate *timestamp;
-
-
-/*!
- * @property
- *
- * @abstract The identifier of the request.
- */
-@property (nonatomic, copy, readonly) NSString *identifier;
 
 
 /*!

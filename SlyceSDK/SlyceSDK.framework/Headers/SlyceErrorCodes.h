@@ -11,6 +11,7 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     SlyceErrorBadCredentials = -102,
     SlyceErrorMissingCredentials = -103,
     SlyceErrorNotAuthenticated = -104,
+    SlyceErrorNotOpen = -105,
 
     // Networking
 
@@ -20,7 +21,8 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     SlyceErrorNetworkTimeout = -204,
     SlyceErrorUnexpectedConnectionType = -205,
     SlyceErrorUnexpectedResponseType = -206,
-
+    SlyceErrorWebSocketConnection = -207,
+    SlyceErrorConfigurationService = -208,
     
     // Parsing Error
     
@@ -42,4 +44,13 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     // Workflow
     
     SlyceErrorWorkflowOperationFailed = -601,
+    
+    // Search History
+    
+    SlyceErrorSearchHistoryManager = -701,
+    SlyceErrorCoreData = -702,
+    
+    // Feature Matching
+    
+    SlyceErrorFeatureMatchCatalog = -801,
 };

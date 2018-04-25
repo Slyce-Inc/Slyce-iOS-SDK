@@ -3,8 +3,8 @@
 #import <SlyceSDK/SlyceInstance.h>
 
 typedef NS_ENUM(NSUInteger, SlyceEnvironment) {
+    SlyceEnvironmentStaging,
     SlyceEnvironmentProduction,
-    SlyceEnvironmentTest,
 };
 
 

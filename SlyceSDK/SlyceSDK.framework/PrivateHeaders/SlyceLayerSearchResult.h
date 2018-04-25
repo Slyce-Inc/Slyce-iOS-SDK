@@ -1,11 +1,12 @@
 #import <Foundation/Foundation.h>
+#import "SlyceMappable.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@interface SlyceLayerSearchResult: NSObject <NSCoding>
+@interface SlyceLayerSearchResult: NSObject <NSCoding, SlyceMappable>
 
 @property(nonatomic, nonnull) NSDate* createdDate;
 @property(nonatomic, nonnull) NSDictionary* searchResultJSON;
-@property(nonatomic, nullable) NSString* searchItemId;
+@property(nonatomic, nullable) NSString* searchItemIdentifier;
 
 @property(nonatomic, nullable) NSArray <NSString *>* searchProductColors;
 @property(nonatomic, nullable) NSArray* searchProductGTINS;
@@ -17,13 +18,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, nullable) NSString* searchProductBrand;
 @property(nonatomic, nullable) NSString* searchProductCategory;
 @property(nonatomic, nullable) NSString* searchProductDescription;
-@property(nonatomic, nullable) NSString* searchProductId;
+@property(nonatomic, nullable) NSString* searchProductIdentifier;
 @property(nonatomic, nullable) NSString* searchProductImageURL;
+@property(nonatomic, nullable) NSString* searchProductThumbnailURL;
 @property(nonatomic, nullable) NSString* searchProductMaterials;
 @property(nonatomic, nullable) NSString* searchProductName;
 @property(nonatomic, nullable) NSString* searchProductPatterns;
 @property(nonatomic, nullable) NSString* searchProductURL;
-@property(nonatomic, nullable) NSString* searchProductAltId;
+@property(nonatomic, nullable) NSString* searchProductAltIdentifier;
 
 @property(nonatomic) BOOL searchProductInStock;
 
@@ -43,7 +45,7 @@ NS_SWIFT_NAME(init(dictionary:));
 
 - (nullable NSString*) searchFormattedPriceString;
 
-- (NSString*) effectiveSearchResultID;
+- (NSString*) effectiveSearchResultIdentifier;
 
 + (nonnull NSArray<SlyceLayerSearchResult *> *)arrayFromDictionaryArray:(nonnull NSArray<NSDictionary *> *)dictArray;
 

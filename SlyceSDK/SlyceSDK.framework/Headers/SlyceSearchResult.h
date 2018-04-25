@@ -1,10 +1,18 @@
 #import <Foundation/Foundation.h>
 
-@interface SlyceSearchResult : NSObject
+@protocol SlyceMappable;
 
-@property(nonatomic, copy) NSString *type;
-@property(nonatomic, copy) NSString *mappingID;
-@property(nonatomic, copy) NSString *cursor;
-@property(nonatomic, strong) NSArray <NSDictionary *> *items;
+NS_ASSUME_NONNULL_BEGIN
+@interface SlyceSearchResult : NSObject <NSCoding>
+
+- (instancetype)initWithType:(NSString *)type mappingIdentifier:(NSString *)mappingIdentifier items:(NSArray <NSDictionary *> *)items
+NS_DESIGNATED_INITIALIZER;
+
+- (NSString *)type;
+- (NSString *)mappingIdentifier;
+- (NSArray <NSDictionary *> *)items;
+
+@property(nonatomic, strong) NSArray<id<SlyceMappable>> *mappedItems;
 
 @end
+NS_ASSUME_NONNULL_END
