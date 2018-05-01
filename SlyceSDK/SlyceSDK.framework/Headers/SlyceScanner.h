@@ -9,7 +9,7 @@
 @class SlyceSearchResult;
 
 NS_ASSUME_NONNULL_BEGIN
-@interface SlyceScanner : NSObject <SlyceCameraDelegate>
+@interface SlyceScanner : NSObject
 
 
 /*!

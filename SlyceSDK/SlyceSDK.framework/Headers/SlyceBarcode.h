@@ -63,43 +63,83 @@ typedef NS_ENUM(NSUInteger, SlyceBarcodeType) {
 /*! 
  *  @brief Class representing a barcode
  */
-
 @interface SlyceBarcode : NSObject <NSCoding>
 
-/*! The barcode result type. */
+/*!
+ * @property
+ *
+ * @brief The barcode result type.
+ *
+ */
 @property(nonatomic, readonly) SlyceBarcodeType type;
 
-/*! The barcode result type in a string representation. */
+
+/*!
+ * @property
+ *
+ * @brief The barcode result type in a string representation.
+ *
+ */
 @property(nonatomic, copy, readonly, nonnull) NSString *typeString;
 
-/*! The UTF-8 encoded string representing the scan result. */
+
+/*!
+ * @property
+ *
+ * @brief The UTF-8 encoded string representing the scan result.
+ *
+ */
 @property(nonatomic, copy, readonly, nonnull) NSString *text;
 
-// TODO: determine best way to encapsulate location information; by saving metadata we gain access to a lot BUT it also makes type/text useless
+
+/*!
+ * @property
+ *
+ * @brief The barcode's AVFoundation metadata.
+ *
+ */
 @property (nonatomic, strong, nullable) AVMetadataMachineReadableCodeObject *metadata;
 
-
 /*!
- @brief Designated initializer.
- @param type Barcode type.
- @param text Barcode string.
- @return instance of SlyceBarcode.
+ * @method
+ *
+ * @brief Designated initializer.
+ *
+ * @discussion Use this method to create a new `SlyceSearchRequest`.
+ *
+ * @param type Barcode type.
+ * @param text Barcode string.
+ *
+ * @return instance of SlyceBarcode.
  */
-- (nonnull instancetype)initWithType:(SlyceBarcodeType)type andText:(nonnull NSString *)text NS_DESIGNATED_INITIALIZER NS_SWIFT_NAME(init(type:text:));
+- (nonnull instancetype)initWithType:(SlyceBarcodeType)type
+                             andText:(nonnull NSString *)text
+NS_DESIGNATED_INITIALIZER NS_SWIFT_NAME(init(type:text:));
+
 
 /*!
- @brief Convert a `SlyceBarcodeType` value to string format.
- @param barcodeType Barcode type.
- @return a string representation of the barcode type
+ * @method
+ *
+ * @brief Convert a `SlyceBarcodeType` value to string format.
+ *
+ * @param barcodeType Barcode type.
+ *
+ * @return a string representation of the barcode type
  */
 + (nullable NSString *)stringFromBarcodeType:(SlyceBarcodeType)barcodeType;
 
+
 /*!
- @brief Convert a string to a `SlyceBarcodeType` value.
- @param typeString Barcode type string representation.
- @return The `SlyceBarcodeType` value, or `SlyceBarcodeTypeNone` if the string could not be converted.
+ * @method
+ *
+ * @brief Convert a string to a `SlyceBarcodeType` value.
+ *
+ * @param typeString Barcode type string representation.
+ *
+ * @return The `SlyceBarcodeType` value, or `SlyceBarcodeTypeNone` if the string could not be converted.
  */
-+ (SlyceBarcodeType)barcodeTypeFromString:(nonnull NSString *)typeString NS_SWIFT_NAME(barcodeType(fromString:));
++ (SlyceBarcodeType)barcodeTypeFromString:(nonnull NSString *)typeString
+NS_SWIFT_NAME(barcodeType(fromString:));
 
 
 @end

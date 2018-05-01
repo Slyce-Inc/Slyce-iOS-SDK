@@ -1,8 +1,8 @@
 #import <Foundation/Foundation.h>
 
 #import "SlyceImageMatchingSyncDelegate.h"
-#import "SlyceSession.h"
 #import "SlyceEventTracker.h"
+#import "SlyceSession.h"
 
 /*
  Main Slyce workflow entry point
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  @method
  *
- *  @brief Initializes a new Slyce object using valid AccountIdentifier, SpaceIdentifier, and API Key.
+ *  @brief Initializes a new Slyce object using valid Account Identifier, API Key, and Space Identifier.
  *
  *  @discussion Use this method to open the SDK for 'Public' recognition functionality.
  *
@@ -45,7 +45,7 @@ NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
  * @brief The default `SlyceSession`.
  * @return A `SlyceSession` instance.
  */
-- (id<SlyceSession>)defaultSession;
+- (SlyceSession *)defaultSession;
 
 /**
  * @property
@@ -73,7 +73,7 @@ NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
 
 /**
  * @property
- * @abstract An instance of `SlyceEventTracker` for posting events that occur outside of the SlyceSDK.
+ * @abstract An instance of `SlyceEventTracker` for posting events that occur inside of or outside of the SlyceSDK.
  */
 @property (nonatomic, readonly) id<SlyceEventTracker> eventTracker;
 

@@ -30,13 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSDate *timestamp;
 
 
-/*!
- * @property
- *
- * @abstract The `SlyceSearchRequestMethod` of the request.
- */
-//@property (nonatomic, assign, readonly) SlyceSearchRequestMethod method;
-
 #pragma mark Input Image
 
 

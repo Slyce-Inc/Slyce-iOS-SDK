@@ -10,10 +10,7 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #import "SlyceInstance.h"
 #import "SlyceErrorCodes.h"
 #import "SlyceSession.h"
-#import "SlyceSearchRequest.h"
-#import "SlyceSearchTask.h"
-#import "SlyceSearchProgress.h"
-#import "SlyceSearchResult.h"
+
 
 #pragma mark Models
 
@@ -22,11 +19,23 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 
 #pragma mark Camera
 
-#import "SlyceCameraDelegate.h"
-#import "SlyceCamera.h"
+#import "SlyceCameraControls.h"
+
+
+#pragma mark Lenses
+
+#import "SlyceLensConfiguration.h"
+
+
+#pragma mark Headless Mode
+
+#import "SlyceSearchRequest.h"
+#import "SlyceSearchTask.h"
+#import "SlyceSearchResponse.h"
+#import "SlyceSearchResult.h"
 #import "SlyceScanner.h"
 
 
-#pragma mark Customization
+#pragma mark Analytics
 
-#import "SlyceTheme.h"
+#import "SlyceEventTracker.h"

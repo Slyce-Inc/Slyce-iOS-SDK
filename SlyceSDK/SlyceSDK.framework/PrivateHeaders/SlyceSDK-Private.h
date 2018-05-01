@@ -6,12 +6,10 @@
 
 #import "SlyceInstance+Environments.h"
 
+
 #pragma mark Full UI (Preview)
 
 #import "SlyceViewController.h"
-
-#pragma mark Temporary Whitelabel API
-
+#import "SlyceHeaderStyles.h"
+#import "SlyceTheme.h"
 #import "SlyceInstance+CustomSearchDetailView.h"
-#import "SlyceLayerSearchResult.h"
-#import "SlyceMappable.h"

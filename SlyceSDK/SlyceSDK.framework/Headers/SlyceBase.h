@@ -1,6 +1,14 @@
 #ifndef SlyceBase_h
 #define SlyceBase_h
 
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#endif /*  __OBJC__ */
+
+///---------------------
+/// @name Macros
+//----------------------
+
 #if !defined(SLYCE_SDK_EXPORT)
 #  define SLYCE_SDK_EXPORT __attribute__((visibility("default")))
 #endif /* !defined(SLYCE_SDK_EXPORT) */
@@ -32,6 +40,14 @@
 #    define SLYCE_SDK_INLINE static
 #  endif
 #endif /* SLYCE_SDK_INLINE */
+
+///---------------------
+/// @name Typedefs
+//----------------------
+
+#ifdef __OBJC__
+typedef NSError *__autoreleasing _Nullable * _Nullable SlyceOutError;
+#endif /*  __OBJC__ */
 
 #endif /* SlyceBase_h */
 

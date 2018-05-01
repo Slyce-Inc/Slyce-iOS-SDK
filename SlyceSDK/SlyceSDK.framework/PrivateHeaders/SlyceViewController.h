@@ -1,5 +1,7 @@
 #import <UIKit/UIKit.h>
 
+#import <SlyceSDK/SlyceSession.h>
+
 
 typedef NS_ENUM(NSUInteger, SlyceViewControllerMode) {
     SlyceViewControllerModeUniversal NS_SWIFT_NAME(universal),
@@ -22,6 +24,25 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, assign) BOOL settingsButtonHidden DEPRECATED_ATTRIBUTE;
 
 - (void)reloadSettingsPanel;
+
+@end
+NS_ASSUME_NONNULL_END
+
+
+
+NS_ASSUME_NONNULL_BEGIN
+@interface SlyceSession (SlyceViewController)
+
+/*!
+ * @method
+ *
+ * @brief Creates a new SlyceViewController instance.
+ *
+ * @param mode - The mode for the SlyceViewController
+ *
+ * @return A nullable `SlyceViewController`
+ */
+- (nullable SlyceViewController *)slyceViewControllerWithMode:(SlyceViewControllerMode)mode;
 
 @end
 NS_ASSUME_NONNULL_END

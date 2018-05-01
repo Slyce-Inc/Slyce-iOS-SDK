@@ -3,25 +3,11 @@
 @class SlyceSearchTask;
 @class SlyceSearchResult;
 @class SlyceSearchRequest;
-@class SlyceSearchProgress;
 @class SlyceSearchResponse;
+@class SlyceSession;
 
 NS_ASSUME_NONNULL_BEGIN
-
 @protocol SlyceSearchTaskDelegate <NSObject>
-
-
-/*!
- * @method
- *
- * @brief Notifies the `SlyceSearchTaskDelegate` that the `SlyceSearchTask` has updated.
- *
- * @param searchTask - The `SlyceSearchTask` instance that is being updated.
- * @param progress - A `SlyceSearchProgress` object that contains progress information.
- *
- */
-- (void)slyceSearchTask:(SlyceSearchTask *)searchTask didUpdateWithProgress:(SlyceSearchProgress *)progress
-NS_SWIFT_NAME(slyce(searchTask:didUpdateWithProgress:));
 
 
 /*!
@@ -37,12 +23,14 @@ NS_SWIFT_NAME(slyce(searchTask:didUpdateWithProgress:));
  *
  */
 - (void)slyceSearchTask:(SlyceSearchTask *)searchTask didFinishWithResults:(NSArray<SlyceSearchResult *> *)results errors:(NSArray<NSError *> *)errors
-NS_SWIFT_NAME(slyce(searchTask:didFinishWithResult:errors:));
+NS_SWIFT_NAME(slyce(searchTask:didFinishWithResults:errors:));
 
 @end
+NS_ASSUME_NONNULL_END
 
 
-@interface SlyceSearchTask : NSObject <NSCoding>
+NS_ASSUME_NONNULL_BEGIN
+@interface SlyceSearchTask : NSObject
 
 /*!
  * @property
@@ -55,11 +43,18 @@ NS_SWIFT_NAME(slyce(searchTask:didFinishWithResult:errors:));
 /*!
  * @property
  *
- * @brief The `SlyceSearchRequest` represented by this task.
+ * @brief The unique identifier for this task.
  *
  */
 @property (nonatomic, copy, readonly) NSString *identifier;
-@property (nonatomic, copy, readonly) NSString *sessionIdentifier;
+
+/*!
+ * @property
+ *
+ * @brief The session that was used to create this task.
+ *
+ */
+@property (nonatomic, readonly) SlyceSession *session;
 
 /*!
  * @property
@@ -67,42 +62,34 @@ NS_SWIFT_NAME(slyce(searchTask:didFinishWithResult:errors:));
  * @brief The `SlyceSearchRequest` represented by this task.
  *
  */
-@property (nonatomic, strong) SlyceSearchRequest *request;
+@property (nonatomic, readonly, strong) SlyceSearchRequest *request;
 
 /*!
  * @property
  *
  * @brief The `SlyceSearchResponse` represented by this task.
  *
- * @discussion This property is only available after a task has successfully completed.
+ * @discussion This property is only available after a task has successfully completed. Supports KVO.
  */
-@property (nonatomic, strong, nullable) SlyceSearchResponse *response;
+@property (nullable, nonatomic, readonly, strong) SlyceSearchResponse *response;
 
 /*!
  * @property
  *
- * @brief The `SlyceSearchProgress` represented by this task.
+ * @brief An array of errors that have occurred. Supports KVO.
  *
  */
-@property (nullable, nonatomic, strong) SlyceSearchProgress *progress;
-/*!
- * @property
- *
- * @brief An array of errors that have occurred.
- *
- */
-@property (nonatomic, strong, readonly) NSArray<NSError *> *errors;
+@property (nonatomic, readonly) NSArray<NSError *> *errors;
 
 /*!
  * @method
  *
  * @brief Starts the search task.
  *
- * @discussion After you receive the `SlyceSearchTask` you must hold a strong reference to it, otherwise you may not reveive the delegate notifications.
+ * @discussion After you receive the `SlyceSearchTask` you must hold a strong reference to it, otherwise you may not receive the delegate notifications.
  *
  */
 - (void)start;
 
 @end
-
 NS_ASSUME_NONNULL_END

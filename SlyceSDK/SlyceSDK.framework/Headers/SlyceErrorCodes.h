@@ -12,6 +12,7 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     SlyceErrorMissingCredentials = -103,
     SlyceErrorNotAuthenticated = -104,
     SlyceErrorNotOpen = -105,
+    SlyceErrorOperationCancelled = -106,
 
     // Networking
 
