@@ -36,6 +36,11 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #import "SlyceScanner.h"
 
 
+#pragma mark LensView
+
+#import "SlyceLensView.h"
+
+
 #pragma mark Analytics
 
 #import "SlyceEventTracker.h"

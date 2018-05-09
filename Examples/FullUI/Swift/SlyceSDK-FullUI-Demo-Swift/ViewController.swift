@@ -23,11 +23,8 @@ class ViewController: UIViewController {
             // so we dispatch the SlyceViewController creation on the main queue
             
             OperationQueue.main.addOperation {
-                guard let vc = Slyce.shared().defaultSession().slyceViewController(with: .picker) else {
-                    // If Slyce has been opened, this should not be nil
-                    fatalError("Could not build SlyceViewController")
-                }
-                
+                let session = Slyce.shared().defaultSession()
+                let vc = SlyceViewController(session: session, mode: .picker)
                 self.present(vc, animated: true, completion: nil)
             }
         }

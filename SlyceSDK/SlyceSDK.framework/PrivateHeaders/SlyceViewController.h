@@ -17,6 +17,8 @@ typedef NS_ENUM(NSUInteger, SlyceViewControllerMode) {
 NS_ASSUME_NONNULL_BEGIN
 @interface SlyceViewController : UIViewController
 
+- (instancetype)initWithSession:(SlyceSession *)session mode:(SlyceViewControllerMode)mode;
+
 @property (nonatomic, readonly) id<SlyceCameraControls> camera;
 
 @property (nonatomic, readwrite, weak, nullable) id<SlyceSettingsPanelDelegate> settingsPanelDelegate;
@@ -24,25 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, assign) BOOL settingsButtonHidden DEPRECATED_ATTRIBUTE;
 
 - (void)reloadSettingsPanel;
-
-@end
-NS_ASSUME_NONNULL_END
-
-
-
-NS_ASSUME_NONNULL_BEGIN
-@interface SlyceSession (SlyceViewController)
-
-/*!
- * @method
- *
- * @brief Creates a new SlyceViewController instance.
- *
- * @param mode - The mode for the SlyceViewController
- *
- * @return A nullable `SlyceViewController`
- */
-- (nullable SlyceViewController *)slyceViewControllerWithMode:(SlyceViewControllerMode)mode;
 
 @end
 NS_ASSUME_NONNULL_END

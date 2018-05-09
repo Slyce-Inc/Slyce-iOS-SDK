@@ -4,22 +4,34 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface SlyceSearchResult : NSObject <NSCoding>
 
-/*!
- * @method
+/**
+ * @property
  *
- * @brief The type of SlyceSearchResult.
+ * @abstract The type of SlyceSearchResult.
+ *
+ * @discussion This the type of response specified by Forge, for instance "TextSearch"
  *
  */
-- (NSString *)type;
+@property(nonatomic, readonly) NSString *type;
 
 
 /*!
- * @method
+ * @property
+ *
+ * @abstract The identifier of the dataset where result originated.
+ *
+ */
+@property(nonatomic, readonly) NSString *datasetIdentifier;
+
+/*!
+ * @property
  *
  * @brief The unmapped items represented by this `SlyceSearchResult`.
  *
+ * @discussion Each item is a dictionary representation of a result in the format specified in its associated dataset.
+ *
  */
-- (NSArray <NSDictionary *> *)items;
+@property(nonatomic, readonly) NSArray <NSDictionary *> *items;
 
 @end
 NS_ASSUME_NONNULL_END

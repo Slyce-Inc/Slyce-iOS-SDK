@@ -7,9 +7,26 @@
 @protocol SlyceScannerDelegate;
 @class SlyceSearchRequest;
 @class SlyceSearchResult;
+@class SlyceLensConfiguration;
+@class SlyceSession;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface SlyceScanner : NSObject
+
+
+/*!
+ * @method
+ *
+ * @brief Creates a new scanner matching the spec of the provided lens identifier.
+ *
+ * @param session - A valid Slyce session to link to the scanner.
+ * @param lensIdentifier  - The identifier of the lens to create.
+ * @param lensConfiguration - The configuration for this lens.
+ * @param outError - A pointer to an error that may be emitted.
+ *
+ * @return a new headless lens.
+ */
++ (nullable instancetype)scannerWithSession:(SlyceSession *)session lensIdentifier:(NSString *)lensIdentifier lensConfiguration:(nullable SlyceLensConfiguration *)lensConfiguration error:(SlyceOutError)outError;
 
 
 /*!
