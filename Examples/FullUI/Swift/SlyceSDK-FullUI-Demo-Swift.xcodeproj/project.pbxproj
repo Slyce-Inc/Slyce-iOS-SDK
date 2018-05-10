@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B30676B1209A01EB006DAE16 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30676AD209A01C8006DAE16 /* SlyceSDK.framework */; };
 		B30676B2209A01EB006DAE16 /* SlyceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30676AD209A01C8006DAE16 /* SlyceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B377736320A48E6B00540F7C /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B377736220A48E6B00540F7C /* SearchDetailViewController.swift */; };
+		B377736520A48E8700540F7C /* SearchDetailViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B377736420A48E8700540F7C /* SearchDetailViewControllerProvider.swift */; };
 		B389A4C0209A0167003C0911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389A4BF209A0167003C0911 /* AppDelegate.swift */; };
 		B389A4C2209A0167003C0911 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389A4C1209A0167003C0911 /* ViewController.swift */; };
 		B389A4C5209A0167003C0911 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B389A4C3209A0167003C0911 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		B30676AD209A01C8006DAE16 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlyceSDK.framework; path = ../../../SlyceSDK/SlyceSDK.framework; sourceTree = "<group>"; };
+		B377736220A48E6B00540F7C /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		B377736420A48E8700540F7C /* SearchDetailViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewControllerProvider.swift; sourceTree = "<group>"; };
 		B389A4BC209A0167003C0911 /* SlyceSDK-FullUI-Demo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SlyceSDK-FullUI-Demo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B389A4BF209A0167003C0911 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B389A4C1209A0167003C0911 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B377736120A48E4F00540F7C /* SearchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B377736220A48E6B00540F7C /* SearchDetailViewController.swift */,
+				B377736420A48E8700540F7C /* SearchDetailViewControllerProvider.swift */,
+			);
+			path = SearchDetail;
+			sourceTree = "<group>";
+		};
 		B389A4B3209A0167003C0911 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,7 @@
 		B389A4BE209A0167003C0911 /* SlyceSDK-FullUI-Demo-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				B377736120A48E4F00540F7C /* SearchDetail */,
 				B389A4BF209A0167003C0911 /* AppDelegate.swift */,
 				B389A4C1209A0167003C0911 /* ViewController.swift */,
 				B389A4C3209A0167003C0911 /* Main.storyboard */,
@@ -182,6 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B389A4C2209A0167003C0911 /* ViewController.swift in Sources */,
+				B377736320A48E6B00540F7C /* SearchDetailViewController.swift in Sources */,
+				B377736520A48E8700540F7C /* SearchDetailViewControllerProvider.swift in Sources */,
 				B389A4C0209A0167003C0911 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
