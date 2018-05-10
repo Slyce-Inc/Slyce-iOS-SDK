@@ -4,11 +4,9 @@ import SlyceSDK.Private
 
 class SearchDetailViewControllerProvider: NSObject, SlyceCustomSearchDetailViewControllerProvider {
     
-    func searchDetailViewViewController(forResultItem resultItem: [AnyHashable : Any]) -> UIViewControllerlleroller? {
-        
+    func searchDetailViewController(forResultItem resultItem: [AnyHashable : Any]) -> UIViewController? {
         let vc = SearchDetailViewController();
         vc.slyceResultItem = resultItem;
         return vc
     }
-    
 }
