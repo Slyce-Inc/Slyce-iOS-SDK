@@ -13,6 +13,11 @@ class ViewController: UIViewController {
         let apiKey = ""
         let spaceIdentifier = ""
         
+        let useCustomSearchDetail = false // set to true to use custom search detail
+        
+        // Slyce should be opened once, generally at application startup. We're doing
+        // it here for demo purposes.
+        
         Slyce.shared().open(accountIdentifier: slyceAccountIdentifier, apiKey: apiKey, spaceIdentifier: spaceIdentifier) { (errorOrNil) in
             if let error = errorOrNil {
                 print("Error opening Slyce!\n" + error.localizedDescription)
@@ -25,6 +30,9 @@ class ViewController: UIViewController {
             OperationQueue.main.addOperation {
                 let session = Slyce.shared().defaultSession()
                 let vc = SlyceViewController(session: session, mode: .picker)
+                if useCustomSearchDetail {
+                    vc.customSearchDetailViewControllerProvider = SearchDetailViewControllerProvider()
+                }
                 self.present(vc, animated: true, completion: nil)
             }
         }
