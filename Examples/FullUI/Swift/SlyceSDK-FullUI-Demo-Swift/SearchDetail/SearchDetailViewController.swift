@@ -1,7 +1,7 @@
 import UIKit
 
 class SearchDetailViewController: UIViewController {
-    
+
     var slyceResultItem: [AnyHashable: Any]?
     
     override func viewDidLoad() {
