@@ -1,8 +1,16 @@
 #import <Foundation/Foundation.h>
 
 #import "SlyceImageMatchingSyncDelegate.h"
-#import "SlyceEventTracker.h"
-#import "SlyceSession.h"
+
+@class SlyceSession;
+@class SlyceCredentials;
+@class SlyceGDPRComplianceManager;
+@protocol SlyceEventTracker;
+@protocol SlyceImageMatchingSyncDelegate;
+
+extern NSNotificationName const SlyceDidOpenNotification;
+extern NSNotificationName const SlyceWillCloseNotification;
+extern NSNotificationName const SlyceDidCloseNotification;
 
 /*
  Main Slyce workflow entry point
@@ -18,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @brief Initializes a new Slyce object using valid Account Identifier, API Key, and Space Identifier.
  *
- *  @discussion Use this method to open the SDK for 'Public' recognition functionality.
+ *  @discussion Use this method to open the SDK for 'Public' recognition functionality. On success, this will also post a `SlyceDidOpenNotification`.
  *
  *  @param accountIdentifier the Account Identifier for your organization.
  *  @param apiKey the API Key for your organization.
@@ -33,19 +41,35 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
 
 /*!
- * @method
+ * @property
  *
- * @brief Closes this instance of Slyce.
+ * @brief Returns a `SlyceCredentials` object if Slyce is authenticated and open. nil otherwise.
  */
-- (void)close;
+@property (nonatomic, readonly, nullable) SlyceCredentials *credentials;
 
 /*!
  * @method
  *
+ * @brief Returns Slyce "open" status.
+ */
+- (BOOL)isOpen;
+
+/*!
+ * @method
+ *
+ * @brief Closes this instance of Slyce.
+ *
+ * @discussion Posts a `SlyceWillCloseNotification` before begining to close, and a `SlyceDidCloseNotification` after close completes.
+ */
+- (void)close;
+
+/*!
+ * @property
+ *
  * @brief The default `SlyceSession`.
  * @return A `SlyceSession` instance.
  */
-- (SlyceSession *)defaultSession;
+@property (nonatomic, readonly, nullable) SlyceSession *defaultSession;
 
 /**
  * @property
@@ -76,6 +100,12 @@ NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
  * @abstract An instance of `SlyceEventTracker` for posting events that occur inside of or outside of the SlyceSDK.
  */
 @property (nonatomic, readonly) id<SlyceEventTracker> eventTracker;
+
+/**
+ * @property
+ * @abstract An instance of `SlyceGDPRComplianceManager` for handling GDPR compliance within Slyce.
+ */
+@property (nonatomic, strong) SlyceGDPRComplianceManager *complianceManager;
 
 @end
 NS_ASSUME_NONNULL_END

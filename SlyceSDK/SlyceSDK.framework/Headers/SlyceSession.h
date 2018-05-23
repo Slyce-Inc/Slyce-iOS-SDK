@@ -1,9 +1,11 @@
 #import <Foundation/Foundation.h>
 
-#import "SlyceSearchTask.h"
-#import "SlyceSearchRequest.h"
-#import "SlyceScanner.h"
-#import "SlyceLensConfiguration.h"
+@class Slyce;
+@class SlyceSession;
+@class SlyceSearchTask;
+@class SlyceSearchRequest;
+@class SlyceScanner;
+@class SlyceLensConfiguration;
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -24,14 +26,40 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SlyceSession : NSObject
 
+/*!
+ * @method
+ *
+ * @brief The static initializer for `SlyceSession`. Use this to create your own instance of a SlyceSession.
+ *
+ * @discussion In most cases you can use the `defaultSession` on `Slyce`.
+ *
+ * @param slyce - An opened instance of `Slyce`.
+ * @param outError - A pointer to an error that will be assigned if a problem occurs.
+ *
+ */
++ (nullable instancetype)sessionWithSlyce:(Slyce *)slyce error:(SlyceOutError)outError;
 
 /*!
  * @property
  *
- * The object that acts as the delegate of the table session.
+ * The object that acts as the delegate of the session.
  */
 @property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate;
 
+/*!
+ * @method
+ *
+ * @brief Invalidates the session, all active tasks will be canceled.
+ *
+ */
+- (void)invalidate;
+
+/*!
+ * @property
+ *
+ * A flag indicating the validity of this session instance.
+ */
+@property (nonatomic, readonly) BOOL isInvalidated;
 
 #pragma mark - SlyceSearchTask
 
@@ -76,9 +104,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @return the corresponding task, or null if not found.
  */
 - (nullable SlyceSearchTask *)getSearchTaskByIdentifier:(NSString *)taskIdentifier NS_SWIFT_NAME(getSearchTask(identifier:));
-
-
-
 
 
 @end

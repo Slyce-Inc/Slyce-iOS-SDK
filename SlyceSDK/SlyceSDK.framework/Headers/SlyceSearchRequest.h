@@ -1,11 +1,21 @@
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, SlyceSearchRequestMethod) {
-    SlyceSearchRequestMethodWebSocket,
-};
+#import "SlyceSearchRequestMethod.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface SlyceSearchRequest : NSObject <NSCoding>
+
+
+/*!
+ * @method
+ *
+ * @brief Initializes a new `SlyceSearchRequest` with the supplied `SlyceSearchRequestMethod`
+ *
+ * @discussion Use this method to create a new `SlyceSearchRequest`.
+ *
+ * @return A `SlyceSearchRequest` instance.
+ */
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 
 /*!
@@ -19,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return A `SlyceSearchRequest` instance.
  */
-- (instancetype)initWithMethod:(SlyceSearchRequestMethod)method NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMethod:(SlyceSearchRequestMethod)method __deprecated __deprecated_msg("Specifying the `SlyceSearchRequestMethod` here is no longer supported.");
 
 
 /*!

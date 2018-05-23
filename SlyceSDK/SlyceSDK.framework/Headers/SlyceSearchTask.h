@@ -5,9 +5,30 @@
 @class SlyceSearchRequest;
 @class SlyceSearchResponse;
 @class SlyceSession;
+@class SlyceSearchResponseUpdate;
+
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol SlyceSearchTaskDelegate <NSObject>
+@protocol SlyceSearchTaskListener <NSObject>
+
+@optional
+- (void)slyceSearchTask:(SlyceSearchTask *)searchTask didFinishWithResponse:(SlyceSearchResponse *)response
+NS_SWIFT_NAME(slyce(searchTask:didFinishWithResponse:));
+
+@optional
+- (void)slyceSearchTask:(SlyceSearchTask *)searchTask didFailWithErrors:(NSArray<NSError *> *)errors
+NS_SWIFT_NAME(slyce(searchTask:didFailWithErrors:));
+
+@optional
+- (void)slyceSearchTask:(SlyceSearchTask *)searchTask didUpdateResponse:(SlyceSearchResponseUpdate *)update
+NS_SWIFT_NAME(slyce(searchTask:didUpdate:));
+
+@end
+NS_ASSUME_NONNULL_END
+
+
+NS_ASSUME_NONNULL_BEGIN
+@protocol SlyceSearchTaskDelegate <SlyceSearchTaskListener>
 
 
 /*!
@@ -22,8 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
  * @param errors - An array of NSErrors.
  *
  */
+@optional
 - (void)slyceSearchTask:(SlyceSearchTask *)searchTask didFinishWithResults:(NSArray<SlyceSearchResult *> *)results errors:(NSArray<NSError *> *)errors
-NS_SWIFT_NAME(slyce(searchTask:didFinishWithResults:errors:));
+NS_SWIFT_NAME(slyce(searchTask:didFinishWithResults:errors:)) __deprecated;
 
 @end
 NS_ASSUME_NONNULL_END
@@ -90,6 +112,26 @@ NS_ASSUME_NONNULL_BEGIN
  *
  */
 - (void)start;
+
+@end
+NS_ASSUME_NONNULL_END
+
+
+
+typedef NS_ENUM(NSUInteger, SlyceSearchTaskUpdateType) {
+    SlyceSearchTaskUpdateTypeTagFound,
+    SlyceSearchTaskUpdateTypeResultsReceived,
+};
+
+
+NS_ASSUME_NONNULL_BEGIN
+@interface SlyceSearchResponseUpdate : NSObject
+
+@property (nonatomic, readonly) SlyceSearchResponse *response;
+@property (nonatomic, readonly) NSDate *timestamp;
+@property (nonatomic, readonly) SlyceSearchTaskUpdateType type;
+
+@property (nonatomic, readonly, nullable) id value;
 
 @end
 NS_ASSUME_NONNULL_END
