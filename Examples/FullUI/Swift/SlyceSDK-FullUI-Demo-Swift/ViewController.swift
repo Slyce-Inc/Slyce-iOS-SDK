@@ -28,8 +28,7 @@ class ViewController: UIViewController {
             // so we dispatch the SlyceViewController creation on the main queue
             
             OperationQueue.main.addOperation {
-                let session = Slyce.shared().defaultSession()
-                let vc = SlyceViewController(session: session, mode: .picker)
+                let vc = SlyceViewController(slyce: Slyce.shared(), mode: .picker)
                 if useCustomSearchDetail {
                     vc.customSearchDetailViewControllerProvider = SearchDetailViewControllerProvider()
                 }
