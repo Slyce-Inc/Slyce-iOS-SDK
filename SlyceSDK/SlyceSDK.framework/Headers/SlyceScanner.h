@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @abstract The `SlyceScannerDelegate` for the scanner instance.
  */
-@property (nonatomic, weak, nullable) id<SlyceScannerDelegate> delegate;
+@property (nonatomic, weak, nullable) id<SlyceScannerDelegate> delegate __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 
 /*!
@@ -107,6 +107,7 @@ NS_ASSUME_NONNULL_END
 NS_ASSUME_NONNULL_BEGIN
 @protocol SlyceScannerDelegate <NSObject>
 
+@optional
 /*!
  * @brief Alerts the delegate that a request has been created.
  *
@@ -115,7 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  */
 - (void)slyceScanner:(SlyceScanner *)scanner didCreateRequest:(SlyceSearchRequest *)request
-NS_SWIFT_NAME(slyce(scanner:didCreateRequest:));
+NS_SWIFT_NAME(slyce(scanner:didCreateRequest:)) __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 
 /*!
@@ -127,7 +128,7 @@ NS_SWIFT_NAME(slyce(scanner:didCreateRequest:));
  *
  */
 - (void)slyceScanner:(SlyceScanner *)scanner didFinishWithResults:(NSArray<SlyceSearchResult *> *)results errors:(NSArray<NSError *> *)errors
-NS_SWIFT_NAME(slyce(scanner:didFinishWithResults:errors:));
+NS_SWIFT_NAME(slyce(scanner:didFinishWithResults:errors:)) __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 
 /*!
@@ -138,7 +139,7 @@ NS_SWIFT_NAME(slyce(scanner:didFinishWithResults:errors:));
  *
  */
 - (void)slyceScanner:(SlyceScanner *)scanner didEncounterError:(nullable NSError *)error
-NS_SWIFT_NAME(slyce(scanner:didEncounterError:));
+NS_SWIFT_NAME(slyce(scanner:didEncounterError:)) __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 @end
 NS_ASSUME_NONNULL_END

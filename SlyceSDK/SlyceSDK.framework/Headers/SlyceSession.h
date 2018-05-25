@@ -9,7 +9,7 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol SlyceSessionDelegate <NSObject>
+@protocol SlyceSessionListener <NSObject>
 
 /*!
  * @method
@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)slyceSession:(SlyceSession *)session didCreateSearchTask:(SlyceSearchTask *)searchTask NS_SWIFT_NAME(slyce(session:didCreateSearchTask:));
 
+@end
+
+@protocol SlyceSessionDelegate <SlyceSessionListener>
 @end
 
 @interface SlyceSession : NSObject
@@ -40,11 +43,31 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable instancetype)sessionWithSlyce:(Slyce *)slyce error:(SlyceOutError)outError;
 
 /*!
+ * @method
+ *
+ * @brief Adds the instance of `SlyceSessionListener` as a listener on this instance of `SlyceSession`.
+ *
+ * @param listener The instance of the listener to be added.
+ *
+ */
+- (void)addListener:(id<SlyceSessionListener>)listener;
+
+/*!
+ * @method
+ *
+ * @brief Removes the instance of `SlyceSessionListener` as a listener on this instance of `SlyceSession`.
+ *
+ * @param listener The instance of the listener to be removed.
+ *
+ */
+- (void)removeListener:(id<SlyceSessionListener>)listener;
+
+/*!
  * @property
  *
  * The object that acts as the delegate of the session.
  */
-@property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate;
+@property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate __deprecated __deprecated_msg("SlyceSessionDelegate has been replaced by SlyceSessionListener APIs and may be removed in a future release.");
 
 /*!
  * @method
@@ -74,6 +97,16 @@ NS_ASSUME_NONNULL_BEGIN
  * @return a new `SlyceSearchTask` for the request and workflow identifier.
  */
 - (nullable SlyceSearchTask *)searchTaskWithRequest:(SlyceSearchRequest *)searchRequest workflowIdentifier:(NSString *)workflowIdentifier NS_SWIFT_NAME(searchTask(request:workflowIdentifier:));
+
+
+/*!
+ * @property
+ *
+ * @brief Gets all `SlyceSearchTask` objects that have been started and not yet completed.
+ *
+ @ @return A copy of all active `SlyceSearchTask` objects.
+ */
+@property (nonatomic, readonly, copy) NSArray<SlyceSearchTask *> *activeSearchTasks;
 
 
 /*!

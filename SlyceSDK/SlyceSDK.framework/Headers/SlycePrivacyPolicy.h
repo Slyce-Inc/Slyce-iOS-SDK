@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "SlyceConsent.h"
-#import "SlyceLink.h"
+#import "SlycePrivacyPolicyConsent.h"
+#import "SlycePrivacyPolicyLink.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface SlycePrivacyPolicy : NSObject
@@ -19,14 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @property
- * @abstract An array of `SlyceConsent` objects.
+ * @abstract An array of `SlycePrivacyPolicyConsent` objects.
  */
-@property (nonatomic, strong, readonly) NSArray<SlyceConsent *> *consents;
+@property (nonatomic, strong, readonly) NSArray<SlycePrivacyPolicyConsent *> *consents;
 
 /**
  * @property
- * @abstract An array of SlyceLinkObjects.
+ * @abstract An array of SlycePrivacyPolicyLinkObjects.
  */
-@property (nonatomic, strong, readonly) NSArray<SlyceLink *> *links;
+@property (nonatomic, strong, readonly) NSArray<SlycePrivacyPolicyLink *> *links;
 @end
 NS_ASSUME_NONNULL_END

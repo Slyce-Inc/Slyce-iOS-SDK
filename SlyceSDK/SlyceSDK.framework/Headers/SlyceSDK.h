@@ -52,4 +52,4 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #import "SlycePrivacyPolicy.h"
 #import "SlyceGDPRComplianceManager.h"
 #import "SlycePrivacyPolicy.h"
-#import "SlyceConsent.h"
+#import "SlycePrivacyPolicyConsent.h"

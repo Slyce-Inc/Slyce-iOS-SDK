@@ -24,11 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  * @method
  *
- * @brief Sets the identifier for the user in the host application.
+ * @brief The identifier representing the user in the host application.
  *
  * @discussion The host application must set the user identifier to enable cross-device compliance with GDPR.
- *
- * @param userIdentifier the identifer for the user of the host application.
  */
 - (void)setUserIdentifier:(NSString *)userIdentifier;
 

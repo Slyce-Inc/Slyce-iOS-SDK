@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@interface SlyceConsent : NSObject
+@interface SlycePrivacyPolicyConsent : NSObject
 
 /**
  * @property
@@ -20,5 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract A string representing the call to action of this consent object.
  */
 @property (nonatomic, copy, readonly) NSString *callToAction;
+
 @end
 NS_ASSUME_NONNULL_END

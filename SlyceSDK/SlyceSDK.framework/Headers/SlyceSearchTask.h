@@ -60,7 +60,29 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief The `SlyceSearchTaskDelegate` of this instance.
  *
  */
-@property (nonatomic, weak, nullable) id<SlyceSearchTaskDelegate> delegate;
+@property (nonatomic, weak, nullable) id<SlyceSearchTaskDelegate> delegate  __deprecated __deprecated_msg("SlyceSearchTaskDelegate functionality has been replaced by SlyceSearchTaskListener APIs and may be removed in a future release.");
+
+/*!
+ * @method
+ *
+ * @brief Adds the instance of `SlyceSearchTaskListener` as a listener on this instance of `SlyceSearchTask`.
+ *
+ * @param listener The instance of the listener to be added.
+ *
+ */
+- (void)addListener:(id<SlyceSearchTaskListener>)listener;
+
+
+/*!
+ * @method
+ *
+ * @brief Removes the instance of `SlyceSearchTaskListener` as a listener on this instance of `SlyceSearchTask`.
+ *
+ * @param listener The instance of the listener to be removed.
+ *
+ */
+- (void)removeListener:(id<SlyceSearchTaskListener>)listener;
+
 
 /*!
  * @property
