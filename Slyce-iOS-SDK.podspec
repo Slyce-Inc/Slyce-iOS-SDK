@@ -7,8 +7,8 @@ s.description                           = <<-DESC
 The Slyce iOS SDK makes it easy to add visual search capabilities to mobile apps.
 DESC
 s.homepage                              = "https://github.com/Slyce-Inc/Slyce-iOS-SDK"
-s.license                               = { :type => "BSD", :file => "LICENSE.md" }
-s.author                                    = { "Slyce Inc." => "andy@slyce.it" }
+s.license                               = { :type => "Commercial", :file => "LICENSE.md" }
+s.author                                = { "Slyce Inc." => "andy@slyce.it" }
 s.platform                              = :ios, "9.0"
 s.source                                = { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "5.1.0-rc2" }
 s.requires_arc                          = true
