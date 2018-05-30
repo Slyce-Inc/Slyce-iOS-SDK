@@ -1,20 +1,18 @@
-Pod::Spec.new do |s|
+Pod::Spec.new do |spec|
 
-s.name                                  = "Slyce-iOS-SDK"
-s.version                               = "5.1.0-rc2"
-s.summary                               = "Slyce iOS SDK"
-s.description                           = <<-DESC
+spec.name                    = "Slyce-iOS-SDK"
+spec.version                 = "5.1.0-rc2"
+spec.summary                 = "Slyce iOS SDK"
+spec.description             = <<-DESC
 The Slyce iOS SDK makes it easy to add visual search capabilities to mobile apps.
 DESC
-s.homepage                              = "https://github.com/Slyce-Inc/Slyce-iOS-SDK"
-s.license                               = { :type => "Commercial", :file => "LICENSE.md" }
-s.author                                = { "Slyce Inc." => "andy@slyce.it" }
-s.platform                              = :ios, "9.0"
-s.source                                = { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "5.1.0-rc2" }
-s.requires_arc                          = true
-s.preserve_paths                        = "SlyceSDK/SlyceSDK.framework"
-s.libraries                             = "icucore"
-s.ios.vendored_frameworks               = "SlyceSDK/SlyceSDK.framework"
-s.xcconfig                              = { "OTHER_LDFLAGS" => "-ObjC", "FRAMEWORK_SEARCH_PATHS" => "$(inherited)" }
+spec.homepage                = "https://github.com/Slyce-Inc/Slyce-iOS-SDK"
+spec.license                 = { :type => "Commercial", :file => "LICENSE.md" }
+spec.author                  = { "Slyce Inc." => "andy@slyce.it" }
+spec.platform                = :ios, "9.0"
+spec.source                  = { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "5.1.0-rc2" }
+spec.requires_arc            = true
+spec.preserve_paths          = "SlyceSDK/Scripts/*"
+spec.ios.vendored_frameworks = "SlyceSDK/SlyceSDK.framework"
 
 end
