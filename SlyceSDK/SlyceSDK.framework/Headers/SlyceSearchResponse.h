@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract The job identifier created by Forge.
  * 
  */
-@property (nonatomic, readonly, copy) NSString *jobIdentifier;
+@property (nonatomic, readonly, nullable) NSString *jobIdentifier;
 
 /*!
  * @property
@@ -20,13 +20,13 @@ NS_ASSUME_NONNULL_BEGIN
  * @discussion The tags represent keywords that are produced by the Workflow that backs this `SlyceSearchTask`. These tags will be updated as the task goes through its progression.
  *
  */
-@property (nonatomic, readonly) NSOrderedSet<NSString *> *tags;
+@property (nonatomic, readonly, nullable) NSOrderedSet<NSString *> *tags;
 
 /**
  * @property
  * @abstract An array of `SlyceSearchResult` returned by a `SlyceSearchTask`.
  */
-@property (nullable, nonatomic, readonly, strong) NSArray<SlyceSearchResult *> *results;
+@property (nonatomic, readonly, nullable) NSArray<SlyceSearchResult *> *results;
 
 @end
 NS_ASSUME_NONNULL_END

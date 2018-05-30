@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithSlyce:(Slyce *)slyce mode:(SlyceViewControllerMode)mode NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)initWithSession:(SlyceSession *)session mode:(SlyceViewControllerMode)mode __deprecated __deprecated_msg("Use 'initWithSlyce:mode:' instead.");
+- (instancetype)initWithSession:(SlyceSession *)session mode:(SlyceViewControllerMode)mode __deprecated_msg("Use 'initWithSlyce:mode:' instead.");
 
 @property (nonatomic, readonly) id<SlyceCameraControls> camera;
 

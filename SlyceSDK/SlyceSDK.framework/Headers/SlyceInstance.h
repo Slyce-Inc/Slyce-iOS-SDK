@@ -105,9 +105,9 @@ NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
  * @property
  * @abstract An instance of `SlyceGDPRComplianceManager` for handling GDPR compliance within Slyce.
  */
-@property (nonatomic, strong) SlyceGDPRComplianceManager *complianceManager;
+@property (nonatomic, readonly) SlyceGDPRComplianceManager *complianceManager;
 
 @end
 NS_ASSUME_NONNULL_END
 
-typedef Slyce SFSlyce __deprecated __deprecated_msg("Use 'Slyce' instead.");
+typedef Slyce SFSlyce __deprecated_msg("Use 'Slyce' instead.");

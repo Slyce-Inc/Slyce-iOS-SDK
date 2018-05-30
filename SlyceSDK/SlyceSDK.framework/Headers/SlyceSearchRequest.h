@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return A `SlyceSearchRequest` instance.
  */
-- (instancetype)initWithMethod:(SlyceSearchRequestMethod)method __deprecated __deprecated_msg("Specifying the `SlyceSearchRequestMethod` here is no longer supported.");
+- (instancetype)initWithMethod:(SlyceSearchRequestMethod)method __deprecated_msg("Specifying the `SlyceSearchRequestMethod` here is no longer supported.");
 
 
 /*!

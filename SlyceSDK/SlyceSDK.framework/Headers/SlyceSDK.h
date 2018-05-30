@@ -33,6 +33,7 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #import "SlyceSearchRequest.h"
 #import "SlyceSearchTask.h"
 #import "SlyceSearchResponse.h"
+#import "SlyceSearchResponseUpdate.h"
 #import "SlyceSearchResult.h"
 #import "SlyceScanner.h"
 

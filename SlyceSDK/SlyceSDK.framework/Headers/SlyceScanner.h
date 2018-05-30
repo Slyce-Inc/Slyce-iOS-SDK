@@ -29,20 +29,20 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable instancetype)scannerWithSession:(SlyceSession *)session lensIdentifier:(NSString *)lensIdentifier lensConfiguration:(nullable SlyceLensConfiguration *)lensConfiguration error:(SlyceOutError)outError;
 
 
+
 /*!
  * @property
  *
- * @abstract The identifier for the scanner instance.
+ * @abstract The lens identifier associated with this scanner instance.
  */
-@property (nonatomic, readonly) NSString *identifier;
-
+@property (nonatomic, readonly) NSString *lensIdentifier;
 
 /*!
  * @property
  *
  * @abstract The `SlyceScannerDelegate` for the scanner instance.
  */
-@property (nonatomic, weak, nullable) id<SlyceScannerDelegate> delegate __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
+@property (nonatomic, weak, nullable) id<SlyceScannerDelegate> delegate __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 
 /*!
@@ -99,6 +99,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)resumeDetection;
 
+#pragma mark Deprecated
+
+
+
+/*!
+ * @deprecated as of 5.1.0
+ */
+@property (nonatomic, readonly) NSString *identifier __deprecated_msg("Use 'lensIdentifier' instead.");
+
 @end
 NS_ASSUME_NONNULL_END
 
@@ -116,7 +125,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  */
 - (void)slyceScanner:(SlyceScanner *)scanner didCreateRequest:(SlyceSearchRequest *)request
-NS_SWIFT_NAME(slyce(scanner:didCreateRequest:)) __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
+NS_SWIFT_NAME(slyce(scanner:didCreateRequest:)) __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 
 /*!
@@ -128,7 +137,7 @@ NS_SWIFT_NAME(slyce(scanner:didCreateRequest:)) __deprecated __deprecated_msg("P
  *
  */
 - (void)slyceScanner:(SlyceScanner *)scanner didFinishWithResults:(NSArray<SlyceSearchResult *> *)results errors:(NSArray<NSError *> *)errors
-NS_SWIFT_NAME(slyce(scanner:didFinishWithResults:errors:)) __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
+NS_SWIFT_NAME(slyce(scanner:didFinishWithResults:errors:)) __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 
 /*!
@@ -139,7 +148,7 @@ NS_SWIFT_NAME(slyce(scanner:didFinishWithResults:errors:)) __deprecated __deprec
  *
  */
 - (void)slyceScanner:(SlyceScanner *)scanner didEncounterError:(nullable NSError *)error
-NS_SWIFT_NAME(slyce(scanner:didEncounterError:)) __deprecated __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
+NS_SWIFT_NAME(slyce(scanner:didEncounterError:)) __deprecated_msg("Please use SlyceSession and SlyceSearchTask instead, SlyceScannerDelegate will be removed in a future release.");
 
 @end
 NS_ASSUME_NONNULL_END
