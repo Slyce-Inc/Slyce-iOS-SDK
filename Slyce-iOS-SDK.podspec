@@ -12,7 +12,7 @@ spec.author                  = { "Slyce Inc." => "andy@slyce.it" }
 spec.platform                = :ios, "9.0"
 spec.source                  = { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "5.1.0-rc2" }
 spec.requires_arc            = true
-spec.preserve_paths          = "SlyceSDK/Scripts/*"
+spec.preserve_paths          = "SlyceSDK/**"
 spec.ios.vendored_frameworks = "SlyceSDK/SlyceSDK.framework"
 
 end
