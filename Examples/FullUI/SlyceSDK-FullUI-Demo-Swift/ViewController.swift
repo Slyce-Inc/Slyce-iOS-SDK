@@ -9,9 +9,23 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // Uncomment the following lines to customize the Full UI experience using SlyceTheme
+        // - Header
+        // SlyceTheme.shared().headerLeftNavigation = .backButton
+        // SlyceTheme.shared().headerCenter = .image
+        // SlyceTheme.shared().headerRightNavigation = .settings
+        
+        // - Accent Color
+        // SlyceTheme.shared().global_accent_color = UIColor.purple
+        
+        // - Coaching Tips
+        // SlyceTheme.shared().string_coachingTip_headline_visualSearch = ""
+        // SlyceTheme.shared().string_coachingTip_body_visualSearch = ""
+        // SlyceTheme.shared().bg_coachingTip_visualSearch = UIImage(named: "")
+        
         let slyceAccountIdentifier = ""
-        let apiKey = ""
         let spaceIdentifier = ""
+        let apiKey = ""
         
         let useCustomSearchDetail = false // set to true to use custom search detail
         
