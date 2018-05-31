@@ -45,6 +45,7 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     // Workflow
     
     SlyceErrorWorkflowOperationFailed = -601,
+    SlyceErrorWorkflowOperationNoResults = -602,
     
     // Search History
     
@@ -54,4 +55,9 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     // Feature Matching
     
     SlyceErrorFeatureMatchCatalog = -801,
+    
+    // GDPR
+    
+    SlyceErrorUserNotGDPRCompliant = -901,
+    SlyceErrorUserIdentifierNotSet = -902
 };

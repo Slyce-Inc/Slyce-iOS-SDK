@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FullUI/Swift/SlyceSDK-FullUI-Demo-Swift.xcodeproj">
+      location = "group:FullUI/SlyceSDK-FullUI-Demo-Swift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Headless/SlyceSDK-Headless-Demo-Swift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LensView/SlyceSDK-LensView-Demo-Swift.xcodeproj">
    </FileRef>
 </Workspace>

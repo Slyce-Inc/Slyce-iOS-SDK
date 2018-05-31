@@ -7,6 +7,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (SlyceTheme *)shared;
 
++ (void)resetToDefaults;
+
 // MARK: - camera header configs
 @property (nonatomic, readwrite) SlyceHeaderLeftStyle headerLeftNavigation;
 @property (nonatomic, readwrite) SlyceHeaderCenterStyle headerCenter;
@@ -49,6 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, copy, nullable) UIColor *global_secondaryBackground_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *global_primaryForeground_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *global_secondaryForeground_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *bg_processingIndicator_tint;
 // MARK: lens
 @property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_background_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_tint_color;
@@ -58,6 +61,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, copy, nullable) UIColor *lens_status_background_selection_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *lens_status_tint_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *lens_status_selection_tint_color;
+
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_active_tint_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_active_selection_tint_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_active_background_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_active_background_selection_color;
+
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_picker_tint_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_picker_selection_tint_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_picker_background_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_picker_background_selection_color;
+
 // MARK: settings
 @property (nonatomic, readwrite, copy, nullable) UIColor *settings_btn_tint_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *settings_btn_color;
@@ -97,7 +111,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_photoGallery;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_searchHistory;
 @property (nonatomic, readwrite, copy, nullable) NSArray<UIImage *> *bg_processingIndicator;
-@property (nonatomic, readwrite, copy, nullable) NSArray<UIImage *> *bg_processingIndicator_greyscale;
 // MARK: global
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_global_done_small;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_global_done_large;
