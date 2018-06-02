@@ -65,8 +65,8 @@ NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
 
 /*!
  * @property
- *
  * @brief The default `SlyceSession`.
+ * @discussion The default `SlyceSession`. The default session cannot be manually invalidated, but will be invalidated when `Slyce` is closed.
  * @return A `SlyceSession` instance.
  */
 @property (nonatomic, readonly, nullable) SlyceSession *defaultSession;
@@ -109,5 +109,3 @@ NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
 
 @end
 NS_ASSUME_NONNULL_END
-
-typedef Slyce SFSlyce __deprecated_msg("Use 'Slyce' instead.");

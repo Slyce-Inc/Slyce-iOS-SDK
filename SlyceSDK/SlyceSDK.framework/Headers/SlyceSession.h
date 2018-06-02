@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class Slyce;
 @class SlyceSession;
@@ -8,6 +8,7 @@
 @class SlyceLensConfiguration;
 @protocol SlyceSessionDelegate;
 @protocol SlyceSearchTaskListener;
+@class SlyceSearchParameters;
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -135,6 +136,8 @@ NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
  */
 - (void)cancelAllTasks;
 
+@property (nonatomic, strong, nullable) SlyceSearchParameters *defaultSearchParameters;
+
 
 #pragma mark -
 #pragma mark Deprecated Methods
@@ -144,9 +147,8 @@ NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
  *
  * The object that acts as the delegate of the session.
  *
- * @deprecated in version 5.1.0
  */
-@property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate __deprecated_msg("SlyceSessionDelegate has been replaced by SlyceSessionListener APIs and may be removed in a future release.");
+@property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate;
 
 /*!
  * @method
@@ -178,7 +180,10 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol SlyceSessionDelegate <SlyceSessionListener>
+@protocol SlyceSessionDelegate <NSObject>
+
+//@optional
+//- (SlyceSearchParameters *)slyceSession :(SlyceSession *)slyceSession searchParametersForImage:(UIImage *)slyceImage;
     
 /*!
  * @method

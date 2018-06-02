@@ -36,9 +36,7 @@ class VisualSearchViewController: TextViewViewController
         // Instead of attaching an image, an imageURL may also be used.
         // Anchor is optional, and represents the tap point relative to the coordinates of the image.
         
-        let request = SlyceSearchRequest()
-        request.image = image
-        request.anchor = .zero
+        let request = SlyceSearchRequest(image: image, anchor: SlyceAnchorPointNone, searchParameters: nil)
 
         // In order to receive updates after starting the task, we must provide a SlyceSearchTaskListener,
         // which will be called whenever there are errors, updates, or a completed result.
