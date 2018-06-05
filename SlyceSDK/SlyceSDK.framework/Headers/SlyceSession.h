@@ -136,6 +136,12 @@ NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
  */
 - (void)cancelAllTasks;
 
+/*!
+ * @property
+ *
+ * The `SlyceSearchParameters` for all requests in this session.
+ *
+ */
 @property (nonatomic, strong, nullable) SlyceSearchParameters *defaultSearchParameters;
 
 

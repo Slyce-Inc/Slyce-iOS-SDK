@@ -18,10 +18,36 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 
+/*!
+ * @method
+ *
+ * @brief Initializes a new `SlyceSearchRequest`.
+ *
+ * @discussion Use this method to create a new `SlyceSearchRequest`.
+ *
+ * @param image - The `UIImage` to be used for this search request.
+ * @param anchor - The focal point to be used for this search request.
+ * @param anchor - Nullable `SlyceSearchParameters` for this search request.
+ *
+ * @return A `SlyceSearchRequest` instance.
+ */
 - (instancetype)initWithImage:(UIImage *)image
                        anchor:(CGPoint)anchor
              searchParameters:(nullable SlyceSearchParameters *)searchParameters;
 
+/*!
+ * @method
+ *
+ * @brief Initializes a new `SlyceSearchRequest` with the supplied `SlyceSearchRequestMethod`
+ *
+ * @discussion Use this method to create a new `SlyceSearchRequest`.
+ *
+ * @param image - An NSString representing the URL of an image to be used for this search request.
+ * @param anchor - The focal point to be used for this search request.
+ * @param anchor - Nullable `SlyceSearchParameters` for this search request.
+ *
+ * @return A `SlyceSearchRequest` instance.
+ */
 - (instancetype)initWithImageURL:(NSString *)imageURL
                           anchor:(CGPoint)anchor
                 searchParameters:(nullable SlyceSearchParameters *)searchParameters;
