@@ -28,7 +28,8 @@ class ViewController: UIViewController {
         let apiKey = ""
         
         let useCustomSearchDetail = false // set to true to use custom search detail
-        
+        let useCustomSearchParams = false // set to use custom search params for the entire session
+
         // Slyce should be opened once, generally at application startup. We're doing
         // it here for demo purposes.
         
@@ -36,6 +37,22 @@ class ViewController: UIViewController {
             if let error = errorOrNil {
                 print("Error opening Slyce!\n" + error.localizedDescription)
                 return;
+            }
+            
+            if (useCustomSearchParams) {
+                // (Optional) Use to set custom language and/or country codes
+                
+                guard let session = Slyce.shared().defaultSession else {
+                    fatalError();
+                }
+                
+                let searchParams = SlyceSearchParameters();
+                searchParams.countryCode = "BE"    // one of both of these may be set
+                searchParams.languageCode = "fr"
+                
+                // Setting search parameters here will automatically include them for all
+                // SearchRequests in the session.
+                session.defaultSearchParameters = searchParams;
             }
 
             // The current completion block may not be on the main thread

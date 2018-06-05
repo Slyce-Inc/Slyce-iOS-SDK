@@ -7,6 +7,7 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #pragma mark Main
 
 #import "SlyceBase.h"
+#import "SlyceTypes.h"
 #import "SlyceInstance.h"
 #import "SlyceErrorCodes.h"
 #import "SlyceSession.h"
@@ -30,6 +31,7 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 
 #pragma mark Headless Mode
 
+#import "SlyceSearchParameters.h"
 #import "SlyceSearchRequest.h"
 #import "SlyceSearchTask.h"
 #import "SlyceSearchResponse.h"
