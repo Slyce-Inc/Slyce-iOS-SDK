@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param image - The `UIImage` to be used for this search request.
  * @param anchor - The focal point to be used for this search request.
- * @param anchor - Nullable `SlyceSearchParameters` for this search request.
+ * @param searchParameters - Nullable `SlyceSearchParameters` for this search request.
  *
  * @return A `SlyceSearchRequest` instance.
  */
@@ -42,9 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @discussion Use this method to create a new `SlyceSearchRequest`.
  *
- * @param image - An NSString representing the URL of an image to be used for this search request.
+ * @param imageURL - An NSString representing the URL of an image to be used for this search request.
  * @param anchor - The focal point to be used for this search request.
- * @param anchor - Nullable `SlyceSearchParameters` for this search request.
+ * @param searchParameters - Nullable `SlyceSearchParameters` for this search request.
  *
  * @return A `SlyceSearchRequest` instance.
  */
