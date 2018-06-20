@@ -8,9 +8,9 @@
 @protocol SlyceEventTracker;
 @protocol SlyceImageMatchingSyncDelegate;
 
-extern NSNotificationName const SlyceDidOpenNotification;
-extern NSNotificationName const SlyceWillCloseNotification;
-extern NSNotificationName const SlyceDidCloseNotification;
+extern _Nonnull NSNotificationName const SlyceDidOpenNotification;
+extern _Nonnull NSNotificationName const SlyceWillCloseNotification;
+extern _Nonnull NSNotificationName const SlyceDidCloseNotification;
 
 /*
  Main Slyce workflow entry point

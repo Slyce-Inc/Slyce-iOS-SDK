@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param image - The `UIImage` to be used for this search request.
  * @param anchor - The focal point to be used for this search request.
- * @param anchor - Nullable `SlyceSearchParameters` for this search request.
+ * @param searchParameters - Nullable `SlyceSearchParameters` for this search request.
  *
  * @return A `SlyceSearchRequest` instance.
  */
@@ -42,9 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @discussion Use this method to create a new `SlyceSearchRequest`.
  *
- * @param image - An NSString representing the URL of an image to be used for this search request.
+ * @param imageURL - An NSString representing the URL of an image to be used for this search request.
  * @param anchor - The focal point to be used for this search request.
- * @param anchor - Nullable `SlyceSearchParameters` for this search request.
+ * @param searchParameters - Nullable `SlyceSearchParameters` for this search request.
  *
  * @return A `SlyceSearchRequest` instance.
  */
@@ -90,6 +90,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) NSString *countryCode;
 
 
+/*!
+ * @property
+ *
+ * @abstract Gets demo mode setting.
+ *
+ * @discussion If demo mode is enabled, some of the more time consuming operations will be disabled. This also clients to receive faster, but less accurate results while integrating the SlyceSDK. Demo mode should not be enabled in your production application.
+ */
+@property (nonatomic, readonly) BOOL demoMode;
+
+
 #pragma mark Input Image
 
 
@@ -123,6 +133,8 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract An optional anchor point that indicates an area of interest within the supplied image.
  */
 @property (nonatomic, readonly) CGPoint anchor;
+
+
 
 @end
 NS_ASSUME_NONNULL_END
