@@ -28,6 +28,7 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     // Parsing Error
     
     SlyceErrorJSONParsing = -301,
+    SlyceErrorSearchRequestEncoding = -302,
     
     // Lenses
     

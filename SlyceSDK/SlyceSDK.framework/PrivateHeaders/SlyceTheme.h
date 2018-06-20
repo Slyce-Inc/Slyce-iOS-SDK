@@ -79,6 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: - strings
 // MARK: global
 @property (nonatomic, readwrite, copy, nullable) NSString *string_appTitle;
+@property (nonatomic, readwrite, copy, nullable) NSString *string_alertOKString;
 // MARK: lens
 @property (nonatomic, readwrite, copy, nullable) NSString *string_lens_visualSearch;
 @property (nonatomic, readwrite, copy, nullable) NSString *string_lens_barcode;
@@ -98,6 +99,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, copy, nullable) NSString *string_searchHistoryTitle;
 @property (nonatomic, readwrite, copy, nullable) NSString *string_emptyContent_headline;
 @property (nonatomic, readwrite, copy, nullable) NSString *string_emptyContent_body;
+// MARK: search results
+@property (nonatomic, readwrite, copy, nullable) NSString *string_searchResultsTitle;
 
 // MARK: - icons
 // MARK: camera

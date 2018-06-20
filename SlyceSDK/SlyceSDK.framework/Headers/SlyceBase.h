@@ -13,6 +13,15 @@
 #  define SLYCE_SDK_EXPORT __attribute__((visibility("default")))
 #endif /* !defined(SLYCE_SDK_EXPORT) */
 
+
+#if !defined(SLYCE_SDK_DEBUG_EXPORT)
+#  ifdef DEBUG
+#    define SLYCE_SDK_DEBUG_EXPORT __attribute__((visibility("default")))
+#  else
+#    define SLYCE_SDK_DEBUG_EXPORT
+#  endif
+#endif /* !defined(SLYCE_SDK_DEBUG_EXPORT) */
+
 #if !defined(SLYCE_SDK_EXTERN)
 #  if defined(__cplusplus)
 #   define SLYCE_SDK_EXTERN extern "C"
