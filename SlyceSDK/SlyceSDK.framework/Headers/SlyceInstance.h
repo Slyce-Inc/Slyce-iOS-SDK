@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param accountIdentifier the Account Identifier for your organization.
  *  @param apiKey the API Key for your organization.
  *  @param spaceIdentifier the Space Identifier for this SlyceInstance.
- *  @param completion the completion block.
+ *  @param completion the completion block. This will always be returned on the main queue.
  *
  *  **Important:** Successfully opening the Slyce object is mandatory before you start
  *  performing any tasks in the SDK!

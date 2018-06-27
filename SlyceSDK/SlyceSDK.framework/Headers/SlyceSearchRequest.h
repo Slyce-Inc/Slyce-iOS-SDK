@@ -35,6 +35,22 @@ NS_ASSUME_NONNULL_BEGIN
                        anchor:(CGPoint)anchor
              searchParameters:(nullable SlyceSearchParameters *)searchParameters;
 
+
+/*!
+ * @method
+ *
+ * @brief Initializes a new `SlyceSearchRequest`.
+ *
+ * @discussion Use this method to create a new `SlyceSearchRequest`.
+ *
+ * @param image - The `UIImage` to be used for this search request.
+ * @param searchParameters - Nullable `SlyceSearchParameters` for this search request.
+ *
+ * @return A `SlyceSearchRequest` instance.
+ */
+- (instancetype)initWithImage:(UIImage *)image
+             searchParameters:(nullable SlyceSearchParameters *)searchParameters;
+
 /*!
  * @method
  *
@@ -50,6 +66,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithImageURL:(NSString *)imageURL
                           anchor:(CGPoint)anchor
+                searchParameters:(nullable SlyceSearchParameters *)searchParameters;
+
+/*!
+ * @method
+ *
+ * @brief Initializes a new `SlyceSearchRequest` with the supplied `SlyceSearchRequestMethod`
+ *
+ * @discussion Use this method to create a new `SlyceSearchRequest`.
+ *
+ * @param imageURL - An NSString representing the URL of an image to be used for this search request.
+ * @param searchParameters - Nullable `SlyceSearchParameters` for this search request.
+ *
+ * @return A `SlyceSearchRequest` instance.
+ */
+- (instancetype)initWithImageURL:(NSString *)imageURL
                 searchParameters:(nullable SlyceSearchParameters *)searchParameters;
 
 /*!
