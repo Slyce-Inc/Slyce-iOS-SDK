@@ -7,11 +7,13 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #pragma mark Main
 
 #import "SlyceBase.h"
+#import "SlyceLogging.h"
 #import "SlyceTypes.h"
 #import "SlyceInstance.h"
 #import "SlyceErrorCodes.h"
 #import "SlyceSession.h"
 #import "SlyceCredentials.h"
+#import "SlyceLocalization.h"
 
 
 #pragma mark Models

@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: - strings
 // MARK: global
 @property (nonatomic, readwrite, copy, nullable) NSString *string_appTitle;
-@property (nonatomic, readwrite, copy, nullable) NSString *string_alertOKString;
+@property (nonatomic, readwrite, copy, nullable) NSString *string_alertOKString __deprecated_msg("Overide slyce_action_ok string instead.");
 // MARK: lens
 @property (nonatomic, readwrite, copy, nullable) NSString *string_lens_visualSearch;
 @property (nonatomic, readwrite, copy, nullable) NSString *string_lens_barcode;
