@@ -7,7 +7,7 @@
 // https://gist.github.com/amrox/bcae53ef91e216388b98ed40ccef1b01
 //
 
-"slyce_action_ok" = "Okay!"; // Set the text all all "OK" buttons in Slyce
+"slyce_action_ok" = "Okay!"; // Set the text for all "OK" buttons in Slyce
 "slyce_general_headline_new" = ""; // Remove the NEW text above search results
 
 // SlyceTheme strings can be overidden here too, though setting the related property
