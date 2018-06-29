@@ -8,8 +8,14 @@
 //
 
 "slyce_action_ok" = "Okay!"; // Set the text for all "OK" buttons in Slyce
-"slyce_general_headline_new" = ""; // Remove the NEW text above search results
 
+// "slyce_general_headline_new" = ""; // Remove the NEW text above search results
+
+
+// --  SlyceTheme strings via localization
+// 
 // SlyceTheme strings can be overidden here too, though setting the related property
-// on the SlyceTheme instance will take precedent
+// on the SlyceTheme instance will take precedent.
+//
+
 "slyce_theme_error_string_type_image_headline" = "No results found.";
