@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23B0ACEB20B8A36100C5346C /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B0ACEA20B8A36100C5346C /* SlyceSDK.framework */; };
 		23B0ACEC20B8A36100C5346C /* SlyceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23B0ACEA20B8A36100C5346C /* SlyceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B357A78920E6771200A844C0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B357A78820E6771200A844C0 /* Localizable.strings */; };
 		B377736320A48E6B00540F7C /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B377736220A48E6B00540F7C /* SearchDetailViewController.swift */; };
 		B377736520A48E8700540F7C /* SearchDetailViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B377736420A48E8700540F7C /* SearchDetailViewControllerProvider.swift */; };
 		B389A4C0209A0167003C0911 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B389A4BF209A0167003C0911 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		23B0ACEA20B8A36100C5346C /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlyceSDK.framework; path = ../../SlyceSDK/SlyceSDK.framework; sourceTree = "<group>"; };
+		B357A78820E6771200A844C0 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B377736220A48E6B00540F7C /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		B377736420A48E8700540F7C /* SearchDetailViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewControllerProvider.swift; sourceTree = "<group>"; };
 		B389A4BC209A0167003C0911 /* SlyceSDK-FullUI-Demo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SlyceSDK-FullUI-Demo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 				B389A4C3209A0167003C0911 /* Main.storyboard */,
 				B389A4C6209A0169003C0911 /* Assets.xcassets */,
 				B389A4C8209A0169003C0911 /* LaunchScreen.storyboard */,
+				B357A78820E6771200A844C0 /* Localizable.strings */,
 				B389A4CB209A0169003C0911 /* Info.plist */,
 			);
 			path = "SlyceSDK-FullUI-Demo-Swift";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B389A4CA209A0169003C0911 /* LaunchScreen.storyboard in Resources */,
+				B357A78920E6771200A844C0 /* Localizable.strings in Resources */,
 				B389A4C7209A0169003C0911 /* Assets.xcassets in Resources */,
 				B389A4C5209A0167003C0911 /* Main.storyboard in Resources */,
 			);
@@ -351,7 +355,7 @@
 					"$(PROJECT_DIR)/../../SlyceSDK",
 				);
 				INFOPLIST_FILE = "SlyceSDK-FullUI-Demo-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,7 +381,7 @@
 					"$(PROJECT_DIR)/../../SlyceSDK",
 				);
 				INFOPLIST_FILE = "SlyceSDK-FullUI-Demo-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
