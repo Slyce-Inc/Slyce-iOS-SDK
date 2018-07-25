@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite) SlyceHeaderCenterStyle headerCenter;
 @property (nonatomic, readwrite) SlyceHeaderRightStyle headerRightNavigation;
 
+// MARK: - active searches
+@property (nonatomic, readwrite) BOOL activeSearchesHidden;
+
 // MARK: - error handling
 // MARK: strings
 @property (nonatomic, readwrite, copy, nullable) NSString *error_string_type_image_headline;
@@ -76,6 +79,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, copy, nullable) UIColor *settings_btn_tint_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *settings_btn_color;
 
+// MARK: web view
+@property (nonatomic, readwrite, copy, nullable) UIColor *webview_btn_color;
+@property (nonatomic, readwrite, copy, nullable) UIColor *webview_btn_tint_color;
+
 // MARK: - strings
 // MARK: global
 @property (nonatomic, readwrite, copy, nullable) NSString *string_appTitle;
@@ -103,6 +110,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, copy, nullable) NSString *string_searchResultsTitle;
 
 // MARK: - icons
+@property (nonatomic, readwrite, copy, nullable) UIImage *btn_drawer_close;
+@property (nonatomic, readwrite, copy, nullable) UIImage *btn_drawer_back;
 // MARK: camera
 @property (nonatomic, readwrite, copy, nullable) UIImage *bg_nav_stripImage;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_back;

@@ -10,6 +10,7 @@
 #pragma mark Full UI (Preview)
 
 #import "SlyceViewController.h"
-#import "SlyceViewController+CustomSearchDetail.h"
+#import "SlyceViewController+Private.h"
 #import "SlyceHeaderStyles.h"
 #import "SlyceTheme.h"
+#import "SlyceItemDescriptor.h"
