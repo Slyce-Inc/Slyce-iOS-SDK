@@ -86,7 +86,7 @@ extension ViewController : SlyceViewControllerDelegate {
             }
             
             // This a very simple implementation that will present the custom search detail modally over
-            // the SlyceViewController. If your application, you want wish to dismiss the SlyceViewController
+            // the SlyceViewController. In your application you may wish to dismiss the SlyceViewController
             // or push the detail controller in a navigation controller.
             
             let detailVC = SearchDetailViewController(nibName: "SearchDetailViewController", bundle: nil)
