@@ -48,6 +48,20 @@
                ReferencedContainer = "container:LensView/SlyceSDK-LensView-Demo-Swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3F792462110AE1A00CC3BC5"
+               BuildableName = "libSlyceSDK-Snippets.a"
+               BlueprintName = "SlyceSDK-Snippets"
+               ReferencedContainer = "container:SlyceSDK-Snippets/SlyceSDK-Snippets.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
