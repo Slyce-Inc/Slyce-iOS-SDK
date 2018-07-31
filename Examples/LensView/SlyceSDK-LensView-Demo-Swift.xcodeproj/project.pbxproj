@@ -56,8 +56,8 @@
 		23A1466B20BEE15C00986FCA = {
 			isa = PBXGroup;
 			children = (
-				23A1468920BEE1EB00986FCA /* SlyceSDK.framework */,
 				23A1467620BEE15C00986FCA /* SlyceSDK-LensView-Demo-Swift */,
+				B36E1EA3210D3D1E000D1EC4 /* Frameworks */,
 				23A1467520BEE15C00986FCA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +81,14 @@
 				23A1468320BEE15E00986FCA /* Info.plist */,
 			);
 			path = "SlyceSDK-LensView-Demo-Swift";
+			sourceTree = "<group>";
+		};
+		B36E1EA3210D3D1E000D1EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23A1468920BEE1EB00986FCA /* SlyceSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

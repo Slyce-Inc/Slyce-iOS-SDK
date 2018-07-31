@@ -2,7 +2,6 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import "SlyceLensIdentifiers.h"
-#import "SlyceCameraDelegate.h"
 
 @protocol SlyceScannerDelegate;
 @class SlyceSearchRequest;

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SlyceSDK-Snippets/SlyceSDK-Snippets.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:FullUI/SlyceSDK-FullUI-Demo-Swift.xcodeproj">
    </FileRef>
    <FileRef

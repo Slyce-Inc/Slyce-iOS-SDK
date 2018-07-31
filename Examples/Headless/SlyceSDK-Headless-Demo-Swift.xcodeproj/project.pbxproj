@@ -62,8 +62,8 @@
 		23B0ACEE20B8A8BD00C5346C = {
 			isa = PBXGroup;
 			children = (
-				23B0AD1A20B8A9C900C5346C /* SlyceSDK.framework */,
 				23B0ACF920B8A8BD00C5346C /* SlyceSDK-Headless-Demo-Swift */,
+				B36E1EA2210D3CF1000D1EC4 /* Frameworks */,
 				23B0ACF820B8A8BD00C5346C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +90,14 @@
 				23B0AD0620B8A8BF00C5346C /* Info.plist */,
 			);
 			path = "SlyceSDK-Headless-Demo-Swift";
+			sourceTree = "<group>";
+		};
+		B36E1EA2210D3CF1000D1EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23B0AD1A20B8A9C900C5346C /* SlyceSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
