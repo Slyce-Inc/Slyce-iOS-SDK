@@ -1,4 +1,5 @@
-#import <Foundation/Foundation.h>
+#import "SlyceBase.h"
+
 #import <AVFoundation/AVFoundation.h>
 
 /*!

@@ -38,7 +38,7 @@
 		23A1467E20BEE15E00986FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A1468120BEE15E00986FCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A1468320BEE15E00986FCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23A1468920BEE1EB00986FCA /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlyceSDK.framework; path = ../../SlyceSDK/SlyceSDK.framework; sourceTree = "<group>"; };
+		23A1468920BEE1EB00986FCA /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlyceSDK.framework; path = ../Frameworks/SlyceSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 		23A1466B20BEE15C00986FCA = {
 			isa = PBXGroup;
 			children = (
-				23A1468920BEE1EB00986FCA /* SlyceSDK.framework */,
 				23A1467620BEE15C00986FCA /* SlyceSDK-LensView-Demo-Swift */,
+				B36E1EA3210D3D1E000D1EC4 /* Frameworks */,
 				23A1467520BEE15C00986FCA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +81,14 @@
 				23A1468320BEE15E00986FCA /* Info.plist */,
 			);
 			path = "SlyceSDK-LensView-Demo-Swift";
+			sourceTree = "<group>";
+		};
+		B36E1EA3210D3D1E000D1EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23A1468920BEE1EB00986FCA /* SlyceSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,11 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)",
-					"$(SRCROOT)/../",
-					"$(PROJECT_DIR)/../../SlyceSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks";
 				INFOPLIST_FILE = "SlyceSDK-LensView-Demo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,11 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)",
-					"$(SRCROOT)/../",
-					"$(PROJECT_DIR)/../../SlyceSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks";
 				INFOPLIST_FILE = "SlyceSDK-LensView-Demo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (

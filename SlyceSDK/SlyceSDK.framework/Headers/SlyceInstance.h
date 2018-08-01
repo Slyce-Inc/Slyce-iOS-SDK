@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "SlyceBase.h"
 
 #import "SlyceImageMatchingSyncDelegate.h"
 

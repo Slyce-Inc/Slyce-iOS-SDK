@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "SlyceBase.h"
 
 typedef NS_ENUM(NSUInteger, SlyceSearchResponseUpdateType) {
     /// Indicates a job was created on the backend service. The `value` property will be an NSString containing the job id.

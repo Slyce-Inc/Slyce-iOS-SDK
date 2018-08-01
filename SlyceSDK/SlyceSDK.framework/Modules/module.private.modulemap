@@ -1,6 +1,0 @@
-explicit module SlyceSDK.Private {
-    
-    umbrella header "SlyceSDK-Private.h"
-
-    export *
-}

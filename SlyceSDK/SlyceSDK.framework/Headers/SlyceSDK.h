@@ -1,8 +1,5 @@
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXPORT double SlyceSDKVersionNumber;
-FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
-
 
 #pragma mark Main
 
@@ -58,3 +55,11 @@ FOUNDATION_EXPORT const unsigned char SlyceSDKVersionString[];
 #import "SlyceGDPRComplianceManager.h"
 #import "SlycePrivacyPolicy.h"
 #import "SlycePrivacyPolicyConsent.h"
+
+
+#pragma mark Full UI
+
+#import "SlyceViewController.h"
+#import "SlyceTheme.h"
+#import "SlyceItemDescriptor.h"
+#import "SlyceAppearanceStyles.h"

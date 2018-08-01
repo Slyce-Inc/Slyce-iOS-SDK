@@ -3,6 +3,8 @@ import SlyceSDK
 
 class TableViewController: UITableViewController
 {
+    let requireGDPR = false // set to `true` to use GDPR compliance support
+    
     // MARK: - Slyce
     var slyceIsOpen: Bool {
         return Slyce.shared().isOpen()
@@ -16,8 +18,28 @@ class TableViewController: UITableViewController
         let spaceIdentifier = ""
         let apiKey = ""
         
+        // GDPR Compliance support (optional)
+        if (requireGDPR) {
+            Slyce.shared().complianceManager.userRequiresGDPRCompliance = true
+        }
+        
+        
         Slyce.shared().open(accountIdentifier: accountIdentifier, apiKey: apiKey, spaceIdentifier: spaceIdentifier) { (err) in
             OperationQueue.main.addOperation {
+                
+                if (self.requireGDPR) {
+                    
+                    guard let privacyPolicy = Slyce.shared().complianceManager.privacyPolicy else {
+                        fatalError("failed to retrieve Privacy Policy")
+                    }
+                    
+                    // Here you are required to display the information in the Privacy Policy and capture
+                    // the user's consesnt. See documentation for `SlycePrivacyPolicy`.
+                    
+                    // If user consensents...
+                    Slyce.shared().complianceManager.setUserConsentedTo(privacyPolicy)
+                }
+                
                 self.tableView.reloadData()
             }
         }

@@ -1,14 +1,12 @@
-#import <UIKit/UIKit.h>
+#import "SlyceBase.h"
 
 @class Slyce;
 @class SlyceSession;
 @class SlyceSearchTask;
 @class SlyceSearchRequest;
-@class SlyceScanner;
-@class SlyceLensConfiguration;
+@class SlyceSearchParameters;
 @protocol SlyceSessionDelegate;
 @protocol SlyceSearchTaskListener;
-@class SlyceSearchParameters;
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -187,9 +185,6 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SlyceSessionDelegate <NSObject>
-
-//@optional
-//- (SlyceSearchParameters *)slyceSession :(SlyceSession *)slyceSession searchParametersForImage:(UIImage *)slyceImage;
     
 /*!
  * @method

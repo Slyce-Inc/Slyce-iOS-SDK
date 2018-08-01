@@ -44,7 +44,7 @@
 		23B0AD0120B8A8BF00C5346C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23B0AD0420B8A8BF00C5346C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23B0AD0620B8A8BF00C5346C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23B0AD1A20B8A9C900C5346C /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlyceSDK.framework; path = ../../SlyceSDK/SlyceSDK.framework; sourceTree = "<group>"; };
+		23B0AD1A20B8A9C900C5346C /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlyceSDK.framework; path = ../Frameworks/SlyceSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 		23B0ACEE20B8A8BD00C5346C = {
 			isa = PBXGroup;
 			children = (
-				23B0AD1A20B8A9C900C5346C /* SlyceSDK.framework */,
 				23B0ACF920B8A8BD00C5346C /* SlyceSDK-Headless-Demo-Swift */,
+				B36E1EA2210D3CF1000D1EC4 /* Frameworks */,
 				23B0ACF820B8A8BD00C5346C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +90,14 @@
 				23B0AD0620B8A8BF00C5346C /* Info.plist */,
 			);
 			path = "SlyceSDK-Headless-Demo-Swift";
+			sourceTree = "<group>";
+		};
+		B36E1EA2210D3CF1000D1EC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23B0AD1A20B8A9C900C5346C /* SlyceSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,11 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../",
-					"$(SRCROOT)",
-					"$(PROJECT_DIR)/../../SlyceSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks";
 				INFOPLIST_FILE = "SlyceSDK-Headless-Demo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,11 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SRCROOT)/../",
-					"$(SRCROOT)",
-					"$(PROJECT_DIR)/../../SlyceSDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Frameworks";
 				INFOPLIST_FILE = "SlyceSDK-Headless-Demo-Swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (

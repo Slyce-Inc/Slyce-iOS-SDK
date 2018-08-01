@@ -1,4 +1,3 @@
-
 extern NSString * _Nonnull const SlyceErrorDomain;
 
 NS_ERROR_ENUM(SlyceErrorDomain)
@@ -61,5 +60,20 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     // GDPR
     
     SlyceErrorUserNotGDPRCompliant = -901,
-    SlyceErrorUserIdentifierNotSet = -902
+    SlyceErrorUserIdentifierNotSet = -902,
+    
+    // DB & Persistence
+    
+    SlyceErrorDatabaseGeneral = -1001,
+    SlyceErrorDatabaseUnsupportedVersion = -1002,
+    
+    // Search Storage
+    
+    SlyceErrorSearchNotFound = -1101,
+    SlyceErrorSearchEncoding = -1102,
+    SlyceErrorSearchImageExists = -1103,
+    SlyceErrorSearchImageWriteFailed = -1104,
+    SlyceErrorSearchExists = -1105,
+
 };
+
