@@ -1,6 +1,7 @@
-#import <Foundation/Foundation.h>
-
 #import "SlyceBase.h"
+
+#import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
 
 
 NS_ASSUME_NONNULL_BEGIN

@@ -1,6 +1,10 @@
 framework module SlyceSDK {
-  umbrella header "SlyceSDK.h"
+    umbrella header "SlyceSDK.h"
+    export *
 
-  export *
-  module * { export * }
+    explicit module Private {
+        umbrella header "SlyceSDK-Private.h"
+    }
+
+    module * { export * }
 }

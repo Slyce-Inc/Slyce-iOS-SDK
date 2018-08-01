@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "SlyceBase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface SlyceLensConfiguration: NSObject

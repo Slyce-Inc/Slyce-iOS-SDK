@@ -7,9 +7,9 @@
 #import "SlyceInstance+Environments.h"
 
 
-#pragma mark Full UI (Preview)
+#pragma mark Full UI Mode Extras
 
-#import "SlyceViewController.h"
-#import "SlyceViewController+CustomSearchDetail.h"
-#import "SlyceHeaderStyles.h"
-#import "SlyceTheme.h"
+#import "SlyceViewController+Private.h"
+#import "SlyceSettingsPanelDelegate.h"
+#import "SlyceSettingsPanelDataSource.h"
+#import "SlyceTheme+Legacy.h"
