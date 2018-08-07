@@ -8,25 +8,16 @@ class ViewController: UIViewController {
     let slyceAPIKey = ""
     
     let useCustomSearchDetail = false // set to true to use custom search detail
+    let applyCustomTheme = false // set to true to use custom theme values
     
     var slyceViewController: SlyceViewController?
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Uncomment the following lines to customize the Full UI experience using SlyceTheme
-        // - Header
-        // SlyceTheme.shared().headerLeftNavigation = .backButton
-        // SlyceTheme.shared().headerCenter = .image
-        // SlyceTheme.shared().headerRightNavigation = .settings
-        
-        // - Accent Color
-        // SlyceTheme.shared().global_accent_color = UIColor.purple
-        
-        // - Coaching Tips
-        // SlyceTheme.shared().string_coachingTip_headline_visualSearch = ""
-        // SlyceTheme.shared().string_coachingTip_body_visualSearch = ""
-        // SlyceTheme.shared().bg_coachingTip_visualSearch = UIImage(named: "")
+        if (applyCustomTheme) {
+            self.applySlyceTheme()
+        }
         
         // Slyce should be opened once, generally at application startup. We're doing
         // it here for demo purposes.
@@ -69,6 +60,21 @@ class ViewController: UIViewController {
                 self.present(vc, animated: true, completion: nil)
             }
         }
+    }
+    
+    func applySlyceTheme() {
+        // - Header
+        SlyceTheme.shared().setAppearanceStyle(SlyceHeaderStyleLeft.backButton.rawValue, forPropertyName: "appearance_headerStyle_left")
+        SlyceTheme.shared().setAppearanceStyle(SlyceHeaderStyleCenter.image.rawValue, forPropertyName: "appearance_headerStyle_center")
+        SlyceTheme.shared().setAppearanceStyle(SlyceHeaderStyleRight.settings.rawValue, forPropertyName: "appearance_headerStyle_right")
+        
+        // - Accent Color
+        SlyceTheme.shared().setColor(UIColor.purple, forPropertyName: "global_accent_color")
+        
+        // - Coaching Tips
+        SlyceTheme.shared().setString("Your Headline Here", forPropertyName: "string_coachingTip_headline_visualSearch")
+        SlyceTheme.shared().setString("Your body text here", forPropertyName: "string_coachingTip_body_visualSearch")
+        SlyceTheme.shared().setImage(UIImage(named: "your_image")!, forPropertyName: "bg_coachingTip_visualSearch")
     }
 }
 
