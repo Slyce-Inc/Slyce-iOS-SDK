@@ -72,9 +72,9 @@ class ViewController: UIViewController {
         SlyceTheme.shared().setColor(UIColor.purple, forPropertyName: "global_accent_color")
         
         // - Coaching Tips
-        SlyceTheme.shared().setString("", forPropertyName: "string_coachingTip_headline_visualSearch")
-        SlyceTheme.shared().setString("", forPropertyName: "string_coachingTip_body_visualSearch")
-        SlyceTheme.shared().setImage(UIImage(named: "")!, forPropertyName: "bg_coachingTip_visualSearch")
+        SlyceTheme.shared().setString("Your Headline Here", forPropertyName: "string_coachingTip_headline_visualSearch")
+        SlyceTheme.shared().setString("Your body text here", forPropertyName: "string_coachingTip_body_visualSearch")
+        SlyceTheme.shared().setImage(UIImage(named: "your_image")!, forPropertyName: "bg_coachingTip_visualSearch")
     }
 }
 
