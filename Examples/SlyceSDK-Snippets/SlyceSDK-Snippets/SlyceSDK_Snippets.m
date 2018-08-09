@@ -1,5 +1,55 @@
 #import <SlyceSDK/SlyceSDK.h>
 
+#pragma mark Search Parameters
+
+
+/*!
+ * @brief Demonstrates how to add custom workflow options for a single search task.
+ */
+void addWorkflowOptionsForSingleTask() {
+    
+    // set up some example data
+    UIImage *searchImage = [[UIImage alloc] init]; // must use a real image in practice
+    
+    // create a `SlyceSearchParameters` object and set the workflow options dictionary.
+    // this dictionary must only contain JSON-compatible values: strings, numbers, arrays
+    // and other dictionaries
+    SlyceSearchParameters *searchParams = [[SlyceSearchParameters alloc] init];
+    searchParams.workflowOptions = @{@"key1": @"myValue",
+                                     @"key2:": @5};
+    
+    SlyceSearchRequest *request = [[SlyceSearchRequest alloc] initWithImage:searchImage
+                                                           searchParameters:searchParams];
+
+    NSError *error;
+    SlyceSession *session = [SlyceSession sessionWithSlyce:[Slyce shared] error:&error];
+    if (session) {
+        // handle error
+        return;
+    }
+    [session startSearchTaskWithRequest:request workflowIdentifier:@"your workflow id" listener:nil];
+}
+
+
+void addDefaultWorkOptions() {
+    
+    // create a `SlyceSearchParameters` object and set the workflow options dictionary.
+    // this dictionary must only contain JSON-compatible values: strings, numbers, arrays
+    // and other dictionaries
+    SlyceSearchParameters *searchParams = [[SlyceSearchParameters alloc] init];
+    searchParams.workflowOptions = @{@"key1": @"myValue",
+                                     @"key2:": @5};
+
+
+    // add to a custom session
+    SlyceSession *session = [SlyceSession sessionWithSlyce:[Slyce shared] error:NULL];
+    session.defaultSearchParameters = searchParams;
+    
+    // or alternatively, add to the default session
+    [Slyce shared].defaultSession.defaultSearchParameters = searchParams;
+}
+
+
 #pragma mark Analytics
 
 /*!
