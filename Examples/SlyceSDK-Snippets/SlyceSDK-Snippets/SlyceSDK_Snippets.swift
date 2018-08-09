@@ -1,5 +1,56 @@
 import SlyceSDK
 
+
+// MARK: Search Parameters
+
+/**
+ Demonstrates how to add custom workflow options for a single search task.
+ */
+func addWorkflowOptionsForSingleTask() {
+    
+    // set up some example data
+    let searchImage = UIImage()  // must use a real image in practice
+    
+    // create a `SlyceSearchParameters` object and set the workflow options dictionary.
+    // this dictionary must only contain JSON-compatible values: strings, numbers, arrays
+    // and other dictionaries
+    let searchParams = SlyceSearchParameters();
+    searchParams.workflowOptions = ["key1": "myValue",
+                                    "key2:": 5];
+    
+
+    let request = SlyceSearchRequest(image: searchImage, searchParameters: searchParams)
+    
+    do {
+        let session = try SlyceSession(slyce: Slyce.shared())
+        session.startSearchTask(request: request, workflowIdentifier: "your workflow id", listener: nil)
+    } catch {
+        // handle error
+    }
+}
+
+func addDefaultWorkOptions() {
+    
+    // create a `SlyceSearchParameters` object and set the workflow options dictionary.
+    // this dictionary must only contain JSON-compatible values: strings, numbers, arrays
+    // and other dictionaries
+    let searchParams = SlyceSearchParameters();
+    searchParams.workflowOptions = ["key1": "myValue",
+                                    "key2:": 5];
+    
+    // add to a custom session
+    do {
+        let session = try SlyceSession(slyce: Slyce.shared())
+        session.defaultSearchParameters = searchParams
+    } catch {
+        // handle error
+    }
+    
+    // or alternatively, add to the default session
+    Slyce.shared().defaultSession?.defaultSearchParameters = searchParams
+}
+
+
 // MARK: Analytics
 
 /**
