@@ -14,9 +14,9 @@ func addWorkflowOptionsForSingleTask() {
     // create a `SlyceSearchParameters` object and set the workflow options dictionary.
     // this dictionary must only contain JSON-compatible values: strings, numbers, arrays
     // and other dictionaries
-    let searchParams = SlyceSearchParameters();
+    let searchParams = SlyceSearchParameters()
     searchParams.workflowOptions = ["key1": "myValue",
-                                    "key2:": 5];
+                                    "key2:": 5]
     
 
     let request = SlyceSearchRequest(image: searchImage, searchParameters: searchParams)
@@ -34,9 +34,9 @@ func addDefaultWorkOptions() {
     // create a `SlyceSearchParameters` object and set the workflow options dictionary.
     // this dictionary must only contain JSON-compatible values: strings, numbers, arrays
     // and other dictionaries
-    let searchParams = SlyceSearchParameters();
+    let searchParams = SlyceSearchParameters()
     searchParams.workflowOptions = ["key1": "myValue",
-                                    "key2:": 5];
+                                    "key2:": 5]
     
     // add to a custom session
     do {
