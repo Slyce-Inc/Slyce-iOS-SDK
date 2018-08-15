@@ -192,10 +192,69 @@ default layer.</p>
 
 		<div class="method-info-container">
 			
+			
+			<div class="method-subsection brief-description">
+				<p>This delegate method allows for the host application to handle a list
+of items returned from a <a href="../Classes/Slyce.html">Slyce</a> search,  presumably to show it&rsquo;s own custom view controller
+instead of Slyce&rsquo;s default layer.</p>
+			</div>
+			
+		    
 
 			<div class="method-subsection method-declaration"><code>- (BOOL)slyceViewController:(SlyceViewController *)<em>viewController</em> shouldDisplayDefaultListForItemDescriptors:(NSArray&lt;SlyceItemDescriptor*&gt; *)<em>itemDescriptors</em></code></div>
 
 		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>viewController</code></th>
+						<td><p>The attached <a href="../Classes/SlyceViewController.html"><code>SlyceViewController</code></a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>itemDescriptors</code></th>
+						<td><p>An array of <a href="../Classes/SlyceItemDescriptor.html"><code>SlyceItemDescriptor</code></a> objects, each of which provide
+information about an individual item.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>Return <code>YES</code> or <code>true</code> if the <a href="../Classes/SlyceViewController.html"><code>SlyceViewController</code></a> should show it&rsquo;s own default
+item list layer. Return <code>NO</code> or <code>false</code> if your application will handle the display
+of the item list.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This delegate method allows for the host application to handle a list
+of items returned from a <a href="../Classes/Slyce.html">Slyce</a> search,  presumably to show it&rsquo;s own custom view controller
+instead of Slyce&rsquo;s default layer.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceViewController.h</code></p>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>
