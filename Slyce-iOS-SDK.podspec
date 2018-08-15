@@ -8,7 +8,7 @@ The Slyce iOS SDK makes it easy to add visual search capabilities to mobile apps
 DESC
 spec.homepage                = "https://github.com/Slyce-Inc/Slyce-iOS-SDK"
 spec.license                 = { :type => "Commercial", :file => "LICENSE.md" }
-spec.author                  = { "Slyce Inc." => "andy@slyce.it" }
+spec.author                  = { "Slyce Inc." => "mobile@slyce.it" }
 spec.platform                = :ios, "9.0"
 spec.source                  = { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "5.2.0" }
 spec.requires_arc            = true
