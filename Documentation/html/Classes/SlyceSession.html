@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>SlyceSession Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">SlyceSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Slyce Inc</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/defaultSearchParameters">defaultSearchParameters</option>
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+		<option value="//api/name/isInvalidated">isInvalidated</option>
+		
+		<option value="//api/name/searchTasks">searchTasks</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sessionWithSlyce:error:">+ sessionWithSlyce:error:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/addListener:NS_SWIFT_NAME:">- addListener:NS_SWIFT_NAME:</option>
+		
+		<option value="//api/name/cancelAllTasks">- cancelAllTasks</option>
+		
+		<option value="//api/name/cancelSearchTaskWithIdentifier:NS_SWIFT_NAME:">- cancelSearchTaskWithIdentifier:NS_SWIFT_NAME:</option>
+		
+		<option value="//api/name/getSearchTaskByIdentifier:NS_SWIFT_NAME:">- getSearchTaskByIdentifier:NS_SWIFT_NAME:</option>
+		
+		<option value="//api/name/invalidate">- invalidate</option>
+		
+		<option value="//api/name/removeListener:NS_SWIFT_NAME:">- removeListener:NS_SWIFT_NAME:</option>
+		
+		<option value="//api/name/searchTaskWithRequest:workflowIdentifier:NS_SWIFT_NAME:">- searchTaskWithRequest:workflowIdentifier:NS_SWIFT_NAME:</option>
+		
+		<option value="//api/name/startSearchTaskWithRequest:workflowIdentifier:listener:NS_SWIFT_NAME:">- startSearchTaskWithRequest:workflowIdentifier:listener:NS_SWIFT_NAME:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">SlyceSession Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>SlyceSession.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sessionWithSlyce:error:" title="sessionWithSlyce:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sessionWithSlyce:error:">+&nbsp;sessionWithSlyce:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The static initializer for <code>SlyceSession</code>. Use this to create your own instance of a SlyceSession.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable instancetype)sessionWithSlyce:(Slyce *)<em>slyce</em> error:(SlyceOutError)<em>outError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>slyce</code></th>
+						<td><ul>
+<li>An opened instance of <a href="../Classes/Slyce.html"><code>Slyce</code></a>.</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>outError</code></th>
+						<td><ul>
+<li>A pointer to an error that will be assigned if a problem occurs.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>In most cases you can use the <code>defaultSession</code> on <a href="../Classes/Slyce.html"><code>Slyce</code></a>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/addListener:NS_SWIFT_NAME:" title="addListener:NS_SWIFT_NAME:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/addListener:NS_SWIFT_NAME:">&ndash;&nbsp;addListener:NS_SWIFT_NAME:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Adds the instance of <a href="../Protocols/SlyceSessionListener.html"><code>SlyceSessionListener</code></a> as a listener on this instance of <code>SlyceSession</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)addListener:(id&lt;SlyceSessionListener&gt;)<em>listener</em> NS_SWIFT_NAME</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>The instance of the listener to be added.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeListener:NS_SWIFT_NAME:" title="removeListener:NS_SWIFT_NAME:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeListener:NS_SWIFT_NAME:">&ndash;&nbsp;removeListener:NS_SWIFT_NAME:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes the instance of <a href="../Protocols/SlyceSessionListener.html"><code>SlyceSessionListener</code></a> as a listener on this instance of <code>SlyceSession</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeListener:(id&lt;SlyceSessionListener&gt;)<em>listener</em> NS_SWIFT_NAME</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><p>The instance of the listener to be removed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/invalidate" title="invalidate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/invalidate">&ndash;&nbsp;invalidate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Invalidates the session, all active tasks will be canceled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)invalidate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isInvalidated" title="isInvalidated"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isInvalidated">&nbsp;&nbsp;isInvalidated</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL isInvalidated</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>A flag indicating the validity of this session instance.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startSearchTaskWithRequest:workflowIdentifier:listener:NS_SWIFT_NAME:" title="startSearchTaskWithRequest:workflowIdentifier:listener:NS_SWIFT_NAME:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startSearchTaskWithRequest:workflowIdentifier:listener:NS_SWIFT_NAME:">&ndash;&nbsp;startSearchTaskWithRequest:workflowIdentifier:listener:NS_SWIFT_NAME:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and starts a search task based on the provided request and workflow identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable SlyceSearchTask *)startSearchTaskWithRequest:(SlyceSearchRequest *)<em>searchRequest</em> workflowIdentifier:(NSString *)<em>workflowIdentifier</em> listener:(nullable id&lt;SlyceSearchTaskListener&gt;)<em>listener</em> NS_SWIFT_NAME</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>searchRequest</code></th>
+						<td><ul>
+<li>The search request.</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>workflowIdentifier</code></th>
+						<td><ul>
+<li>The identifier of the workflow to use.</li>
+</ul>
+</td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>listener</code></th>
+						<td><ul>
+<li>A listener to add to the task. Nullable.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>a new <a href="../Classes/SlyceSearchTask.html"><code>SlyceSearchTask</code></a> for the request and workflow identifier.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchTasks" title="searchTasks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchTasks">&nbsp;&nbsp;searchTasks</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>@property
+*</li>
+<li>@brief Gets all <code>SlyceSearchTask</code> objects that have been started and not yet completed.
+*
+@ @return A copy of all active <a href="../Classes/SlyceSearchTask.html"><code>SlyceSearchTask</code></a> objects.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, copy) NSArray&lt;SlyceSearchTask*&gt; *searchTasks</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSearchTaskByIdentifier:NS_SWIFT_NAME:" title="getSearchTaskByIdentifier:NS_SWIFT_NAME:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSearchTaskByIdentifier:NS_SWIFT_NAME:">&ndash;&nbsp;getSearchTaskByIdentifier:NS_SWIFT_NAME:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets the task with the provided task identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable SlyceSearchTask *)getSearchTaskByIdentifier:(NSString *)<em>taskIdentifier</em> NS_SWIFT_NAME</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>taskIdentifier</code></th>
+						<td><ul>
+<li>The identifier of the task to get.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the corresponding task, or null if not found.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelAllTasks" title="cancelAllTasks"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelAllTasks">&ndash;&nbsp;cancelAllTasks</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels all tasks within this session.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelAllTasks</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultSearchParameters" title="defaultSearchParameters"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultSearchParameters">&nbsp;&nbsp;defaultSearchParameters</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) SlyceSearchParameters *defaultSearchParameters</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The <a href="../Classes/SlyceSearchParameters.html"><code>SlyceSearchParameters</code></a> for all requests in this session.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>@property</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, nullable) id&lt;SlyceSessionDelegate&gt; delegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The object that acts as the delegate of the session.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/searchTaskWithRequest:workflowIdentifier:NS_SWIFT_NAME:" title="searchTaskWithRequest:workflowIdentifier:NS_SWIFT_NAME:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/searchTaskWithRequest:workflowIdentifier:NS_SWIFT_NAME:">&ndash;&nbsp;searchTaskWithRequest:workflowIdentifier:NS_SWIFT_NAME:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<ul>
+<li>@method
+*</li>
+<li>@brief Creates a search task based on the provided request and workflow identifier.
+*</li>
+<li>@param searchRequest - The search request.</li>
+<li>@param workflowIdentifier - The identifier of the workflow to use.
+*</li>
+<li>@return a new <a href="../Classes/SlyceSearchTask.html"><code>SlyceSearchTask</code></a> for the request and workflow identifier.</li>
+</ul>
+
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (nullable SlyceSearchTask *)searchTaskWithRequest:(SlyceSearchRequest *)<em>searchRequest</em> workflowIdentifier:(NSString *)<em>workflowIdentifier</em> NS_SWIFT_NAME</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancelSearchTaskWithIdentifier:NS_SWIFT_NAME:" title="cancelSearchTaskWithIdentifier:NS_SWIFT_NAME:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancelSearchTaskWithIdentifier:NS_SWIFT_NAME:">&ndash;&nbsp;cancelSearchTaskWithIdentifier:NS_SWIFT_NAME:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Cancels the task with the provided task identifier. (<b class="deprecated">Deprecated:</b><span class="deprecated"> in version 5.1.0</span>)</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancelSearchTaskWithIdentifier:(NSString *)<em>taskIdentifier</em> NS_SWIFT_NAME</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>taskIdentifier</code></th>
+						<td><ul>
+<li>The ID of the task to cancel.</li>
+</ul>
+</td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceSession.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-08-15</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -60,6 +60,7 @@
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_global_done_small;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_global_done_large;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_global_alert_small;
+@property (nonatomic, readwrite, copy, nullable) UIImage *ic_global_alert_xlarge;
 
 // MARK: search history
 @property (nonatomic, readwrite, copy, nullable) UIImage *bg_emptyContentImage;

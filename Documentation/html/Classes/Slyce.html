@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Slyce Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">SlyceSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Slyce Inc</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/analyticsEnabled">analyticsEnabled</option>
+		
+		<option value="//api/name/analyticsShouldIncludeLocationInformation">analyticsShouldIncludeLocationInformation</option>
+		
+		<option value="//api/name/complianceManager">complianceManager</option>
+		
+		<option value="//api/name/credentials">credentials</option>
+		
+		<option value="//api/name/defaultSession">defaultSession</option>
+		
+		<option value="//api/name/eventTracker">eventTracker</option>
+		
+		<option value="//api/name/imageMatchingSyncDelegate">imageMatchingSyncDelegate</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/shared">+ shared</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/close">- close</option>
+		
+		<option value="//api/name/isOpen">- isOpen</option>
+		
+		<option value="//api/name/openWithAccountIdentifier:apiKey:spaceIdentifier:completion:NS_SWIFT_NAME:">- openWithAccountIdentifier:apiKey:spaceIdentifier:completion:NS_SWIFT_NAME:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">Slyce Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>SlyceInstance.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/shared" title="shared"></a>
+	<h3 class="method-title"><code><a href="#//api/name/shared">+&nbsp;shared</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)shared</code></div>
+
+		    
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/openWithAccountIdentifier:apiKey:spaceIdentifier:completion:NS_SWIFT_NAME:" title="openWithAccountIdentifier:apiKey:spaceIdentifier:completion:NS_SWIFT_NAME:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/openWithAccountIdentifier:apiKey:spaceIdentifier:completion:NS_SWIFT_NAME:">&ndash;&nbsp;openWithAccountIdentifier:apiKey:spaceIdentifier:completion:NS_SWIFT_NAME:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes a new Slyce object using valid Account Identifier, API Key, and Space Identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)openWithAccountIdentifier:(NSString *)<em>accountIdentifier</em> apiKey:(NSString *)<em>apiKey</em> spaceIdentifier:(NSString *)<em>spaceIdentifier</em> completion:(void ( ^ ) ( NSError *_Nullable ))<em>completion</em> NS_SWIFT_NAME</code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>accountIdentifier</code></th>
+						<td><p>the Account Identifier for your organization.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>apiKey</code></th>
+						<td><p>the API Key for your organization.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>spaceIdentifier</code></th>
+						<td><p>the Space Identifier for this SlyceInstance.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>the completion block. This will always be returned on the main queue.</p>
+
+<p><strong>Important:</strong> Successfully opening the Slyce object is mandatory before you start
+performing any tasks in the SDK!</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this method to open the SDK for &lsquo;Public&rsquo; recognition functionality. On success, this will also post a <code>SlyceDidOpenNotification</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/credentials" title="credentials"></a>
+	<h3 class="method-title"><code><a href="#//api/name/credentials">&nbsp;&nbsp;credentials</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a <a href="../Classes/SlyceCredentials.html"><code>SlyceCredentials</code></a> object if Slyce is authenticated and open. nil otherwise.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) SlyceCredentials *credentials</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/isOpen" title="isOpen"></a>
+	<h3 class="method-title"><code><a href="#//api/name/isOpen">&ndash;&nbsp;isOpen</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns Slyce &ldquo;open&rdquo; status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)isOpen</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/close" title="close"></a>
+	<h3 class="method-title"><code><a href="#//api/name/close">&ndash;&nbsp;close</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Closes this instance of Slyce.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)close</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Posts a <code>SlyceWillCloseNotification</code> before begining to close, and a <code>SlyceDidCloseNotification</code> after close completes.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultSession" title="defaultSession"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultSession">&nbsp;&nbsp;defaultSession</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The default <a href="../Classes/SlyceSession.html"><code>SlyceSession</code></a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) SlyceSession *defaultSession</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>A <a href="../Classes/SlyceSession.html"><code>SlyceSession</code></a> instance.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The default <a href="../Classes/SlyceSession.html"><code>SlyceSession</code></a>. The default session cannot be manually invalidated, but will be invalidated when <code>Slyce</code> is closed.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/imageMatchingSyncDelegate" title="imageMatchingSyncDelegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/imageMatchingSyncDelegate">&nbsp;&nbsp;imageMatchingSyncDelegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>2D catalogs sync delegate</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak, nullable) id&lt;SlyceImageMatchingSyncDelegate&gt; imageMatchingSyncDelegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This object will receive updates about the 2D catalogs sync progress</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/analyticsEnabled" title="analyticsEnabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/analyticsEnabled">&nbsp;&nbsp;analyticsEnabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Enables or disables analytics
+@default YES</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL analyticsEnabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/analyticsShouldIncludeLocationInformation" title="analyticsShouldIncludeLocationInformation"></a>
+	<h3 class="method-title"><code><a href="#//api/name/analyticsShouldIncludeLocationInformation">&nbsp;&nbsp;analyticsShouldIncludeLocationInformation</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Include location information with analytics, if available.
+@default YES</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL analyticsShouldIncludeLocationInformation</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/eventTracker" title="eventTracker"></a>
+	<h3 class="method-title"><code><a href="#//api/name/eventTracker">&nbsp;&nbsp;eventTracker</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An instance of <a href="../Protocols/SlyceEventTracker.html"><code>SlyceEventTracker</code></a> for posting events that occur inside of or outside of the SlyceSDK.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) id&lt;SlyceEventTracker&gt; eventTracker</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/complianceManager" title="complianceManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/complianceManager">&nbsp;&nbsp;complianceManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>An instance of <a href="../Classes/SlyceGDPRComplianceManager.html"><code>SlyceGDPRComplianceManager</code></a> for handling GDPR compliance within Slyce.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) SlyceGDPRComplianceManager *complianceManager</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceInstance.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-08-15</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

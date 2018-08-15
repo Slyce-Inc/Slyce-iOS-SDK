@@ -79,6 +79,22 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 - (BOOL)slyceViewController:(SlyceViewController *)viewController shouldDisplayDefaultDetailForItemDescriptor:(SlyceItemDescriptor *)itemDescriptor;
 
+/*!
+ * @discussion This delegate method allows for the host application to handle a list
+ * of items returned from a Slyce search,  presumably to show it's own custom view controller
+ * instead of Slyce's default layer.
+ *
+ * @param viewController The attached `SlyceViewController`.
+ * @param itemDescriptors An array of `SlyceItemDescriptor` objects, each of which provide
+ * information about an individual item.
+ *
+ * @return Return `YES` or `true` if the `SlyceViewController` should show it's own default
+ * item list layer. Return `NO` or `false` if your application will handle the display
+ * of the item list.
+ */
+@optional
+- (BOOL)slyceViewController:(SlyceViewController *)viewController shouldDisplayDefaultListForItemDescriptors:(NSArray<SlyceItemDescriptor *> *)itemDescriptors;
+
 @end
 
 

@@ -74,6 +74,10 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     SlyceErrorSearchImageExists = -1103,
     SlyceErrorSearchImageWriteFailed = -1104,
     SlyceErrorSearchExists = -1105,
-
+    
+    // Migration
+    
+    SlyceErrorMigrationFetchExistingFailed = -1201,
+    SlyceErrorMigrationAddNewFailed = -1202,
 };
 
