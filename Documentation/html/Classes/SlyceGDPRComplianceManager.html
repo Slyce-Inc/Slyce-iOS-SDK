@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>SlyceGDPRComplianceManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">SlyceSDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Slyce Inc</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/privacyPolicy">privacyPolicy</option>
+		
+		<option value="//api/name/userRequiresGDPRCompliance">userRequiresGDPRCompliance</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/optOutAndForgetUser:">- optOutAndForgetUser:</option>
+		
+		<option value="//api/name/setUserConsentedToPrivacyPolicy:">- setUserConsentedToPrivacyPolicy:</option>
+		
+		<option value="//api/name/setUserIdentifier:">- setUserIdentifier:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">SlyceGDPRComplianceManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>SlyceGDPRComplianceManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/userRequiresGDPRCompliance" title="userRequiresGDPRCompliance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/userRequiresGDPRCompliance">&nbsp;&nbsp;userRequiresGDPRCompliance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets the flag indicating that this user must accept GDPR terms for <a href="../Classes/Slyce.html">Slyce</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL userRequiresGDPRCompliance</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This flag must be set <em>before</em> opening a <a href="../Classes/Slyce.html">Slyce</a> instance. Only set this for users covered by GDPR.
+@default NO</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceGDPRComplianceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/privacyPolicy" title="privacyPolicy"></a>
+	<h3 class="method-title"><code><a href="#//api/name/privacyPolicy">&nbsp;&nbsp;privacyPolicy</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A reference to the <a href="../Classes/SlycePrivacyPolicy.html"><code>SlycePrivacyPolicy</code></a> object which contains the GDPR terms for <a href="../Classes/Slyce.html">Slyce</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable, readonly) SlycePrivacyPolicy *privacyPolicy</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>This property is only available <em>after</em> <a href="../Classes/Slyce.html">Slyce</a> has been opened.
+@default NO</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceGDPRComplianceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setUserIdentifier:" title="setUserIdentifier:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setUserIdentifier:">&ndash;&nbsp;setUserIdentifier:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The identifier representing the user in the host application.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setUserIdentifier:(NSString *)<em>userIdentifier</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The host application must set the user identifier to enable cross-device compliance with GDPR.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceGDPRComplianceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setUserConsentedToPrivacyPolicy:" title="setUserConsentedToPrivacyPolicy:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setUserConsentedToPrivacyPolicy:">&ndash;&nbsp;setUserConsentedToPrivacyPolicy:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Informs <a href="../Classes/Slyce.html">Slyce</a> that a user has accepted the terms of the given <a href="../Classes/SlycePrivacyPolicy.html"><code>SlycePrivacyPolicy</code></a></p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setUserConsentedToPrivacyPolicy:(SlycePrivacyPolicy *)<em>privacyPolicy</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>privacyPolicy</code></th>
+						<td><p>the <a href="../Classes/SlycePrivacyPolicy.html"><code>SlycePrivacyPolicy</code></a> that the user has agreed to.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>The <a href="../Classes/SlycePrivacyPolicy.html"><code>SlycePrivacyPolicy</code></a> can be obtained from an instance of <code>SlyceGDPRComplianceManager</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceGDPRComplianceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/optOutAndForgetUser:" title="optOutAndForgetUser:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/optOutAndForgetUser:">&ndash;&nbsp;optOutAndForgetUser:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Tells <a href="../Classes/Slyce.html">Slyce</a> to forget the user.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)optOutAndForgetUser:(void ( ^ ) ( NSError *_Nullable ))<em>completion</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completion</code></th>
+						<td><p>A completion block that informs if the request to forget the user was <em>received</em> successfully, an error is passed when the request fails. If a request fails, you must prompt the user to run the request again.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Tells <a href="../Classes/Slyce.html">Slyce</a> to forget the user and opt-out of privacy policy so they will be prompted to opt-in next time they utilize <a href="../Classes/Slyce.html">Slyce</a></p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceGDPRComplianceManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-08-15</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
