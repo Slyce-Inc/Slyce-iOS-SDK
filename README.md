@@ -1,6 +1,7 @@
 Slyce iOS SDK
 ==============
 
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Slyce-iOS-SDK.svg)](https://cocoapods.org/pods/Slyce-iOS-SDK)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 The Slyce iOS SDK makes it easy to add visual search capabilities to mobile apps.
