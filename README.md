@@ -1,6 +1,8 @@
 Slyce iOS SDK
 ==============
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 The Slyce iOS SDK makes it easy to add visual search capabilities to mobile apps.
 
 ### [About the SlyceSDK](https://docs.slyce.it)
