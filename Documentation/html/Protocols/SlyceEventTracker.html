@@ -58,17 +58,17 @@
 	
 	<optgroup label="Instance Methods">
 		
-		<option value="//api/name/trackAddToCartTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:">- trackAddToCartTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:</option>
+		<option value="//api/name/trackAddToCartTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:">- trackAddToCartTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:</option>
 		
-		<option value="//api/name/trackAddToListTapForItemIdentifier:itemURL:">- trackAddToListTapForItemIdentifier:itemURL:</option>
+		<option value="//api/name/trackAddToListTapForJobIdentifier:itemIdentifier:itemURL:">- trackAddToListTapForJobIdentifier:itemIdentifier:itemURL:</option>
 		
 		<option value="//api/name/trackCaptureImage">- trackCaptureImage</option>
 		
-		<option value="//api/name/trackCheckoutTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:">- trackCheckoutTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:</option>
+		<option value="//api/name/trackCheckoutTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:">- trackCheckoutTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:</option>
 		
-		<option value="//api/name/trackItemQuantityTapForItemIdentifier:itemURL:itemQuantity:">- trackItemQuantityTapForItemIdentifier:itemURL:itemQuantity:</option>
+		<option value="//api/name/trackItemQuantityTapForJobIdentifier:itemIdentifier:itemURL:itemQuantity:">- trackItemQuantityTapForJobIdentifier:itemIdentifier:itemURL:itemQuantity:</option>
 		
-		<option value="//api/name/trackOrderSuccessfullyCompletedForItemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:">- trackOrderSuccessfullyCompletedForItemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:</option>
+		<option value="//api/name/trackOrderSuccessfullyCompletedForJobIdentifier:itemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:">- trackOrderSuccessfullyCompletedForJobIdentifier:itemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:</option>
 		
 		<option value="//api/name/trackShareFeedbackTap">- trackShareFeedbackTap</option>
 		
@@ -78,9 +78,9 @@
 		
 		<option value="//api/name/trackTurnOnFlash">- trackTurnOnFlash</option>
 		
-		<option value="//api/name/trackViewProductInformationTapForItemIdentifier:itemURL:">- trackViewProductInformationTapForItemIdentifier:itemURL:</option>
+		<option value="//api/name/trackViewProductInformationTapForJobIdentifier:itemIdentifier:itemURL:">- trackViewProductInformationTapForJobIdentifier:itemIdentifier:itemURL:</option>
 		
-		<option value="//api/name/trackViewProductReviewsTapForItemIdentifier:itemURL:">- trackViewProductReviewsTapForItemIdentifier:itemURL:</option>
+		<option value="//api/name/trackViewProductReviewsTapForJobIdentifier:itemIdentifier:itemURL:">- trackViewProductReviewsTapForJobIdentifier:itemIdentifier:itemURL:</option>
 		
 		<option value="//api/name/trackZoomIn">- trackZoomIn</option>
 		
@@ -415,8 +415,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/trackViewProductInformationTapForItemIdentifier:itemURL:" title="trackViewProductInformationTapForItemIdentifier:itemURL:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackViewProductInformationTapForItemIdentifier:itemURL:">&ndash;&nbsp;trackViewProductInformationTapForItemIdentifier:itemURL:</a></code>
+	<a name="//api/name/trackViewProductInformationTapForJobIdentifier:itemIdentifier:itemURL:" title="trackViewProductInformationTapForJobIdentifier:itemIdentifier:itemURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackViewProductInformationTapForJobIdentifier:itemIdentifier:itemURL:">&ndash;&nbsp;trackViewProductInformationTapForJobIdentifier:itemIdentifier:itemURL:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -431,13 +431,18 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)trackViewProductInformationTapForItemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)trackViewProductInformationTapForJobIdentifier:(NSString *)<em>jobIdentifier</em> itemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jobIdentifier</code></th>
+						<td><p>The jobIdentifier of the originating searchTask.</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>itemIdentifier</code></th>
@@ -473,8 +478,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/trackViewProductReviewsTapForItemIdentifier:itemURL:" title="trackViewProductReviewsTapForItemIdentifier:itemURL:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackViewProductReviewsTapForItemIdentifier:itemURL:">&ndash;&nbsp;trackViewProductReviewsTapForItemIdentifier:itemURL:</a></code>
+	<a name="//api/name/trackViewProductReviewsTapForJobIdentifier:itemIdentifier:itemURL:" title="trackViewProductReviewsTapForJobIdentifier:itemIdentifier:itemURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackViewProductReviewsTapForJobIdentifier:itemIdentifier:itemURL:">&ndash;&nbsp;trackViewProductReviewsTapForJobIdentifier:itemIdentifier:itemURL:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -489,13 +494,18 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)trackViewProductReviewsTapForItemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)trackViewProductReviewsTapForJobIdentifier:(NSString *)<em>jobIdentifier</em> itemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jobIdentifier</code></th>
+						<td><p>The jobIdentifier of the originating searchTask.</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>itemIdentifier</code></th>
@@ -531,8 +541,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/trackAddToListTapForItemIdentifier:itemURL:" title="trackAddToListTapForItemIdentifier:itemURL:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackAddToListTapForItemIdentifier:itemURL:">&ndash;&nbsp;trackAddToListTapForItemIdentifier:itemURL:</a></code>
+	<a name="//api/name/trackAddToListTapForJobIdentifier:itemIdentifier:itemURL:" title="trackAddToListTapForJobIdentifier:itemIdentifier:itemURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackAddToListTapForJobIdentifier:itemIdentifier:itemURL:">&ndash;&nbsp;trackAddToListTapForJobIdentifier:itemIdentifier:itemURL:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -547,13 +557,18 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)trackAddToListTapForItemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)trackAddToListTapForJobIdentifier:(NSString *)<em>jobIdentifier</em> itemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jobIdentifier</code></th>
+						<td><p>The jobIdentifier of the originating searchTask.</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>itemIdentifier</code></th>
@@ -589,8 +604,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/trackItemQuantityTapForItemIdentifier:itemURL:itemQuantity:" title="trackItemQuantityTapForItemIdentifier:itemURL:itemQuantity:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackItemQuantityTapForItemIdentifier:itemURL:itemQuantity:">&ndash;&nbsp;trackItemQuantityTapForItemIdentifier:itemURL:itemQuantity:</a></code>
+	<a name="//api/name/trackItemQuantityTapForJobIdentifier:itemIdentifier:itemURL:itemQuantity:" title="trackItemQuantityTapForJobIdentifier:itemIdentifier:itemURL:itemQuantity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackItemQuantityTapForJobIdentifier:itemIdentifier:itemURL:itemQuantity:">&ndash;&nbsp;trackItemQuantityTapForJobIdentifier:itemIdentifier:itemURL:itemQuantity:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -605,13 +620,18 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)trackItemQuantityTapForItemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)trackItemQuantityTapForJobIdentifier:(NSString *)<em>jobIdentifier</em> itemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemURL:(nullable NSString *)<em>itemURL</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jobIdentifier</code></th>
+						<td><p>The jobIdentifier of the originating searchTask.</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>itemIdentifier</code></th>
@@ -652,8 +672,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/trackAddToCartTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:" title="trackAddToCartTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackAddToCartTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:">&ndash;&nbsp;trackAddToCartTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:</a></code>
+	<a name="//api/name/trackAddToCartTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:" title="trackAddToCartTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackAddToCartTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:">&ndash;&nbsp;trackAddToCartTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -668,13 +688,18 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)trackAddToCartTapForItemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemRevenue:(nullable NSString *)<em>itemRevenue</em> itemURL:(nullable NSString *)<em>itemURL</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)trackAddToCartTapForJobIdentifier:(NSString *)<em>jobIdentifier</em> itemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemRevenue:(nullable NSString *)<em>itemRevenue</em> itemURL:(nullable NSString *)<em>itemURL</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jobIdentifier</code></th>
+						<td><p>The jobIdentifier of the originating searchTask.</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>itemIdentifier</code></th>
@@ -720,8 +745,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/trackCheckoutTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:" title="trackCheckoutTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackCheckoutTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:">&ndash;&nbsp;trackCheckoutTapForItemIdentifier:itemRevenue:itemURL:itemQuantity:</a></code>
+	<a name="//api/name/trackCheckoutTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:" title="trackCheckoutTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackCheckoutTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:">&ndash;&nbsp;trackCheckoutTapForJobIdentifier:itemIdentifier:itemRevenue:itemURL:itemQuantity:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -736,13 +761,18 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)trackCheckoutTapForItemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemRevenue:(nullable NSString *)<em>itemRevenue</em> itemURL:(nullable NSString *)<em>itemURL</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)trackCheckoutTapForJobIdentifier:(NSString *)<em>jobIdentifier</em> itemIdentifier:(nullable NSString *)<em>itemIdentifier</em> itemRevenue:(nullable NSString *)<em>itemRevenue</em> itemURL:(nullable NSString *)<em>itemURL</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jobIdentifier</code></th>
+						<td><p>The jobIdentifier of the originating searchTask.</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>itemIdentifier</code></th>
@@ -788,8 +818,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/trackOrderSuccessfullyCompletedForItemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:" title="trackOrderSuccessfullyCompletedForItemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/trackOrderSuccessfullyCompletedForItemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:">&ndash;&nbsp;trackOrderSuccessfullyCompletedForItemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:</a></code>
+	<a name="//api/name/trackOrderSuccessfullyCompletedForJobIdentifier:itemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:" title="trackOrderSuccessfullyCompletedForJobIdentifier:itemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/trackOrderSuccessfullyCompletedForJobIdentifier:itemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:">&ndash;&nbsp;trackOrderSuccessfullyCompletedForJobIdentifier:itemRevenue:transactionCurrency:transactionId:transactionRevenue:transactionShipping:transactionTax:itemQuantity:</a></code>
 <span class="task-item-suffix">required method</span></h3>
 
 	<div class="method-info">
@@ -804,13 +834,18 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)trackOrderSuccessfullyCompletedForItemRevenue:(nullable NSString *)<em>itemRevenue</em> transactionCurrency:(nullable NSString *)<em>transactionCurrency</em> transactionId:(nullable NSString *)<em>transactionId</em> transactionRevenue:(nullable NSString *)<em>transactionRevenue</em> transactionShipping:(nullable NSString *)<em>transactionShipping</em> transactionTax:(nullable NSString *)<em>transactionTax</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)trackOrderSuccessfullyCompletedForJobIdentifier:(NSString *)<em>jobIdentifier</em> itemRevenue:(nullable NSString *)<em>itemRevenue</em> transactionCurrency:(nullable NSString *)<em>transactionCurrency</em> transactionId:(nullable NSString *)<em>transactionId</em> transactionRevenue:(nullable NSString *)<em>transactionRevenue</em> transactionShipping:(nullable NSString *)<em>transactionShipping</em> transactionTax:(nullable NSString *)<em>transactionTax</em> itemQuantity:(NSInteger)<em>itemQuantity</em></code></div>
 
 		    
 			
 			<div class="method-subsection arguments-section parameters">
 				<h4 class="method-subtitle parameter-title">Parameters</h4>
 				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>jobIdentifier</code></th>
+						<td><p>The jobIdentifier of the originating searchTask.</p></td>
+					</tr>
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>itemRevenue</code></th>
@@ -883,7 +918,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-08-15</p>
+						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-08-29</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
