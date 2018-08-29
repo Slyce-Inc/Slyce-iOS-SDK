@@ -98,11 +98,32 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)resumeDetection;
 
-#pragma mark Deprecated
 
+#pragma mark Camera Pass-through
+
+/*!
+ * @property
+ *
+ * @brief Pass-through `AVCaptureVideoDataOutputSampleBufferDelegate`
+ *
+ * @discussion Setting this property will pass-through all `AVCaptureVideoDataOutputSampleBufferDelegate` delegate methods after Slyce has finished processing. This can be use to do your own processing of video frames.
+ */
+@property (nonatomic, weak, nullable) id<AVCaptureVideoDataOutputSampleBufferDelegate> avCaptureVideoDataOutputSampleBufferDelegate;
 
 
 /*!
+ * @property
+ *
+ * @brief Pass-through `AVCaptureMetadataOutputObjectsDelegate`
+ *
+ * @discussion Setting this property will pass-through all `AVCaptureMetadataOutputObjectsDelegate` delegate methods after Slyce has finished processing. This can be used to do your own processing of any detected barcodes.
+ */
+@property (nonatomic, weak, nullable) id<AVCaptureMetadataOutputObjectsDelegate> avCaptureMetadataOutputObjectsDelegate;
+
+
+#pragma mark Deprecated
+
+/*
  * @deprecated as of 5.1.0
  */
 @property (nonatomic, readonly) NSString *identifier __deprecated_msg("Use 'lensIdentifier' instead.");

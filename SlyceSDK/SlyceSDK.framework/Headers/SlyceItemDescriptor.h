@@ -19,5 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, readonly) NSDictionary<NSString *, id> *item;
 
+/*!
+ * @property
+ *
+ * @brief The identifier of the originating search.
+ *
+ * @discussion This is the jobIdentifier to use for all analytics callbacks related to this item or search result.
+ *
+ */
+@property (nonatomic, copy, readonly) NSString *jobIdentifier;
+
 @end
 NS_ASSUME_NONNULL_END
