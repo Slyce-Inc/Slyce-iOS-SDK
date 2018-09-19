@@ -16,6 +16,7 @@ extern _Nonnull NSNotificationName const SlyceDidCloseNotification;
  Main Slyce workflow entry point
  */
 NS_ASSUME_NONNULL_BEGIN
+__attribute__((objc_subclassing_restricted))
 @interface Slyce : NSObject
 
 + (instancetype)shared;

@@ -11,6 +11,7 @@
 #import "SlyceSession.h"
 #import "SlyceCredentials.h"
 #import "SlyceLocalization.h"
+#import "SlyceOptions.h"
 
 
 #pragma mark Models
@@ -25,7 +26,8 @@
 
 #pragma mark Lenses
 
-#import "SlyceLensConfiguration.h"
+#import "SlyceLensLocalDetectionMode.h"
+#import "SlyceLensSettings.h"
 
 
 #pragma mark Headless Mode
@@ -53,8 +55,6 @@
 
 #import "SlycePrivacyPolicy.h"
 #import "SlyceGDPRComplianceManager.h"
-#import "SlycePrivacyPolicy.h"
-#import "SlycePrivacyPolicyConsent.h"
 
 
 #pragma mark Full UI
@@ -63,3 +63,12 @@
 #import "SlyceTheme.h"
 #import "SlyceItemDescriptor.h"
 #import "SlyceAppearanceStyles.h"
+
+
+#pragma mark Other
+
+#import "SlyceLegacySearchTypes.h"
+
+#pragma mark Deprecated
+
+#import "SlyceLensConfiguration.h"

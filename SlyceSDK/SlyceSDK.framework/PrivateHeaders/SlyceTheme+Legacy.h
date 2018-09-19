@@ -48,6 +48,8 @@
 @property (nonatomic, readwrite, copy, nullable) UIImage *btn_drawer_close;
 @property (nonatomic, readwrite, copy, nullable) UIImage *btn_drawer_back;
 
+@property (nonatomic, readwrite, copy, nullable) UIImage *ic_help;
+
 // MARK: camera
 @property (nonatomic, readwrite, copy, nullable) UIImage *bg_nav_stripImage;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_back;
@@ -130,5 +132,8 @@
 
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_lensPicker_closed_selected_visualSearch;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_lensPicker_closed_pressed_visualSearch;
+
+@property (nonatomic, readwrite, copy, nullable) UIImage *ic_lensPicker_close;
+@property (nonatomic, readwrite, copy, nullable) UIImage *ic_lensPicker_close_pressed;
 
 @end

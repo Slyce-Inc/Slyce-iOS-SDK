@@ -38,7 +38,19 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return An instance of a `SlyceViewController`.
  */
-- (instancetype)initWithSlyce:(Slyce *)slyce mode:(SlyceViewControllerMode)mode NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSlyce:(Slyce *)slyce mode:(SlyceViewControllerMode)mode options:(nullable NSDictionary<NSString *, id> *)options NS_DESIGNATED_INITIALIZER;
+
+
+/*!
+ *
+ * @brief Initializes a `SlyceViewController`.
+ *
+ * @param slyce An open `Slyce` instance.
+ * @param mode The mode, either Universal Lens or Lens Picker. See `SlyceViewControllerMode`.
+ *
+ * @return An instance of a `SlyceViewController`.
+ */
+- (instancetype)initWithSlyce:(Slyce *)slyce mode:(SlyceViewControllerMode)mode;
 
 
 #pragma mark Properties
@@ -54,6 +66,15 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Access the camera interface.
  */
 @property (nonatomic, readonly) id<SlyceCameraControls> camera;
+
+
+
+/*!
+ * @property
+ *
+ * @brief Access the attached session.
+ */
+@property (nonatomic, readonly, nullable) SlyceSession *session;
 
 @end
 
@@ -95,7 +116,8 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 - (BOOL)slyceViewController:(SlyceViewController *)viewController shouldDisplayDefaultListForItemDescriptors:(NSArray<SlyceItemDescriptor *> *)itemDescriptors;
 
-@end
 
+
+@end
 
 NS_ASSUME_NONNULL_END

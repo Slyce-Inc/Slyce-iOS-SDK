@@ -64,6 +64,7 @@ typedef NS_ENUM(NSUInteger, SlyceBarcodeType) {
 /*! 
  *  @brief Class representing a barcode
  */
+__attribute__((objc_subclassing_restricted))
 @interface SlyceBarcode : NSObject <NSCoding>
 
 /*!

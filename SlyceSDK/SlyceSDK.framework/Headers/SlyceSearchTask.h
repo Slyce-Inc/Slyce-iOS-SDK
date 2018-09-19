@@ -59,6 +59,7 @@ NS_ASSUME_NONNULL_END
 
 
 NS_ASSUME_NONNULL_BEGIN
+__attribute__((objc_subclassing_restricted))
 @interface SlyceSearchTask : NSObject
 
 /*!
@@ -138,15 +139,6 @@ NS_SWIFT_NAME(removeListener(_:));
 #pragma mark Deprecated
 
 /*!
- * @method
- *
- * @brief Starts the search task.
- *
- */
-- (void)start __deprecated_msg("Use SlyceSession:startSearchTask method instead.");
-
-
-/*!
  * @property
  *
  * @brief The `SlyceSearchTaskDelegate` of this instance.
@@ -160,23 +152,6 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SlyceSearchTaskDelegate <SlyceSearchTaskListener>
-
-
-/*!
- * @method
- *
- * @brief Notifies the `SlyceSearchTaskDelegate` that the `SlyceSearchTask` has finished.
- *
- * @discussion Once this message is received you will no longer get any notifications from this task.
- *
- * @param searchTask - The `SlyceSearchTask` instance that is being updated.
- * @param results - An array of `SlyceSearchResult` objects.
- * @param errors - An array of NSErrors.
- *
- */
-@optional
-- (void)slyceSearchTask:(SlyceSearchTask *)searchTask didFinishWithResults:(NSArray<SlyceSearchResult *> *)results errors:(NSArray<NSError *> *)errors
-NS_SWIFT_NAME(slyce(searchTask:didFinishWithResults:errors:)) __deprecated;
 
 @end
 NS_ASSUME_NONNULL_END

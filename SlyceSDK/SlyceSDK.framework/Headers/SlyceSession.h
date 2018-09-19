@@ -39,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
+__attribute__((objc_subclassing_restricted))
 @interface SlyceSession : NSObject
 
 /*!
@@ -154,29 +155,6 @@ NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
  */
 @property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate;
 
-/*!
- * @method
- *
- * @brief Creates a search task based on the provided request and workflow identifier.
- *
- * @param searchRequest - The search request.
- * @param workflowIdentifier - The identifier of the workflow to use.
- *
- * @return a new `SlyceSearchTask` for the request and workflow identifier.
- 
- */
-- (nullable SlyceSearchTask *)searchTaskWithRequest:(SlyceSearchRequest *)searchRequest workflowIdentifier:(NSString *)workflowIdentifier NS_SWIFT_NAME(searchTask(request:workflowIdentifier:)) __deprecated_msg("Use 'startSearchTaskWithRequest:workflowIdentifier:listener:' instead.");
-
-/*!
- * @method
- *
- * @brief Cancels the task with the provided task identifier.
- *
- * @param taskIdentifier - The ID of the task to cancel.
- *
- * @deprecated in version 5.1.0
- */
-- (void)cancelSearchTaskWithIdentifier:(NSString *)taskIdentifier NS_SWIFT_NAME(cancelSearchTask(identifier:)) __deprecated;
 
 
 @end
@@ -185,18 +163,6 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SlyceSessionDelegate <NSObject>
-    
-/*!
- * @method
- *
- * @brief Implement this method in order to be notified when the session creates `SlyceSearchTask`'s.
- *
- * @param session - The `SlyceSession` instance that has sent this message.
- * @param searchTask - The `SlyceSearchTask` that has been created.
- *
-* @deprecated as of 5.1.0
-*/
-- (void)slyceSession:(SlyceSession *)session didCreateSearchTask:(SlyceSearchTask *)searchTask NS_SWIFT_NAME(slyce(session:didCreateSearchTask:)) __deprecated_msg("Use `slyceSession:willStartSearchTask:` instead");
     
 @end
 NS_ASSUME_NONNULL_END

@@ -22,5 +22,6 @@ typedef NS_ENUM(NSUInteger, SlyceHeaderStyleCenter)
 typedef NS_ENUM(NSUInteger, SlyceHeaderStyleRight)
 {
     SlyceHeaderStyleRightHidden,
-    SlyceHeaderStyleRightSettings
+    SlyceHeaderStyleRightSettings,
+    SlyceHeaderStyleRightHelp
 };
