@@ -46,8 +46,6 @@
 
 	
 	
-	<option value="tasks">Tasks</option>
-	
 	
 
 	
@@ -55,16 +53,6 @@
 
 	
 
-	
-	<optgroup label="Instance Methods">
-		
-		<option value="//api/name/slyceScanner:didCreateRequest:NS_SWIFT_NAME:">- slyceScanner:didCreateRequest:NS_SWIFT_NAME:</option>
-		
-		<option value="//api/name/slyceScanner:didEncounterError:NS_SWIFT_NAME:">- slyceScanner:didEncounterError:NS_SWIFT_NAME:</option>
-		
-		<option value="//api/name/slyceScanner:didFinishWithResults:errors:NS_SWIFT_NAME:">- slyceScanner:didFinishWithResults:errors:NS_SWIFT_NAME:</option>
-		
-	</optgroup>
 	
 	
 </select>
@@ -97,219 +85,6 @@
 
 					
 					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						
-
-						
-						
-
-						<div class="task-list">
-							<div class="section-method">
-	<a name="//api/name/slyceScanner:didCreateRequest:NS_SWIFT_NAME:" title="slyceScanner:didCreateRequest:NS_SWIFT_NAME:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/slyceScanner:didCreateRequest:NS_SWIFT_NAME:">&ndash;&nbsp;slyceScanner:didCreateRequest:NS_SWIFT_NAME:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Alerts the delegate that a request has been created.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)slyceScanner:(SlyceScanner *)<em>scanner</em> didCreateRequest:(SlyceSearchRequest *)<em>request</em> NS_SWIFT_NAME</code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>scanner</code></th>
-						<td><ul>
-<li>The <a href="../Classes/SlyceScanner.html"><code>SlyceScanner</code></a> instance.</li>
-</ul>
-</td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>request</code></th>
-						<td><ul>
-<li>The <a href="../Classes/SlyceSearchRequest.html"><code>SlyceSearchRequest</code></a> that has been created.</li>
-</ul>
-</td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceScanner.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/slyceScanner:didFinishWithResults:errors:NS_SWIFT_NAME:" title="slyceScanner:didFinishWithResults:errors:NS_SWIFT_NAME:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/slyceScanner:didFinishWithResults:errors:NS_SWIFT_NAME:">&ndash;&nbsp;slyceScanner:didFinishWithResults:errors:NS_SWIFT_NAME:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Alerts the delegate that a response has finished.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)slyceScanner:(SlyceScanner *)<em>scanner</em> didFinishWithResults:(NSArray&lt;SlyceSearchResult*&gt; *)<em>results</em> errors:(NSArray&lt;NSError*&gt; *)<em>errors</em> NS_SWIFT_NAME</code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>scanner</code></th>
-						<td><ul>
-<li>The <a href="../Classes/SlyceScanner.html"><code>SlyceScanner</code></a> instance.</li>
-</ul>
-</td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>results</code></th>
-						<td><ul>
-<li>An array of <a href="../Classes/SlyceSearchResult.html"><code>SlyceSearchResult</code></a> returned by the <a href="../Classes/SlyceScanner.html"><code>SlyceScanner</code></a> upon completion.</li>
-</ul>
-</td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>errors</code></th>
-						<td><ul>
-<li>An array of NSError returned by the <a href="../Classes/SlyceScanner.html"><code>SlyceScanner</code></a> upon completion.</li>
-</ul>
-</td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceScanner.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/slyceScanner:didEncounterError:NS_SWIFT_NAME:" title="slyceScanner:didEncounterError:NS_SWIFT_NAME:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/slyceScanner:didEncounterError:NS_SWIFT_NAME:">&ndash;&nbsp;slyceScanner:didEncounterError:NS_SWIFT_NAME:</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>Alerts the delegate that an error has been encountered.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>- (void)slyceScanner:(SlyceScanner *)<em>scanner</em> didEncounterError:(nullable NSError *)<em>error</em> NS_SWIFT_NAME</code></div>
-
-		    
-			
-			<div class="method-subsection arguments-section parameters">
-				<h4 class="method-subtitle parameter-title">Parameters</h4>
-				<table class="argument-def parameter-def">
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>scanner</code></th>
-						<td><ul>
-<li>The <a href="../Classes/SlyceScanner.html"><code>SlyceScanner</code></a> instance.</li>
-</ul>
-</td>
-					</tr>
-				
-					<tr>
-						<th scope="row" class="argument-name"><code>error</code></th>
-						<td><ul>
-<li>The error that has been encountered.</li>
-</ul>
-</td>
-					</tr>
-				
-				</table>
-			</div>
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceScanner.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div>
-						</div>
-						
-					</div>
-					
 					
 
                     
@@ -318,7 +93,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-08-29</p>
+						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-09-19</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
