@@ -35,10 +35,15 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param slyce An open `Slyce` instance.
  * @param mode The mode, either Universal Lens or Lens Picker. See `SlyceViewControllerMode`.
+ * @param options A dictionary of additional options. See `SlyceOptions.h` header.
+ * @param delegate Optional delegate. This may be set later as well.
  *
  * @return An instance of a `SlyceViewController`.
  */
-- (instancetype)initWithSlyce:(Slyce *)slyce mode:(SlyceViewControllerMode)mode options:(nullable NSDictionary<NSString *, id> *)options NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSlyce:(Slyce *)slyce
+                         mode:(SlyceViewControllerMode)mode
+                      options:(nullable NSDictionary<NSString *, id> *)options
+                     delegate:(nullable id<SlyceViewControllerDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
 
 /*!
@@ -83,6 +88,9 @@ NS_ASSUME_NONNULL_BEGIN
  * @brief Delegate protocol for `SlyceViewController`.
  */
 @protocol SlyceViewControllerDelegate <NSObject>
+
+@optional
+- (void)slyceViewController:(SlyceViewController *)viewController didOpenSession:(SlyceSession *)session;
 
 /*!
  * @discussion This delegate method allows for the host application to handle an item selected from
