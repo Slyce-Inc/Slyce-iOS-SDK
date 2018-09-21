@@ -60,6 +60,7 @@ void addDefaultWorkOptions() {
 void reportManualAnalytics() {
     
     // set up some simple example variables
+    NSString *jobId = @"xyz"; // retreieve this from a SlyceSearchResponse
     NSString *itemId = @"123";
     NSString *itemRevenue = @"$9.99";
     NSString *itemURL = @"https://store.com/123";
@@ -69,13 +70,15 @@ void reportManualAnalytics() {
     [[Slyce shared].eventTracker trackCaptureImage];
  
     // track add to cart
-    [[Slyce shared].eventTracker trackAddToCartTapForItemIdentifier:itemId
+    [[Slyce shared].eventTracker trackAddToCartTapForJobIdentifier:jobId
+                                                    itemIdentifier:itemId
                                                         itemRevenue:itemRevenue
                                                             itemURL:itemURL
                                                        itemQuantity:itemQuantity];
     
     // track successful checkout
-    [[Slyce shared].eventTracker trackCheckoutTapForItemIdentifier:itemId
+    [[Slyce shared].eventTracker trackCheckoutTapForJobIdentifier:jobId
+                                                   itemIdentifier:itemId
                                                        itemRevenue:itemRevenue
                                                            itemURL:itemURL
                                                       itemQuantity:itemQuantity];
