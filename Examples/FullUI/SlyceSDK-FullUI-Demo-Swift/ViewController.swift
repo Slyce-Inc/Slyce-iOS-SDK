@@ -42,8 +42,8 @@ class ViewController: UIViewController {
             // Language Code
             //searchParams.languageCode = "fr"
             
-            // Demo Mode. Set to `true` to receive test data
-            //searchParams.demoMode = true
+            // Demo Mode. Set to `true` to receive test data. Defaults to false.
+            searchParams.demoMode = false
             
             // Setting search parameters here will automatically include them for all
             // SearchRequests in the session.
