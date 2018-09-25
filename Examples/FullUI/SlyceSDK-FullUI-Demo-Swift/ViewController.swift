@@ -102,4 +102,12 @@ extension ViewController : SlyceViewControllerDelegate {
             return true
         }
     }
+    
+    func slyceViewController(_ viewController: SlyceViewController, shouldDisplayDefaultListFor itemDescriptors: [SlyceItemDescriptor]) -> Bool {
+        
+        // Similar to the delegate method above, you can return `false` in this method and
+        // push your own list view
+        
+        return true
+    }
 }
