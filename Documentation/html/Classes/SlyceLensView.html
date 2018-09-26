@@ -54,11 +54,15 @@
 	
 	<optgroup label="Properties">
 		
+		<option value="//api/name/)">)</option>
+		
 		<option value="//api/name/camera">camera</option>
 		
-		<option value="//api/name/lensConfiguration">lensConfiguration</option>
-		
 		<option value="//api/name/lensIdentifier">lensIdentifier</option>
+		
+		<option value="//api/name/lensSettings">lensSettings</option>
+		
+		<option value="//api/name/session">session</option>
 		
 	</optgroup>
 	
@@ -67,6 +71,10 @@
 	<optgroup label="Class Methods">
 		
 		<option value="//api/name/lensViewWithSession:lensIdentifier:lensConfiguration:error:">+ lensViewWithSession:lensIdentifier:lensConfiguration:error:</option>
+		
+		<option value="//api/name/lensViewWithSession:lensIdentifier:options:error:">+ lensViewWithSession:lensIdentifier:options:error:</option>
+		
+		<option value="//api/name/lensViewWithSession:lensIdentifier:options:settings:error:">+ lensViewWithSession:lensIdentifier:options:settings:error:</option>
 		
 	</optgroup>
 	
@@ -124,8 +132,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/lensViewWithSession:lensIdentifier:lensConfiguration:error:" title="lensViewWithSession:lensIdentifier:lensConfiguration:error:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lensViewWithSession:lensIdentifier:lensConfiguration:error:">+&nbsp;lensViewWithSession:lensIdentifier:lensConfiguration:error:</a></code>
+	<a name="//api/name/lensViewWithSession:lensIdentifier:options:error:" title="lensViewWithSession:lensIdentifier:options:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lensViewWithSession:lensIdentifier:options:error:">+&nbsp;lensViewWithSession:lensIdentifier:options:error:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -140,7 +148,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>+ (nullable instancetype)lensViewWithSession:(SlyceSession *)<em>session</em> lensIdentifier:(NSString *)<em>lensIdentifier</em> lensConfiguration:(nullable SlyceLensConfiguration *)<em>lensConfiguration</em> error:(SlyceOutError)<em>outError</em></code></div>
+			<div class="method-subsection method-declaration"><code>+ (nullable instancetype)lensViewWithSession:(SlyceSession *)<em>session</em> lensIdentifier:(NSString *)<em>lensIdentifier</em> options:(nullable NSDictionary&lt;NSString*,id&gt; *)<em>options</em> error:(SlyceOutError)<em>outError</em></code></div>
 
 		    
 			
@@ -159,7 +167,85 @@
 					</tr>
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>lensConfiguration</code></th>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>TODO:</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>outError</code></th>
+						<td><p>An error that is assigned if an instance of <code>SlyceLensView</code> cannot be created.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this method to open the SDK for &lsquo;Public&rsquo; recognition functionality.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceLensView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/lensViewWithSession:lensIdentifier:options:settings:error:" title="lensViewWithSession:lensIdentifier:options:settings:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lensViewWithSession:lensIdentifier:options:settings:error:">+&nbsp;lensViewWithSession:lensIdentifier:options:settings:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes a new <a href="../Classes/Slyce.html">Slyce</a> object using valid Account Identifier, API Key, and Space Identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable instancetype)lensViewWithSession:(SlyceSession *)<em>session</em> lensIdentifier:(NSString *)<em>lensIdentifier</em> options:(nullable NSDictionary&lt;NSString*,id&gt; *)<em>options</em> settings:(nullable SlyceLensSettings *)<em>settings</em> error:(SlyceOutError)<em>outError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>An instance of <a href="../Classes/SlyceSession.html"><code>SlyceSession</code></a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>lensIdentifier</code></th>
+						<td><p>The identifier of the lens to be used by this instance.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>options</code></th>
+						<td><p>TODO:</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>settings</code></th>
 						<td><p>An optional <a href="../Classes/SlyceLensConfiguration.html"><code>SlyceLensConfiguration</code></a> object.</p></td>
 					</tr>
 				
@@ -238,8 +324,8 @@
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/lensConfiguration" title="lensConfiguration"></a>
-	<h3 class="method-title"><code><a href="#//api/name/lensConfiguration">&nbsp;&nbsp;lensConfiguration</a></code>
+	<a name="//api/name/lensSettings" title="lensSettings"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lensSettings">&nbsp;&nbsp;lensSettings</a></code>
 </h3>
 
 	<div class="method-info">
@@ -249,12 +335,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The <a href="../Classes/SlyceLensConfiguration.html"><code>SlyceLensConfiguration</code></a> used to configure this instance.</p>
+				<p>The <a href="../Classes/SlyceLensSettings.html"><code>SlyceLensSettings</code></a> used to configure this instance.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) SlyceLensConfiguration *lensConfiguration</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) SlyceLensSettings *lensSettings</code></div>
 
 		    
 			
@@ -483,6 +569,161 @@
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/lensViewWithSession:lensIdentifier:lensConfiguration:error:" title="lensViewWithSession:lensIdentifier:lensConfiguration:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/lensViewWithSession:lensIdentifier:lensConfiguration:error:">+&nbsp;lensViewWithSession:lensIdentifier:lensConfiguration:error:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes a new <a href="../Classes/Slyce.html">Slyce</a> object using valid Account Identifier, API Key, and Space Identifier.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (nullable instancetype)lensViewWithSession:(SlyceSession *)<em>session</em> lensIdentifier:(NSString *)<em>lensIdentifier</em> lensConfiguration:(nullable SlyceLensSettings *)<em>lensConfiguration</em> error:(SlyceOutError)<em>outError</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>session</code></th>
+						<td><p>An instance of <a href="../Classes/SlyceSession.html"><code>SlyceSession</code></a>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>lensIdentifier</code></th>
+						<td><p>The identifier of the lens to be used by this instance.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>lensConfiguration</code></th>
+						<td><p>An optional <a href="../Classes/SlyceLensConfiguration.html"><code>SlyceLensConfiguration</code></a> object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>outError</code></th>
+						<td><p>An error that is assigned if an instance of <code>SlyceLensView</code> cannot be created.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Use this method to open the SDK for &lsquo;Public&rsquo; recognition functionality.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceLensView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/session" title="session"></a>
+	<h3 class="method-title"><code><a href="#//api/name/session">&nbsp;&nbsp;session</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The <a href="../Classes/SlyceSession.html"><code>SlyceSession</code></a> used to configure this instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) SlyceSession *session</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceLensView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/)" title=")"></a>
+	<h3 class="method-title"><code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The <a href="../Classes/SlyceLensConfiguration.html"><code>SlyceLensConfiguration</code></a> used to configure this instance.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) SlyceLensSettings *__deprecated_msg ( &quot;lensConfiguration has been renamed to lensSettings&quot; )</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">SlyceLensView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -496,7 +737,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-08-29</p>
+						<p class="copyright">Copyright &copy; 2018 Slyce Inc. All rights reserved. Updated: 2018-09-26</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

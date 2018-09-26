@@ -1,5 +1,6 @@
 #import "SlyceBase.h"
 
+__attribute__((objc_subclassing_restricted))
 @interface SlyceSearchParameters : NSObject
 
 /*!

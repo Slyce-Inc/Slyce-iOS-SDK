@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, SlyceSearchResponseUpdateType) {
  * @discussion An object representing updates sent via a `SlyceSearchTaskListener`.
  */
 NS_ASSUME_NONNULL_BEGIN
+__attribute__((objc_subclassing_restricted))
 @interface SlyceSearchResponseUpdate : NSObject
 
 /**

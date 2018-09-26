@@ -142,5 +142,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) CGPoint anchor;
 
+
+/*!
+ * @property
+ *
+ * @abstract Gets the legacy search type.
+ *
+ * @discussion Gets the legacy search type ("1D", "2D", or "3D") or `nil` if the legacy type cannot be determined.
+ */
+@property (nonatomic, readonly, nullable) NSString *legacySearchType;
+
 @end
 NS_ASSUME_NONNULL_END

@@ -3,6 +3,7 @@
 @class SlycePrivacyPolicy;
 
 NS_ASSUME_NONNULL_BEGIN
+__attribute__((objc_subclassing_restricted))
 @interface SlyceGDPRComplianceManager : NSObject
 
 /**

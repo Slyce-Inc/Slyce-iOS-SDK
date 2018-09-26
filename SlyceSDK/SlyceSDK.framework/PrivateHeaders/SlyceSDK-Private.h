@@ -7,6 +7,12 @@
 #import "SlyceInstance+Environments.h"
 
 
+#pragma mark Labs
+
+#import "SlyceLabsViewControllerDelegate.h"
+#import "SlyceListDescriptor.h"
+
+
 #pragma mark Full UI Mode Extras
 
 #import "SlyceViewController+Private.h"

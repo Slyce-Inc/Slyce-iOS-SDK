@@ -60,8 +60,10 @@ func addDefaultWorkOptions() {
  
  */
 func reportManualAnalytics() {
+    
 
     // set up some simple example variables
+    let jobId = "xyz" // retreieve this from a SlyceSearchResponse
     let itemId = "123"
     let itemRevenue = "$9.99"
     let itemURL = "https://store.com/123"
@@ -71,8 +73,8 @@ func reportManualAnalytics() {
     Slyce.shared().eventTracker.trackCaptureImage()
     
     // track add to cart
-    Slyce.shared().eventTracker.trackAddToCartTap(forItemIdentifier: itemId, itemRevenue: itemRevenue, itemURL: itemURL, itemQuantity: itemQuantity)
+    Slyce.shared().eventTracker.trackAddToCartTap(forJobIdentifier: jobId, itemIdentifier: itemId, itemRevenue: itemRevenue, itemURL: itemURL, itemQuantity: itemQuantity)
     
     // track successful checkout
-    Slyce.shared().eventTracker.trackCheckoutTap(forItemIdentifier: itemId, itemRevenue: itemRevenue, itemURL: itemURL, itemQuantity: 1)
+    Slyce.shared().eventTracker.trackCheckoutTap(forJobIdentifier: jobId, itemIdentifier: itemId, itemRevenue: itemRevenue, itemURL: itemURL, itemQuantity: 1)
 }
