@@ -2,7 +2,7 @@ Slyce iOS SDK
 ==============
 
 <!-- Official release -->
-[![GitHub release](https://img.shields.io/github/release/Slyce-Inc/Slyce-iOS-SDK.svg?style=flat-square)](https://github.com/Slyce-Inc/Slyce-iOS-SDK/releases)
+[![GitHub release](https://img.shields.io/github/release/Slyce-Inc/Slyce-iOS-SDK.svg?style=flat)](https://github.com/Slyce-Inc/Slyce-iOS-SDK/releases)
 <!-- Pre release -->
 <!--[![GitHub release](https://img.shields.io/github/release/Slyce-Inc/Slyce-iOS-SDK/all.svg?style=flat-square)](https://github.com/Slyce-Inc/Slyce-iOS-SDK/releases)-->
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Slyce-iOS-SDK.svg)](https://cocoapods.org/pods/Slyce-iOS-SDK)
