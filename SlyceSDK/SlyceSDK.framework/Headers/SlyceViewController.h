@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger, SlyceViewControllerMode) {
 
 @class Slyce;
 @class SlyceItemDescriptor;
+@class SlyceListDescriptor;
 @class SlyceSession;
 @protocol SlyceCameraControls;
 @protocol SlyceViewControllerDelegate;
@@ -125,6 +126,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)slyceViewController:(SlyceViewController *)viewController shouldDisplayDefaultListForItemDescriptors:(NSArray<SlyceItemDescriptor *> *)itemDescriptors;
 
 
+/*!
+ * @discussion This delegate method allows for the host application to handle a list
+ * that has been created during batch capture mode.
+ *
+ * @param viewController The attached `SlyceViewController`.
+ * @param list A `SlyceListDescriptor` object, representing each item selected by the user.
+ */
+@optional
+- (void)slyceViewController:(SlyceViewController *)viewController didCreateList:(SlyceListDescriptor *)list;
 
 @end
 
