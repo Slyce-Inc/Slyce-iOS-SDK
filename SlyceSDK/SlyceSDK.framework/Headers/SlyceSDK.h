@@ -62,6 +62,7 @@
 #import "SlyceViewController.h"
 #import "SlyceTheme.h"
 #import "SlyceItemDescriptor.h"
+#import "SlyceListDescriptor.h"
 #import "SlyceAppearanceStyles.h"
 
 

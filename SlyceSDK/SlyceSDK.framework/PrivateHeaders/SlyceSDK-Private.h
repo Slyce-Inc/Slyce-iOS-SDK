@@ -9,8 +9,6 @@
 
 #pragma mark Labs
 
-#import "SlyceLabsViewControllerDelegate.h"
-#import "SlyceListDescriptor.h"
 
 
 #pragma mark Full UI Mode Extras

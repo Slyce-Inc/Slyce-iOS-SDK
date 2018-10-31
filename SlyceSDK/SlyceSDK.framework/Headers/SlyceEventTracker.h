@@ -1,4 +1,8 @@
-#import <Foundation/Foundation.h>
+#import "SlyceBase.h"
+
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 @protocol SlyceEventTracker <NSObject>
 
@@ -134,4 +138,25 @@
                                          transactionTax:(nullable NSString *)transactionTax
                                            itemQuantity:(NSInteger)itemQuantity;
 
+/**
+ * Tracks the tap of a search result item.
+ *
+ * @param jobIdentifier  The job identier of the originating search task.
+ * @param itemIdentifier The item identifier.
+ * @param itemURL        The item URL.
+ * @param itemPosition   The position of the item in the results list.
+ */
+- (void)trackResultTappedForJobIdentifier:(NSString *)jobIdentifier
+                           itemIdentifier:(nullable NSString *)itemIdentifier
+                                  itemURL:(nullable NSString *)itemURL
+                             itemPosition:(NSInteger)itemPosition;
+/*
+ * Tracks the launch of Slyce camera.
+ */
+- (void)trackSlyceCameraLaunch;
+
 @end
+
+
+NS_ASSUME_NONNULL_END
+

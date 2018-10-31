@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>SlyceSearchResponse Class Reference</title>
+	<title>SlyceListDescriptor Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,11 +54,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/jobIdentifier">jobIdentifier</option>
+		<option value="//api/name/items">items</option>
 		
-		<option value="//api/name/results">results</option>
-		
-		<option value="//api/name/tags">tags</option>
+		<option value="//api/name/name">name</option>
 		
 	</optgroup>
 	
@@ -79,7 +77,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">SlyceSearchResponse Class Reference</h1>
+					<h1 class="title">SlyceListDescriptor Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -87,11 +85,8 @@
 	<th>Inherits from</th>
 	<td>NSObject</td>
 </tr><tr>
-	<th>Conforms to</th>
-	<td>NSCoding</td>
-</tr><tr>
 	<th>Declared in</th>
-	<td>SlyceSearchResponse.h</td>
+	<td>SlyceListDescriptor.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -109,8 +104,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/jobIdentifier" title="jobIdentifier"></a>
-	<h3 class="method-title"><code><a href="#//api/name/jobIdentifier">&nbsp;&nbsp;jobIdentifier</a></code>
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="method-title"><code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
 </h3>
 
 	<div class="method-info">
@@ -120,12 +115,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The job identifier created by Forge.</p>
+				<p>The name of the list.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSString *jobIdentifier</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSString *name</code></div>
 
 		    
 			
@@ -143,15 +138,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceSearchResponse.h</code></p>
+				<p><code class="declared-in-ref">SlyceListDescriptor.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/tags" title="tags"></a>
-	<h3 class="method-title"><code><a href="#//api/name/tags">&nbsp;&nbsp;tags</a></code>
+	<a name="//api/name/items" title="items"></a>
+	<h3 class="method-title"><code><a href="#//api/name/items">&nbsp;&nbsp;items</a></code>
 </h3>
 
 	<div class="method-info">
@@ -161,58 +156,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>A set of tags returned by this <a href="../Classes/SlyceSearchTask.html"><code>SlyceSearchTask</code></a>.</p>
+				<p>The list of items on this list instance.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSOrderedSet&lt;NSString*&gt; *tags</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection discussion-section">
-				<h4 class="method-subtitle">Discussion</h4>
-				<p>The tags represent keywords that are produced by the Workflow that backs this <a href="../Classes/SlyceSearchTask.html"><code>SlyceSearchTask</code></a>. These tags will be updated as the task goes through its progression.</p>
-			</div>
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceSearchResponse.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/results" title="results"></a>
-	<h3 class="method-title"><code><a href="#//api/name/results">&nbsp;&nbsp;results</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>An array of <a href="../Classes/SlyceSearchResult.html"><code>SlyceSearchResult</code></a> returned by a <a href="../Classes/SlyceSearchTask.html"><code>SlyceSearchTask</code></a>.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSArray&lt;SlyceSearchResult*&gt; *results</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;SlyceItemDescriptor*&gt; *items</code></div>
 
 		    
 			
@@ -230,7 +179,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceSearchResponse.h</code></p>
+				<p><code class="declared-in-ref">SlyceListDescriptor.h</code></p>
 			</div>
 			
 			
