@@ -17,6 +17,7 @@
 #pragma mark Models
 
 #import "SlyceBarcode.h"
+#import "SlyceDetectionDescriptor.h"
 
 
 #pragma mark Camera

@@ -9,7 +9,30 @@ __attribute__((objc_subclassing_restricted))
 
 + (SlyceTheme *)shared;
 
+
+/*!
+ *  @method
+ *
+ *  @brief Resets all properties to their defaults.
+ *
+ *  @discussion Use this method to reset all properties to the default values.
+ *
+ */
 + (void)resetToDefaults;
+
+
+/*!
+ *  @method
+ *
+ *  @brief Sets a float value for the provided property name.
+ *
+ *  @discussion Use this method to set a float value for a property defined in Slyce Theming Guide.
+ *
+ *  @param value The CGFloat value to be used for the provided property name.
+ *  @param propertyName The property name defined by the Slyce Theming Guide.
+ *
+ */
+- (void)setFloat:(CGFloat)value forPropertyName:(NSString *)propertyName;
 
 /*!
  *  @method

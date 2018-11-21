@@ -24,7 +24,8 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     SlyceErrorUnexpectedResponseType = -206,
     SlyceErrorWebSocketConnection = -207,
     SlyceErrorConfigurationService = -208,
-    
+    SlyceErrorWorkflowTimeout = -209,
+
     // Parsing Error
     
     SlyceErrorJSONParsing = -301,

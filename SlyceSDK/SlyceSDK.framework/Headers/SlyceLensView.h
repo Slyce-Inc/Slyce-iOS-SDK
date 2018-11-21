@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract The identifier of the lens used by this instance.
  *
  */
-@property (nonatomic, copy, readonly) NSString *lensIdentifier;
+@property (nonatomic, readonly) NSString *lensIdentifier;
 
 /**
  * @property
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract The `SlyceLensSettings` used to configure this instance.
  *
  */
-@property (nonatomic, strong, readonly) SlyceLensSettings *lensSettings;
+@property (nonatomic, readonly) SlyceLensSettings *lensSettings;
 
 
 
@@ -152,7 +152,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @abstract The `SlyceLensConfiguration` used to configure this instance.
  *
  */
-@property (nonatomic, strong, readonly) SlyceLensSettings *lensConfiguration __deprecated_msg("lensConfiguration has been renamed to lensSettings");
+@property (nonatomic, readonly) SlyceLensSettings *lensConfiguration __deprecated_msg("lensConfiguration has been renamed to lensSettings");
 
 @end
 NS_ASSUME_NONNULL_END

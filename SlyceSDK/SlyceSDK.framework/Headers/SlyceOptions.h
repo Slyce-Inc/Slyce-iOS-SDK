@@ -11,12 +11,4 @@ SLYCE_SDK_EXPORT extern NSString *const SlyceOptionLensCaptureModeKey;
 SLYCE_SDK_EXPORT extern NSString *const SlyceOptionLensCaptureModeSingle;
 SLYCE_SDK_EXPORT extern NSString *const SlyceOptionLensCaptureModeBatch;
 
-
-@interface SlyceOptionsHelpers : NSObject
-
-+ (NSString *)captureModeForLensIdentifier:(NSString *)lensIdentifier options:(nullable NSDictionary<NSString *, id> *)options;
-
-@end
-
-
 NS_ASSUME_NONNULL_END
