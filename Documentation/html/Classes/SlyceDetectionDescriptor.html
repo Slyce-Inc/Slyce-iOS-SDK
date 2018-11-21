@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>SlyceLensSettings Class Reference</title>
+	<title>SlyceDetectionDescriptor Class Reference</title>
 
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
@@ -54,11 +54,9 @@
 	
 	<optgroup label="Properties">
 		
-		<option value="//api/name/detectionThreshold2D">detectionThreshold2D</option>
+		<option value="//api/name/type">type</option>
 		
-		<option value="//api/name/sound">sound</option>
-		
-		<option value="//api/name/vibrate">vibrate</option>
+		<option value="//api/name/value">value</option>
 		
 	</optgroup>
 	
@@ -79,7 +77,7 @@
 		<div id="overview_contents" class="container">
 			<div id="content">
 				<main role="main">
-					<h1 class="title">SlyceLensSettings Class Reference</h1>
+					<h1 class="title">SlyceDetectionDescriptor Class Reference</h1>
 
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
@@ -88,7 +86,7 @@
 	<td>NSObject</td>
 </tr><tr>
 	<th>Declared in</th>
-	<td>SlyceLensSettings.h</td>
+	<td>SlyceDetectionDescriptor.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -106,8 +104,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/detectionThreshold2D" title="detectionThreshold2D"></a>
-	<h3 class="method-title"><code><a href="#//api/name/detectionThreshold2D">&nbsp;&nbsp;detectionThreshold2D</a></code>
+	<a name="//api/name/type" title="type"></a>
+	<h3 class="method-title"><code><a href="#//api/name/type">&nbsp;&nbsp;type</a></code>
 </h3>
 
 	<div class="method-info">
@@ -117,12 +115,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>The detection threshold for image matching.</p>
+				<p>The type of update. See <a href="../Constants/SlyceDetectionType.html"><code>SlyceDetectionType</code></a>.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) float detectionThreshold2D</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) SlyceDetectionType type</code></div>
 
 		    
 			
@@ -140,15 +138,15 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceLensSettings.h</code></p>
+				<p><code class="declared-in-ref">SlyceDetectionDescriptor.h</code></p>
 			</div>
 			
 			
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/sound" title="sound"></a>
-	<h3 class="method-title"><code><a href="#//api/name/sound">&nbsp;&nbsp;sound</a></code>
+	<a name="//api/name/value" title="value"></a>
+	<h3 class="method-title"><code><a href="#//api/name/value">&nbsp;&nbsp;value</a></code>
 </h3>
 
 	<div class="method-info">
@@ -158,12 +156,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>YES if a sound should be played upon detection.</p>
+				<p>Gets the value associated with this detection.</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL sound</code></div>
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) id value</code></div>
 
 		    
 			
@@ -172,6 +170,11 @@
 
 			
 
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>If <a href="#//api/name/type"><code>type</code></a> is <code>SlyceDetectionTypeBarcode</code>, <code>value</code> will be a <a href="../Classes/SlyceBarcode.html"><code>SlyceBarcode</code></a> object.</p>
+			</div>
 			
 
 			
@@ -181,48 +184,7 @@
 			
 			<div class="method-subsection declared-in-section">
 				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceLensSettings.h</code></p>
-			</div>
-			
-			
-		</div>
-	</div>
-</div><div class="section-method">
-	<a name="//api/name/vibrate" title="vibrate"></a>
-	<h3 class="method-title"><code><a href="#//api/name/vibrate">&nbsp;&nbsp;vibrate</a></code>
-</h3>
-
-	<div class="method-info">
-		<div class="pointy-thing"></div>
-
-		<div class="method-info-container">
-			
-			
-			<div class="method-subsection brief-description">
-				<p>YES if the device should vibrate upon detection.</p>
-			</div>
-			
-		    
-
-			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL vibrate</code></div>
-
-		    
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-			<div class="method-subsection declared-in-section">
-				<h4 class="method-subtitle">Declared In</h4>
-				<p><code class="declared-in-ref">SlyceLensSettings.h</code></p>
+				<p><code class="declared-in-ref">SlyceDetectionDescriptor.h</code></p>
 			</div>
 			
 			
