@@ -5,6 +5,7 @@
 @class SlyceSearchTask;
 @class SlyceSearchRequest;
 @class SlyceSearchParameters;
+@class SlyceDetectionDescriptor;
 @protocol SlyceSessionDelegate;
 @protocol SlyceSearchTaskListener;
 
@@ -35,6 +36,19 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @optional
 - (void)slyceSession:(SlyceSession *)session didFinishSearchTask:(SlyceSearchTask *)searchTask NS_SWIFT_NAME(slyce(session:didFinish:));
+
+
+/*!
+ * @method
+ *
+ * @brief Implement this method in order to be notified when the session has performed a local detection, such as a barcode
+ *
+ * @param session - The `SlyceSession` instance that has sent this message.
+ * @param detection - A `SlyceDetectionDescriptor` that describes the detection.
+ *
+ */
+@optional
+- (void)slyceSession:(SlyceSession *)session didPerformDetection:(SlyceDetectionDescriptor *)detection NS_SWIFT_NAME(slyce(session:didPerformDetection:));
 
 @end
 

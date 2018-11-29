@@ -82,6 +82,10 @@
 @property (nonatomic, readwrite, copy, nullable) NSString *global_title_font;
 @property (nonatomic, readwrite, copy, nullable) NSString *global_primary_font;
 
+// MARK: Corner radius
+@property (nonatomic, readwrite, copy, nullable) NSNumber *userImage_global_cornerRadius;
+
+
 // MARK: - colors
 // MARK: global
 @property (nonatomic, readwrite, copy, nullable) UIColor *global_accent_color;
