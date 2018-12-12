@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithImage:(UIImage *)image
                        anchor:(CGPoint)anchor
-             searchParameters:(nullable SlyceSearchParameters *)searchParameters NS_DESIGNATED_INITIALIZER;
+             searchParameters:(nullable SlyceSearchParameters *)searchParameters;
 
 
 /*!
@@ -72,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @return A `SlyceSearchRequest` instance.
  */
 - (instancetype)initWithImageURL:(NSString *)imageURL
-                searchParameters:(nullable SlyceSearchParameters *)searchParameters NS_DESIGNATED_INITIALIZER;
+                searchParameters:(nullable SlyceSearchParameters *)searchParameters;
 
 /*!
  * @property

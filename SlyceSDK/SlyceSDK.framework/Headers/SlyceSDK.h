@@ -34,6 +34,7 @@
 #pragma mark Headless Mode
 
 #import "SlyceSearchParameters.h"
+#import "SlyceSearchImage.h"
 #import "SlyceSearchRequest.h"
 #import "SlyceSearchTask.h"
 #import "SlyceSearchResponse.h"
