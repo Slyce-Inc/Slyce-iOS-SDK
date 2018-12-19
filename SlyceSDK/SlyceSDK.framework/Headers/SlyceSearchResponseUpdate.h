@@ -7,6 +7,8 @@ typedef NS_ENUM(NSUInteger, SlyceSearchResponseUpdateType) {
     SlyceSearchResponseUpdateTypeTagFound,
     /// Indicates that results were received. The `value` property will be an NSArray of SlyceSearchResults objects. The search results are also available on the associated response object.
     SlyceSearchResponseUpdateTypeResultsReceived,
+    /// Indicates that an image was successfully uploaded to the backend service. The `value` property will be `nil`.
+    SlyceSearchResponseUpdateTypeImageUploaded,
 };
 
 @class SlyceSearchResponse;

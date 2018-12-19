@@ -1,7 +1,7 @@
 #import "SlyceBase.h"
 
 __attribute__((objc_subclassing_restricted))
-@interface SlyceSearchParameters : NSObject
+@interface SlyceSearchParameters : NSObject <NSCopying>
 
 /*!
  * @property
@@ -21,8 +21,10 @@ __attribute__((objc_subclassing_restricted))
  * @property
  *
  * @abstract Arbitrary options to pass to the workflow.
+ *
+ * @discussion All values in this dictionary must be JSON-compatible. The dictionary is deep-copied on assignment.
  */
-@property (nonatomic, strong, nullable) NSDictionary<NSString *, id> *workflowOptions;
+@property (nonatomic, copy, nullable) NSDictionary<NSString *, id> *workflowOptions;
 
 /*!
  * @property

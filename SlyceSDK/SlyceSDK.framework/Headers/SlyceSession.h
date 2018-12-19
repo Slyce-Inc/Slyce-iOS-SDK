@@ -6,6 +6,7 @@
 @class SlyceSearchRequest;
 @class SlyceSearchParameters;
 @class SlyceDetectionDescriptor;
+@class SlyceSearchImage;
 @protocol SlyceSessionDelegate;
 @protocol SlyceSearchTaskListener;
 
@@ -68,6 +69,15 @@ __attribute__((objc_subclassing_restricted))
  *
  */
 + (nullable instancetype)sessionWithSlyce:(Slyce *)slyce error:(SlyceOutError)outError;
+
+/*!
+ * @property
+ *
+ * The object that acts as the delegate of the session.
+ *
+ */
+@property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate;
+
 
 /*!
  * @method
@@ -155,19 +165,8 @@ NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
  * The `SlyceSearchParameters` for all requests in this session.
  *
  */
-@property (nonatomic, strong, nullable) SlyceSearchParameters *defaultSearchParameters;
+@property (nonatomic, copy, nullable) SlyceSearchParameters *defaultSearchParameters;
 
-
-#pragma mark -
-#pragma mark Deprecated Methods
-
-/*!
- * @property
- *
- * The object that acts as the delegate of the session.
- *
- */
-@property (nonatomic, weak, nullable) id<SlyceSessionDelegate> delegate;
 
 
 
@@ -177,6 +176,10 @@ NS_ASSUME_NONNULL_END
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol SlyceSessionDelegate <NSObject>
-    
+
+@optional
+- (nullable SlyceSearchParameters *)slyceSession:(SlyceSession *)session searchParametersForImage:(SlyceSearchImage *)searchImage NS_SWIFT_NAME(slyce(session:searchParametersForImage:));
+
+
 @end
 NS_ASSUME_NONNULL_END

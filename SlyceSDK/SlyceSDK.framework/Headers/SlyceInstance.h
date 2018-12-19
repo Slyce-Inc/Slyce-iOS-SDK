@@ -2,6 +2,7 @@
 
 #import "SlyceImageMatchingSyncDelegate.h"
 
+@class SlyceSearchParameters;
 @class SlyceSession;
 @class SlyceCredentials;
 @class SlyceGDPRComplianceManager;
@@ -70,7 +71,15 @@ NS_SWIFT_NAME(open(accountIdentifier:apiKey:spaceIdentifier:completion:));
  * @discussion The default `SlyceSession`. The default session cannot be manually invalidated, but will be invalidated when `Slyce` is closed.
  * @return A `SlyceSession` instance.
  */
-@property (nonatomic, readonly, nullable) SlyceSession *defaultSession;
+@property (nonatomic, readonly, nullable) SlyceSession *defaultSession __deprecated_msg("The default session is deprecated and will be removed in a future release. Sessions may be created using the SlyceSession.sessionWithSlyce method.");
+
+/*!
+ * @property
+ *
+ * The `SlyceSearchParameters` for all requests in this Slyce instance..
+ *
+ */
+@property (nonatomic, copy, nullable) SlyceSearchParameters *defaultSearchParameters;
 
 /**
  * @property
