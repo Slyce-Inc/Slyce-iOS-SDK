@@ -13,7 +13,7 @@ The Slyce iOS SDK makes it easy to add visual search capabilities to mobile apps
 
 ---
 
-Copyright Slyce, Inc 2014-2018
+Copyright Slyce, Inc 2014-2019
 
 <!-- Official release -->
 <!--[![GitHub release](https://img.shields.io/github/release/Slyce-Inc/Slyce-iOS-SDK.svg?style=flat)](https://github.com/Slyce-Inc/Slyce-iOS-SDK/releases)-->
