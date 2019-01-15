@@ -37,7 +37,7 @@ class ViewController: UIViewController
         // In this case, we are creating a LensView which can
         // be used to detect and receive Visual Search results.
         
-        guard let session = Slyce.shared().defaultSession else {
+        guard let session = try? SlyceSession(slyce: Slyce.shared()) else {
             print("Unable to access Slyce!")
             return
         }

@@ -10,11 +10,17 @@ class VisualSearchViewController: TextViewViewController
     var visualSearchWorkflowIdentifier: String { return "" }
     var visualSearchExampleImage: UIImage { return UIImage(named: "shirt")! }
     
-    let session: SlyceSession = Slyce.shared().defaultSession!
+    let session: SlyceSession
     var task: SlyceSearchTask?
     
     init()
     {
+        do {
+            session = try SlyceSession(slyce: Slyce.shared())
+        } catch(let e) {
+            fatalError(e.localizedDescription)
+        }
+        
         super.init(nibName: nil, bundle: nil)
     }
     

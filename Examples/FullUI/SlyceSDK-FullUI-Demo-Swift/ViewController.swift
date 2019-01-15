@@ -28,10 +28,6 @@ class ViewController: UIViewController {
                 return;
             }
             
-            guard let session = Slyce.shared().defaultSession else {
-                fatalError();
-            }
-            
             let searchParams = SlyceSearchParameters();
             
             // All search parameters are optional and independent
@@ -47,7 +43,7 @@ class ViewController: UIViewController {
             
             // Setting search parameters here will automatically include them for all
             // SearchRequests in the session.
-            session.defaultSearchParameters = searchParams;
+            Slyce.shared().defaultSearchParameters = searchParams;
 
             // The current completion block may not be on the main thread
             // so we dispatch the SlyceViewController creation on the main queue
