@@ -40,7 +40,7 @@ class ScannerViewController: TextViewViewController
         // (2) if the user did not accept the iOS Camera Privacy popup.
 
         guard let layer = camera.start(),
-            let slyceSession = Slyce.shared().defaultSession,
+            let slyceSession = try? SlyceSession(slyce: Slyce.shared()),
             let cameraSession = camera.cameraCaptureSession else {
             print("Unable to access Slyce session and/or start camera")
             return

@@ -47,7 +47,7 @@ func addDefaultWorkOptions() {
     }
     
     // or alternatively, add to the default session
-    Slyce.shared().defaultSession?.defaultSearchParameters = searchParams
+    Slyce.shared().defaultSearchParameters = searchParams
 }
 
 
