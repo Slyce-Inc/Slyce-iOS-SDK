@@ -41,6 +41,7 @@
 #import "SlyceSearchResponseUpdate.h"
 #import "SlyceSearchResult.h"
 #import "SlyceScanner.h"
+#import "SlyceWorkflowNames.h"
 
 
 #pragma mark LensView

@@ -74,6 +74,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithImageURL:(NSString *)imageURL
                 searchParameters:(nullable SlyceSearchParameters *)searchParameters;
 
+
+/*!
+ * @method
+ *
+ * @brief Initializes a new `SlyceSearchRequest`.
+ *
+ * @discussion Use this method to create an empty `SlyceSearchRequest`. This assumes that search criteria with be supplied in workflow options; for example, "product_id" for find similar searches.
+ *
+ * @param searchParameters - Nullable `SlyceSearchParameters` for this search request.
+ *
+ * @return A `SlyceSearchRequest` instance.
+ */
+- (instancetype)initWithSearchParameters:(SlyceSearchParameters *)searchParameters;
+
 /*!
  * @property
  *

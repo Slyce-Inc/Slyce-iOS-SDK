@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 
-extern NSString * _Nonnull const SlyceLensIdentifierBarcode;
-extern NSString * _Nonnull const SlyceLensIdentifierImageMatching;
-extern NSString * _Nonnull const SlyceLensIdentifierVisualSearch;
-extern NSString * _Nonnull const SlyceLensIdentifierUniversal;
+typedef NSString * _Nonnull const SlyceLensIdentifier NS_TYPED_EXTENSIBLE_ENUM;
+
+extern SlyceLensIdentifier SlyceLensIdentifierBarcode;
+extern SlyceLensIdentifier SlyceLensIdentifierImageMatching;
+extern SlyceLensIdentifier SlyceLensIdentifierVisualSearch;
+extern SlyceLensIdentifier SlyceLensIdentifierUniversal;
