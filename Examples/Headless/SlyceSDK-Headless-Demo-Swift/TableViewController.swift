@@ -59,9 +59,9 @@ class TableViewController: UITableViewController
         case 0:
             viewController = VisualSearchViewController()
         case 1:
-            viewController = ScannerViewController(lensIdentifier: SlyceLensIdentifierBarcode)
+            viewController = ScannerViewController(lensIdentifier: .barcode)
         case 2:
-            viewController = ScannerViewController(lensIdentifier: SlyceLensIdentifierImageMatching)
+            viewController = ScannerViewController(lensIdentifier: .imageMatching)
         default:
             return
         }
