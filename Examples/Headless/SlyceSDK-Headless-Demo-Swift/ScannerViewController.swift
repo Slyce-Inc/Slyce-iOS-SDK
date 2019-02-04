@@ -6,7 +6,7 @@ class ScannerViewController: TextViewViewController
     // Performing a Barcode Search or Image Match is similar to a Visual Search.
     // In order to differentiate between modes, we must provide the lensIdentifier
     // (used when creating a new Scanner, see viewDidLoad below).
-    let lensIdentifier: String
+    let lensIdentifier: SlyceLensIdentifier
     
     // A SlyceScanner attaches to an existing AVFoundation camera session and wires
     // Slyce into the active camera, allowing us to get instant continuous results.
@@ -18,7 +18,7 @@ class ScannerViewController: TextViewViewController
     var session: SlyceSession?
     var scanner: SlyceScanner?
 
-    init(lensIdentifier identifier: String)
+    init(lensIdentifier identifier: SlyceLensIdentifier)
     {
         self.lensIdentifier = identifier
         super.init(nibName: nil, bundle: nil)
@@ -60,7 +60,7 @@ class ScannerViewController: TextViewViewController
             // we can create a scanner using the session and lens identifier. This might also
             // fail if the camera is unavailable.
             
-            let slyceScanner = try SlyceScanner(session: slyceSession, lensIdentifier: lensIdentifier, lensConfiguration: nil)
+            let slyceScanner = try SlyceScanner(session: slyceSession, lensIdentifier: lensIdentifier.rawValue, lensConfiguration: nil)
             scanner = slyceScanner
             
             try slyceScanner.attachTo(captureSession: cameraSession)

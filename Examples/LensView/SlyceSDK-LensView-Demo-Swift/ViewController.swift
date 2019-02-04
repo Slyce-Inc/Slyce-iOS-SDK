@@ -42,13 +42,13 @@ class ViewController: UIViewController
             return
         }
         
-        let lensIdentifier = SlyceLensIdentifierVisualSearch
+        let lensIdentifier = SlyceLensIdentifier.visualSearch
         
         do {
             // A LensView can be added to any superview and is a fully contained Slyce
             // camera experience, managed through the session and configuration given
             // at init-time.
-            let lensView = try SlyceLensView(session: session, lensIdentifier: lensIdentifier, settings: nil)
+            let lensView = try SlyceLensView(session: session, lensIdentifier: lensIdentifier.rawValue, settings: nil)
             lensView.frame = view.frame
             view.addSubview(lensView)
             
