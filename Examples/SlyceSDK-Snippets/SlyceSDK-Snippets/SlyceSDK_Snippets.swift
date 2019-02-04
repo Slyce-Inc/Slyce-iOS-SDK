@@ -50,6 +50,31 @@ func addDefaultWorkOptions() {
     Slyce.shared().defaultSearchParameters = searchParams
 }
 
+/**
+ Demonstrates how to perform a Find Similar search task by setting workflow options or with an image url.
+ */
+func findSimilarTask() {
+    var request: SlyceSearchRequest
+    
+    // Search with an image url or item identifier
+    if let url = URL(string: "http://imageUrl") {
+        request = SlyceSearchRequest(imageURL: url.absoluteString, searchParameters: SlyceSearchParameters())
+    } else {
+        let parameters = SlyceSearchParameters()
+        parameters.workflowOptions = ["item_id": "myValue"]
+        request = SlyceSearchRequest(searchParameters: parameters)
+    }
+    
+    let workflowName = SlyceWorkflowName.findSimilar
+    
+    do {
+        let session = try SlyceSession(slyce: Slyce.shared())
+        try session.startSearchTask(request: request, workflowName: workflowName.rawValue, listener: nil)
+    } catch {
+        // handle error
+    }
+}
+
 
 // MARK: Analytics
 

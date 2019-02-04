@@ -49,6 +49,35 @@ void addDefaultWorkOptions() {
     [Slyce shared].defaultSearchParameters = searchParams;
 }
 
+/*!
+ * @brief Demonstrates how to perform a Find Similar search task by setting workflow options or with an image url.
+ */
+void findSimilarTask() {
+    SlyceSearchRequest *request;
+    
+    NSURL *url = [[NSURL alloc] initWithString:@"http://imageUrl"];
+    
+    // Search with an image url or item identifier
+    if (url != nil) {
+        request = [[SlyceSearchRequest alloc] initWithImageURL:url.absoluteString
+                                              searchParameters:[[SlyceSearchParameters alloc] init]];
+    } else {
+        SlyceSearchParameters *parameters = [[SlyceSearchParameters alloc] init];
+        parameters.workflowOptions = @{ @"item_id": @"myValue" };
+        request = [[SlyceSearchRequest alloc] initWithSearchParameters:parameters];
+    }
+    
+    NSError *error;
+    SlyceSession *session = [SlyceSession sessionWithSlyce:[Slyce shared] error:&error];
+    if (session) {
+        // handle error
+        return;
+    }
+    
+    NSError *searchError;
+    [session startSearchTaskWithRequest:request workflowName:SlyceWorkflowNameFindSimilar listener:NULL error:&searchError];
+}
+
 
 #pragma mark Analytics
 
