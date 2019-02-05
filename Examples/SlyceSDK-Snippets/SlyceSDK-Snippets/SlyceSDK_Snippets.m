@@ -69,7 +69,7 @@ void findSimilarTask() {
     
     NSError *error;
     SlyceSession *session = [SlyceSession sessionWithSlyce:[Slyce shared] error:&error];
-    if (session) {
+    if (!session) {
         // handle error
         return;
     }
