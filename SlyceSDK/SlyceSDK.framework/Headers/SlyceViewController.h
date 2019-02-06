@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithSlyce:(Slyce *)slyce
                          mode:(SlyceViewControllerMode)mode
-                      options:(nullable NSDictionary<NSString *, id> *)options
+                      options:(nullable NSDictionary<id, id> *)options
                      delegate:(nullable id<SlyceViewControllerDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
 

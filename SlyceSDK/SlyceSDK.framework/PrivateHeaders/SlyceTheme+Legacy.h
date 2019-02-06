@@ -107,6 +107,10 @@
 @property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_picker_background_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *lens_btn_picker_background_selection_color;
 
+// MARK: dots animation
+@property (nonatomic, readwrite, copy, nullable) UIColor *dotDetection_primary;
+@property (nonatomic, readwrite, copy, nullable) UIColor *dotDetection_secondary;
+
 // MARK: settings
 @property (nonatomic, readwrite, copy, nullable) UIColor *settings_btn_tint_color;
 @property (nonatomic, readwrite, copy, nullable) UIColor *settings_btn_color;

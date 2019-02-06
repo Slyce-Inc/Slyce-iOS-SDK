@@ -25,6 +25,7 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     SlyceErrorWebSocketConnection = -207,
     SlyceErrorConfigurationService = -208,
     SlyceErrorWorkflowTimeout = -209,
+    SlyceErrorWorkflowUnknown = -210,
 
     // Parsing Error
     
@@ -48,6 +49,7 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     
     SlyceErrorWorkflowOperationFailed = -601,
     SlyceErrorWorkflowOperationNoResults = -602,
+    
     
     // Search History
     
