@@ -69,7 +69,7 @@ func findSimilarTask() {
     
     do {
         let session = try SlyceSession(slyce: Slyce.shared())
-        try session.startSearchTask(request: request, workflowName: workflowName.rawValue, listener: nil)
+        try session.startSearchTask(request: request, workflowName: workflowName, listener: nil)
     } catch {
         // handle error
     }
