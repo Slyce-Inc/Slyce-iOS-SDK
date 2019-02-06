@@ -1,4 +1,5 @@
 #import "SlyceBase.h"
+#import "SlyceWorkflowNames.h"
 
 @class Slyce;
 @class SlyceSession;
@@ -135,7 +136,7 @@ NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
 /*!
  * @method
  *
- * @brief Creates and starts a search task based on the provided request and workflow identifier.
+ * @brief Creates and starts a search task based on the provided request and workflow name.
  *
  * @param searchRequest - The search request.
  * @param workflowName - The name of the workflow to use, for example, `SlyceWorkflowName3D` or `SlyceWorkflowNameFindSimilar`.
@@ -145,8 +146,8 @@ NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
  *
  * @return a new `SlyceSearchTask` for the request and workflow identifier.
  */
-- (nullable SlyceSearchTask *)startSearchTaskWithRequest:(SlyceSearchRequest *)searchRequest workflowName:(NSString *)workflowName listener:(nullable id<SlyceSearchTaskListener>)listener error:(SlyceOutError)outError
-NS_SWIFT_NAME(startSearchTask(request:workflowIdentifier:listener:));
+- (nullable SlyceSearchTask *)startSearchTaskWithRequest:(SlyceSearchRequest *)searchRequest workflowName:(SlyceWorkflowName)workflowName listener:(nullable id<SlyceSearchTaskListener>)listener error:(SlyceOutError)outError
+NS_SWIFT_NAME(startSearchTask(request:workflowName:listener:));
 
 /*!
  * @property
