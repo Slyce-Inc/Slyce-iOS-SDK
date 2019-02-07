@@ -112,3 +112,31 @@ void reportManualAnalytics() {
                                                            itemURL:itemURL
                                                       itemQuantity:itemQuantity];
 }
+
+
+#pragma mark Full UI Mode
+
+/*!
+ * @brief Shows how to display the universal lens in the "Legacy Multi Search" capture mode
+ *
+ * @discussion This assumes that the Slyce instances has been configured and open.
+ */
+void legacyMultiSearch() {
+    
+    // Create an options dictionary, with the appropriate capture mode set for the Universal lens
+    NSDictionary *options = @{
+                              SlyceOptionLensesKey: @{
+                                      SlyceLensIdentifierUniversal: @{
+                                              SlyceLensOptionKeyCaptureMode: SlyceLensCaptureModeLegacyMulti
+                                              }
+                                      }
+                              };
+    
+    SlyceViewController *slyceVC __unused;
+    slyceVC = [[SlyceViewController alloc] initWithSlyce:[Slyce shared]
+                                                    mode:SlyceViewControllerModeUniversal
+                                                 options:options
+                                                delegate:nil];
+    
+    // Present view controller here...
+}
