@@ -103,3 +103,27 @@ func reportManualAnalytics() {
     // track successful checkout
     Slyce.shared().eventTracker.trackCheckoutTap(forJobIdentifier: jobId, itemIdentifier: itemId, itemRevenue: itemRevenue, itemURL: itemURL, itemQuantity: 1)
 }
+
+
+// MARK: Full UI Mode
+
+/*!
+ * @brief Shows how to display the universal lens in the "Legacy Multi Search" capture mode
+ *
+ * @discussion This assumes that the Slyce instances has been configured and open.
+ */
+func legacyMultiSearch() {
+    
+    // Create an options dictionary, with the appropriate capture mode set for the Universal lens
+    let options = [
+        SlyceOptionKey.Lenses: [
+            SlyceLensIdentifier.universal: [
+                SlyceLensOptionKey.captureMode: SlyceLensCaptureMode.legacyMulti
+            ]
+        ]
+    ]
+
+    let _ = SlyceViewController(slyce: Slyce.shared(), mode: .universal, options: options, delegate: nil)
+    
+    // Present view controller here...
+}
