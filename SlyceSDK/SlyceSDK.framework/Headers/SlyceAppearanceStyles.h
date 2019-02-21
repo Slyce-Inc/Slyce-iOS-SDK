@@ -22,6 +22,11 @@ typedef NS_ENUM(NSUInteger, SlyceHeaderStyleCenter)
 typedef NS_ENUM(NSUInteger, SlyceHeaderStyleRight)
 {
     SlyceHeaderStyleRightHidden,
-    SlyceHeaderStyleRightSettings,
     SlyceHeaderStyleRightHelp
+};
+
+typedef NS_ENUM(NSUInteger, SlyceSearchResultsListType)
+{
+    SlyceSearchResultsGrid,
+    SlyceSearchResultsList
 };

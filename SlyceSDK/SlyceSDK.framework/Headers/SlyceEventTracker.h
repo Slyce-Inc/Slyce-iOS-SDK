@@ -37,11 +37,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)trackCaptureImage;
 
 /**
- * Tracks a user action to tap to share feedback.
- */
-- (void)trackShareFeedbackTap;
-
-/**
  * Tracks a user action to tap to view a product's information.
  *
  * @param jobIdentifier The jobIdentifier of the originating searchTask.

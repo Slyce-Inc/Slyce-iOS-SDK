@@ -35,7 +35,8 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     // Lenses
     
     SlyceErrorInvalidLens = -401,
-    
+    SlyceErrorScannerUnsupported = -402,
+
     // Camera
     
     SlyceErrorCaptureDeviceUnavailable = -501,

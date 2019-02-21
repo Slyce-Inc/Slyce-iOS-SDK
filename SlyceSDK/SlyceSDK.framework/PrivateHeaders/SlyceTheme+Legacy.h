@@ -33,9 +33,6 @@
 @property (nonatomic, readwrite, copy, nullable) NSString *string_coachingTip_headline_imageMatch;
 @property (nonatomic, readwrite, copy, nullable) NSString *string_coachingTip_body_imageMatch;
 
-// MARK: settings
-@property (nonatomic, readwrite, copy, nullable) NSString *string_settingsTitle;
-
 // MARK: search history
 @property (nonatomic, readwrite, copy, nullable) NSString *string_searchHistoryTitle;
 @property (nonatomic, readwrite, copy, nullable) NSString *string_emptyContent_headline;
@@ -43,6 +40,7 @@
 
 // MARK: search results
 @property (nonatomic, readwrite, copy, nullable) NSString *string_searchResultsTitle;
+@property (nonatomic, readwrite) SlyceSearchResultsListType appearance_searchResultsType;
 
 // MARK: - icons
 @property (nonatomic, readwrite, copy, nullable) UIImage *btn_drawer_close;
