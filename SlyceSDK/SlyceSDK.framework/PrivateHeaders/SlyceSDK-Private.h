@@ -14,6 +14,4 @@
 #pragma mark Full UI Mode Extras
 
 #import "SlyceViewController+Private.h"
-#import "SlyceSettingsPanelDelegate.h"
-#import "SlyceSettingsPanelDataSource.h"
 #import "SlyceTheme+Legacy.h"
