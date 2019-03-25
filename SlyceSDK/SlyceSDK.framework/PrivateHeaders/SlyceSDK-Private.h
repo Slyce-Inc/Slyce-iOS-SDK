@@ -1,4 +1,4 @@
-// "SlyceCore.Private" umbrella header
+// "SlyceSDK.Private" umbrella header
 //
 // Everything here may be stripped out in the final distributed framework
 

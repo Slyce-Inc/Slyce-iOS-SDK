@@ -1,4 +1,10 @@
-#import <SlyceSDK/SlyceAppearanceStyles.h>
+
+#ifdef SLYCE_SDK_INTERNAL
+#import "SlyceTheme.h"
+#import "SlyceAppearanceStyles.h"
+#endif
+
+
 
 @interface SlyceTheme ()
 
@@ -51,7 +57,6 @@
 // MARK: camera
 @property (nonatomic, readwrite, copy, nullable) UIImage *bg_nav_stripImage;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_back;
-@property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_settings;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_photoGallery;
 @property (nonatomic, readwrite, copy, nullable) UIImage *ic_nav_searchHistory;
 @property (nonatomic, readwrite, copy, nullable) NSArray<UIImage *> *bg_processingIndicator;
