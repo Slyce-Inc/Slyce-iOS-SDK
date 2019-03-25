@@ -62,8 +62,7 @@ class ViewController: UIViewController {
         // - Header
         SlyceTheme.shared().setAppearanceStyle(SlyceHeaderStyleLeft.backButton.rawValue, forPropertyName: "appearance_headerStyle_left")
         SlyceTheme.shared().setAppearanceStyle(SlyceHeaderStyleCenter.image.rawValue, forPropertyName: "appearance_headerStyle_center")
-        SlyceTheme.shared().setAppearanceStyle(SlyceHeaderStyleRight.settings.rawValue, forPropertyName: "appearance_headerStyle_right")
-        
+
         // - Accent Color
         SlyceTheme.shared().setColor(UIColor.purple, forPropertyName: "global_accent_color")
         
