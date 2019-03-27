@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 
-#import <SlyceSDK/SlyceInstance.h>
+#ifdef SLYCE_SDK_INTERNAL
+#import "SlyceInstance.h"
+#endif
 
 typedef NS_ENUM(NSUInteger, SlyceEnvironment) {
     SlyceEnvironmentStaging,

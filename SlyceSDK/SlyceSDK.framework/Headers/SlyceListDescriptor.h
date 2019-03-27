@@ -1,4 +1,4 @@
-#import <SlyceSDK/SlyceBase.h>
+#import "SlyceBase.h"
 
 @class SlyceItemDescriptor;
 
