@@ -14,6 +14,10 @@ __attribute__((objc_subclassing_restricted))
  */
 @property (nonatomic, assign) BOOL userRequiresGDPRCompliance;
 
+@property (nonatomic, copy, nullable) NSString *language;
+
+@property (nonatomic, copy, nullable) NSString *country;
+
 /**
  * @property
  * @abstract A reference to the `SlycePrivacyPolicy` object which contains the GDPR terms for Slyce.

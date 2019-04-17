@@ -4,6 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NSString *const SlyceOptionKey NS_TYPED_EXTENSIBLE_ENUM;
 
+__deprecated_msg("Deprecated in 5.10.0. Universal lens will now always use continuous local detection.")
 SLYCE_SDK_EXPORT extern SlyceOptionKey SlyceOptionUniversalLensLocalDetectionModeKey NS_SWIFT_NAME(UniversalLensLocalDetectionMode);
 SLYCE_SDK_EXPORT extern SlyceOptionKey SlyceOptionLensesKey NS_SWIFT_NAME(Lenses);
 
@@ -23,6 +24,9 @@ SLYCE_SDK_EXPORT extern SlyceLensCaptureMode SlyceLensCaptureModeSingle;
 SLYCE_SDK_EXPORT extern SlyceLensCaptureMode SlyceLensCaptureModeBatch;
 SLYCE_SDK_EXPORT extern SlyceLensCaptureMode SlyceLensCaptureModeLegacyMulti;
 
+#pragma make -
+
+SLYCE_SDK_EXPORT extern NSString *const SlyceOptionDisableBarcodeSearchTask;
 
 #pragma mark -
 

@@ -13,8 +13,8 @@ typedef NS_ENUM(NSUInteger, SlyceEnvironment) {
 @interface Slyce (Environments)
 
 /* Sets the environment for the shared Slyce instance. This must be
-   called before accessing `[Slyce sharedInstance]`. Otherwise it will have
-   no effect
+ called before accessing `[Slyce sharedInstance]`. Otherwise it will have
+ no effect
  */
 + (void)setSharedInstanceEnvironment:(SlyceEnvironment)env;
 

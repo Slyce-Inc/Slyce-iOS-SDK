@@ -78,6 +78,7 @@
 
 // MARK: error
 @property (nonatomic, readwrite, copy, nullable) UIImage *error_image_type_system;
+@property (nonatomic, readwrite, copy, nullable) UIColor *errorLayer_error_code_color;
 
 // MARK: Fonts
 @property (nonatomic, readwrite, copy, nullable) NSString *global_headline_font;
