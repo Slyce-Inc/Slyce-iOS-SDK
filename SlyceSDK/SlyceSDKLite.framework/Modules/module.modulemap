@@ -1,0 +1,10 @@
+framework module SlyceSDKLite {
+    umbrella header "SlyceSDKLite.h"
+    export *
+
+    explicit module Private {
+        umbrella header "SlyceSDKLite-Private.h"
+    }
+
+    module * { export * }
+}

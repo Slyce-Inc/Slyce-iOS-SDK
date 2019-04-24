@@ -1,0 +1,8 @@
+#import <Foundation/Foundation.h>
+
+typedef NSString * _Nonnull const SlyceLensIdentifier NS_TYPED_EXTENSIBLE_ENUM;
+
+extern SlyceLensIdentifier SlyceLensIdentifierBarcode;
+extern SlyceLensIdentifier SlyceLensIdentifierImageMatching;
+extern SlyceLensIdentifier SlyceLensIdentifierVisualSearch;
+extern SlyceLensIdentifier SlyceLensIdentifierUniversal;
