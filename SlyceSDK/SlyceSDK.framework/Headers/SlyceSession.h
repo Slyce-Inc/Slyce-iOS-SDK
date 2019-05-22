@@ -63,8 +63,6 @@ __attribute__((objc_subclassing_restricted))
  *
  * @brief The static initializer for `SlyceSession`. Use this to create your own instance of a SlyceSession.
  *
- * @discussion In most cases you can use the `defaultSession` on `Slyce`.
- *
  * @param slyce - An opened instance of `Slyce`.
  * @param outError - A pointer to an error that will be assigned if a problem occurs.
  *
