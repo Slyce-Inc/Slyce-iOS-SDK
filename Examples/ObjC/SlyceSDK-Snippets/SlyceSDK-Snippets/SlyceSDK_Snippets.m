@@ -20,7 +20,7 @@ void addWorkflowOptionsForSingleTask() {
     
     SlyceSearchRequest *request = [[SlyceSearchRequest alloc] initWithImage:searchImage
                                                            searchParameters:searchParams];
-
+    
     NSError *error;
     SlyceSession *session = [SlyceSession sessionWithSlyce:[Slyce shared] error:&error];
     if (session) {
@@ -39,8 +39,8 @@ void addDefaultWorkOptions() {
     SlyceSearchParameters *searchParams = [[SlyceSearchParameters alloc] init];
     searchParams.workflowOptions = @{@"key1": @"myValue",
                                      @"key2:": @5};
-
-
+    
+    
     // add to a custom session
     SlyceSession *session = [SlyceSession sessionWithSlyce:[Slyce shared] error:NULL];
     session.defaultSearchParameters = searchParams;
@@ -97,20 +97,20 @@ void reportManualAnalytics() {
     
     // track that an image was captured outside of the SlyceSDK
     [[Slyce shared].eventTracker trackCaptureImage];
- 
+    
     // track add to cart
     [[Slyce shared].eventTracker trackAddToCartTapForJobIdentifier:jobId
                                                     itemIdentifier:itemId
-                                                        itemRevenue:itemRevenue
-                                                            itemURL:itemURL
-                                                       itemQuantity:itemQuantity];
+                                                       itemRevenue:itemRevenue
+                                                           itemURL:itemURL
+                                                      itemQuantity:itemQuantity];
     
     // track successful checkout
     [[Slyce shared].eventTracker trackCheckoutTapForJobIdentifier:jobId
                                                    itemIdentifier:itemId
-                                                       itemRevenue:itemRevenue
-                                                           itemURL:itemURL
-                                                      itemQuantity:itemQuantity];
+                                                      itemRevenue:itemRevenue
+                                                          itemURL:itemURL
+                                                     itemQuantity:itemQuantity];
 }
 
 
@@ -140,3 +140,4 @@ void legacyMultiSearch() {
     
     // Present view controller here...
 }
+

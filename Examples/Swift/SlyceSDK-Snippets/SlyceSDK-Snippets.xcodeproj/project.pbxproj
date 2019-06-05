@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B3F7924B2110AE1A00CC3BC5 /* SlyceSDK_Snippets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F7924A2110AE1A00CC3BC5 /* SlyceSDK_Snippets.swift */; };
 		B3F792532110AE5F00CC3BC5 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F792522110AE5F00CC3BC5 /* SlyceSDK.framework */; };
-		B3F792552110AEB500CC3BC5 /* SlyceSDK_Snippets.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F792542110AEB500CC3BC5 /* SlyceSDK_Snippets.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +27,6 @@
 		B3F792472110AE1A00CC3BC5 /* libSlyceSDK-Snippets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSlyceSDK-Snippets.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F7924A2110AE1A00CC3BC5 /* SlyceSDK_Snippets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlyceSDK_Snippets.swift; sourceTree = "<group>"; };
 		B3F792522110AE5F00CC3BC5 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlyceSDK.framework; path = ../Frameworks/SlyceSDK.framework; sourceTree = "<group>"; };
-		B3F792542110AEB500CC3BC5 /* SlyceSDK_Snippets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlyceSDK_Snippets.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				B3F7924A2110AE1A00CC3BC5 /* SlyceSDK_Snippets.swift */,
-				B3F792542110AEB500CC3BC5 /* SlyceSDK_Snippets.m */,
 			);
 			path = "SlyceSDK-Snippets";
 			sourceTree = "<group>";
@@ -136,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F7924B2110AE1A00CC3BC5 /* SlyceSDK_Snippets.swift in Sources */,
-				B3F792552110AEB500CC3BC5 /* SlyceSDK_Snippets.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

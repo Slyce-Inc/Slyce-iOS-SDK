@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1020"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ADCBE0D222A6DD4B008211B0"
+               BuildableName = "SlyceSDK-FullUI-Demo-ObjC.app"
+               BlueprintName = "SlyceSDK-FullUI-Demo-ObjC"
+               ReferencedContainer = "container:../FullUI/SlyceSDK-FullUI-Demo-ObjC.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ADD1403C22A8163D00698369"
+               BuildableName = "SlyceSDK-Headless-Demo-ObjC.app"
+               BlueprintName = "SlyceSDK-Headless-Demo-ObjC"
+               ReferencedContainer = "container:../Headless/SlyceSDK-Headless-Demo-ObjC.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ADD1405E22A8166900698369"
+               BuildableName = "SlyceSDK-LensView-Demo-ObjC.app"
+               BlueprintName = "SlyceSDK-LensView-Demo-ObjC"
+               ReferencedContainer = "container:../LensView/SlyceSDK-LensView-Demo-ObjC.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ADCBE0B822A6DC6B008211B0"
+               BuildableName = "libSlyceSDK-Snippets.a"
+               BlueprintName = "SlyceSDK-Snippets"
+               ReferencedContainer = "container:SlyceSDK-Snippets.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "ADCBE0B822A6DC6B008211B0"
+            BuildableName = "libSlyceSDK-Snippets.a"
+            BlueprintName = "SlyceSDK-Snippets"
+            ReferencedContainer = "container:SlyceSDK-Snippets.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "ADCBE0B822A6DC6B008211B0"
+            BuildableName = "libSlyceSDK-Snippets.a"
+            BlueprintName = "SlyceSDK-Snippets"
+            ReferencedContainer = "container:SlyceSDK-Snippets.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "ADCBE0D222A6DD4B008211B0"
+            BuildableName = "SlyceSDK-FullUI-Demo-ObjC.app"
+            BlueprintName = "SlyceSDK-FullUI-Demo-ObjC"
+            ReferencedContainer = "container:../FullUI/SlyceSDK-FullUI-Demo-ObjC.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
