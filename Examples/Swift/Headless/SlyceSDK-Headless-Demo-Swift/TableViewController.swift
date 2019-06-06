@@ -14,9 +14,10 @@ class TableViewController: UITableViewController
         // Slyce should be opened once, generally at application startup. We have to
         // do so before launching any of our demos in order to get results.
 
-        let accountIdentifier = ""
-        let spaceIdentifier = ""
-        let apiKey = ""
+        let accountIdentifier = "slyce_integrations"
+        let spaceIdentifier = "n2b4mfqcDji5Q9hyU8h3Ve"
+        let apiKey = "l3Jk79JZM8ATo68dv2vrJc8m6YOdMIzv6BM0UwdW-F8"
+        
         
         // GDPR Compliance support (optional)
         if (requireGDPR) {

@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		ADD1404222A8163D00698369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1404122A8163D00698369 /* AppDelegate.m */; };
-		ADD1404522A8163D00698369 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1404422A8163D00698369 /* ViewController.m */; };
-		ADD1404822A8163D00698369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD1404622A8163D00698369 /* Main.storyboard */; };
 		ADD1404A22A8163E00698369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD1404922A8163E00698369 /* Assets.xcassets */; };
 		ADD1404D22A8163E00698369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD1404B22A8163E00698369 /* LaunchScreen.storyboard */; };
 		ADD1405022A8163E00698369 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD1404F22A8163E00698369 /* main.m */; };
 		ADD1408D22A816EE00698369 /* SlyceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD1408822A816DB00698369 /* SlyceSDK.framework */; };
 		ADD1408E22A816EE00698369 /* SlyceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADD1408822A816DB00698369 /* SlyceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ADD140A422A8233A00698369 /* TableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD140A322A8233A00698369 /* TableTableViewController.m */; };
+		ADD140A722A8254600698369 /* TextViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD140A622A8254600698369 /* TextViewViewController.m */; };
+		ADD140AA22A82C4B00698369 /* VisualSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD140A922A82C4B00698369 /* VisualSearchViewController.m */; };
+		ADD140B022A92B8F00698369 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD140AF22A92B8F00698369 /* ScannerViewController.m */; };
+		ADD140B322A92C7700698369 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD140B222A92C7700698369 /* Camera.m */; };
+		ADD140B622A9385800698369 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD140B522A9385800698369 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,14 +39,23 @@
 		ADD1403D22A8163D00698369 /* SlyceSDK-Headless-Demo-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SlyceSDK-Headless-Demo-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD1404022A8163D00698369 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ADD1404122A8163D00698369 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ADD1404322A8163D00698369 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ADD1404422A8163D00698369 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ADD1404722A8163D00698369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADD1404922A8163E00698369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD1404C22A8163E00698369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADD1404E22A8163E00698369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADD1404F22A8163E00698369 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADD1408822A816DB00698369 /* SlyceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SlyceSDK.framework; sourceTree = "<group>"; };
+		ADD140A222A8233A00698369 /* TableTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableTableViewController.h; sourceTree = "<group>"; };
+		ADD140A322A8233A00698369 /* TableTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableTableViewController.m; sourceTree = "<group>"; };
+		ADD140A522A8254600698369 /* TextViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewViewController.h; sourceTree = "<group>"; };
+		ADD140A622A8254600698369 /* TextViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewViewController.m; sourceTree = "<group>"; };
+		ADD140A822A82C4B00698369 /* VisualSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisualSearchViewController.h; sourceTree = "<group>"; };
+		ADD140A922A82C4B00698369 /* VisualSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualSearchViewController.m; sourceTree = "<group>"; };
+		ADD140AE22A92B8F00698369 /* ScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
+		ADD140AF22A92B8F00698369 /* ScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
+		ADD140B122A92C7700698369 /* Camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		ADD140B222A92C7700698369 /* Camera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		ADD140B422A9385800698369 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		ADD140B522A9385800698369 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +92,22 @@
 			children = (
 				ADD1404022A8163D00698369 /* AppDelegate.h */,
 				ADD1404122A8163D00698369 /* AppDelegate.m */,
-				ADD1404322A8163D00698369 /* ViewController.h */,
-				ADD1404422A8163D00698369 /* ViewController.m */,
-				ADD1404622A8163D00698369 /* Main.storyboard */,
 				ADD1404922A8163E00698369 /* Assets.xcassets */,
 				ADD1404B22A8163E00698369 /* LaunchScreen.storyboard */,
 				ADD1404E22A8163E00698369 /* Info.plist */,
 				ADD1404F22A8163E00698369 /* main.m */,
+				ADD140A222A8233A00698369 /* TableTableViewController.h */,
+				ADD140A322A8233A00698369 /* TableTableViewController.m */,
+				ADD140A522A8254600698369 /* TextViewViewController.h */,
+				ADD140A622A8254600698369 /* TextViewViewController.m */,
+				ADD140A822A82C4B00698369 /* VisualSearchViewController.h */,
+				ADD140A922A82C4B00698369 /* VisualSearchViewController.m */,
+				ADD140AE22A92B8F00698369 /* ScannerViewController.h */,
+				ADD140AF22A92B8F00698369 /* ScannerViewController.m */,
+				ADD140B122A92C7700698369 /* Camera.h */,
+				ADD140B222A92C7700698369 /* Camera.m */,
+				ADD140B422A9385800698369 /* TableViewCell.h */,
+				ADD140B522A9385800698369 /* TableViewCell.m */,
 			);
 			path = "SlyceSDK-Headless-Demo-ObjC";
 			sourceTree = "<group>";
@@ -159,7 +181,6 @@
 			files = (
 				ADD1404D22A8163E00698369 /* LaunchScreen.storyboard in Resources */,
 				ADD1404A22A8163E00698369 /* Assets.xcassets in Resources */,
-				ADD1404822A8163D00698369 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADD1404522A8163D00698369 /* ViewController.m in Sources */,
+				ADD140A722A8254600698369 /* TextViewViewController.m in Sources */,
+				ADD140A422A8233A00698369 /* TableTableViewController.m in Sources */,
+				ADD140B022A92B8F00698369 /* ScannerViewController.m in Sources */,
+				ADD140AA22A82C4B00698369 /* VisualSearchViewController.m in Sources */,
+				ADD140B622A9385800698369 /* TableViewCell.m in Sources */,
+				ADD140B322A92C7700698369 /* Camera.m in Sources */,
 				ADD1405022A8163E00698369 /* main.m in Sources */,
 				ADD1404222A8163D00698369 /* AppDelegate.m in Sources */,
 			);
@@ -179,14 +205,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ADD1404622A8163D00698369 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADD1404722A8163D00698369 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADD1404B22A8163E00698369 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
