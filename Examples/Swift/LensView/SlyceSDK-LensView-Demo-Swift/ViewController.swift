@@ -13,9 +13,9 @@ class ViewController: UIViewController
     {
         // Slyce should be opened once, generally at application startup.
         
-        let accountIdentifier = ""
-        let spaceIdentifier = ""
-        let apiKey = ""
+        let accountIdentifier = "slyce_integrations"
+        let spaceIdentifier = "n2b4mfqcDji5Q9hyU8h3Ve"
+        let apiKey = "l3Jk79JZM8ATo68dv2vrJc8m6YOdMIzv6BM0UwdW-F8"
         
         Slyce.shared().open(accountIdentifier: accountIdentifier, apiKey: apiKey, spaceIdentifier: spaceIdentifier) { (err) in
             if let validErr = err {
