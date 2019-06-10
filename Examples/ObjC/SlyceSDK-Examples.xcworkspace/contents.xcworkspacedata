@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SlyceSDK-Snippets/SlyceSDK-Snippets.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FullUI/SlyceSDK-FullUI-Demo-ObjC.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Headless/SlyceSDK-Headless-Demo-ObjC.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LensView/SlyceSDK-LensView-Demo-ObjC.xcodeproj">
+   </FileRef>
+</Workspace>
