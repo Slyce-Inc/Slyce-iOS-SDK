@@ -12,6 +12,8 @@
 @property (nonatomic, readwrite) SlyceHeaderStyleCenter appearance_headerStyle_center;
 @property (nonatomic, readwrite) SlyceHeaderStyleRight appearance_headerStyle_right;
 @property (nonatomic, readwrite) SlyceActiveSearchesStyle appearance_activeSearches;
+@property (nonatomic, readwrite) SlyceToolbarButtonVisibility appearance_gallery_visibility;
+@property (nonatomic, readwrite) SlyceToolbarButtonVisibility appearance_history_visibility;
 
 // MARK: - strings
 // MARK: - error handling
