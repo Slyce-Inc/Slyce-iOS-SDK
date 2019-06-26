@@ -30,3 +30,9 @@ typedef NS_ENUM(NSUInteger, SlyceSearchResultsListType)
     SlyceSearchResultsGrid,
     SlyceSearchResultsList
 };
+
+typedef NS_ENUM(NSUInteger, SlyceToolbarButtonVisibility)
+{
+    SlyceToolbarButtonHidden,
+    SlyceToolbarButtonVisible
+};
