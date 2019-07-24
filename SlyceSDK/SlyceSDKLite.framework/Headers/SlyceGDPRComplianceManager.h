@@ -56,5 +56,14 @@ __attribute__((objc_subclassing_restricted))
  */
 - (void)optOutAndForgetUser:(void (^)(NSError * _Nullable))completion;
 
+/*!
+ * @method
+ *
+ * @brief Remove all data on Slyce servers owned by the current user. Does not reset GDPR or privacy policy consents.
+ *
+ * @param completion A completion block that informs if the request to remove server data was _received_ successfully, an error is passed when the request fails. If a request fails, you must prompt the user to run the request again.
+ */
+- (void)removeServerData:(void (^)(NSError * _Nullable))completion;
+
 @end
 NS_ASSUME_NONNULL_END
