@@ -65,7 +65,8 @@ NS_ERROR_ENUM(SlyceErrorDomain)
     
     SlyceErrorUserNotGDPRCompliant = -901,
     SlyceErrorUserIdentifierNotSet = -902,
-    
+    SlyceErrorForgetUserFailed = -903,
+
     // DB & Persistence
     
     SlyceErrorDatabaseGeneral = -1001,

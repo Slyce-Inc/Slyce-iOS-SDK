@@ -5,6 +5,7 @@
 #pragma mark Slyce alternate intialization
 
 #import "SlyceInstance+Private.h"
+#import "SlyceInstance+Environments.h"
 
 
 #pragma mark Labs
