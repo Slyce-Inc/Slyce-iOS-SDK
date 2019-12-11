@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
 spec.name                    = "Slyce-iOS-SDK"
-spec.version                 = "5.13.2"
+spec.version                 = "5.13.3"
 spec.summary                 = "Slyce iOS SDK"
 spec.description             = <<-DESC
 The Slyce iOS SDK makes it easy to add visual search capabilities to mobile apps.
