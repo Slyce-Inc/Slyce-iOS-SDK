@@ -10,7 +10,7 @@ spec.homepage                = "https://github.com/Slyce-Inc/Slyce-iOS-SDK"
 spec.license                 = { :type => "Commercial", :file => "LICENSE.md" }
 spec.author                  = { "Slyce Inc." => "mobile@slyce.it" }
 spec.platform                = :ios, "9.0"
-spec.source                  = { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "5.13.2" }
+spec.source                  = { :git => "https://github.com/Slyce-Inc/Slyce-iOS-SDK.git", :tag => "5.13.3" }
 spec.requires_arc            = true
 spec.preserve_paths          = "SlyceSDK/**"
 spec.ios.vendored_frameworks = "SlyceSDK/SlyceSDK.framework"
